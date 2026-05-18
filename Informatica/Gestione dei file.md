@@ -11,7 +11,8 @@ Quando un nostro processo va ad aprire un file esso viene trasferito dall'hard-d
 Un' altra cosa importante è che i tipi di file con cui possiamo lavorare sono molteplici:
 - txt: lettura di tipo sequenziale, ovvero che per leggere la riga 20 si devono prima leggere tutte le righe precedenti, iniziando sempre dal primo record logico; sono sequenze di caratteri con record logico che può essere un singolo carattere, la parola, oppure la linea (utilizzato da noi). Per leggere il file abbiamo un puntatore che va a leggere record dopo record il file.![](../Zimmagini/Pasted%20image%2020260518102217.png)
 
-- bin: file binari per memorizzare file o immagini, non apribili con editor di testo perché il risultato non sarà interpretabile e sarà gibberish; sono sequenze di bit.![](../Zimmagini/Pasted%20image%2020260518102242.jpg)
+- bin: file binari per memorizzare file o immagini, non apribili con editor di testo perché il risultato non sarà interpretabile e sarà gibberish; sono sequenze di bit.
+	![](../Zimmagini/Pasted%20image%2020260518102242.jpg)
 
 ## Operazioni gestione file 
 ### Apertura
