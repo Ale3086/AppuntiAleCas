@@ -6,12 +6,12 @@ Quando un nostro processo va ad aprire un file esso viene trasferito dall'hard-d
 - Accediamo e lavoriamo con la risorsa;
 - Chiudiamo la risorsa.
 
-![](Pasted%20image%2020260504234351.jpg)
+![](../../Zimmagini/Pasted%20image%2020260504234351.jpg)
 
 Un' altra cosa importante è che i tipi di file con cui possiamo lavorare sono molteplici:
-- txt: lettura di tipo sequenziale, ovvero che per leggere la riga 20 si devono prima leggere tutte le righe precedenti, iniziando sempre dal primo record logico; sono sequenze di caratteri con record logico che può essere un singolo carattere, la parola, oppure la linea (utilizzato da noi). Per leggere il file abbiamo un puntatore che va a leggere record dopo record il file.![](Pasted%20image%2020260518102217.png)
+- txt: lettura di tipo sequenziale, ovvero che per leggere la riga 20 si devono prima leggere tutte le righe precedenti, iniziando sempre dal primo record logico; sono sequenze di caratteri con record logico che può essere un singolo carattere, la parola, oppure la linea (utilizzato da noi). Per leggere il file abbiamo un puntatore che va a leggere record dopo record il file.![](../../Zimmagini/Pasted%20image%2020260518102217.png)
 
-- bin: file binari per memorizzare file o immagini, non apribili con editor di testo perché il risultato non sarà interpretabile e sarà gibberish; sono sequenze di bit.![](Pasted%20image%2020260518102242.jpg)
+- bin: file binari per memorizzare file o immagini, non apribili con editor di testo perché il risultato non sarà interpretabile e sarà gibberish; sono sequenze di bit.![](../../Zimmagini/Pasted%20image%2020260518102242.jpg)
 
 ## Operazioni gestione file 
 ### Apertura
@@ -36,13 +36,13 @@ La funzione di base ci ridarà l'indirizzo di memora del file se va bene, ma pu�
 Se il file non è vuoto il puntatore potrà andare a leggere fino a leggere fino allo stato di fine file, chiamato EOF (End Of File)
 #### Apertura in lettura
 Il file viene aperto e il EOF sarà a fine file e avremo un puntatore che partirà dalla posizione 0 a salire fino a EOF.
-![](Pasted%20image%2020260504233648.png)
+![](../../Zimmagini/Pasted%20image%2020260504233648.png)
 #### Apertura in scrittura
 Quando apriamo il file in scrittura l'EOF indipendentemente se il file in precedenza fosse vuoto o no viene posizionato all'inizio, questo perché il file viene totalmente troncato, sovrascrivendo i dati che vi erano inizialmente in caso vi ci fossero dei dati.
-![](Pasted%20image%2020260504233634.png)
+![](../../Zimmagini/Pasted%20image%2020260504233634.png)
 #### Apertura in aggiunta
 Quando apriamo il file questo giro EOF si trova alla posizione successiva all'ultimo elemento significativo del file, quindi se inizialmente vi erano dei dati nel file questa volta non verranno sovrascritti, ma verranno aggiunte solo informazioni.
-![](Pasted%20image%2020260504233706.png)
+![](../../Zimmagini/Pasted%20image%2020260504233706.png)
 ### Lavoro
 #### `fseek` - sia .txt che .bin/.dat
 La funzione `fseek` subito dopo aver aperto un file ci va a scorrere a una posizione nella memoria del file precisa. I suoi parametri sono:
@@ -185,4 +185,4 @@ fclose(file);
 ```
 
 La quale ci darà 0 in caso l'operazione sarà riuscita correttamente e la costante EOF in caso non sia andata a buon fine l'operazione, che solitamente è -1.
-![](Pasted%20image%2020260504234630.png)
+![](../../Zimmagini/Pasted%20image%2020260504234630.png)

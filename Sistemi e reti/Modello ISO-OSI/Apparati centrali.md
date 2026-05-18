@@ -3,7 +3,7 @@
 Il modo in cui i dati viaggiano dipende dall'apparato centrale utilizzato.
 #### L'Hub (Il nodo "passivo")
 L'hub si comporta logicamente come un bus: quando riceve un segnale su una porta, lo inoltra a **tutte le altre**. Tutte le stazioni ricevono il frame, ma solo quella destinataria lo trattiene, mentre le altre lo ignorano. Tutti i nodi collegati a un hub formano un unico **dominio di collisione**.
-![](Pasted%20image%2020260428183553.png)
+![697](../../Zimmagini/Pasted%20image%2020260428183553.png)
 #### Lo Switch (Il nodo "intelligente")
 Lo switch opera al livello **Data Link** e inoltra la trama **solo alla porta** a cui è collegato il destinatario, evitando così le collisioni.
 
@@ -11,7 +11,7 @@ Lo switch opera al livello **Data Link** e inoltra la trama **solo alla porta** 
     
 - **Modalità Full-Duplex:** Utilizza canali fisici separati per ricezione e trasmissione, permettendo l'invio contemporaneo di più trame senza conflitti.
 
-![](Pasted%20image%2020260428183829.png)
+![697](../../Zimmagini/Pasted%20image%2020260428183829.png)
 ## Come lavora lo Switch: Auto-apprendimento
 Lo switch non ha bisogno di configurazione manuale; crea dinamicamente una **tabella porta-indirizzo MAC** analizzando il traffico in ingresso.
 

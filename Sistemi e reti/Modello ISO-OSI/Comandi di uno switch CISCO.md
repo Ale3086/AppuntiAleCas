@@ -14,7 +14,7 @@ Per accedere alla riga di comando in ambiente simulato, segui questi passaggi :
 1. Clicca sul **PC0**, vai sulla scheda **"Desktop"** e seleziona **"Terminal"**.
     
 2. Verifica i parametri della **Terminal Configuration**:
-    ![](Pasted%20image%2020260518102714.png)
+    ![](../../Zimmagini/Pasted%20image%2020260518102714.png)
     
 3. Clicca su **OK** e premi **Invio** nella finestra nera per visualizzare il prompt.
 
