@@ -31,7 +31,7 @@ Se una stazione rileva una collisione mentre sta trasmettendo, deve agire immedi
 
 Il tempo è randomico dato che i segali vengono trasmessi in tempi diversi e la possibilità che i segali si riscontrino è minima, dato che ognuno dei dispositivi ha un tempo casuale in cui aspetta del tempo prima di inviare il messaggio di nuovo.
 
-<img src="../../Zimmagini/Pasted%20image%2020260428183441.png" width="536">
+![[Pasted image 20260428183441.png|536]]
 
 ## Il Protocollo CSMA/CA
 Nel Wi-Fi non si usa il sistema delle reti cablate (il CSMA/CD, che rileva le collisioni _dopo_ che sono avvenute), ma si preferisce **prevenirle** prima che accadano.
