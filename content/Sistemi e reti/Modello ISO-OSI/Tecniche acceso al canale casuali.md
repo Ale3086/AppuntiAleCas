@@ -31,7 +31,7 @@ Se una stazione rileva una collisione mentre sta trasmettendo, deve agire immedi
 
 Il tempo Ã¨ randomico dato che i segali vengono trasmessi in tempi diversi e la possibilitÃ  che i segali si riscontrino Ã¨ minima, dato che ognuno dei dispositivi ha un tempo casuale in cui aspetta del tempo prima di inviare il messaggio di nuovo.
 
-![|536](../../Zimmagini/Pasted%20image%2020260428183441.png)
+![[|536]]
 
 ## Il Protocollo CSMA/CA
 Nel Wi-Fi non si usa il sistema delle reti cablate (il CSMA/CD, che rileva le collisioni _dopo_ che sono avvenute), ma si preferisce **prevenirle** prima che accadano.
@@ -65,3 +65,4 @@ Immagina tre soggetti: due computer (_S1_ e _S2_) e l'**Access Point** al centro
 Se _S1_ fa l'ascolto del canale, sente che Ã¨ libero (perchÃ© non puÃ² sentire _S2_) e potrebbe trasmettere. Se lo facesse anche _S2_ nello stesso momento, i due segnali arriverebbero all'Access Point insieme, creando una **collisione** e distruggendo i dati.
 
 **Come risolve il CSMA/CA?** Quando _S1_ manda l'**RTS** all'Access Point, l'Access Point risponde con il **CTS** a raggio totale. Anche se _S2_ non poteva sentire _S1_, **sente benissimo il CTS dell'Access Point**. Leggendo il CTS, _S2_ capisce che deve stare in silenzio per il tempo stabilito (_duration_), lasciando che _S1_ finisca di trasmettere la sua trama in tutta tranquillitÃ .
+

@@ -11,7 +11,8 @@ In una rete Ethernet, ogni messaggio deve avere un destinatario, indicato grazie
     
 - **Broadcast:** se Ã¨ destinato a **tutte le stazioni** della rete (l'indirizzo Ã¨ **FF:FF:FF:FF:FF:FF**). I rooter vanno a spezzare i messaggi di broadcast, ciÃ² vuol dire che **ogni ramo di un router Ã¨ un dominio di broadcast**.
 
-![|697](../../Zimmagini/Pasted%20image%2020260428132224.png)
-![|697](../../Zimmagini/Pasted%20image%2020260428132317.png)
+![[|697]]
+![[|697]]
 
 GLi swith spezzano i domini di collisione, i router spezzano quelli di broadcast
+

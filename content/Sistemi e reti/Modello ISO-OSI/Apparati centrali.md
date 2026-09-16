@@ -2,7 +2,7 @@
 ## L'Hub (Il nodo "passivo")
 L'hub si comporta logicamente come un bus: quando riceve un segnale su una porta, lo inoltra a **tutte le altre**. Tutte le stazioni ricevono il frame, ma solo quella destinataria lo trattiene, mentre le altre lo ignorano. Tutti i nodi collegati a un hub formano un unico **dominio di collisione**.
 
-![|697](../../Zimmagini/Pasted%20image%2020260428183553.png)
+![[|697]]
 ## Lo Switch (Il nodo "intelligente")
 Lo switch opera al livello **Data Link** e inoltra la trama **solo alla porta** a cui Ã¨ collegato il destinatario, evitando cosÃ¬ le collisioni.
 
@@ -10,11 +10,11 @@ Lo switch opera al livello **Data Link** e inoltra la trama **solo alla porta** 
     
 - **ModalitÃ  Full-Duplex:** Utilizza canali fisici separati per ricezione e trasmissione, permettendo l'invio contemporaneo di piÃ¹ trame senza conflitti.
 
-![|697](../../Zimmagini/Pasted%20image%2020260428183829.png)
+![[|697]]
 ### Come lavora lo Switch: Auto-apprendimento
 Lo switch non ha bisogno di configurazione manuale; crea dinamicamente una **tabella porta-indirizzo MAC** analizzando il traffico in ingresso.
 
-![|697](../../Zimmagini/Pasted%20image%2020260519123209.png)
+![[|697]]
 
 Il suo funzionamento si divide in due operazioni, la prima che serve per capire a chi mandare un messaggio, stabilendo un handshake che va a identificare che quel rispettivo indirizzo MAC corrisponde a quella precisa porta; la seconda che va a mandare l'informazione sia se giÃ  sappiamo l'indirizzo di destinazione MAC sia se no.
 
@@ -46,3 +46,4 @@ L'attaccante invia pacchetti di rete falsificati in cui inserisce come mittente 
 Da quel momento, ogni volta che un altro dispositivo (es. il router) invia dati destinati alla vittima, lo switch consulta la tabella e consegna i pacchetti direttamente sulla porta dell'attaccante.
 
 Per evitare che la vittima si accorga dell'interruzione di linea (generando un Denial of Service visibile), l'attaccante deve fare in modo che il suo computer legga i dati e, un millisecondo dopo, li rispedisca indietro verso la reale porta della vittima. Questo crea un imbuto invisibile in cui tutti i dati passano prima dall'attaccante.
+
