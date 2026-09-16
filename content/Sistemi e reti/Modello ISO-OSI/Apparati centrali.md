@@ -2,7 +2,7 @@
 ## L'Hub (Il nodo "passivo")
 L'hub si comporta logicamente come un bus: quando riceve un segnale su una porta, lo inoltra a **tutte le altre**. Tutte le stazioni ricevono il frame, ma solo quella destinataria lo trattiene, mentre le altre lo ignorano. Tutti i nodi collegati a un hub formano un unico **dominio di collisione**.
 
-![[|697]]
+<img src="../../Zimmagini/Pasted%20image%2020260428183553.png" width="697">
 ## Lo Switch (Il nodo "intelligente")
 Lo switch opera al livello **Data Link** e inoltra la trama **solo alla porta** a cui Ã¨ collegato il destinatario, evitando cosÃ¬ le collisioni.
 
@@ -10,11 +10,11 @@ Lo switch opera al livello **Data Link** e inoltra la trama **solo alla porta** 
     
 - **ModalitÃ  Full-Duplex:** Utilizza canali fisici separati per ricezione e trasmissione, permettendo l'invio contemporaneo di piÃ¹ trame senza conflitti.
 
-![[|697]]
+<img src="../../Zimmagini/Pasted%20image%2020260428183829.png" width="697">
 ### Come lavora lo Switch: Auto-apprendimento
 Lo switch non ha bisogno di configurazione manuale; crea dinamicamente una **tabella porta-indirizzo MAC** analizzando il traffico in ingresso.
 
-![[|697]]
+<img src="../../Zimmagini/Pasted%20image%2020260519123209.png" width="697">
 
 Il suo funzionamento si divide in due operazioni, la prima che serve per capire a chi mandare un messaggio, stabilendo un handshake che va a identificare che quel rispettivo indirizzo MAC corrisponde a quella precisa porta; la seconda che va a mandare l'informazione sia se giÃ  sappiamo l'indirizzo di destinazione MAC sia se no.
 

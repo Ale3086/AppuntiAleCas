@@ -13,7 +13,7 @@ Mentre per i simboli `-` e `+` che vediamo dai due poli dei cavi nell'immagine c
 ## Unione dispositivi
 I cavi possono essere sia **dritti** che **incrociati**, i quali si crimpano in due modi diversi. Ognuna delle due strutture ha un suo preciso scopo, infatti i cavi dritti si usano quando bisogna collegare due **dispositivi diversi** (PC-Hub); mentre invece i cavi incrociati si vanno ad utilizzare per comunicare tra due **dispositivi uguali** (PC-PC).
 
-![[|555]]
+<img src="../../Zimmagini/out1.gif" width="555">
 
 **Il cavo incrociato non si usa quasi mai**, questo perchÃ© se la casa elettronica giÃ  conosce che verranno collegati due dispositivi uguali in produzione andrÃ  a switchare i pin indicati in modo che sia fattibile fare il cablaggio dritto. Un altro motivo per cui il cavo incrociato non si usa piÃ¹ Ã¨ perchÃ© i dispositivi nuovi riescono subito a riconoscere se stiamo trasmettendo o ricevendo, scambiandosi automaticamente in base alla necessitÃ .
 
