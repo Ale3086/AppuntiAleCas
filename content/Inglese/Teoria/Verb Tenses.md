@@ -72,7 +72,7 @@ Used to connect the past to the present, without saying exactly when something h
 - Often used with ever, never, just, yet, already, for, since
 
 #### Structure:
-![697](../../Zimmagini/Pasted%20image%2020260712220155.jpg)
+<img src="../../Zimmagini/Pasted%20image%2020260712220155.jpg" width="697">
 
 #### Usage:
 - No specific time expression: I **have visited** Paris.
@@ -108,7 +108,7 @@ Used to emphasise the duration of an action that started in the past and is conn
 - Not normally used with stative verbs
 
 #### Structure:
-![697](../../Zimmagini/Pasted%20image%2020260712220218.jpg)
+<img src="../../Zimmagini/Pasted%20image%2020260712220218.jpg" width="697">
 
 #### Usage:
 - Action started in the past, continued to now: I **have been studying** English since 2020.
@@ -169,7 +169,7 @@ Used to describe an action that was in progress at a specific moment in the past
 - Requires a specific past moment or another action to relate to (often introduced by when/while)
 
 #### Structure:
-![697](../../Zimmagini/Pasted%20image%2020260713134922.png)
+<img src="../../Zimmagini/Pasted%20image%2020260713134922.png" width="697">
 
 #### Usage:
 - Action in progress at a specific past moment: At 8 pm I **was having** dinner.
@@ -200,7 +200,7 @@ Used to show that an action happened and finished before another action in the p
 - Cannot be used alone to describe a single past action
 
 #### Structure:
-![697](../../Zimmagini/Pasted%20image%2020260713134939.jpg)
+<img src="../../Zimmagini/Pasted%20image%2020260713134939.jpg" width="697">
 
 #### Usage:
 - Action concluded before another past action: She **had left** before I arrived.
@@ -231,7 +231,7 @@ Used to emphasise the duration of an action that happened before another past ac
 - Requires a reference to another past action
 
 #### Structure:
-![697](../../Zimmagini/Pasted%20image%2020260713134954.jpg)
+<img src="../../Zimmagini/Pasted%20image%2020260713134954.jpg" width="697">
 
 #### Usage:
 - Duration of an action before another past action: I **had been working** for five hours before I **took** a break.
