@@ -1,4 +1,4 @@
-﻿## Significati colori e simboli
+## Significati colori e simboli
 Per crimpare un cavo di rete (doppino) in rame ci sono due modi per crimpare i fili, utilizzando rispettivamente due standard, usando **due normative**; di conseguenza ordinando i colori in modi diversi.
 ![](../../Zimmagini/Pasted%20image%2020260519122120.png)
 
@@ -13,8 +13,6 @@ Mentre per i simboli `-` e `+` che vediamo dai due poli dei cavi nell'immagine c
 ## Unione dispositivi
 I cavi possono essere sia **dritti** che **incrociati**, i quali si crimpano in due modi diversi. Ognuna delle due strutture ha un suo preciso scopo, infatti i cavi dritti si usano quando bisogna collegare due **dispositivi diversi** (PC-Hub); mentre invece i cavi incrociati si vanno ad utilizzare per comunicare tra due **dispositivi uguali** (PC-PC).
 
-<img src="../../Zimmagini/out1.gif" width="555">
+![555](../../Zimmagini/out1.gif)
 
-**Il cavo incrociato non si usa quasi mai**, questo perchÃ© se la casa elettronica giÃ  conosce che verranno collegati due dispositivi uguali in produzione andrÃ  a switchare i pin indicati in modo che sia fattibile fare il cablaggio dritto. Un altro motivo per cui il cavo incrociato non si usa piÃ¹ Ã¨ perchÃ© i dispositivi nuovi riescono subito a riconoscere se stiamo trasmettendo o ricevendo, scambiandosi automaticamente in base alla necessitÃ .
-
-
+**Il cavo incrociato non si usa quasi mai**, questo perché se la casa elettronica già conosce che verranno collegati due dispositivi uguali in produzione andrà a switchare i pin indicati in modo che sia fattibile fare il cablaggio dritto. Un altro motivo per cui il cavo incrociato non si usa più è perché i dispositivi nuovi riescono subito a riconoscere se stiamo trasmettendo o ricevendo, scambiandosi automaticamente in base alla necessità.
