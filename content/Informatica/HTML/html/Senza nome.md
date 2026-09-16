@@ -305,6 +305,7 @@ Crea collegamenti ipertestuali. Può avvolgere anche elementi block-level.
 <!-- Link con immagine -->
 <a href="/">
   <img src="logo.png" alt="Homepage" />
+
 </a>
 ```
 
@@ -326,8 +327,10 @@ Incorpora un'immagine. Elemento void (nessun tag di chiusura).
 
 ```html
 <img src="foto.jpg" alt="Una bella foto" />
+
 <img src="logo.svg" alt="Logo aziendale" width="200" height="80" />
 <img src="grande.jpg" alt="Banner" loading="lazy" decoding="async" />
+
 <img
   src="small.jpg"
   srcset="medium.jpg 768w, large.jpg 1200w"
@@ -364,6 +367,7 @@ Permette di servire formati o immagini diverse in base a media query o supporto 
   <source srcset="mobile.jpg" media="(max-width: 600px)" />
   <!-- Fallback -->
   <img src="immagine.jpg" alt="Descrizione" />
+
 </picture>
 ```
 
@@ -1207,6 +1211,7 @@ Attributi ARIA migliorano l'accessibilità per tecnologie assistive (screen read
 
 <!-- Nascondere dal tree di accessibilità -->
 <img src="decorativa.svg" alt="" aria-hidden="true" />
+
 <span aria-hidden="true">→</span>
 ```
 

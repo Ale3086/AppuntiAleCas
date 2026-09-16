@@ -24,6 +24,7 @@ Crea collegamenti ipertestuali. Può avvolgere anche elementi block-level.
 <!-- Link con immagine -->
 <a href="/">
   <img src="logo.png" alt="Homepage" />
+
 </a>
 ```
 

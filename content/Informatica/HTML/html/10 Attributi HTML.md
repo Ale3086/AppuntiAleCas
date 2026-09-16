@@ -66,6 +66,7 @@ Attributi ARIA migliorano l'accessibilità per tecnologie assistive (screen read
 
 <!-- Nascondere dal tree di accessibilità -->
 <img src="decorativa.svg" alt="" aria-hidden="true" />
+
 <span aria-hidden="true">→</span>
 ```
 

@@ -4,8 +4,10 @@ Incorpora un'immagine. Elemento void (nessun tag di chiusura).
 
 ```html
 <img src="foto.jpg" alt="Una bella foto" />
+
 <img src="logo.svg" alt="Logo aziendale" width="200" height="80" />
 <img src="grande.jpg" alt="Banner" loading="lazy" decoding="async" />
+
 <img
   src="small.jpg"
   srcset="medium.jpg 768w, large.jpg 1200w"
@@ -42,6 +44,7 @@ Permette di servire formati o immagini diverse in base a media query o supporto 
   <source srcset="mobile.jpg" media="(max-width: 600px)" />
   <!-- Fallback -->
   <img src="immagine.jpg" alt="Descrizione" />
+
 </picture>
 ```
 
