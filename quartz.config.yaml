@@ -31,12 +31,12 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#0f172a"
-        lightgray: "#1e293b"
+        light: "#000000"
+        lightgray: "#1e1e1e"
         gray: "#646464"
         darkgray: "#d4d4d4"
         dark: "#f8fafc"
-        secondary: "#818cf8"
+        secondary: "#9333ea"
         tertiary: "#a5b4fc"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
@@ -282,6 +282,7 @@ layout:
         right: []
     canvas: {}
     bases: {}
+
 
 
 
