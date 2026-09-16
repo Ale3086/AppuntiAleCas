@@ -6,19 +6,19 @@ cssclasses:
 
 # 📚 Appunti di AleCas
 
-Benvenuto nella mia raccolta personale di appunti. Seleziona una materia per iniziare a studiare!
+Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in continua evoluzione mi accompagnerà fino alla quinta superiore e oltre, fungendo da vero e proprio archivio personale per ripassare e consolidare le mie conoscenze. Usa la barra laterale o seleziona una materia qui sotto per esplorare!
 
 ---
 
 ## 💻 [[Informatica]]
-Appunti su C++, HTML, gestione dei file, classi e strutture dati.
+Lo studio del pensiero computazionale e della logica di programmazione. In questa sezione raccoglierò tutto ciò che riguarda i linguaggi di sviluppo, gli algoritmi, le strutture dati e le architetture software.
 
 ## 🇬🇧 [[Inglese]]
-Grammatica, tempi verbali e preparazione per le certificazioni linguistiche.
+Il passaporto per il mondo. Qui troverai regole grammaticali, lessico, strutture linguistiche e materiale di preparazione per affrontare certificazioni e test di livello internazionale.
 
 ## 🌐 [[Sistemi e reti]]
-Modello ISO-OSI, protocolli di rete, architetture e cablaggio strutturato.
+Il dietro le quinte di Internet e della comunicazione digitale. Appunti su come i computer "parlano" tra loro, i protocolli di rete, i modelli teorici come ISO-OSI e la sicurezza informatica.
 
 ## 📝 [[TIPSIT]]
-Tecnologie Informatiche e Progettazione di Sistemi IT.
+Tecnologie Informatiche e Progettazione di Sistemi IT. Un mix tra teoria e pratica per capire come si progettano e gestiscono i sistemi informatici complessi.
 
