@@ -1,4 +1,4 @@
-# **Present Tenses**
+﻿# **Present Tenses**
 ## 1. Present Simple
 Used to talk about habits, routines, general truths and permanent states.
 #### Requirements:
@@ -10,13 +10,13 @@ Used to talk about habits, routines, general truths and permanent states.
 
 #### Usage:
 - Habit/routine: I **brush** my teeth every morning.
-- General truth: Water **boils** at 100°C.
+- General truth: Water **boils** at 100Â°C.
 - Permanent state: She **owns** a small bookshop.
 - Fixed timetable: The film **starts** at 8 pm.
 - Instructions: First, you **mix** the flour and the sugar.
 
 > [!NOTE]- TRADUZIONE
-> Si usa per parlare di abitudini, routine, verità generali e stati permanenti.
+> Si usa per parlare di abitudini, routine, veritÃ  generali e stati permanenti.
 > **Requisiti:**
 > - Non richiede un'espressione di tempo
 > - Richiede la desinenza -s/-es sul verbo alla terza persona singolare
@@ -28,7 +28,7 @@ Used to talk about habits, routines, general truths and permanent states.
 >
 > **Uso:**
 > - Abitudine/routine: I **brush** my teeth every morning. (Mi lavo i denti ogni mattina.)
-> - Verità generale: Water **boils** at 100°C. (L'acqua bolle a 100°C.)
+> - VeritÃ  generale: Water **boils** at 100Â°C. (L'acqua bolle a 100Â°C.)
 > - Stato permanente: She **owns** a small bookshop. (Lei possiede una piccola libreria.)
 > - Orario fisso: The film **starts** at 8 pm. (Il film inizia alle 20.)
 > - Istruzioni: First, you **mix** the flour and the sugar. (Prima, mescoli la farina e lo zucchero.)
@@ -83,7 +83,7 @@ Used to connect the past to the present, without saying exactly when something h
 - Result visible now: I **have lost** my keys.
 
 > [!NOTE]- TRADUZIONE
-> Si usa per collegare il passato al presente, senza dire esattamente quando è successo qualcosa.
+> Si usa per collegare il passato al presente, senza dire esattamente quando Ã¨ successo qualcosa.
 > **Requisiti:**
 > - Non richiede/non vuole un'espressione di tempo specifica (niente yesterday, in 2020, last week)
 > - Si usa spesso con ever, never, just, yet, already, for, since
@@ -118,7 +118,7 @@ Used to emphasise the duration of an action that started in the past and is conn
 > [!NOTE]- TRADUZIONE
 > Si usa per dare enfasi alla durata di un'azione iniziata nel passato e collegata al presente.
 > **Requisiti:**
-> - Richiede for/since (o un'altra espressione di durata) per specificare quanto è durata l'azione
+> - Richiede for/since (o un'altra espressione di durata) per specificare quanto Ã¨ durata l'azione
 > - Non si usa normalmente con i verbi di stato
 >
 > **Struttura:**
@@ -128,7 +128,7 @@ Used to emphasise the duration of an action that started in the past and is conn
 >
 > **Uso:**
 > - Azione iniziata nel passato, continuata fino ad ora: I **have been studying** English since 2020. (Studio inglese dal 2020.)
-> - Azione appena finita, effetti visibili: She is tired because she **has been running**. (È stanca perché ha corso.)
+> - Azione appena finita, effetti visibili: She is tired because she **has been running**. (Ãˆ stanca perchÃ© ha corso.)
 > - Enfasi sulla durata: They **have been waiting** for two hours. (Aspettano da due ore.)
 
 ---
@@ -159,8 +159,8 @@ Used to talk about a completed action in the past.
 >
 > **Uso:**
 > - Con un'espressione di tempo: I **visited** Rome last year. (Ho visitato Roma l'anno scorso.)
-> - Azione passata conclusa: She **closed** the door and **left**. (Ha chiuso la porta ed è uscita.)
-> - Sequenza di azioni concluse: He **woke up**, **had** breakfast and **went** to work. (Si è svegliato, ha fatto colazione ed è andato al lavoro.)
+> - Azione passata conclusa: She **closed** the door and **left**. (Ha chiuso la porta ed Ã¨ uscita.)
+> - Sequenza di azioni concluse: He **woke up**, **had** breakfast and **went** to work. (Si Ã¨ svegliato, ha fatto colazione ed Ã¨ andato al lavoro.)
 > - Persone morte/fatti storici: Leonardo da Vinci **painted** the Mona Lisa. (Leonardo da Vinci dipinse la Gioconda.)
 
 ## 6. Past Continuous
@@ -208,10 +208,10 @@ Used to show that an action happened and finished before another action in the p
 - Sequence between two past facts: I **had never seen** snow before I moved to Turin.
 
 > [!NOTE]- TRADUZIONE
-> Si usa per mostrare che un'azione è avvenuta e si è conclusa prima di un'altra azione nel passato.
+> Si usa per mostrare che un'azione Ã¨ avvenuta e si Ã¨ conclusa prima di un'altra azione nel passato.
 > **Requisiti:**
-> - Richiede un riferimento a un'altra azione passata più recente (spesso con before/after)
-> - Non può essere usato da solo per descrivere una singola azione passata
+> - Richiede un riferimento a un'altra azione passata piÃ¹ recente (spesso con before/after)
+> - Non puÃ² essere usato da solo per descrivere una singola azione passata
 >
 > **Struttura:**
 > `Soggetto + had + verbo (participio passato) + before + soggetto + verbo (passato)`
@@ -220,7 +220,7 @@ Used to show that an action happened and finished before another action in the p
 > Interrogativa: `Had + soggetto + participio passato?`
 >
 > **Uso:**
-> - Azione conclusa prima di un'altra azione passata: She **had left** before I arrived. (Era già andata via prima che io arrivassi.)
+> - Azione conclusa prima di un'altra azione passata: She **had left** before I arrived. (Era giÃ  andata via prima che io arrivassi.)
 > - Con "after": After they **had finished** dinner, they went for a walk. (Dopo che ebbero finito di cenare, andarono a fare una passeggiata.)
 > - Sequenza tra due fatti passati: I **had never seen** snow before I moved to Turin. (Non avevo mai visto la neve prima di trasferirmi a Torino.)
 
@@ -240,7 +240,7 @@ Used to emphasise the duration of an action that happened before another past ac
 > [!NOTE]- TRADUZIONE
 > Si usa per dare enfasi alla durata di un'azione avvenuta prima di un'altra azione passata.
 > **Requisiti:**
-> - Richiede for + durata per enfatizzare quanto è durata l'azione
+> - Richiede for + durata per enfatizzare quanto Ã¨ durata l'azione
 > - Richiede un riferimento a un'altra azione passata
 >
 > **Struttura:**
@@ -250,7 +250,7 @@ Used to emphasise the duration of an action that happened before another past ac
 >
 > **Uso:**
 > - Durata di un'azione prima di un'altra azione passata: I **had been working** for five hours before I **took** a break. (Lavoravo da cinque ore prima di fare una pausa.)
-> - Causa di una situazione passata: She was tired because she **had been studying** all night. (Era stanca perché aveva studiato tutta la notte.)
+> - Causa di una situazione passata: She was tired because she **had been studying** all night. (Era stanca perchÃ© aveva studiato tutta la notte.)
 
 ---
 # **Future Tenses**
@@ -269,7 +269,7 @@ Used for decisions, promises and predictions about the future that we are not fu
 ![](../../Zimmagini/Pasted%20image%2020260713135019.jpg)
 
 #### Usage:
-- Spontaneous decision/offer: The phone is ringing — I **will answer** it.
+- Spontaneous decision/offer: The phone is ringing â€” I **will answer** it.
 - Promise: I **will call** you tomorrow, I promise.
 - Uncertain prediction/personal opinion: I think it **will rain** tomorrow.
 - Request: **Will** you help me with this bag?
@@ -277,7 +277,7 @@ Used for decisions, promises and predictions about the future that we are not fu
 > [!NOTE]- TRADUZIONE
 > Si usa per decisioni, promesse e previsioni sul futuro di cui non siamo del tutto sicuri.
 > **Requisiti:**
-> - Non richiede un piano fatto in anticipo (si usa per decisioni prese lì per lì)
+> - Non richiede un piano fatto in anticipo (si usa per decisioni prese lÃ¬ per lÃ¬)
 >
 > **Struttura:**
 > `Soggetto + will + verbo (forma base)`
@@ -285,9 +285,9 @@ Used for decisions, promises and predictions about the future that we are not fu
 > Interrogativa: `Will + soggetto + verbo (forma base)?`
 >
 > **Uso:**
-> - Decisione spontanea/offerta: The phone is ringing — I **will answer** it. (Il telefono sta squillando — rispondo io.)
-> - Promessa: I **will call** you tomorrow, I promise. (Ti chiamerò domani, promesso.)
-> - Previsione incerta/opinione personale: I think it **will rain** tomorrow. (Penso che domani pioverà.)
+> - Decisione spontanea/offerta: The phone is ringing â€” I **will answer** it. (Il telefono sta squillando â€” rispondo io.)
+> - Promessa: I **will call** you tomorrow, I promise. (Ti chiamerÃ² domani, promesso.)
+> - Previsione incerta/opinione personale: I think it **will rain** tomorrow. (Penso che domani pioverÃ .)
 > - Richiesta: **Will** you help me with this bag? (Mi aiuti con questa borsa?)
 
 ### Going to
@@ -301,13 +301,13 @@ Used for plans already decided and predictions based on evidence we can see now.
 
 #### Usage:
 - Plan already decided: I **am going to study** medicine at university.
-- Prediction based on evidence: Look at those clouds — it **is going to rain**.
+- Prediction based on evidence: Look at those clouds â€” it **is going to rain**.
 - Stated intention: They **are going to renovate** the kitchen next month.
 
 > [!NOTE]- TRADUZIONE
-> Si usa per piani già decisi e previsioni basate su prove che possiamo vedere ora.
+> Si usa per piani giÃ  decisi e previsioni basate su prove che possiamo vedere ora.
 > **Requisiti:**
-> - Richiede che l'intenzione/il piano esista già prima del momento in cui si parla
+> - Richiede che l'intenzione/il piano esista giÃ  prima del momento in cui si parla
 > - Richiede prove visibili per le previsioni
 >
 > **Struttura:**
@@ -316,8 +316,8 @@ Used for plans already decided and predictions based on evidence we can see now.
 > Interrogativa: `Be + soggetto + going to + verbo?`
 >
 > **Uso:**
-> - Piano già deciso: I **am going to study** medicine at university. (Studierò medicina all'università.)
-> - Previsione basata su prove: Look at those clouds — it **is going to rain**. (Guarda quelle nuvole — pioverà.)
+> - Piano giÃ  deciso: I **am going to study** medicine at university. (StudierÃ² medicina all'universitÃ .)
+> - Previsione basata su prove: Look at those clouds â€” it **is going to rain**. (Guarda quelle nuvole â€” pioverÃ .)
 > - Intenzione dichiarata: They **are going to renovate** the kitchen next month. (Ristruttureranno la cucina il mese prossimo.)
 
 ### Present Simple (future use)
@@ -346,9 +346,9 @@ Used for future events that follow a fixed timetable or a scheduled routine.
 >
 > **Uso:**
 > - Orario fisso: The train **leaves** at 6:45 tomorrow morning. (Il treno parte alle 6:45 domani mattina.)
-> - Dopo "when": I will call you when I **arrive**. (Ti chiamerò quando arriverò.)
-> - Dopo "as soon as": She will let you know as soon as she **hears** anything. (Ti farà sapere non appena avrà notizie.)
-> - Dopo "before/after/until": Wait here until I **come** back. (Aspetta qui finché non torno.)
+> - Dopo "when": I will call you when I **arrive**. (Ti chiamerÃ² quando arriverÃ².)
+> - Dopo "as soon as": She will let you know as soon as she **hears** anything. (Ti farÃ  sapere non appena avrÃ  notizie.)
+> - Dopo "before/after/until": Wait here until I **come** back. (Aspetta qui finchÃ© non torno.)
 
 ### Present Continuous (future use)
 Used for future plans already arranged with other people, for a specific time and place.
@@ -363,16 +363,16 @@ Used for future plans already arranged with other people, for a specific time an
 - Confirmed event: We **are flying** to Spain next Friday.
 
 > [!NOTE]- TRADUZIONE
-> Si usa per piani futuri già organizzati con altre persone, per un orario e/o un luogo specifici.
+> Si usa per piani futuri giÃ  organizzati con altre persone, per un orario e/o un luogo specifici.
 > **Requisiti:**
-> - Richiede un accordo specifico (orario e/o luogo) già preso con qualcun altro
+> - Richiede un accordo specifico (orario e/o luogo) giÃ  preso con qualcun altro
 >
 > **Struttura:**
 > `Soggetto + am/is/are + verbo-ing + (espressione di tempo/luogo)`
 >
 > **Uso:**
-> - Piano già fissato con altre persone: I **am meeting** Sara at the cinema at 8 pm. (Incontro Sara al cinema alle 20.)
-> - Evento confermato: We **are flying** to Spain next Friday. (Voliamo in Spagna venerdì prossimo.)
+> - Piano giÃ  fissato con altre persone: I **am meeting** Sara at the cinema at 8 pm. (Incontro Sara al cinema alle 20.)
+> - Evento confermato: We **are flying** to Spain next Friday. (Voliamo in Spagna venerdÃ¬ prossimo.)
 
 ### Shall
 Used mainly with I/We for polite suggestions and offers.
@@ -400,7 +400,7 @@ Used mainly with I/We for polite suggestions and offers.
 > **Uso:**
 > - Proposta cortese: **Shall** we go for a walk? (Andiamo a fare una passeggiata?)
 > - Offerta: **Shall** I open the window for you? (Ti apro la finestra?)
-> - Futuro formale (raro, inglese britannico): I **shall** be there by noon. (Sarò lì entro mezzogiorno.)
+> - Futuro formale (raro, inglese britannico): I **shall** be there by noon. (SarÃ² lÃ¬ entro mezzogiorno.)
 
 ## 10. Future Continuous
 Used for an action that will be in progress at a specific moment in the future.
@@ -416,9 +416,9 @@ Used for an action that will be in progress at a specific moment in the future.
 - Polite question about someone's plans: **Will** you **be using** the car this evening?
 
 > [!NOTE]- TRADUZIONE
-> Si usa per un'azione che sarà in corso in un momento preciso nel futuro.
+> Si usa per un'azione che sarÃ  in corso in un momento preciso nel futuro.
 > **Requisiti:**
-> - Richiede un momento futuro specifico in cui l'azione sarà in corso
+> - Richiede un momento futuro specifico in cui l'azione sarÃ  in corso
 >
 > **Struttura:**
 > `Soggetto + will be + verbo-ing`
@@ -426,8 +426,8 @@ Used for an action that will be in progress at a specific moment in the future.
 > Interrogativa: `Will + soggetto + be + verbo-ing?`
 >
 > **Uso:**
-> - Azione in corso in un momento futuro preciso: This time tomorrow, I **will be flying** to London. (A quest'ora domani, starò volando verso Londra.)
-> - Azione futura di routine/programmata, detta senza enfasi: I **will be seeing** him at the meeting anyway. (Lo vedrò comunque alla riunione.)
+> - Azione in corso in un momento futuro preciso: This time tomorrow, I **will be flying** to London. (A quest'ora domani, starÃ² volando verso Londra.)
+> - Azione futura di routine/programmata, detta senza enfasi: I **will be seeing** him at the meeting anyway. (Lo vedrÃ² comunque alla riunione.)
 > - Domanda cortese sui piani di qualcuno: **Will** you **be using** the car this evening? (Userai la macchina stasera?)
 
 ## 11. Future Perfect
@@ -443,7 +443,7 @@ Used for an action that will be completed by a certain point in the future.
 - With "by the time": By the time you arrive, we **will have eaten** dinner.
 
 > [!NOTE]- TRADUZIONE
-> Si usa per un'azione che sarà completata entro un determinato momento nel futuro.
+> Si usa per un'azione che sarÃ  completata entro un determinato momento nel futuro.
 > **Requisiti:**
 > - Richiede una scadenza futura, di solito introdotta da "by" o "by the time"
 >
@@ -453,8 +453,8 @@ Used for an action that will be completed by a certain point in the future.
 > Interrogativa: `Will + soggetto + have + participio passato?`
 >
 > **Uso:**
-> - Azione completata entro un momento futuro: By next year, I **will have finished** my degree. (Entro l'anno prossimo avrò finito la laurea.)
-> - Con "by the time": By the time you arrive, we **will have eaten** dinner. (Quando arriverai, avremo già cenato.)
+> - Azione completata entro un momento futuro: By next year, I **will have finished** my degree. (Entro l'anno prossimo avrÃ² finito la laurea.)
+> - Con "by the time": By the time you arrive, we **will have eaten** dinner. (Quando arriverai, avremo giÃ  cenato.)
 
 ## 12. Future Perfect Continuous
 Used to emphasise the duration of an action up to a specific point in the future.
@@ -479,5 +479,7 @@ Used to emphasise the duration of an action up to a specific point in the future
 > Interrogativa: `Will + soggetto + have + been + verbo-ing?`
 >
 > **Uso:**
-> - Durata di un'azione fino a un punto futuro: By December, I **will have been living** in Turin for five years. (A dicembre vivrò a Torino da cinque anni.)
-> - Enfasi sulla durata continuativa fino al futuro: Next month, she **will have been working** here for a decade. (Il mese prossimo lavorerà qui da un decennio.)
+> - Durata di un'azione fino a un punto futuro: By December, I **will have been living** in Turin for five years. (A dicembre vivrÃ² a Torino da cinque anni.)
+> - Enfasi sulla durata continuativa fino al futuro: Next month, she **will have been working** here for a decade. (Il mese prossimo lavorerÃ  qui da un decennio.)
+
+

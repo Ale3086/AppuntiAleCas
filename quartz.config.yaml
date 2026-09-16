@@ -76,7 +76,7 @@ plugins:
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
-      markdownLinkResolution: absolute
+      markdownLinkResolution: shortest
     order: 60
   - source: "@quartz-community/description"
     enabled: true
@@ -282,6 +282,8 @@ layout:
         right: []
     canvas: {}
     bases: {}
+
+
 
 
 
