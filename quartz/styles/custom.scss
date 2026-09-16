@@ -1,3 +1,33 @@
-@use "./variables.scss" as *;
+﻿@use "./variables.scss" as *;
 
-// put your custom CSS here!
+.section-ul {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+  gap: 1rem !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+.section-li {
+  background: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.section-li:hover {
+  transform: translateY(-2px);
+  border-color: var(--tertiary);
+}
+.section-li > .section > .desc > h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.section-li > .section > .desc > h3 > a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+.section-li > .section > .meta {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
