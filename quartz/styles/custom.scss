@@ -1,4 +1,6 @@
-﻿@use "./variables.scss" as *;
+@use "./variables.scss" as *;
 
 // put your custom CSS here!
-
+.note-properties {
+  display: none !important;
+}
