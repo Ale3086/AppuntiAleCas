@@ -15,7 +15,7 @@ Per accedere alla riga di comando in ambiente simulato, segui questi passaggi :
     
 2. Verifica i parametri della **Terminal Configuration**:
 	
-    ![](../../Zimmagini/Pasted%20image%2020260518102714.png)
+    ![[Pasted image 20260518102714.png]]
     
 3. Clicca su **OK** e premi **Invio** nella finestra nera per visualizzare il prompt.
 

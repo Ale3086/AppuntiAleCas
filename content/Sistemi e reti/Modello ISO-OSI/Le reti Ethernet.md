@@ -1,6 +1,6 @@
 Le reti Ethernet sono una particolare tecnologia usata nelle reti locali (LAN) ed è basata sullo **standard IEEE 802.3**. Nata inizialmente come rete a topologia a bus con cavi coassiali, evolvendosi col tempo in una topologia a stella, in cui il centro della rete è occupato da un dispositivo **apparato centrale** come hub o switch. Nel modello ISO/OSI l' Ethernet lavora principalmente al livello **Fisico e Data Link**. 
 
-![](../../Zimmagini/Pasted%20image%2020260428131702.png)
+![[Pasted image 20260428131702.png]]
 
 ## Gli indirizzi MAC
 In una rete Ethernet, ogni messaggio deve avere un destinatario, indicato grazie all'**indirizzo di MAC di destinazione**, ovvero l'identificatore univoco a 48 bit (espresso in esadecimale) della scheda di rete specifica a cui è destinato un pacchetto dati in una rete locale (LAN o Wi-Fi) . L'indirizzo MAC di destinazione può essere di tre tipi:

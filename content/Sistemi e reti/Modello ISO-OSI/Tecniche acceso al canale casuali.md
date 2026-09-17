@@ -13,11 +13,11 @@ Questo protocollo si potrebbe analogamente collegare all'attraversamento di un i
     
 - **Collision Detection (Rilevazione Collisioni):** Se due dispositivi inviano un messaggio nello stesso momento, avviene una **collisione**. Questo causa la degenerazione dei segnali e la perdita dei dati.
 
-![](../../Zimmagini/Pasted%20image%2020260428183244.png)
+![[Pasted image 20260428183244.png]]
 
 **Perché avvengono le collisioni?** Anche se il canale sembra libero, un segnale può impiegare del tempo per propagarsi lungo la linea. È come immettersi in una strada dopo aver guardato: un'auto velocissima potrebbe spuntare dietro una curva quando sei già impegnato nell'incrocio.
 
-![](../../Zimmagini/Pasted%20image%2020260428132950.png)
+![[Pasted image 20260428132950.png]]
 ## Gestione degli errori e Algoritmo di Backoff
 Se una stazione rileva una collisione mentre sta trasmettendo, deve agire immediatamente, praticamente inizia un algoritmo che invia un segale, indicando a tutti i segali che c'è stata una collisione; questo segnale smette di far inviare altre trasmissioni e quindi va a liberare il canale, andando ad aspettare un tempo casuale esponenziale per 16 tentativi prima di annullare definitivamente la trasmissione. L'algoritmo descritto segue queste fasi:
 
@@ -51,7 +51,7 @@ Quando un dispositivo deve inviare una dei dati, segue questi passaggi obbligato
     
 5. **L'invio sicuro:** Ora che il canale è isolato e sicuro, il mittente invia la sua **trama** di dati senza il rischio che qualcuno lo interrompa.
 
-![](../../Zimmagini/Pasted%20image%2020260520162338.png)
+![[Pasted image 20260520162338.png]]
 
 ### Il problema del "Terminale Nascosto" (_Hidden Terminal_)
 Il meccanismo RTS/CTS serve soprattutto a risolvere un problema tipico del wireless: il **terminale nascosto**.

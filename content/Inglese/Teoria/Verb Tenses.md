@@ -6,7 +6,7 @@ Used to talk about habits, routines, general truths and permanent states.
 - Requires an -s/-es ending on the verb for the 3rd person singular
 
 #### Structure:
-![](../../Zimmagini/1744639012_Present-Simple-or-Simple-Present-Tense-Chart-Table-Structure-or-Form-Examples-scaled.webp)
+![[1744639012_Present-Simple-or-Simple-Present-Tense-Chart-Table-Structure-or-Form-Examples-scaled.webp]]
 
 #### Usage:
 - Habit/routine: I **brush** my teeth every morning.
@@ -40,7 +40,7 @@ Used to talk about actions that are happening now or around now.
 - Not normally used with stative verbs (know, believe, want, own, love, etc.), unless they take on a dynamic meaning
 
 #### Structure:
-![](../../Zimmagini/Pasted%20image%2020260712220130.jpg)
+![[Pasted image 20260712220130.jpg]]
 
 #### Usage:
 - Action in progress now: She **is cooking** dinner right now.
@@ -139,7 +139,7 @@ Used to talk about a completed action in the past.
 - Requires a time expression (yesterday, last week, in 2010, etc.)
 
 #### Structure:
-![](../../Zimmagini/Pasted%20image%2020260713134902.jpg)
+![[Pasted image 20260713134902.jpg]]
 
 #### Usage:
 - With a time expression: I **visited** Rome last year.
@@ -266,7 +266,7 @@ Used for decisions, promises and predictions about the future that we are not fu
 - Does not require a plan made in advance (used for decisions made on the spot)
 
 #### Structure:
-![](../../Zimmagini/Pasted%20image%2020260713135019.jpg)
+![[Pasted image 20260713135019.jpg]]
 
 #### Usage:
 - Spontaneous decision/offer: The phone is ringing â€” I **will answer** it.
@@ -297,7 +297,7 @@ Used for plans already decided and predictions based on evidence we can see now.
 - Requires visible evidence for predictions
 
 #### Structure:
-![](../../Zimmagini/Pasted%20image%2020260713135038.jpg)
+![[Pasted image 20260713135038.jpg]]
 
 #### Usage:
 - Plan already decided: I **am going to study** medicine at university.
@@ -408,7 +408,7 @@ Used for an action that will be in progress at a specific moment in the future.
 - Requires a specific future moment to be in progress at
 
 #### Structure:
-![](../../Zimmagini/Pasted%20image%2020260713135419.jpg)
+![[Pasted image 20260713135419.jpg]]
 
 #### Usage:
 - Action in progress at a precise future moment: This time tomorrow, I **will be flying** to London.
@@ -436,7 +436,7 @@ Used for an action that will be completed by a certain point in the future.
 - Requires a future deadline, usually introduced by "by" or "by the time"
 
 #### Structure:
-![](../../Zimmagini/Pasted%20image%2020260713135432.jpg)
+![[Pasted image 20260713135432.jpg]]
 
 #### Usage:
 - Action completed by a future point: By next year, I **will have finished** my degree.
@@ -462,7 +462,7 @@ Used to emphasise the duration of an action up to a specific point in the future
 - Requires for + duration and a future deadline (by + time)
 
 #### Structure:
-![](../../Zimmagini/Pasted%20image%2020260713135458.png)
+![[Pasted image 20260713135458.png]]
 
 #### Usage:
 - Duration of an action up to a future point: By December, I **will have been living** in Turin for five years.

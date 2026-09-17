@@ -29,11 +29,11 @@ Il suo funzionamento si divide in due operazioni, la prima che serve per capire 
 
 > **Nota sulla sicurezza:** Poiché lo switch trasmette in modo selettivo, impedisce a un computer di intercettare facilmente il traffico destinato ad altri, migliorando la sicurezza informatica della rete.
 
-![](../../Zimmagini/Pasted%20image%2020260520164836.png)
+![[Pasted image 20260520164836.png]]
 ### Spoofing
 E' una particolare tecnica usata da hacker informatici in cui si va a rubare o falsificare l'identità di un dispositivo o di un utente (usando un indirizzo MAC in questo caso, ma anche un IP o un'email falsa) per ingannare la rete. Serve a superare i blocchi di sicurezza e a intercettare i dati altrui senza farsi scoprire. Questa particolare tecnica si utilizza seguendo tre passaggi ben definiti.
 
-![](../../Zimmagini/Pasted%20image%2020260520163914.jpg)
+![[Pasted image 20260520163914.jpg]]
 #### 1. La Fase di Ricognizione (Trovare il Target)
 L'attaccante deve prima identificare l'indirizzo MAC della vittima (Dispositivo A) e idealmente quello del Gateway (il router). Questo serve a capire quale identità "rubare" per intercettare il flusso di dati interessante.
 
