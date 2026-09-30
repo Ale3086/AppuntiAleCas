@@ -13,7 +13,8 @@ Ogni operazione logica viene eseguita sul branch dedicato `refactor/quartz-prep`
 
 | Commit Hash | Timestamp (UTC) | Action | Target Files | Details |
 |---|---|---|---|---|
-| `[in-progress]` | 2026-09-30 11:15:00 UTC | chore: branch and changelog init | `CHANGELOG_RIORGANIZZAZIONE.md` | Inizializzazione branch `refactor/quartz-prep`, predisposizione registro modifiche, tabella Safe-Delete e matrice di verifica. |
+| `e8c9f0f` | 2026-09-30 11:15:00 UTC | chore: branch and changelog init | `CHANGELOG_RIORGANIZZAZIONE.md` | Inizializzazione branch `refactor/quartz-prep`, predisposizione registro modifiche, tabella Safe-Delete e matrice di verifica. |
+| `347ec62` | 2026-09-30 11:17:00 UTC | test: establish e2e verification suite with check_links and check_tags | `check_links.py`, `check_tags.py`, `TEST_INFRA.md`, `TEST_READY.md` | Distribuzione harness di test standard Python (zero dipendenze). `check_links.py` valida 244 link (0 rotti, exit code 0). `check_tags.py` identifica service/draft page (55 file) e isola 101 note prive di tag gerarchici (exit code 1 atteso pre-M3). Redazione di `TEST_INFRA.md` e pubblicazione di `TEST_READY.md`. |
 
 *(Nota: Ogni milestone successiva aggiungerà le proprie azioni registrando il relativo hash di commit, file modificati e descrizione delle trasformazioni effettuate).*
 
@@ -40,8 +41,8 @@ Stato di conformità rispetto ai criteri di accettazione Quartz:
 
 | Criterio di Verifica | Strumento di Controllo | Obiettivo | Stato Attuale | Note |
 |---|---|---|---|---|
-| **Integrità Wikilink** | `check_links.py` | 0 broken wikilinks | In corso (T1/M2) | Nessun link rotto tollerato su tutto il vault |
-| **Tassonomia Tag YAML** | `check_tags.py` | 100% file non-draft conformi | In corso (T1/M3) | Almeno 2 tag gerarchici (`materia/argomento`, `tipologia/concetto`) per nota |
-| **Compilazione Quartz** | `node ./quartz/bootstrap-cli.mjs build` | 0 errori fatali | In corso (M4) | Validazione schema frontmatter e parsing AST |
-| **Commit Atomici Git** | `git log --oneline` | Conventional commits | Conforme (M1) | Commit granulari tracciati sul branch `refactor/quartz-prep` |
-| **Remote Sync** | `git push origin refactor/quartz-prep` | Branch sincronizzato | Conforme (M1) | Push automatico su remote repository |
+| **Integrità Wikilink** | `check_links.py` | 0 broken wikilinks | **Conforme (PASS)** | 244 link verificati, 0 link rotti (Exit code 0) |
+| **Tassonomia Tag YAML** | `check_tags.py` | 100% file non-draft conformi | **Pronto per M3 (Atteso FAIL)** | 55 service/draft identificati; 101 note prive di tag gerarchici rilevate (Exit code 1) |
+| **Compilazione Quartz** | `node ./quartz/bootstrap-cli.mjs build` | 0 errori fatali | **Conforme (PASS)** | Validazione schema frontmatter e parsing AST (552 file generati) |
+| **Commit Atomici Git** | `git log --oneline` | Conventional commits | **Conforme (PASS)** | Commit granulari tracciati sul branch `refactor/quartz-prep` |
+| **Remote Sync** | `git push origin refactor/quartz-prep` | Branch sincronizzato | **Conforme (PASS)** | Branch `refactor/quartz-prep` allineato con `origin` |
