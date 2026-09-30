@@ -1,3 +1,10 @@
+---
+title: "string"
+tags:
+  - informatica/cpp/librerie
+  - tipologia/reference
+---
+
 ## Indice
 
 - [[#length / size]]

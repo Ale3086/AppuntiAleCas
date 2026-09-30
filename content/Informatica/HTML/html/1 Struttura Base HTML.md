@@ -1,3 +1,10 @@
+---
+title: "1 Struttura Base HTML"
+tags:
+  - informatica/html/struttura
+  - tipologia/concetto
+---
+
 ## Struttura base
 
 Scheletro minimo di ogni documento HTML.

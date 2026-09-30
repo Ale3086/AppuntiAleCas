@@ -1,3 +1,10 @@
+---
+title: "Guida ai comandi terminali Linux"
+tags:
+  - tipsit/filesystem
+  - tipologia/guida-pratica
+---
+
 # Indice
 - [Comandi da Ricordare per Primi](#Comandi%20da%20Ricordare%20per%20Primi)
 - [Navigazione nel Terminale](#Navigazione%20nel%20Terminale)

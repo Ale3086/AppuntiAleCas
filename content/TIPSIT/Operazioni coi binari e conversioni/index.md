@@ -1,6 +1,7 @@
 ---
 title: Operazioni coi binari e conversioni
 description: Modulo completo su sistemi di numerazione, conversioni di base (interi e frazionari), aritmetica binaria e complemento a 2.
+draft: true
 ---
 
 # 🔢 Operazioni coi Binari e Conversioni

@@ -1,3 +1,10 @@
+---
+title: "Politics and Society"
+tags:
+  - inglese/vocabulary/society-world
+  - tipologia/glossario
+---
+
 Vocabulary relating to nations, government systems, elections, and civic duties.
 
 ## 1. General Government and Leadership (A2 - B1)

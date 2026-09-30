@@ -6,6 +6,7 @@ tags:
   - reti-informatiche
   - topologie-di-rete
   - lan-wan
+draft: true
 ---
 
 # Reti Informatiche: Classificazione Geografica e Topologie Fisiche

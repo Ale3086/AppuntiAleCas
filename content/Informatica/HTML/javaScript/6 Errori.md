@@ -1,3 +1,10 @@
+---
+title: "6 Errori"
+tags:
+  - informatica/javascript/errori
+  - tipologia/concetto
+---
+
 ## Indice
 
 - [[#try catch finally]]

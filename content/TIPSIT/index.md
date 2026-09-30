@@ -1,6 +1,7 @@
 ---
 title: TIPSIT
 description: Tecnologie Informatiche e Progettazione di Sistemi IT - Moduli teorici, guide pratiche e appunti di studio.
+draft: true
 ---
 
 # 📝 TIPSIT

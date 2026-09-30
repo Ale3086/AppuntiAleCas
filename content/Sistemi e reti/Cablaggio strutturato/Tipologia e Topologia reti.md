@@ -1,3 +1,10 @@
+---
+title: "Tipologia e Topologia reti"
+tags:
+  - sistemi-e-reti/topologie
+  - tipologia/teoria
+---
+
 ## Tipologia
 Ci va ad indicare l'estensione su cui agisce la rete.
 ![[Pasted image 20260421124803.png]]

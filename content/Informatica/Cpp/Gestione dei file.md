@@ -1,3 +1,10 @@
+---
+title: "Gestione dei file"
+tags:
+  - informatica/cpp/sintassi
+  - tipologia/guida-pratica
+---
+
 Un file è l'unità logica di memorizzazione dei dati su memoria di massa. che consente una memorizzazione persistente dei dati, non limitata dalle dimensioni della memoria centrale.
 
 Quando un nostro processo va ad aprire un file esso viene trasferito dall'hard-disk alla RAM e per rendere la modifica persistente si deve fare un'operazione per riportare dalla RAM all'hard-disk; se non si fanno il file non si aggiorna e quindi rimane con sempre i dati iniziali. Le operazioni per avere un file con una modifica persistente sono uguali per ogni linguaggio, ma le istruzioni dentro esse sono la vera cosa che cambiano effettivamente, ma di poco. Le operazioni sono:

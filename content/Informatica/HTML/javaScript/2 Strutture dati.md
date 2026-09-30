@@ -1,3 +1,10 @@
+---
+title: "2 Strutture dati"
+tags:
+  - informatica/javascript/strutture-dati
+  - tipologia/reference
+---
+
 ## Indice
 
 - [[#String]]

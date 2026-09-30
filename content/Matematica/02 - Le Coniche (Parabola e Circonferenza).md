@@ -1,3 +1,10 @@
+---
+title: "02 - Le Coniche (Parabola e Circonferenza)"
+tags:
+  - matematica/geometria-analitica
+  - tipologia/teoria
+---
+
 # Le Coniche: Parabola e Circonferenza
 
 ## 1. La Parabola

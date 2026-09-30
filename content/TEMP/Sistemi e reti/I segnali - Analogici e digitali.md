@@ -6,6 +6,7 @@ tags:
   - segnali
   - telecomunicazioni
   - analogico-digitale
+draft: true
 ---
 
 # I Segnali nelle Telecomunicazioni: Analogici e Digitali

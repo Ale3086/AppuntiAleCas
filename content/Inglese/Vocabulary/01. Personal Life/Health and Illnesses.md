@@ -1,3 +1,10 @@
+---
+title: "Health and Illnesses"
+tags:
+  - inglese/vocabulary/personal-life
+  - tipologia/glossario
+---
+
 Vocabulary related to body parts, medical symptoms, injuries, and treatments.
 
 ## 1. General Symptoms and Illnesses (A1 - B1)

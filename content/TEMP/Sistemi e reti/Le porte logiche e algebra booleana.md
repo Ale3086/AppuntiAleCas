@@ -6,6 +6,7 @@ tags:
   - elettronica-digitale
   - porte-logiche
   - algebra-booleana
+draft: true
 ---
 
 # Le Porte Logiche e l'Algebra Booleana

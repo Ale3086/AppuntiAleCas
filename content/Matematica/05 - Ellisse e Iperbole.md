@@ -1,3 +1,10 @@
+---
+title: "05 - Ellisse e Iperbole"
+tags:
+  - matematica/geometria-analitica
+  - tipologia/teoria
+---
+
 # Ellisse e Iperbole
 
 Oltre a Parabola e Circonferenza, le altre due coniche fondamentali sono l'Ellisse e l'Iperbole.

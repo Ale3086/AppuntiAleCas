@@ -1,3 +1,10 @@
+---
+title: "algorithm"
+tags:
+  - informatica/cpp/librerie
+  - tipologia/reference
+---
+
 ## Indice
 
 - [[#sort]]

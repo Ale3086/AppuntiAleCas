@@ -1,3 +1,10 @@
+---
+title: "Esercizi e Risorse"
+tags:
+  - inglese/grammatica/esercizi
+  - tipologia/esercizi
+---
+
 Qui troverai una selezione dei migliori siti gratuiti dove potrai mettere in pratica quanto appreso nei file di grammatica (Tempi Verbali, Condizionali, Voce Passiva). Puoi navigare all'interno di queste piattaforme per trovare decine di esercizi specifici sulle regole trattate.
 
 ### ✍️ Grammatica

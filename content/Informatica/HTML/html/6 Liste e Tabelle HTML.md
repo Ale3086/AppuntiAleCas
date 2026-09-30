@@ -1,3 +1,10 @@
+---
+title: "6 Liste e Tabelle HTML"
+tags:
+  - informatica/html/tabelle-e-liste
+  - tipologia/reference
+---
+
 ## ul e ol
 
 Liste non ordinate (`<ul>`) e ordinate (`<ol>`). Ogni elemento è un `<li>`.

@@ -1,3 +1,10 @@
+---
+title: "01 - La Retta"
+tags:
+  - matematica/geometria-analitica
+  - tipologia/teoria
+---
+
 # La Retta (Geometria Analitica)
 
 > [!info] Cos'è la retta?

@@ -1,3 +1,10 @@
+---
+title: "3 Testo HTML"
+tags:
+  - informatica/html/testo
+  - tipologia/reference
+---
+
 ## Headings
 
 Titoli da `<h1>` a `<h6>`. Usare un solo `<h1>` per pagina; la gerarchia deve essere logica.

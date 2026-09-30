@@ -7,6 +7,7 @@ tags:
   - multiplazione
   - commutazione
   - protocolli
+draft: true
 ---
 
 # Il Canale di Comunicazione: Multiplazione e Commutazione

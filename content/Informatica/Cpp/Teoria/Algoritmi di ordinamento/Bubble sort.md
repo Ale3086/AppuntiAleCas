@@ -1,3 +1,10 @@
+---
+title: "Bubble sort"
+tags:
+  - informatica/cpp/algoritmi
+  - tipologia/algoritmo
+---
+
 E’ un algoritmo semplice basato sul metodo degli scambi. 
 
 L’algoritmo confronta a due a due gli elementi adiacenti e li scambia tra loro. Se il primo elemento è maggiore del secondo quest’ultimo verrà spostato verso sinistra. Questo è il motivo anche di perché viene chiamato bubble sort, perché come le bolle la prima parte a essere ordinata e la parte maggiore dell'array.

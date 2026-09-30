@@ -6,6 +6,7 @@ tags:
   - automi
   - tabelle-di-transizione
   - sintesi-automi
+draft: true
 ---
 
 # Tabelle di Transizione e Trasformazione negli Automi

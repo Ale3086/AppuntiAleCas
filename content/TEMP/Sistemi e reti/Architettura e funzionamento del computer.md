@@ -7,6 +7,7 @@ tags:
   - hardware
   - cpu
   - memorie
+draft: true
 ---
 
 # Architettura e Funzionamento del Computer

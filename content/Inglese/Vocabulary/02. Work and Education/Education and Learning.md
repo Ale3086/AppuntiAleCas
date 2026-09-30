@@ -1,3 +1,10 @@
+---
+title: "Education and Learning"
+tags:
+  - inglese/vocabulary/work-education
+  - tipologia/glossario
+---
+
 Vocabulary related to schools, studying, exams, and academic systems.
 
 ## 1. General Studying and Exams (A1 - B1)

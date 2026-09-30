@@ -1,3 +1,10 @@
+---
+title: "5 OOP"
+tags:
+  - informatica/javascript/oop
+  - tipologia/concetto
+---
+
 ## Indice
 
 - [[#Classi]]

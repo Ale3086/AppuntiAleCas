@@ -1,3 +1,10 @@
+---
+title: "Work and Careers"
+tags:
+  - inglese/vocabulary/work-education
+  - tipologia/glossario
+---
+
 Vocabulary related to finding a job, the workplace, salaries, leaving a job, and common professions.
 
 ## 1. Getting a Job (A1 - B2)

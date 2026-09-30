@@ -1,3 +1,10 @@
+---
+title: "Guida ai comandi terminali Windows"
+tags:
+  - tipsit/filesystem
+  - tipologia/guida-pratica
+---
+
 # Index
 - [Comandi da Ricordare per Primi (CMD)](#Comandi%20da%20Ricordare%20per%20Primi%20(CMD))
 - [Comandi PowerShell Fondamentali](#Comandi%20PowerShell%20Fondamentali)

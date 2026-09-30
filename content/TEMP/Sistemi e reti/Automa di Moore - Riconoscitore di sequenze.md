@@ -7,6 +7,7 @@ tags:
   - moore
   - mealy
   - riconoscitore-sequenze
+draft: true
 ---
 
 # Automa di Moore e Riconoscitore di Sequenze (101)

@@ -1,3 +1,10 @@
+---
+title: "7 DOM"
+tags:
+  - informatica/javascript/dom
+  - tipologia/reference
+---
+
 ## Indice
 
 - [[#Selezione elementi]]

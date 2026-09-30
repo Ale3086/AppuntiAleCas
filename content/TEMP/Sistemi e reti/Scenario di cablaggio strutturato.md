@@ -7,6 +7,7 @@ tags:
   - norme-iso-osi
   - impianti-di-rete
   - rack
+draft: true
 ---
 
 # Scenario Tipico di Cablaggio Strutturato (Norma ISO/IEC 11801)

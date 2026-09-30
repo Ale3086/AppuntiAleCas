@@ -1,6 +1,7 @@
 ---
 title: Digitalizzazione e Multimedialità
 description: Dalla teoria dei segnali alla conversione analogico-digitale, digitalizzazione delle immagini raster, modelli di colore, calcolo del peso, grafica vettoriale e video digitale.
+draft: true
 ---
 
 # 🌐 Digitalizzazione e Multimedialità (Segnali, Immagini e Video)

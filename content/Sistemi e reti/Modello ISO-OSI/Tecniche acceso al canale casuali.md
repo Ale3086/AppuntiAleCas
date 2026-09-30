@@ -1,3 +1,10 @@
+---
+title: "Tecniche acceso al canale casuali"
+tags:
+  - sistemi-e-reti/iso-osi
+  - tipologia/teoria
+---
+
 ## Il Protocollo CSMA/CD e le regole di conversazione
 Per gestire l'accesso al mezzo di trasmissione e "mettere ordine" nelle comunicazioni, Ethernet utilizza il protocollo **CSMA/CD** (_**C**arrier **S**ense **M**ultiple **A**ccess with **C**ollision **D**etection_). 
 

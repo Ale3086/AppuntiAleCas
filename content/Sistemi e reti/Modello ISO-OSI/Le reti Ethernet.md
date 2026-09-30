@@ -1,3 +1,10 @@
+---
+title: "Le reti Ethernet"
+tags:
+  - sistemi-e-reti/topologie
+  - tipologia/teoria
+---
+
 Le reti Ethernet sono una particolare tecnologia usata nelle reti locali (LAN) ed è basata sullo **standard IEEE 802.3**. Nata inizialmente come rete a topologia a bus con cavi coassiali, evolvendosi col tempo in una topologia a stella, in cui il centro della rete è occupato da un dispositivo **apparato centrale** come hub o switch. Nel modello ISO/OSI l' Ethernet lavora principalmente al livello **Fisico e Data Link**. 
 
 ![[Pasted image 20260428131702.png]]

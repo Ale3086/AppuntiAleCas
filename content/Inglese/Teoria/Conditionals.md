@@ -1,3 +1,10 @@
+---
+title: "Conditionals"
+tags:
+  - inglese/grammatica/conditionals
+  - tipologia/teoria
+---
+
 # Conditionals
 
 > [!info] 🧠 The Basics

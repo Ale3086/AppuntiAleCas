@@ -1,3 +1,10 @@
+---
+title: "Verb Tenses"
+tags:
+  - inglese/grammatica/verb-tenses
+  - tipologia/teoria
+---
+
 # **Present Tenses**
 ## 1. Present Simple
 

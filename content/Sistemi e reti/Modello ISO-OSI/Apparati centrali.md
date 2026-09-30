@@ -1,3 +1,10 @@
+---
+title: "Apparati centrali"
+tags:
+  - sistemi-e-reti/dispositivi
+  - tipologia/teoria
+---
+
 Il modo in cui i dati viaggiano dipende dall'apparato centrale utilizzato.
 ## L'Hub (Il nodo "passivo")
 L'hub si comporta logicamente come un bus: quando riceve un segnale su una porta, lo inoltra a **tutte le altre**. Tutte le stazioni ricevono il frame, ma solo quella destinataria lo trattiene, mentre le altre lo ignorano. Tutti i nodi collegati a un hub formano un unico **dominio di collisione**.

@@ -6,6 +6,7 @@ tags:
   - automi
   - riconoscitore-sequenze
   - overlapping
+draft: true
 ---
 
 # Riconoscitori di Sequenze con e senza Sovrapposizione (*Overlapping*)

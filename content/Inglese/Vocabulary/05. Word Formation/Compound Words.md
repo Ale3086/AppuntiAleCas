@@ -1,3 +1,10 @@
+---
+title: "Compound Words"
+tags:
+  - inglese/vocabulary/word-formation
+  - tipologia/glossario
+---
+
 Vocabulary consisting of compound nouns (two words joined together) and compound adjectives.
 
 ## 1. Compound Adjectives (Work and Lifestyle)

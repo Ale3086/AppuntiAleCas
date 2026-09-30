@@ -1,3 +1,10 @@
+---
+title: "8 Layout e Semantica HTML"
+tags:
+  - informatica/html/semantica
+  - tipologia/concetto
+---
+
 ## div e span
 
 Contenitori generici senza valore semantico. Usare gli elementi semantici quando possibile.

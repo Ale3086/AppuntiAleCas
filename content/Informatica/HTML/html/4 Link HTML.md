@@ -1,3 +1,10 @@
+---
+title: "4 Link HTML"
+tags:
+  - informatica/html/link
+  - tipologia/concetto
+---
+
 ## a
 
 Crea collegamenti ipertestuali. Può avvolgere anche elementi block-level.

@@ -5,6 +5,7 @@ tags:
   - sistemi-e-reti
   - teoria-dei-sistemi
   - automi
+draft: true
 ---
 
 # Teoria dei Sistemi: Fondamenti e Modellazione

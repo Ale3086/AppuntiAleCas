@@ -1,3 +1,10 @@
+---
+title: "vector"
+tags:
+  - informatica/cpp/librerie
+  - tipologia/reference
+---
+
 ## Indice
 
 - [[#push_back]]

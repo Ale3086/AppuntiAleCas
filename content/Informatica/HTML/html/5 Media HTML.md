@@ -1,3 +1,10 @@
+---
+title: "5 Media HTML"
+tags:
+  - informatica/html/media
+  - tipologia/reference
+---
+
 ## img
 
 Incorpora un'immagine. Elemento void (nessun tag di chiusura).

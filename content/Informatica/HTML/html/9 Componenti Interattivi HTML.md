@@ -1,3 +1,10 @@
+---
+title: "9 Componenti Interattivi HTML"
+tags:
+  - informatica/html/interattivita
+  - tipologia/reference
+---
+
 ## details e summary
 
 Widget di disclosure nativo: contenuto espandibile/collassabile senza JavaScript.

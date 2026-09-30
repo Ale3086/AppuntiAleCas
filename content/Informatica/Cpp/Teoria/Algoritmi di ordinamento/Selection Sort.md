@@ -1,3 +1,10 @@
+---
+title: "Selection Sort"
+tags:
+  - informatica/cpp/algoritmi
+  - tipologia/algoritmo
+---
+
 Il selection sort è un algoritmo di ordinamento di un array che va a dividere l'array in due, una parte iniziale ordinata e la seconda parte non ordinata da cui va a cercare sempre il minimo da inserire nella parte ordinata. 
 
 L’algoritmo sostanzialmente seleziona di volta in volta il numero minore nella parte non ordinata e lo sposta in quella ordinata, sostituendo il valore nella posizione i con il valore minore trovato nell'array non ordinato.

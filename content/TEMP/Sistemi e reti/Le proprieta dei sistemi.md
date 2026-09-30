@@ -5,6 +5,7 @@ tags:
   - sistemi-e-reti
   - teoria-dei-sistemi
   - classificazione
+draft: true
 ---
 
 # Proprietà e Classificazione dei Sistemi

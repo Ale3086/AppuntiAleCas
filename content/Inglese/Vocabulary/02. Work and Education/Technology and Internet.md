@@ -1,3 +1,10 @@
+---
+title: "Technology and Internet"
+tags:
+  - inglese/vocabulary/work-education
+  - tipologia/glossario
+---
+
 Vocabulary related to computers, hardware, software, and going online.
 
 ## 1. Hardware and Devices (A1 - B1)

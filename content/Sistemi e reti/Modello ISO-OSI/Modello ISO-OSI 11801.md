@@ -1,3 +1,10 @@
+---
+title: "Modello ISO-OSI 11801"
+tags:
+  - sistemi-e-reti/iso-osi
+  - tipologia/teoria
+---
+
 ## Cosa ci permette il modello ISO-OSI 11801
 **Permette di prendere un problema e scomposto nei suoi sotto-problemi.** E' **diviso in 7 parti** e ogni livello è autonomo, ovvero svolgono le loro istruzioni senza sapere cosa c'è sotto o sopra. 
 

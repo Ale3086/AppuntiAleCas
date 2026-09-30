@@ -1,3 +1,10 @@
+---
+title: "Senza nome"
+tags:
+  - informatica/html/guida-completa
+  - tipologia/reference
+---
+
 ## Indice
 
 - [[#Struttura base]]

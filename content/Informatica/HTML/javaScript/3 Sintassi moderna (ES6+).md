@@ -1,3 +1,10 @@
+---
+title: "3 Sintassi moderna (ES6+)"
+tags:
+  - informatica/javascript/es6
+  - tipologia/reference
+---
+
 ## Indice
 
 - [[#Destructuring]]

@@ -1,3 +1,10 @@
+---
+title: "Family and Life Stages"
+tags:
+  - inglese/vocabulary/personal-life
+  - tipologia/glossario
+---
+
 Vocabulary related to the stages of human life, immediate and extended family members, and complex relationships.
 
 ## 1. Life Events and Actions (A2 - B1)

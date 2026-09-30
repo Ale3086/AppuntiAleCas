@@ -1,3 +1,10 @@
+---
+title: "4 Asincrono"
+tags:
+  - informatica/javascript/asincrono
+  - tipologia/concetto
+---
+
 ## Indice
 
 - [[#Callback]]

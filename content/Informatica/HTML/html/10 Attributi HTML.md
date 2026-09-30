@@ -1,3 +1,10 @@
+---
+title: "10 Attributi HTML"
+tags:
+  - informatica/html/attributi
+  - tipologia/reference
+---
+
 ## Attributi globali
 
 Utilizzabili su qualsiasi elemento HTML.

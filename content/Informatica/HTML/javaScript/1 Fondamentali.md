@@ -1,3 +1,10 @@
+---
+title: "1 Fondamentali"
+tags:
+  - informatica/javascript/fondamenti
+  - tipologia/concetto
+---
+
 ## Indice
 
 - [[#Variabili]]

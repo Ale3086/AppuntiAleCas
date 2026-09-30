@@ -1,3 +1,10 @@
+---
+title: "Travel and Airport"
+tags:
+  - inglese/vocabulary/leisure-travel
+  - tipologia/glossario
+---
+
 Vocabulary for navigating airports, taking flights, vehicles, and traveling abroad.
 
 ## 1. General Vehicles and Stations (A1 - B1)

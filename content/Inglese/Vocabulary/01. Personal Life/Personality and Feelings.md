@@ -1,3 +1,10 @@
+---
+title: "Personality and Feelings"
+tags:
+  - inglese/vocabulary/personal-life
+  - tipologia/glossario
+---
+
 Vocabulary to describe character traits, emotions, and personal qualities.
 
 ## 1. General Positive Traits (A1 - B1)

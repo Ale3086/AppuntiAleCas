@@ -1,3 +1,10 @@
+---
+title: "Media, Books and TV"
+tags:
+  - inglese/vocabulary/leisure-travel
+  - tipologia/glossario
+---
+
 Vocabulary related to television, literature, journalism, and describing entertainment.
 
 ## 1. General TV, Radio, and News (A2 - B1)

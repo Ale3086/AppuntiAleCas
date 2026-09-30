@@ -1,3 +1,10 @@
+---
+title: "Insertion sort"
+tags:
+  - informatica/cpp/algoritmi
+  - tipologia/algoritmo
+---
+
 E’ più efficiente degli algoritmi visti in precedenza. Funziona efficientemente con array di dimensione molto piccola o con array parzialmente ordinati. 
 
 L’idea di ordinamento è simile al modo in cui un giocatore di bridge ordina le carte nella propria mano. Per trovare la giusta posizione si confronta la carta con le altre che sono nella mano da destra a sinistra. 

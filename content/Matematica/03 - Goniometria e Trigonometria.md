@@ -1,3 +1,10 @@
+---
+title: "03 - Goniometria e Trigonometria"
+tags:
+  - matematica/trigonometria
+  - tipologia/teoria
+---
+
 # Goniometria e Trigonometria
 
 ## 1. Misura degli Angoli: Gradi e Radianti

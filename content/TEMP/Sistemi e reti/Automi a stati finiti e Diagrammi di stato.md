@@ -6,6 +6,7 @@ tags:
   - automi
   - fsm
   - diagrammi-di-stato
+draft: true
 ---
 
 # Automi a Stati Finiti e Diagrammi di Stato

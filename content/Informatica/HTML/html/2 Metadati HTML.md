@@ -1,3 +1,10 @@
+---
+title: "2 Metadati HTML"
+tags:
+  - informatica/html/metadati
+  - tipologia/reference
+---
+
 ## meta
 
 Fornisce metadati alla pagina. Va sempre dentro `<head>`.

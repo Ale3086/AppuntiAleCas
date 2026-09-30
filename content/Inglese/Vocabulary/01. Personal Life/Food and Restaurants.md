@@ -1,3 +1,10 @@
+---
+title: "Food and Restaurants"
+tags:
+  - inglese/vocabulary/personal-life
+  - tipologia/glossario
+---
+
 Vocabulary for eating out, describing food, diets, and cooking.
 
 ## 1. Describing Food and Science (A2 - C2)

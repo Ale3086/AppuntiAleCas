@@ -1,6 +1,9 @@
 ---
 title: Sintesi, Formulario Rapido e Mappa Concettuale
 description: Schemi riassuntivi, formulario per le verifiche scritte e glossario completo dei termini tecnici su segnali, immagini raster, vettoriali e video digitale.
+tags:
+  - tipsit/multimedialita
+  - tipologia/sintesi
 ---
 
 # 🎯 Sintesi, Formulario Rapido e Mappa Concettuale

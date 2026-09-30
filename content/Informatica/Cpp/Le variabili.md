@@ -1,3 +1,10 @@
+---
+title: "Le variabili"
+tags:
+  - informatica/cpp/sintassi
+  - tipologia/concetto
+---
+
 Una **variabile** è una porzione di memoria RAM destinata a contenere un dato che può variare durante l'esecuzione del programma. Possiamo immaginarla come una "scatola" con un nome, in cui inseriamo un valore.
 
 A differenza dei file (che sono persistenti sulla memoria di massa), le variabili sono **volatili**: quando il programma termina o il computer si spegne, i dati contenuti nelle variabili vengono cancellati dalla RAM.

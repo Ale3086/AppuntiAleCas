@@ -1,3 +1,10 @@
+---
+title: "7 Form HTML e input"
+tags:
+  - informatica/html/form
+  - tipologia/reference
+---
+
 ## form
 
 Contenitore per i controlli di input. Gestisce la raccolta e l'invio dei dati.

@@ -1,3 +1,10 @@
+---
+title: "Comandi di uno switch CISCO"
+tags:
+  - sistemi-e-reti/dispositivi
+  - tipologia/guida-pratica
+---
+
 L'interfaccia a riga di comando (CLI) è lo strumento principale per configurare uno switch. Permette operazioni complesse spesso non disponibili tramite interfaccia grafica.
 
 - **Connessione Fisica**: Si utilizza un **cavo di console** azzurro collegato tra il PC e lo switch.

@@ -1,3 +1,10 @@
+---
+title: "Crime and Law"
+tags:
+  - inglese/vocabulary/society-world
+  - tipologia/glossario
+---
+
 Vocabulary related to crimes, types of criminals, police investigations, and the justice system.
 
 ## 1. General Crimes and Criminals (A1 - B1)

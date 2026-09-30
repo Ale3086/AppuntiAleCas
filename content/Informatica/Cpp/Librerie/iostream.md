@@ -1,3 +1,10 @@
+---
+title: "iostream"
+tags:
+  - informatica/cpp/librerie
+  - tipologia/reference
+---
+
 ## Indice
 
 - [[#cout]]

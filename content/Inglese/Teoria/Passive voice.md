@@ -1,3 +1,10 @@
+---
+title: "Passive voice"
+tags:
+  - inglese/grammatica/passive-voice
+  - tipologia/teoria
+---
+
 # Passive Voice
 
 > [!info] 🧠 The Basics

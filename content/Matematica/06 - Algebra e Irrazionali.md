@@ -1,3 +1,10 @@
+---
+title: "06 - Algebra e Irrazionali"
+tags:
+  - matematica/algebra
+  - tipologia/teoria
+---
+
 # Algebra Avanzata e Irrazionali
 
 Oltre alle disequazioni standard (II grado e fratte), il programma prevede la risoluzione di equazioni/disequazioni di grado superiore e quelle con valori assoluti o radici (irrazionali).

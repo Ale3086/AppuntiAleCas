@@ -1,3 +1,10 @@
+---
+title: "Le struct e le classi"
+tags:
+  - informatica/cpp/sintassi
+  - tipologia/concetto
+---
+
 Le struct sono come delle grandi variabili pubbliche e visibili da tutti che vanno ad allocare spazio in memoria uno dopo l'altro, allocando anche differenti tipi di dati uno dopo l'altro. Una struct va a definire un nuovo tipo di dato strutturato esclusivo in quel programma che, a differenza degli array che può contenere solo stessi tipi di dati semplici, può contenere come già detto varie tipologie di dati insieme sotto un unico nome.
 
 ```cpp

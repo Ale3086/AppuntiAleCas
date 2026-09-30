@@ -1,3 +1,10 @@
+---
+title: "Environment and Nature"
+tags:
+  - inglese/vocabulary/society-world
+  - tipologia/glossario
+---
+
 Vocabulary related to geographical features, climate change, and protecting the planet.
 
 ## 1. General Geographical Features (A1 - B1)

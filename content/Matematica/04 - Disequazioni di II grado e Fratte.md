@@ -1,3 +1,10 @@
+---
+title: "04 - Disequazioni di II grado e Fratte"
+tags:
+  - matematica/algebra
+  - tipologia/teoria
+---
+
 # Disequazioni di II Grado e Fratte
 
 Una disequazione di secondo grado si presenta nella forma:
