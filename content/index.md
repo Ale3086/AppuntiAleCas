@@ -1,4 +1,4 @@
-﻿---
+---
 title: Home Appunti
 cssclasses:
   - dashboard
@@ -16,9 +16,13 @@ Lo studio del pensiero computazionale e della logica di programmazione. In quest
 ## 🇬🇧 [Inglese](Inglese/)
 Il passaporto per il mondo. Qui troverai regole grammaticali, lessico, strutture linguistiche e materiale di preparazione per affrontare certificazioni e test di livello internazionale.
 
+## 📐 [[Matematica/index|Matematica]]
+Il linguaggio universale della scienza. Formule, dimostrazioni ed esercizi guidati che spaziano dalla geometria analitica (studio della retta e delle coniche) all'algebra, alla trigonometria e al calcolo.
+
 ## 🌐 [Sistemi e reti](Sistemi-e-reti/)
 Il dietro le quinte di Internet e della comunicazione digitale. Appunti su come i computer "parlano" tra loro, i protocolli di rete, i modelli teorici come ISO-OSI e la sicurezza informatica.
 
 ## 📝 [TIPSIT](TIPSIT/)
 Tecnologie Informatiche e Progettazione di Sistemi IT. Un mix tra teoria e pratica per capire come si progettano e gestiscono i sistemi informatici complessi.
+
 
