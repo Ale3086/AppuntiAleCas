@@ -4,3 +4,17 @@
 .note-properties {
   display: none !important;
 }
+
+.mermaid {
+  display: flex !important;
+  justify-content: center !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin: 1rem auto !important;
+
+  svg {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+  }
+}

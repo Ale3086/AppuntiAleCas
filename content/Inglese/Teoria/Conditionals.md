@@ -1,29 +1,33 @@
 # Conditionals
-Every conditional sentence expresses a cause and a consequence: one part introduces the condition (the cause), and the other part introduces the result (the consequence). 
 
-The condition is always introduced by **if/when/unless**, while the consequence is always introduced by the verb form or modal typical of that conditional (will, would, would have, depending on the type). 
+> [!info] 🧠 The Basics
+> Conditionals are sentences with two clauses: an "if" clause (the condition) and a main clause (the result).
+> They are used to talk about possibilities, imaginary situations, or things that didn't happen.
 
-These two parts are interchangeable: the consequence can be said first and the condition second, or the other way round, without changing the meaning. For example, *"If it rains, I will stay home"* can also be said as *"I will stay home if it rains"*.
-
-> [!NOTE]- TRADUZIONE
-> Ogni frase condizionale esprime una causa e una conseguenza: una frase introduce la condizione (la causa), e l'altra frase introduce il risultato (la conseguenza). La condizione è sempre introdotta da **if/when/unless**, mentre la conseguenza è sempre introdotta dalla forma verbale o dal modale tipico di quel condizionale (will, would, would have, a seconda del tipo). Queste due frasi sono interscambiabili: la conseguenza può essere detta prima e la condizione dopo, o viceversa, senza cambiare il significato: per esempio, "If it rains, I will stay home" si può dire anche "I will stay home if it rains".
+> [!NOTE]- 🇮🇹 TRADUZIONE
+> I condizionali sono frasi con due proposizioni: una proposizione con "if" (la condizione) e una proposizione principale (il risultato).
+> Si usano per parlare di possibilità, situazioni immaginarie o cose che non sono accadute.
 
 ## 1. Zero Conditional
-Used for facts, general truths and things that are always true.
-#### Structure:
-`If/When + subject + verb (present simple) , subject + verb (present simple)`
 
-**Example of swapping condition with result:**
-- If you heat ice, it melts.
-- It melts if you heat ice.
+> [!summary] 🎯 What is it for?
+> Used for general truths, scientific facts and habits. Things that are always true if the condition happens.
 
-#### Usage:
-- Scientific/natural law: If you **heat** ice, it **melts**.
-- Everyday routine or habit triggered by a recurring event: When the sun **sets**, it **gets** dark.
-- Personal habit: If I **have** free time, I **read**.
+> [!important] ⚙️ Structure
+> `If/When + subject + verb (present simple) , subject + verb (present simple)`
 
-> [!NOTE]- TRADUZIONE
-> Si usa per fatti, verità generali e cose che sono sempre vere.
+> [!example] 📝 Usage & Examples
+> **Example of swapping condition with result:**
+> - If you heat ice, it melts.
+> - It melts if you heat ice.
+> 
+> **Usage:**
+> - Scientific/natural law: If you **heat** ice, it **melts**.
+> - Daily routine/habit linked to a recurring event: When the sun **sets**, it **gets** dark.
+> - Personal habit: If I **have** free time, I **read**.
+
+> [!NOTE]- 🇮🇹 TRADUZIONE
+> Si usa per verità generali, fatti scientifici e abitudini. Cose che sono sempre vere se si verifica la condizione.
 > 
 > **Struttura:**
 > `If/When + soggetto + verbo (present simple) , soggetto + verbo (present simple)`
@@ -38,20 +42,24 @@ Used for facts, general truths and things that are always true.
 > - Abitudine personale: If I **have** free time, I **read**. (Se ho tempo libero, leggo.)
 
 ## 2. First Conditional
-Used for a possible future situation and its consequence.
-#### Structure:
-`If/When/Unless + subject + verb (present simple) , subject + will + verb`
 
-**Example of swapping condition with result:**
-- If it rains tomorrow, we will stay at home.
-- We will stay at home if it rains tomorrow.
+> [!summary] 🎯 What is it for?
+> Used for a possible future situation and its consequence.
 
-#### Usage:
-- Possible future condition: If it **rains** tomorrow, we **will stay** at home.
-- With "when" (more certain than "if"): When she **arrives**, I **will tell** her the news.
-- With "unless" (= if...not): **Unless** you **hurry**, you **will miss** the train.
+> [!important] ⚙️ Structure
+> `If/When/Unless + subject + verb (present simple) , subject + will + verb`
 
-> [!NOTE]- TRADUZIONE
+> [!example] 📝 Usage & Examples
+> **Example of swapping condition with result:**
+> - If it rains tomorrow, we will stay at home.
+> - We will stay at home if it rains tomorrow.
+> 
+> **Usage:**
+> - Possible future condition: If it **rains** tomorrow, we **will stay** at home.
+> - With "when" (more certain than "if"): When she **arrives**, I **will tell** her the news.
+> - With "unless" (= if...not): **Unless** you **hurry**, you **will miss** the train.
+
+> [!NOTE]- 🇮🇹 TRADUZIONE
 > Si usa per una possibile situazione futura e la sua conseguenza.
 > 
 > **Struttura:**
@@ -67,21 +75,25 @@ Used for a possible future situation and its consequence.
 > - Con "unless" (= se... non): **Unless** you **hurry**, you **will miss** the train. (Se non ti sbrighi, perderai il treno.)
 
 ## 3. Second Conditional
-Used for unreal/imagined situations in the present or future.
-#### Structure:
-`If/Unless + subject + verb (past simple) , subject + would + verb`
 
-**Example of swapping condition with result:**
-- If I had more money, I would travel the world.
-- I would travel the world if I had more money.
+> [!summary] 🎯 What is it for?
+> Used for unreal/imagined situations in the present or future.
 
-#### Usage:
-- Unreal present situation: If I **had** more money, I **would travel** the world.
-- Imagined/hypothetical future: If she **won** the lottery, she **would buy** a house.
-- Giving advice ("If I were you"): If I **were** you, I **would apologise**.
-- With "unless": **Unless** he **were** busy, he **would come** with us.
+> [!important] ⚙️ Structure
+> `If/Unless + subject + verb (past simple) , subject + would + verb`
 
-> [!NOTE]- TRADUZIONE
+> [!example] 📝 Usage & Examples
+> **Example of swapping condition with result:**
+> - If I had more money, I would travel the world.
+> - I would travel the world if I had more money.
+> 
+> **Usage:**
+> - Unreal present situation: If I **had** more money, I **would travel** the world.
+> - Imagined/hypothetical future: If she **won** the lottery, she **would buy** a house.
+> - Giving advice ("If I were you"): If I **were** you, I **would apologise**.
+> - With "unless": **Unless** he **were** busy, he **would come** with us.
+
+> [!NOTE]- 🇮🇹 TRADUZIONE
 > Si usa per situazioni irreali/immaginarie nel presente o nel futuro.
 > 
 > **Struttura:**
@@ -98,22 +110,26 @@ Used for unreal/imagined situations in the present or future.
 > - Con "unless": **Unless** he **were** busy, he **would come** with us. (Se non fosse occupato, verrebbe con noi.)
 
 ## 4. Third Conditional
-Used for things that could have been different in the past.
-#### Structure:
-`If/Unless + subject + had + verb (past participle) , subject + would have / wouldn't have + verb (past participle)`
 
-**Example of swapping condition with result:**
-- If I had studied harder, I would have passed the exam.
-- I would have passed the exam if I had studied harder.
+> [!summary] 🎯 What is it for?
+> Used for things that could have been different in the past.
 
-#### Usage:
-- Regret about the past: If I **had studied** harder, I **would have passed** the exam.
-- Imagined different past outcome: If she **hadn't missed** the bus, she **wouldn't have been** late.
-- Alternative modal (might have): If it **had rained**, the match **might have been** cancelled.
-- Alternative modal (could have): If he **had trained** more, he **could have won** the race.
-- With "unless": **Unless** they **had helped** us, we **wouldn't have finished** on time.
+> [!important] ⚙️ Structure
+> `If/Unless + subject + had + verb (past participle) , subject + would have / wouldn't have + verb (past participle)`
 
-> [!NOTE]- TRADUZIONE
+> [!example] 📝 Usage & Examples
+> **Example of swapping condition with result:**
+> - If I had studied harder, I would have passed the exam.
+> - I would have passed the exam if I had studied harder.
+> 
+> **Usage:**
+> - Regret about the past: If I **had studied** harder, I **would have passed** the exam.
+> - Imagined different past outcome: If she **hadn't missed** the bus, she **wouldn't have been** late.
+> - Alternative modal (might have): If it **had rained**, the match **might have been** cancelled.
+> - Alternative modal (could have): If he **had trained** more, he **could have won** the race.
+> - With "unless": **Unless** they **had helped** us, we **wouldn't have finished** on time.
+
+> [!NOTE]- 🇮🇹 TRADUZIONE
 > Si usa per cose che sarebbero potute andare diversamente nel passato.
 > 
 > **Struttura:**
@@ -131,21 +147,24 @@ Used for things that could have been different in the past.
 > - Con "unless": **Unless** they **had helped** us, we **wouldn't have finished** on time. (Se non ci avessero aiutato, non avremmo finito in tempo.)
 
 ## 5. Mixed Conditionals
-Used to combine two parts from different conditional types, when the time of the condition and the time of the result do not match.
-#### Structure:
-`If + subject + had + verb (past participle) , subject + would + verb` 
-(past condition → present result)
-`If + subject + verb (past simple) , subject + would have + verb (past participle)` (present condition → past result)
 
-**Example of swapping condition with result:**
-- If I had taken that job, I would be living in London now.
-- I would be living in London now if I had taken that job.
+> [!summary] 🎯 What is it for?
+> Used to combine two parts from different conditional types, when the time of the condition and the time of the result do not match.
 
-#### Usage:
-- Past condition, present result: If I **had taken** that job, I **would be living** in London now.
-- Present condition, past result: If she **weren't** so shy, she **would have spoken** at the meeting.
+> [!important] ⚙️ Structure
+> `If + subject + had + verb (past participle) , subject + would + verb` (past condition → present result)
+> `If + subject + verb (past simple) , subject + would have + verb (past participle)` (present condition → past result)
 
-> [!NOTE]- TRADUZIONE
+> [!example] 📝 Usage & Examples
+> **Example of swapping condition with result:**
+> - If I had taken that job, I would be living in London now.
+> - I would be living in London now if I had taken that job.
+> 
+> **Usage:**
+> - Past condition, present result: If I **had taken** that job, I **would be living** in London now.
+> - Present condition, past result: If she **weren't** so shy, she **would have spoken** at the meeting.
+
+> [!NOTE]- 🇮🇹 TRADUZIONE
 > Si usano per combinare due frasi appartenenti a tipi diversi di condizionale, quando il momento della condizione e il momento del risultato non coincidono.
 > 
 > **Struttura:**
