@@ -1,0 +1,1721 @@
+{
+  "files_without_fm": [
+    "index.md",
+    "Informatica/index.md",
+    "Inglese/index.md",
+    "Matematica/01 - La Retta.md",
+    "Matematica/02 - Le Coniche (Parabola e Circonferenza).md",
+    "Matematica/03 - Goniometria e Trigonometria.md",
+    "Matematica/04 - Disequazioni di II grado e Fratte.md",
+    "Matematica/05 - Ellisse e Iperbole.md",
+    "Matematica/06 - Algebra e Irrazionali.md",
+    "Matematica/index.md",
+    "Sistemi e reti/index.md",
+    "TIPSIT/Codici di sicurezza/index.md",
+    "TIPSIT/FileSystem/Guida ai comandi terminali Linux.md",
+    "TIPSIT/FileSystem/Guida ai comandi terminali Windows.md",
+    "TIPSIT/FileSystem/index.md",
+    "TIPSIT/Sistemi operativi/1. Il Ruolo del Sistema Operativo.md",
+    "TIPSIT/Sistemi operativi/2. Kernel e Shell.md",
+    "TIPSIT/Sistemi operativi/3. Modello a Ring, User Mode e Kernel Mode.md",
+    "TIPSIT/Sistemi operativi/index.md",
+    "Sistemi e reti/Cablaggio strutturato/Categorie di cavi.md",
+    "Sistemi e reti/Cablaggio strutturato/index.md",
+    "Sistemi e reti/Cablaggio strutturato/Normativa ISO-OSI 11801.md",
+    "Sistemi e reti/Cablaggio strutturato/Tipologia e Topologia reti.md",
+    "Sistemi e reti/Cablaggio strutturato/Tipologie di cavi, i tipi di segnali e il canale di comunicazione.md",
+    "Sistemi e reti/Modello ISO-OSI/Apparati centrali.md",
+    "Sistemi e reti/Modello ISO-OSI/Collegamenti LAN e MAN.md",
+    "Sistemi e reti/Modello ISO-OSI/Comandi di uno switch CISCO.md",
+    "Sistemi e reti/Modello ISO-OSI/Il cavo di rete e crimpaggio.md",
+    "Sistemi e reti/Modello ISO-OSI/index.md",
+    "Sistemi e reti/Modello ISO-OSI/Le reti Ethernet.md",
+    "Sistemi e reti/Modello ISO-OSI/Modello ISO-OSI 11801.md",
+    "Sistemi e reti/Modello ISO-OSI/Standard basi cablaggio.md",
+    "Sistemi e reti/Modello ISO-OSI/Tecniche acceso al canale casuali.md",
+    "Inglese/Cerificazione Inglese/Competenze richieste per ogni livello.md",
+    "Inglese/Cerificazione Inglese/Cosa devi fare nella prova.md",
+    "Inglese/Cerificazione Inglese/index.md",
+    "Inglese/Cerificazione Inglese/Introduzione.md",
+    "Inglese/Teoria/Conditionals.md",
+    "Inglese/Teoria/Esercizi e Risorse.md",
+    "Inglese/Teoria/index.md",
+    "Inglese/Teoria/Passive voice.md",
+    "Inglese/Teoria/Verb Tenses.md",
+    "Inglese/Vocabulary/index.md",
+    "Inglese/Vocabulary/01. Personal Life/Family and Life Stages.md",
+    "Inglese/Vocabulary/01. Personal Life/Food and Restaurants.md",
+    "Inglese/Vocabulary/01. Personal Life/Health and Illnesses.md",
+    "Inglese/Vocabulary/01. Personal Life/index.md",
+    "Inglese/Vocabulary/01. Personal Life/Personality and Feelings.md",
+    "Inglese/Vocabulary/02. Work and Education/Education and Learning.md",
+    "Inglese/Vocabulary/02. Work and Education/index.md",
+    "Inglese/Vocabulary/02. Work and Education/Technology and Internet.md",
+    "Inglese/Vocabulary/02. Work and Education/Work and Careers.md",
+    "Inglese/Vocabulary/03. Society and World/Crime and Law.md",
+    "Inglese/Vocabulary/03. Society and World/Environment and Nature.md",
+    "Inglese/Vocabulary/03. Society and World/index.md",
+    "Inglese/Vocabulary/03. Society and World/Politics and Society.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/index.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/Media, Books and TV.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/Travel and Airport.md",
+    "Inglese/Vocabulary/05. Word Formation/Compound Words.md",
+    "Inglese/Vocabulary/05. Word Formation/index.md",
+    "Inglese/Vocabulary/05. Word Formation/Prefixes and Suffixes.md",
+    "Inglese/Cerificazione Inglese/Listening/index.md",
+    "Inglese/Cerificazione Inglese/Reading/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/Senza nome.md",
+    "Inglese/Cerificazione Inglese/Writing/index.md",
+    "Inglese/Cerificazione Inglese/Writing/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Writing/Esercizi svolti/index.md",
+    "Inglese/Cerificazione Inglese/Writing/Strategie/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For only you.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you and candidate 2.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you and the interviewer.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you, candidate 2 and the interviewer.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Esercizi svolti/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For multiple matching.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For multiple-choice gap-fill.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For open gap-fill.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For reading and multiple-choice comprehension.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For reading and text comprehension.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For trasformation with key word.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For word formation gap-fill.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/Strategies for each gap.md",
+    "Inglese/Cerificazione Inglese/Listening/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple choice 1.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple choice 2.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple matching.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For text or sentence completion.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/index.md",
+    "Informatica/Cpp/Gestione dei file.md",
+    "Informatica/Cpp/Gli array.md",
+    "Informatica/Cpp/index.md",
+    "Informatica/Cpp/Le funzioni e procedure.md",
+    "Informatica/Cpp/Le struct e le classi.md",
+    "Informatica/Cpp/Le variabili.md",
+    "Informatica/Cpp/Puntatori.md",
+    "Informatica/HTML/index.md",
+    "Informatica/HTML/css/index.md",
+    "Informatica/HTML/html/1 Struttura Base HTML.md",
+    "Informatica/HTML/html/10 Attributi HTML.md",
+    "Informatica/HTML/html/2 Metadati HTML.md",
+    "Informatica/HTML/html/3 Testo HTML.md",
+    "Informatica/HTML/html/4 Link HTML.md",
+    "Informatica/HTML/html/5 Media HTML.md",
+    "Informatica/HTML/html/6 Liste e Tabelle HTML.md",
+    "Informatica/HTML/html/7 Form HTML e input.md",
+    "Informatica/HTML/html/8 Layout e Semantica HTML.md",
+    "Informatica/HTML/html/9 Componenti Interattivi HTML.md",
+    "Informatica/HTML/html/index.md",
+    "Informatica/HTML/html/Senza nome.md",
+    "Informatica/HTML/javaScript/1 Fondamentali.md",
+    "Informatica/HTML/javaScript/2 Strutture dati.md",
+    "Informatica/HTML/javaScript/3 Sintassi moderna (ES6+).md",
+    "Informatica/HTML/javaScript/4 Asincrono.md",
+    "Informatica/HTML/javaScript/5 OOP.md",
+    "Informatica/HTML/javaScript/6 Errori.md",
+    "Informatica/HTML/javaScript/7 DOM.md",
+    "Informatica/HTML/javaScript/index.md",
+    "Informatica/Cpp/Librerie/algorithm.md",
+    "Informatica/Cpp/Librerie/index.md",
+    "Informatica/Cpp/Librerie/iostream.md",
+    "Informatica/Cpp/Librerie/string.md",
+    "Informatica/Cpp/Librerie/vector.md",
+    "Informatica/Cpp/Teoria/Caratteristiche.md",
+    "Informatica/Cpp/Teoria/index.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Bubble sort.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/index.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Insertion sort.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Selection Sort.md"
+  ],
+  "files_without_tags": [
+    "index.md",
+    "Informatica/index.md",
+    "Inglese/index.md",
+    "Matematica/01 - La Retta.md",
+    "Matematica/02 - Le Coniche (Parabola e Circonferenza).md",
+    "Matematica/03 - Goniometria e Trigonometria.md",
+    "Matematica/04 - Disequazioni di II grado e Fratte.md",
+    "Matematica/05 - Ellisse e Iperbole.md",
+    "Matematica/06 - Algebra e Irrazionali.md",
+    "Matematica/index.md",
+    "Sistemi e reti/index.md",
+    "TIPSIT/index.md",
+    "TIPSIT/Codici di sicurezza/index.md",
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/1. Teoria dei Segnali e Conversione Analogico-Digitale.md",
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/2. Digitalizzazione delle Immagini e Modelli di Colore.md",
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/3. Caratteristiche Raster, Calcolo del Peso e Compressione.md",
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/4. Grafica Vettoriale e Video Digitale.md",
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/index.md",
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/Sintesi e Mappa Concettuale.md",
+    "TIPSIT/FileSystem/Guida ai comandi terminali Linux.md",
+    "TIPSIT/FileSystem/Guida ai comandi terminali Windows.md",
+    "TIPSIT/FileSystem/index.md",
+    "TIPSIT/Operazioni coi binari e conversioni/1. Sistemi di numerazione e Conversioni di base.md",
+    "TIPSIT/Operazioni coi binari e conversioni/2. Operazioni aritmetiche binarie.md",
+    "TIPSIT/Operazioni coi binari e conversioni/3. Rappresentazione dei numeri con segno e Complemento a 2.md",
+    "TIPSIT/Operazioni coi binari e conversioni/index.md",
+    "TIPSIT/Sistemi operativi/1. Il Ruolo del Sistema Operativo.md",
+    "TIPSIT/Sistemi operativi/2. Kernel e Shell.md",
+    "TIPSIT/Sistemi operativi/3. Modello a Ring, User Mode e Kernel Mode.md",
+    "TIPSIT/Sistemi operativi/index.md",
+    "Sistemi e reti/Cablaggio strutturato/Categorie di cavi.md",
+    "Sistemi e reti/Cablaggio strutturato/index.md",
+    "Sistemi e reti/Cablaggio strutturato/Normativa ISO-OSI 11801.md",
+    "Sistemi e reti/Cablaggio strutturato/Tipologia e Topologia reti.md",
+    "Sistemi e reti/Cablaggio strutturato/Tipologie di cavi, i tipi di segnali e il canale di comunicazione.md",
+    "Sistemi e reti/Modello ISO-OSI/Apparati centrali.md",
+    "Sistemi e reti/Modello ISO-OSI/Collegamenti LAN e MAN.md",
+    "Sistemi e reti/Modello ISO-OSI/Comandi di uno switch CISCO.md",
+    "Sistemi e reti/Modello ISO-OSI/Il cavo di rete e crimpaggio.md",
+    "Sistemi e reti/Modello ISO-OSI/index.md",
+    "Sistemi e reti/Modello ISO-OSI/Le reti Ethernet.md",
+    "Sistemi e reti/Modello ISO-OSI/Modello ISO-OSI 11801.md",
+    "Sistemi e reti/Modello ISO-OSI/Standard basi cablaggio.md",
+    "Sistemi e reti/Modello ISO-OSI/Tecniche acceso al canale casuali.md",
+    "Inglese/Cerificazione Inglese/Competenze richieste per ogni livello.md",
+    "Inglese/Cerificazione Inglese/Cosa devi fare nella prova.md",
+    "Inglese/Cerificazione Inglese/index.md",
+    "Inglese/Cerificazione Inglese/Introduzione.md",
+    "Inglese/Teoria/Conditionals.md",
+    "Inglese/Teoria/Esercizi e Risorse.md",
+    "Inglese/Teoria/index.md",
+    "Inglese/Teoria/Passive voice.md",
+    "Inglese/Teoria/Verb Tenses.md",
+    "Inglese/Vocabulary/index.md",
+    "Inglese/Vocabulary/01. Personal Life/Family and Life Stages.md",
+    "Inglese/Vocabulary/01. Personal Life/Food and Restaurants.md",
+    "Inglese/Vocabulary/01. Personal Life/Health and Illnesses.md",
+    "Inglese/Vocabulary/01. Personal Life/index.md",
+    "Inglese/Vocabulary/01. Personal Life/Personality and Feelings.md",
+    "Inglese/Vocabulary/02. Work and Education/Education and Learning.md",
+    "Inglese/Vocabulary/02. Work and Education/index.md",
+    "Inglese/Vocabulary/02. Work and Education/Technology and Internet.md",
+    "Inglese/Vocabulary/02. Work and Education/Work and Careers.md",
+    "Inglese/Vocabulary/03. Society and World/Crime and Law.md",
+    "Inglese/Vocabulary/03. Society and World/Environment and Nature.md",
+    "Inglese/Vocabulary/03. Society and World/index.md",
+    "Inglese/Vocabulary/03. Society and World/Politics and Society.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/index.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/Media, Books and TV.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/Travel and Airport.md",
+    "Inglese/Vocabulary/05. Word Formation/Compound Words.md",
+    "Inglese/Vocabulary/05. Word Formation/index.md",
+    "Inglese/Vocabulary/05. Word Formation/Prefixes and Suffixes.md",
+    "Inglese/Cerificazione Inglese/Listening/index.md",
+    "Inglese/Cerificazione Inglese/Reading/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/Senza nome.md",
+    "Inglese/Cerificazione Inglese/Writing/index.md",
+    "Inglese/Cerificazione Inglese/Writing/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Writing/Esercizi svolti/index.md",
+    "Inglese/Cerificazione Inglese/Writing/Strategie/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For only you.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you and candidate 2.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you and the interviewer.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you, candidate 2 and the interviewer.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Esercizi svolti/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For multiple matching.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For multiple-choice gap-fill.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For open gap-fill.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For reading and multiple-choice comprehension.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For reading and text comprehension.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For trasformation with key word.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For word formation gap-fill.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/Strategies for each gap.md",
+    "Inglese/Cerificazione Inglese/Listening/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple choice 1.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple choice 2.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple matching.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For text or sentence completion.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/index.md",
+    "Informatica/Cpp/Gestione dei file.md",
+    "Informatica/Cpp/Gli array.md",
+    "Informatica/Cpp/index.md",
+    "Informatica/Cpp/Le funzioni e procedure.md",
+    "Informatica/Cpp/Le struct e le classi.md",
+    "Informatica/Cpp/Le variabili.md",
+    "Informatica/Cpp/Puntatori.md",
+    "Informatica/HTML/index.md",
+    "Informatica/HTML/css/index.md",
+    "Informatica/HTML/html/1 Struttura Base HTML.md",
+    "Informatica/HTML/html/10 Attributi HTML.md",
+    "Informatica/HTML/html/2 Metadati HTML.md",
+    "Informatica/HTML/html/3 Testo HTML.md",
+    "Informatica/HTML/html/4 Link HTML.md",
+    "Informatica/HTML/html/5 Media HTML.md",
+    "Informatica/HTML/html/6 Liste e Tabelle HTML.md",
+    "Informatica/HTML/html/7 Form HTML e input.md",
+    "Informatica/HTML/html/8 Layout e Semantica HTML.md",
+    "Informatica/HTML/html/9 Componenti Interattivi HTML.md",
+    "Informatica/HTML/html/index.md",
+    "Informatica/HTML/html/Senza nome.md",
+    "Informatica/HTML/javaScript/1 Fondamentali.md",
+    "Informatica/HTML/javaScript/2 Strutture dati.md",
+    "Informatica/HTML/javaScript/3 Sintassi moderna (ES6+).md",
+    "Informatica/HTML/javaScript/4 Asincrono.md",
+    "Informatica/HTML/javaScript/5 OOP.md",
+    "Informatica/HTML/javaScript/6 Errori.md",
+    "Informatica/HTML/javaScript/7 DOM.md",
+    "Informatica/HTML/javaScript/index.md",
+    "Informatica/Cpp/Librerie/algorithm.md",
+    "Informatica/Cpp/Librerie/index.md",
+    "Informatica/Cpp/Librerie/iostream.md",
+    "Informatica/Cpp/Librerie/string.md",
+    "Informatica/Cpp/Librerie/vector.md",
+    "Informatica/Cpp/Teoria/Caratteristiche.md",
+    "Informatica/Cpp/Teoria/index.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Bubble sort.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/index.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Insertion sort.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Selection Sort.md"
+  ],
+  "files_with_draft_true": [],
+  "broken_links": [
+    [
+      "TIPSIT/index.md",
+      "Sistemi operativi/index",
+      "",
+      "Sistemi Operativi (Unit\u00e0 6)"
+    ],
+    [
+      "TIPSIT/index.md",
+      "Digitalizzazione e Multimedialit\u00e0/index",
+      "",
+      "Digitalizzazione e Multimedialit\u00e0"
+    ],
+    [
+      "TIPSIT/index.md",
+      "Operazioni coi binari e conversioni/index",
+      "",
+      "Operazioni coi Binari e Conversioni"
+    ],
+    [
+      "TIPSIT/index.md",
+      "FileSystem/index",
+      "",
+      "FileSystem"
+    ],
+    [
+      "TIPSIT/index.md",
+      "Codici di sicurezza/index",
+      "",
+      "Codici di sicurezza"
+    ],
+    [
+      "Informatica/HTML/javaScript/2 Strutture dati.md",
+      "1,[2",
+      "",
+      ""
+    ],
+    [
+      "Informatica/HTML/javaScript/2 Strutture dati.md",
+      "\"a\", 1",
+      "",
+      ""
+    ]
+  ],
+  "fm_tags": {
+    "sistemi-e-reti": 12,
+    "architettura-dei-calcolatori": 1,
+    "hardware": 1,
+    "cpu": 1,
+    "memorie": 1,
+    "automi": 5,
+    "moore": 1,
+    "mealy": 1,
+    "riconoscitore-sequenze": 2,
+    "fsm": 1,
+    "diagrammi-di-stato": 1,
+    "segnali": 1,
+    "telecomunicazioni": 1,
+    "analogico-digitale": 1,
+    "teoria-dei-sistemi": 2,
+    "canale-di-comunicazione": 1,
+    "multiplazione": 1,
+    "commutazione": 1,
+    "protocolli": 1,
+    "elettronica-digitale": 1,
+    "porte-logiche": 1,
+    "algebra-booleana": 1,
+    "classificazione": 1,
+    "reti-informatiche": 1,
+    "topologie-di-rete": 1,
+    "lan-wan": 1,
+    "overlapping": 1,
+    "cablaggio-strutturato": 1,
+    "norme-iso-osi": 1,
+    "impianti-di-rete": 1,
+    "rack": 1,
+    "tabelle-di-transizione": 1,
+    "sintesi-automi": 1
+  },
+  "inline_tags": {
+    "HTML": 17,
+    "Linguaggio_HTML": 10,
+    "JavaScript": 7,
+    "Linguaggio_cpp": 4,
+    "Librerie_cpp": 4
+  },
+  "isolated_nodes": [
+    "TEMP/Sistemi e reti/Le proprieta dei sistemi.md",
+    "Inglese/Cerificazione Inglese/Speaking/Esercizi/index.md",
+    "Inglese/Vocabulary/05. Word Formation/Compound Words.md",
+    "Inglese/Vocabulary/05. Word Formation/index.md",
+    "TIPSIT/Codici di sicurezza/index.md",
+    "Informatica/index.md",
+    "Inglese/Cerificazione Inglese/Competenze richieste per ogni livello.md",
+    "TEMP/Sistemi e reti/Il canale di comunicazione, multiplazione e commutazione.md",
+    "Inglese/Cerificazione Inglese/Listening/Esercizi/index.md",
+    "Informatica/HTML/html/1 Struttura Base HTML.md",
+    "Inglese/Cerificazione Inglese/Cosa devi fare nella prova.md",
+    "Informatica/HTML/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For multiple-choice gap-fill.md",
+    "Inglese/Vocabulary/05. Word Formation/Prefixes and Suffixes.md",
+    "TEMP/Sistemi e reti/Reti informatiche - Tipologie e topologie.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/index.md",
+    "Informatica/Cpp/Gestione dei file.md",
+    "Informatica/HTML/html/Senza nome.md",
+    "Inglese/Vocabulary/01. Personal Life/Food and Restaurants.md",
+    "Informatica/HTML/html/9 Componenti Interattivi HTML.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/index.md",
+    "Informatica/HTML/javaScript/2 Strutture dati.md",
+    "Inglese/Vocabulary/03. Society and World/Politics and Society.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For text or sentence completion.md",
+    "Inglese/Vocabulary/03. Society and World/Crime and Law.md",
+    "Informatica/Cpp/Teoria/index.md",
+    "Inglese/Vocabulary/01. Personal Life/Family and Life Stages.md",
+    "Informatica/Cpp/Le funzioni e procedure.md",
+    "Inglese/Teoria/Passive voice.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For word formation gap-fill.md",
+    "Sistemi e reti/index.md",
+    "Inglese/Cerificazione Inglese/Writing/Esercizi svolti/index.md",
+    "TEMP/Sistemi e reti/Architettura e funzionamento del computer.md",
+    "TEMP/Sistemi e reti/Automa di Moore - Riconoscitore di sequenze.md",
+    "TEMP/Sistemi e reti/Tabelle di transizione e trasformazione.md",
+    "Sistemi e reti/Cablaggio strutturato/Categorie di cavi.md",
+    "TEMP/Sistemi e reti/Riconoscitori di sequenze con e senza sovrapposizione.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple matching.md",
+    "TIPSIT/Sistemi operativi/2. Kernel e Shell.md",
+    "Informatica/HTML/javaScript/index.md",
+    "Informatica/HTML/html/3 Testo HTML.md",
+    "Informatica/Cpp/Gli array.md",
+    "Informatica/HTML/javaScript/5 OOP.md",
+    "Inglese/Vocabulary/01. Personal Life/index.md",
+    "TEMP/Sistemi e reti/I sistemi.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/Travel and Airport.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/Strategies for each gap.md",
+    "Inglese/Vocabulary/02. Work and Education/Work and Careers.md",
+    "TEMP/Sistemi e reti/I segnali - Analogici e digitali.md",
+    "Matematica/06 - Algebra e Irrazionali.md",
+    "Inglese/Vocabulary/03. Society and World/index.md",
+    "Informatica/HTML/javaScript/6 Errori.md",
+    "Informatica/HTML/html/6 Liste e Tabelle HTML.md",
+    "TIPSIT/FileSystem/Guida ai comandi terminali Linux.md",
+    "TEMP/Sistemi e reti/Automi a stati finiti e Diagrammi di stato.md",
+    "Informatica/Cpp/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For reading and text comprehension.md",
+    "Inglese/Vocabulary/02. Work and Education/Education and Learning.md",
+    "Informatica/Cpp/Puntatori.md",
+    "Inglese/Vocabulary/02. Work and Education/Technology and Internet.md",
+    "Informatica/Cpp/Le struct e le classi.md",
+    "TIPSIT/FileSystem/Guida ai comandi terminali Windows.md",
+    "Inglese/Cerificazione Inglese/Listening/index.md",
+    "Inglese/Vocabulary/01. Personal Life/Health and Illnesses.md",
+    "TIPSIT/Sistemi operativi/3. Modello a Ring, User Mode e Kernel Mode.md",
+    "Sistemi e reti/Cablaggio strutturato/Normativa ISO-OSI 11801.md",
+    "Sistemi e reti/Modello ISO-OSI/Collegamenti LAN e MAN.md",
+    "Inglese/Cerificazione Inglese/Writing/Esercizi/index.md",
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/index.md",
+    "Inglese/Vocabulary/03. Society and World/Environment and Nature.md",
+    "Informatica/HTML/html/4 Link HTML.md",
+    "Informatica/HTML/html/8 Layout e Semantica HTML.md",
+    "Informatica/Cpp/Librerie/algorithm.md",
+    "Informatica/Cpp/Librerie/string.md",
+    "Inglese/Cerificazione Inglese/Speaking/Senza nome.md",
+    "index.md",
+    "Sistemi e reti/Cablaggio strutturato/index.md",
+    "Informatica/HTML/javaScript/7 DOM.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you and the interviewer.md",
+    "Sistemi e reti/Cablaggio strutturato/Tipologie di cavi, i tipi di segnali e il canale di comunicazione.md",
+    "Inglese/Cerificazione Inglese/index.md",
+    "Inglese/Teoria/Esercizi e Risorse.md",
+    "Inglese/Vocabulary/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For only you.md",
+    "Informatica/HTML/html/10 Attributi HTML.md",
+    "Inglese/index.md",
+    "TEMP/Sistemi e reti/Scenario di cablaggio strutturato.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple choice 1.md",
+    "Informatica/HTML/javaScript/3 Sintassi moderna (ES6+).md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For multiple matching.md",
+    "Informatica/HTML/javaScript/4 Asincrono.md",
+    "Informatica/HTML/html/2 Metadati HTML.md",
+    "Sistemi e reti/Modello ISO-OSI/Standard basi cablaggio.md",
+    "TIPSIT/index.md",
+    "TEMP/Sistemi e reti/Le porte logiche e algebra booleana.md",
+    "Informatica/Cpp/Librerie/index.md",
+    "Informatica/Cpp/Le variabili.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple choice 2.md",
+    "Inglese/Cerificazione Inglese/Introduzione.md",
+    "Inglese/Vocabulary/04. Leisure and Travel/Media, Books and TV.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/index.md",
+    "Inglese/Vocabulary/02. Work and Education/index.md",
+    "Inglese/Vocabulary/01. Personal Life/Personality and Feelings.md",
+    "Inglese/Cerificazione Inglese/Reading/Esercizi svolti/index.md",
+    "TIPSIT/FileSystem/index.md",
+    "Informatica/Cpp/Teoria/Caratteristiche.md",
+    "Informatica/HTML/html/7 Form HTML e input.md",
+    "Inglese/Teoria/Conditionals.md",
+    "Sistemi e reti/Modello ISO-OSI/index.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you, candidate 2 and the interviewer.md",
+    "Informatica/HTML/css/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Esercizi/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For trasformation with key word.md",
+    "Inglese/Cerificazione Inglese/Speaking/index.md",
+    "TIPSIT/Sistemi operativi/1. Il Ruolo del Sistema Operativo.md",
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you and candidate 2.md",
+    "Inglese/Cerificazione Inglese/Writing/Strategie/index.md",
+    "Informatica/Cpp/Librerie/iostream.md",
+    "Informatica/HTML/javaScript/1 Fondamentali.md",
+    "Inglese/Cerificazione Inglese/Writing/index.md",
+    "Informatica/HTML/html/index.md",
+    "Informatica/Cpp/Librerie/vector.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For reading and multiple-choice comprehension.md",
+    "Informatica/HTML/html/5 Media HTML.md",
+    "Inglese/Teoria/index.md",
+    "Inglese/Cerificazione Inglese/Listening/Strategie/index.md",
+    "TIPSIT/Sistemi operativi/index.md",
+    "Matematica/index.md",
+    "Inglese/Cerificazione Inglese/Reading/index.md",
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For open gap-fill.md"
+  ],
+  "file_stats": {
+    "index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Matematica/01 - La Retta.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 4
+    },
+    "Matematica/02 - Le Coniche (Parabola e Circonferenza).md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 4
+    },
+    "Matematica/03 - Goniometria e Trigonometria.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 2
+    },
+    "Matematica/04 - Disequazioni di II grado e Fratte.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 3
+    },
+    "Matematica/05 - Ellisse e Iperbole.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 3
+    },
+    "Matematica/06 - Algebra e Irrazionali.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Matematica/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/index.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 5
+    },
+    "TIPSIT/Codici di sicurezza/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/1. Teoria dei Segnali e Conversione Analogico-Digitale.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 1
+    },
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/2. Digitalizzazione delle Immagini e Modelli di Colore.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 3
+    },
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/3. Caratteristiche Raster, Calcolo del Peso e Compressione.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 4
+    },
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/4. Grafica Vettoriale e Video Digitale.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 3
+    },
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/index.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 5
+    },
+    "TIPSIT/Digitalizzazione e Multimedialit\u00e0/Sintesi e Mappa Concettuale.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/FileSystem/Guida ai comandi terminali Linux.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/FileSystem/Guida ai comandi terminali Windows.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/FileSystem/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/Operazioni coi binari e conversioni/1. Sistemi di numerazione e Conversioni di base.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/Operazioni coi binari e conversioni/2. Operazioni aritmetiche binarie.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/Operazioni coi binari e conversioni/3. Rappresentazione dei numeri con segno e Complemento a 2.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/Operazioni coi binari e conversioni/index.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 5
+    },
+    "TIPSIT/Sistemi operativi/1. Il Ruolo del Sistema Operativo.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/Sistemi operativi/2. Kernel e Shell.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/Sistemi operativi/3. Modello a Ring, User Mode e Kernel Mode.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TIPSIT/Sistemi operativi/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Architettura e funzionamento del computer.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "architettura-dei-calcolatori",
+        "hardware",
+        "cpu",
+        "memorie"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Automa di Moore - Riconoscitore di sequenze.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "automi",
+        "moore",
+        "mealy",
+        "riconoscitore-sequenze"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Automi a stati finiti e Diagrammi di stato.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "automi",
+        "fsm",
+        "diagrammi-di-stato"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/I segnali - Analogici e digitali.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "segnali",
+        "telecomunicazioni",
+        "analogico-digitale"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/I sistemi.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "teoria-dei-sistemi",
+        "automi"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Il canale di comunicazione, multiplazione e commutazione.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "canale-di-comunicazione",
+        "multiplazione",
+        "commutazione",
+        "protocolli"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Le porte logiche e algebra booleana.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "elettronica-digitale",
+        "porte-logiche",
+        "algebra-booleana"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Le proprieta dei sistemi.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "teoria-dei-sistemi",
+        "classificazione"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Reti informatiche - Tipologie e topologie.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "reti-informatiche",
+        "topologie-di-rete",
+        "lan-wan"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Riconoscitori di sequenze con e senza sovrapposizione.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "automi",
+        "riconoscitore-sequenze",
+        "overlapping"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Scenario di cablaggio strutturato.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "cablaggio-strutturato",
+        "norme-iso-osi",
+        "impianti-di-rete",
+        "rack"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "TEMP/Sistemi e reti/Tabelle di transizione e trasformazione.md": {
+      "has_fm": true,
+      "is_draft": false,
+      "fm_tags": [
+        "sistemi-e-reti",
+        "automi",
+        "tabelle-di-transizione",
+        "sintesi-automi"
+      ],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/Cablaggio strutturato/Categorie di cavi.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/Cablaggio strutturato/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/Cablaggio strutturato/Normativa ISO-OSI 11801.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/Cablaggio strutturato/Tipologia e Topologia reti.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 2
+    },
+    "Sistemi e reti/Cablaggio strutturato/Tipologie di cavi, i tipi di segnali e il canale di comunicazione.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/Modello ISO-OSI/Apparati centrali.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 5
+    },
+    "Sistemi e reti/Modello ISO-OSI/Collegamenti LAN e MAN.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/Modello ISO-OSI/Comandi di uno switch CISCO.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 1
+    },
+    "Sistemi e reti/Modello ISO-OSI/Il cavo di rete e crimpaggio.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 3
+    },
+    "Sistemi e reti/Modello ISO-OSI/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/Modello ISO-OSI/Le reti Ethernet.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 3
+    },
+    "Sistemi e reti/Modello ISO-OSI/Modello ISO-OSI 11801.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 3
+    },
+    "Sistemi e reti/Modello ISO-OSI/Standard basi cablaggio.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Sistemi e reti/Modello ISO-OSI/Tecniche acceso al canale casuali.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 4
+    },
+    "Inglese/Cerificazione Inglese/Competenze richieste per ogni livello.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Cosa devi fare nella prova.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Introduzione.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Teoria/Conditionals.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Teoria/Esercizi e Risorse.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Teoria/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Teoria/Passive voice.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Teoria/Verb Tenses.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 13
+    },
+    "Inglese/Vocabulary/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/01. Personal Life/Family and Life Stages.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/01. Personal Life/Food and Restaurants.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/01. Personal Life/Health and Illnesses.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/01. Personal Life/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/01. Personal Life/Personality and Feelings.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/02. Work and Education/Education and Learning.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/02. Work and Education/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/02. Work and Education/Technology and Internet.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/02. Work and Education/Work and Careers.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/03. Society and World/Crime and Law.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/03. Society and World/Environment and Nature.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/03. Society and World/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/03. Society and World/Politics and Society.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/04. Leisure and Travel/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/04. Leisure and Travel/Media, Books and TV.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/04. Leisure and Travel/Travel and Airport.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/05. Word Formation/Compound Words.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/05. Word Formation/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Vocabulary/05. Word Formation/Prefixes and Suffixes.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Listening/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Speaking/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Speaking/Senza nome.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Writing/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Writing/Esercizi/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Writing/Esercizi svolti/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Writing/Strategie/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Speaking/Esercizi/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For only you.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you and candidate 2.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you and the interviewer.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/For you, candidate 2 and the interviewer.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Speaking/Strategie/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Esercizi/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Esercizi svolti/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For multiple matching.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For multiple-choice gap-fill.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For open gap-fill.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For reading and multiple-choice comprehension.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For reading and text comprehension.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For trasformation with key word.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/For word formation gap-fill.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Reading/Strategie/Strategies for each gap.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Listening/Esercizi/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple choice 1.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple choice 2.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For multiple matching.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Listening/Strategie/For text or sentence completion.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Inglese/Cerificazione Inglese/Listening/Strategie/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Gestione dei file.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Gli array.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Le funzioni e procedure.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Le struct e le classi.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Le variabili.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Puntatori.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/css/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/1 Struttura Base HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/10 Attributi HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/2 Metadati HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/3 Testo HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/4 Link HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/5 Media HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/6 Liste e Tabelle HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/7 Form HTML e input.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/8 Layout e Semantica HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/9 Componenti Interattivi HTML.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "Linguaggio_HTML"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/html/Senza nome.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/javaScript/1 Fondamentali.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "JavaScript"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/javaScript/2 Strutture dati.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "JavaScript"
+      ],
+      "wikilinks_count": 2
+    },
+    "Informatica/HTML/javaScript/3 Sintassi moderna (ES6+).md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "JavaScript"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/javaScript/4 Asincrono.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "JavaScript"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/javaScript/5 OOP.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "JavaScript"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/javaScript/6 Errori.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "JavaScript"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/javaScript/7 DOM.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "HTML",
+        "JavaScript"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/HTML/javaScript/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Librerie/algorithm.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "Linguaggio_cpp",
+        "Librerie_cpp"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Librerie/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Librerie/iostream.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "Linguaggio_cpp",
+        "Librerie_cpp"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Librerie/string.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "Linguaggio_cpp",
+        "Librerie_cpp"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Librerie/vector.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [
+        "Linguaggio_cpp",
+        "Librerie_cpp"
+      ],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Teoria/Caratteristiche.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Teoria/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Bubble sort.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 1
+    },
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/index.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 0
+    },
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Insertion sort.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 1
+    },
+    "Informatica/Cpp/Teoria/Algoritmi di ordinamento/Selection Sort.md": {
+      "has_fm": false,
+      "is_draft": false,
+      "fm_tags": [],
+      "inline_tags": [],
+      "wikilinks_count": 1
+    }
+  }
+}
