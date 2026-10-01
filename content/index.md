@@ -1,5 +1,5 @@
 ---
-title: Home Appunti
+title: "Home Appunti"
 cssclasses:
   - dashboard
 ---
@@ -10,17 +10,17 @@ Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in 
 
 ---
 
-## 💻 [[Informatica]]
-Lo studio del pensiero computazionale e della logica di programmazione. In questa sezione raccoglierò tutto ciò che riguarda i linguaggi di sviluppo, gli algoritmi, le strutture dati e le architetture software.
+## 💻 [[index[Informatica]|Informatica]]
+Lo studio del pensiero computazionale e della logica di programmazione: linguaggi C++, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.
 
-## 🇬🇧 [[Inglese]]
-Il passaporto per il mondo. Qui troverai regole grammaticali, lessico, strutture linguistiche e materiale di preparazione per affrontare certificazioni e test di livello internazionale.
+## 🇬🇧 [[index[Inglese]|Inglese]]
+Regole grammaticali complete, teoria dei tempi verbali, lessico tematico e preparazione intensiva per la certificazione linguistica Cambridge B2 First.
 
-## 📐 [[Matematica]]
-Il linguaggio universale della scienza. Formule, dimostrazioni ed esercizi guidati che spaziano dalla geometria analitica (studio della retta e delle coniche) all'algebra, alla trigonometria e al calcolo.
+## 📐 [[index[Matematica]|Matematica]]
+Geometria analitica (retta, coniche, circonferenza, parabola, ellisse, iperbole), goniometria, trigonometria, disequazioni e algebra avanzata.
 
-## 🌐 [[Sistemi e reti]]
-Il dietro le quinte di Internet e della comunicazione digitale. Appunti su come i computer "parlano" tra loro, i protocolli di rete, i modelli teorici come ISO-OSI e la sicurezza informatica.
+## 🌐 [[index[Sistemi e reti]|Sistemi e reti]]
+Architettura delle reti di calcolatori, standard di cablaggio strutturato, apparati di rete e analisi approfondita dei 7 livelli del modello ISO-OSI.
 
-## ⚙️ [[TIPSIT]]
-Tecnologie Informatiche e Progettazione di Sistemi IT. Un mix tra teoria e pratica per capire come si progettano e gestiscono i sistemi informatici complessi.
+## ⚙️ [[index[TIPSIT]|TIPSIT]]
+Tecnologie Informatiche e Progettazione: sistemi operativi, digitalizzazione multimediale, teoria dei segnali, conversioni binarie e comandi shell.

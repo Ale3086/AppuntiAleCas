@@ -1,4 +1,3 @@
-// Re-export shared path utilities from @quartz-community/utils
 export {
   isFilePath,
   isFullSlug,
@@ -6,7 +5,6 @@ export {
   isRelativeURL,
   isAbsoluteURL,
   getFullSlug,
-  slugifyFilePath,
   simplifySlug,
   joinSegments,
   endsWith,
@@ -23,6 +21,23 @@ export {
   transformLink,
   normalizeHastElement,
 } from "@quartz-community/utils"
+
+import { slugifyFilePath as _slugifyFilePath, FilePath, FullSlug } from "@quartz-community/utils"
+
+export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
+  const normalized = String(fp).replace(/\\/g, "/")
+  const segments = normalized.split("/")
+  if (segments.length >= 2) {
+    const filename = segments[segments.length - 1]
+    const ext = filename.lastIndexOf(".") !== -1 ? filename.slice(filename.lastIndexOf(".")) : ""
+    const base = filename.slice(0, filename.length - ext.length)
+    if (/^index(\[.*\]|[\s_-].*)?$/i.test(base)) {
+      segments[segments.length - 1] = "index" + ext
+      return _slugifyFilePath(segments.join("/") as FilePath, excludeExt)
+    }
+  }
+  return _slugifyFilePath(fp, excludeExt)
+}
 
 export type {
   FilePath,
