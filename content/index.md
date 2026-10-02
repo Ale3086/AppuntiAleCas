@@ -8,7 +8,7 @@ Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in 
 
 ---
 ## 💻 [[_index_Informatica|Informatica]]
-Lo studio del pensiero computazionale e della logica di programmazione: linguaggi C++, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.
+Lo studio del pensiero computazionale e della logica di programmazione: programmazione di sistema in C++, programmazione moderna in Python, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.
 
 ## 🇬🇧 [[_index_Inglese|Inglese]]
 Regole grammaticali complete, teoria dei tempi verbali, lessico tematico e preparazione intensiva per la certificazione linguistica Cambridge B2 First.

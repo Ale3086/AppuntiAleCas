@@ -4,6 +4,16 @@ tags:
   - informatica/cpp/sintassi
   - tipologia/concetto
 ---
+
+> [!SUMMARY] ⚡ In Sintesi (A Colpo d'Occhio)
+> - **Variabile**: porzione di RAM con ==Nome==, ==Tipo==, ==Valore== e ==Indirizzo (`&`)==.
+> - **Tipi Chiave**: `int` (interi 4 byte), `double` (decimali precisi 8 byte), `char` (singolo carattere), `bool` (`true`/`false`), `string` (testo).
+> - **Input Tastiera**: `cin >>` legge fino al primo spazio; `getline(cin, s)` legge l'intera riga.
+> - **Risoluzione Bug Buffer**: usa sempre ==`cin.ignore()`== tra un `cin >>` e un `getline()`.
+> - **Divisione tra Interi**: $5 / 2$ fa $2$; usa ==`static_cast<float>(a) / b`== per ottenere $2.5$.
+
+---
+
 Una **variabile** è una porzione di memoria RAM destinata a contenere un dato che può variare durante l'esecuzione del programma.
 
 Possiamo immaginarla come una **scatola etichettata** con 4 caratteristiche inscindibili:
@@ -21,16 +31,18 @@ flowchart LR
     end
 ```
 
-1. **Nome (Identificatore)**: l'etichetta testuale usata dal programmatore per riferirsi alla cella (es. `eta`, `punteggio`).
-2. **Tipo di Dato**: determina quanti byte di RAM riservare e come interpretare i bit memorizzati (`int`, `float`, `char`...).
-3. **Valore**: il contenuto effettivo memorizzato all'interno della cella.
-4. **Indirizzo di Memoria**: la posizione fisica univoca in RAM (es. `0x7ffd5e8b41ac`), ottenibile con l'operatore `&`.
+1. **Nome (Identificatore)**: l'etichetta usata per riferirsi alla cella (es. `eta`, `punteggio`).
+2. **Tipo di Dato**: stabilisce quanti byte di RAM riservare e come interpretare i bit (`int`, `float`, `char`...).
+3. **Valore**: il contenuto effettivo memorizzato nella cella.
+4. **Indirizzo di Memoria**: la posizione fisica univoca in RAM (es. `0x7ffd5e8b41ac`), accessibile con l'operatore **`&`**.
 
 > [!NOTE]
 > A differenza dei file (persistenti su SSD/hard disk), le variabili sono **volatili**: quando il programma termina o il computer si spegne, tutti i dati nelle variabili vengono distrutti.
 
 ---
+
 ## 1. Ciclo di Vita di una Variabile
+
 Le tre fasi fondamentali per usare una variabile sono:
 
 ```mermaid
@@ -39,15 +51,17 @@ flowchart LR
 ```
 
 ```cpp
-int eta;          // 1. Dichiarazione (riserva lo spazio, valore iniziale indefinito / spazzatura!)
+int eta;          // 1. Dichiarazione (valore iniziale indefinito / spazzatura!)
 eta = 18;         // 2. Assegnazione (memorizza il valore)
 
-int livello = 1;  // Inizializzazione contestuale (buona norma!)
+int livello = 1;  // Inizializzazione contestuale (buona norma consigliata!)
 ```
 
 ---
+
 ## 2. I Tipi di Dato Primitivi
-In C++ ogni variabile deve avere un tipo stabilito prima dell'esecuzione (**tipizzazione statica e forte**).
+
+In C++ ogni variabile deve avere un tipo stabilito a priori (**tipizzazione statica e forte**).
 
 | Tipo | Significato | Dimensione | Intervallo / Valori possibili | Esempio |
 | :--- | :--- | :--- | :--- | :--- |
@@ -56,93 +70,87 @@ In C++ ogni variabile deve avere un tipo stabilito prima dell'esecuzione (**tipi
 | **`double`** | Decimale doppia precisione | 8 byte (64 bit) | $\approx 15$ cifre decimali significative | `double pi = 3.14159265;` |
 | **`char`** | Singolo carattere ASCII | 1 byte (8 bit) | Tra apici singoli `' '` (codici 0-255) | `char voto = 'A';` |
 | **`bool`** | Valore booleano di verità | 1 byte | `true` (1) oppure `false` (0) | `bool vivo = true;` |
-| **`string`** | Stringa testuale (classe STL) | Dinamica | Testo tra doppi apici `" "` | `string nome = "Luca";` |
-
-> [!TIP]
-> Per usare `string` includi l'header `#include <string>`. Le stringhe in C++ sono oggetti dinamici che gestiscono automaticamente la memoria.
+| **`string`** | Testo (classe STL da `<string>`) | Dinamica | Testo tra doppi apici `" "` | `string nome = "Luca";` |
 
 ---
-## 3. Modificatori di Tipo, Costanti e Overflow
+
+## 3. Modificatori, Costanti e Integer Overflow
 
 ### Modificatori
-- **`unsigned`**: elimina i numeri negativi, raddoppiando l'intervallo positivo (es. `unsigned int` va da $0$ a oltre $4$ miliardi).
+- **`unsigned`**: elimina i negativi, raddoppiando il limite positivo (`unsigned int` va da $0$ a oltre $4$ miliardi).
 - **`long long`**: estende gli interi a 8 byte (fino a $\pm 9 \times 10^{18}$).
-- **`const`**: rende la variabile una **costante di sola lettura**. Qualsiasi tentativo di modifica genererà un errore di compilazione.
+- **`const`**: trasforma la variabile in una ==costante di sola lettura==. Qualsiasi modifica successiva genererà un errore di compilazione.
 
 ```cpp
 const float TASSO_IVA = 0.22f;
 // TASSO_IVA = 0.25f; // ERRORE! Non puoi modificare una costante!
 ```
 
-### Il Fenomeno dell'Overflow Numerico
-Cosa succede se aggiungi `1` al valore massimo consentito da un tipo di dato?
-
-```cpp
-int maxIntero = 2147483647; // Massimo valore per un int a 32 bit con segno
-maxIntero = maxIntero + 1;
-cout << maxIntero << endl;  // Stampa: -2147483648!
-```
-> [!WARNING]
-> Questo fenomeno si chiama **Integer Overflow**: il bit di segno si ribalta e il numero "ricomincia" dal limite negativo più basso. In sistemi critici può provocare bug gravissimi.
+> [!DANGER] 🚫 Il Fenomeno dell'Integer Overflow
+> Se aggiungi `1` al valore massimo consentito da un `int` a 32 bit ($2.147.483.647$), il bit di segno si ribalta e il numero "ricomincia" dal limite negativo:
+> ```cpp
+> int max = 2147483647;
+> max = max + 1;
+> cout << max; // Stampa: -2147483648!
+> ```
 
 ---
+
 ## 4. Input e Output (`cout`, `cin`, `getline()`)
 
 ### Output con `cout` (Operatore `<<`)
-Permette di inviare dati al terminale:
-
 ```cpp
 int vite = 3;
 cout << "Vite rimaste: " << vite << endl;
 ```
 
 ### Input con `cin` (Operatore `>>`)
-Estrae valori dal flusso di input della tastiera:
-
 ```cpp
 int eta;
 cout << "Quanti anni hai? ";
 cin >> eta;
 ```
 
-> [!CAUTION]
-> L'operatore `>>` **si arresta al primo spazio bianco**. Se inserisci `"Mario Rossi"`, `cin` memorizzerà solo `"Mario"` e lascerà `"Rossi"` in sospeso nel buffer!
+> [!WARNING] ⚠️ Il Limite di `cin >>`
+> L'operatore `>>` ==si ferma al primo spazio bianco==. Se inserisci `"Mario Rossi"`, `cin` leggerà solo `"Mario"` e lascerà `"Rossi"` nel canale di input!
 
 ---
-### Lettura di Intere Righe: `getline()` e il Problema del Buffer
-Per leggere testi con spazi si usa `getline(cin, stringa)`. Tuttavia, se usato dopo un `cin >>`, si verifica un errore classico:
+
+### Lettura con Spazi: `getline()` e la Trappola del Buffer
+
+Per leggere frasi complete con spazi si usa `getline(cin, stringa)`.  
+Tuttavia, se usato subito dopo un `cin >>`, si verifica un errore comunissimo:
 
 ```mermaid
 flowchart TD
     Tastiera["Utente digita: 18 e preme Invio ('\n')"]
-    Cin["cin >> eta legge il numero '18'"]
+    Cin["cin >> eta legge '18'"]
     Buffer["Nel buffer rimane il carattere Invio ('\n')"]
-    Getline["getline() parte, trova subito '\n' e si chiude pensando sia una riga vuota!"]
+    Getline["getline() parte, trova subito '\n' e si chiude all'istante!"]
 
     Tastiera --> Cin --> Buffer --> Getline
 ```
 
-#### La Soluzione: `cin.ignore()`
-```cpp
-int eta;
-string indirizzo;
-
-cout << "Inserisci l'eta': ";
-cin >> eta;
-
-cin.ignore(); // Svuota l'Invio residuo dal canale di input!
-
-cout << "Inserisci via e civico: ";
-getline(cin, indirizzo); // Ora funziona correttamente!
-```
+> [!SUCCESS] 🎯 La Soluzione: `cin.ignore()`
+> Inserisci sempre `cin.ignore()` per "ripulire" l'Invio pendente prima di chiamare `getline()`:
+> ```cpp
+> int eta;
+> string indirizzo;
+> 
+> cin >> eta;
+> cin.ignore(); // Svuota il buffer!
+> getline(cin, indirizzo); // Ora funziona regolarmente!
+> ```
 
 > [!INFO] 🖼️ Placeholder Immagine: Funzionamento del buffer dello stream di input
-> *Suggerimento per Obsidian: inserisci qui un diagramma che illustra la coda FIFO del buffer di cin prima e dopo cin.ignore().*
+> *Suggerimento per Obsidian: inserisci qui un diagramma che illustra la coda FIFO del buffer di cin prima e dopo cin.ignore().*  
 > `![[Pasted image buffer_cin.png|550]]`
 
 ---
-## 5. Scope delle Variabili e Variable Shadowing
-Lo **scope** (o ambito di visibilità) definisce dove una variabile può essere utilizzata nel codice.
+
+## 5. Scope e Variable Shadowing
+
+Lo **scope** (ambito di visibilità) definisce dove una variabile è valida.
 
 ```cpp
 #include <iostream>
@@ -151,34 +159,33 @@ using namespace std;
 int x = 100; // Variabile Globale
 
 int main() {
-    int x = 10; // Variabile Locale del main: nasconde quella globale (Shadowing!)
-    cout << "x locale main: " << x << endl; // 10
+    int x = 10; // Locale del main (nasconde quella globale: Shadowing!)
 
     {
         int x = 5; // Locale del blocco interno
         cout << "x blocco interno: " << x << endl; // 5
-    } // Qui la x da 5 viene distrutta!
+    } // Qui la x interna viene distrutta
 
-    cout << "x torna ad essere: " << x << endl; // 10
-    cout << "x globale (con ::): " << ::x << endl; // 100
-
+    cout << "x locale main:    " << x << endl;   // 10
+    cout << "x globale (::x):  " << ::x << endl; // 100
     return 0;
 }
 ```
 
 ---
-## 6. Typecasting (`static_cast`)
-Il casting converte una variabile da un tipo all'altro.
 
-In C++, la divisione tra due interi `5 / 2` produce `2` (troncamento dei decimali). Per ottenere `2.5`, dobbiamo convertire almeno uno dei due operandi in un tipo decimale:
+## 6. Typecasting con `static_cast`
+
+> [!QUESTION] ❓ Domanda d'Esame: Perché 5 / 2 dà 2 in C++?
+> Perché la divisione tra due interi genera **sempre un intero troncato**. Per avere decimali, almeno uno dei due operandi deve essere convertito con ==`static_cast<float>()`==:
 
 ```cpp
 int a = 5;
 int b = 2;
 
-// Errato: tronca a 2 prima di assegnare
-float f1 = a / b; // 2.0
+// Errato (troncamento a 2):
+float errato = a / b; // 2.0
 
-// Corretto tramite static_cast:
-float f2 = static_cast<float>(a) / b; // 2.5
+// Corretto con static_cast:
+float corretto = static_cast<float>(a) / b; // 2.5
 ```

@@ -4,18 +4,28 @@ tags:
   - informatica/cpp/sintassi
   - tipologia/guida-pratica
 ---
-Nei programmi più semplici le istruzioni vengono eseguite in modo **sequenziale**, una riga dopo l'altra.
-Nella realtà, però, dobbiamo consentire al computer di prendere decisioni o ripetere blocchi di istruzioni finché una condizione è verificata.
+
+> [!SUMMARY] ⚡ In Sintesi (A Colpo d'Occhio)
+> - **Selezione**: ==`if-else`== per condizioni booleane; ==`switch`== per menu numerici o caratteri (ricorda il `break`!).
+> - **Ciclo `for`**: ideale quando il ==numero di iterazioni è noto== a priori (es. array da 0 a $N$).
+> - **Ciclo `while`**: controllo in testa, esegue da ==0 a $N$ volte== (ottimo per lettura file).
+> - **Ciclo `do-while`**: controllo in coda, esegue ==almeno 1 volta== (la scelta d'oro per la validazione dell'input).
+> - **Interruzioni**: ==`break`== esce dal ciclo; ==`continue`== salta al giro successivo.
+
+---
+
+Nei programmi reali dobbiamo consentire al computer di prendere decisioni o ripetere blocchi di istruzioni finché una condizione è verificata.
 
 Queste capacità sono governate dalle **strutture di controllo**:
 1. **Selezione (Condizionali)**: `if`, `else`, `switch`.
 2. **Iterazione (Cicli)**: `while`, `do-while`, `for`.
 
 ---
+
 ## 1. Strutture di Selezione
 
 ### Il costrutto `if` - `else if` - `else`
-Consente di biforcare il flusso di esecuzione in base al valore di verità (`true` o `false`) di un'espressione.
+Biforca il flusso di esecuzione in base al valore booleano (`true` o `false`) dell'espressione.
 
 ```mermaid
 flowchart TD
@@ -50,18 +60,19 @@ int main() {
 ```
 
 ### Cortocircuito Logico (*Short-Circuit Evaluation*)
-Negli operatori logici composti:
-- Nel costrutto `cond1 && cond2`: se `cond1` è **falsa**, il compilatore **non valuta nemmeno `cond2`** (il risultato complessivo sarà comunque falso).
-- Nel costrutto `cond1 || cond2`: se `cond1` è **vera**, il compilatore **non valuta `cond2`** (il risultato sarà comunque vero).
+- In `cond1 && cond2`: se `cond1` è ==falsa==, il computer **non valuta nemmeno `cond2`** (il risultato è per forza falso).
+- In `cond1 || cond2`: se `cond1` è ==vera==, il computer **non valuta `cond2`** (il risultato è per forza vero).
 
-> [!TIP]
-> Questa proprietà consente di scrivere controlli di sicurezza salvavita come:
-> `if (ptr != nullptr && *ptr > 0)`
-> Se `ptr` è nullo, la dereferenziazione `*ptr` non viene eseguita evitando un crash!
+> [!SUCCESS] 🎯 Trucco del Mestiere: Sicurezza dei Puntatori
+> Grazie al cortocircuito puoi scrivere controlli salvavita come:  
+> `if (ptr != nullptr && *ptr > 0)`  
+> Se `ptr` è nullo, la dereferenziazione `*ptr` viene evitata proteggendo il programma da un crash!
 
 ---
+
 ### Selezione Multipla: `switch`
-Quando dobbiamo confrontare **una singola variabile intera o carattere** contro una serie di valori costanti prefissati, `switch` è più pulito ed efficiente di una sfilza di `else if`.
+
+Quando confrontiamo **una singola variabile intera o carattere** contro più valori costanti, `switch` è molto più pulito di una sfilza di `else if`.
 
 ```mermaid
 flowchart TD
@@ -83,9 +94,9 @@ cin >> scelta;
 
 switch (scelta) {
     case 's':
-    case 'S': // Supporta sia minuscola che maiuscola
+    case 'S':
         cout << "Continuo l'elaborazione..." << endl;
-        break; // Interrompe ed esce dallo switch
+        break; // Esce dallo switch!
     case 'n':
     case 'N':
         cout << "Operazione annullata." << endl;
@@ -96,12 +107,12 @@ switch (scelta) {
 }
 ```
 
-> [!CAUTION]
-> **Il pericolo del *Fall-Through***: se dimentichi di inserire l'istruzione `break`, il programma continuerà a eseguire anche le istruzioni dei `case` successivi, anche se la condizione non corrisponde!
+> [!DANGER] 🚫 Errore da Matita Rossa: Dimenticare il `break` (Fall-Through)
+> Se ometti l'istruzione `break`, il programma continuerà a eseguire indistintamente anche i `case` sottostanti anche se la condizione non corrisponde!
 
 ---
-## 2. Strutture di Iterazione (I Cicli a Confronto)
-I cicli servono a ripetere istruzioni. In C++ si dividono in base a **quando** viene controllata la condizione:
+
+## 2. Strutture di Iterazione (I Cicli)
 
 ```mermaid
 flowchart LR
@@ -117,46 +128,30 @@ flowchart LR
     end
 ```
 
-### 1. `while`: Controllo in Testa
-La condizione viene verificata **prima** di ogni giro. Se la condizione è falsa fin dall'inizio, il ciclo non parte mai.
-
-```cpp
-int contatore = 1;
-while (contatore <= 3) {
-    cout << "Iterazione: " << contatore << endl;
-    contatore++;
-}
-```
+> [!QUESTION] ❓ Domanda d'Esame: Differenza tra `while` e `do-while`
+> - **`while`**: la condizione viene controllata **prima**. Se è falsa subito, il ciclo esegue ==0 iterazioni==.
+> - **`do-while`**: la condizione viene controllata **dopo**. Il corpo viene eseguito ==almeno 1 volta garantita==.
 
 ---
-### 2. `do-while`: Controllo in Coda (Validazione Input)
-Il corpo viene eseguito **almeno una volta**, perché la verifica avviene solo alla fine.
-È il costrutto fondamentale per la **validazione dei dati immessi dall'utente**:
 
-```cpp
-#include <iostream>
-using namespace std;
+### Lo Schema Fisso della Validazione Input con `do-while`
 
-int main() {
-    int numero;
-    // Chiede il numero finché non rispetta l'intervallo richiesto
-    do {
-        cout << "Inserisci un numero positivo tra 1 e 10: ";
-        cin >> numero;
-    } while (numero < 1 || numero > 10);
-
-    cout << "Hai inserito un valore valido: " << numero << endl;
-    return 0;
-}
-```
+> [!SUCCESS] 🎯 Il Pattern per la Verifica dei Dati Utente
+> ```cpp
+> int voto;
+> do {
+>     cout << "Inserisci un voto valido (1-10): ";
+>     cin >> voto;
+> } while (voto < 1 || voto > 10); // Ripete se il dato è SBAGLIATO!
+> ```
 
 > [!INFO] 🖼️ Placeholder Immagine: Diagramma di flusso della validazione di un input
-> *Suggerimento per Obsidian: inserisci qui un diagramma di flusso flowchart della validazione utente con do-while.*
+> *Suggerimento per Obsidian: inserisci qui un diagramma di flusso flowchart della validazione utente con do-while.*  
 > `![[Pasted image validazione_flowchart.png|500]]`
 
 ---
-### 3. `for`: Ciclo a Conteggio
-Ideale quando il numero di iterazioni è prefissato o quando si devono scorrere collezioni di dati.
+
+### Il Ciclo `for` (A Conteggio)
 
 ```mermaid
 flowchart TD
@@ -174,30 +169,29 @@ for (int i = 1; i <= 5; i++) {
 cout << endl;
 ```
 
-#### Pre-incremento (`++i`) vs Post-incremento (`i++`)
-- `i++` (Post): restituisce il valore attuale di `i` e solo successivamente lo incrementa.
-- `++i` (Pre): incrementa prima il valore e restituisce il valore già aggiornato.
-*(Nei cicli `for` l'effetto pratico è lo stesso, ma `++i` è preferito per ragioni di efficienza quando si usano iteratori complessi).*
-
 ---
+
 ## 3. Istruzioni di Salto: `break` e `continue`
-- **`break`**: esce all'istante dal ciclo più interno in cui si trova.
-- **`continue`**: salta il resto delle istruzioni del giro corrente e passa immediatamente alla verifica della successiva iterazione.
+
+- **`break`**: ==termina ed esce all'istante== dal ciclo più interno.
+- **`continue`**: ==salta il resto del giro corrente== e passa subito all'iterazione successiva.
 
 ```cpp
 for (int i = 1; i <= 6; i++) {
     if (i == 3) continue; // Salta il numero 3!
-    if (i == 5) break;    // Si ferma del tutto prima del 5!
+    if (i == 5) break;    // Blocca il ciclo prima del 5!
     cout << i << " ";
 }
-// Output stampato: 1 2 4
+// Stampa a schermo: 1 2 4
 ```
 
 ---
+
 ## Tabella di Scelta Rapida
-| Situazione | Struttura Consigliata | Esempio |
+
+| Situazione | Struttura Consigliata | Esempio Tipico |
 | :--- | :--- | :--- |
-| Conosci a priori quanti giri fare | **`for`** | Scorrere un array di 50 elementi |
-| Devi verificare prima se agire | **`while`** | Lettura di righe da file fino a EOF |
-| Devi eseguire l'azione almeno una volta | **`do-while`** | Menu con ripetizione o controllo input |
-| Confronti una variabile contro 3 o più valori fissi | **`switch`** | Selezione opzioni menu (1, 2, 3...) |
+| **Numero di iterazioni noto a priori** | ==`for`== | Scorrere un array di 50 elementi |
+| **Controllo preventivo della condizione** | ==`while`== | Lettura da file riga per riga fino a EOF |
+| **Esecuzione obbligatoria almeno una volta** | ==`do-while`== | Validazione da tastiera, menu ripetuto |
+| **Scelta multipla tra valori fissi** | ==`switch`== | Menu di selezione (1, 2, 3...) |

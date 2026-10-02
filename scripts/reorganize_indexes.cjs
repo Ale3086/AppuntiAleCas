@@ -3,7 +3,7 @@ const path = require("path");
 
 const DESCRIPTIONS = {
   // Macro materie
-  "Informatica": "Lo studio del pensiero computazionale e della logica di programmazione: linguaggi C++, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.",
+  "Informatica": "Lo studio del pensiero computazionale e della logica di programmazione: programmazione di sistema in C++, programmazione moderna in Python, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.",
   "Inglese": "Regole grammaticali complete, teoria dei tempi verbali, lessico tematico e preparazione intensiva per la certificazione linguistica Cambridge B2 First.",
   "Matematica": "Geometria analitica (retta, coniche, circonferenza, parabola, ellisse, iperbole), goniometria, trigonometria, disequazioni e algebra avanzata.",
   "Sistemi e reti": "Architettura delle reti di calcolatori, standard di cablaggio strutturato, apparati di rete e analisi approfondita dei 7 livelli del modello ISO-OSI.",
@@ -11,6 +11,7 @@ const DESCRIPTIONS = {
 
   // Informatica subfolders
   "Cpp": "Programmazione in C++: gestione della memoria, puntatori, array, funzioni, struct, classi, librerie e algoritmi di ordinamento.",
+  "Python": "Programmazione in Python: architettura bytecode PVM, collezioni (liste, tuple, set, dict), funzioni avanzate, memory model, OOP, gestione file e algoritmi.",
   "HTML": "Sviluppo Web Frontend: struttura semantica delle pagine in HTML5, fogli di stile CSS3 e programmazione interattiva con JavaScript.",
   "Librerie": "Prontuario delle librerie standard di C++ (iostream, string, vector, algorithm) con funzioni, metodi e casi d'uso pratici.",
   "Teoria": "Concetti teorici del C++, architettura dei calcolatori e analisi computazionale degli algoritmi di ordinamento.",
@@ -43,6 +44,8 @@ const DESCRIPTIONS = {
   "05. Word Formation": "Tavole riassuntive di prefissi, suffissi, nomi composti e regole di derivazione morfologica per la parte 3 di Use of English.",
 
   // Sistemi e reti subfolders
+  "Automi e Reti Logiche": "Teoria degli automi a stati finiti (FSM), modelli di Moore e Mealy, tabelle di transizione/trasformazione e circuiti sequenziali sincroni.",
+  "Teoria dei sistemi e Architettura": "Architettura di Von Neumann, gerarchia della CPU e delle memorie, algebra booleana, porte logiche e classificazione sistemica.",
   "Cablaggio strutturato": "Normative ISO/IEC 11801, categorie di cavi Ethernet (rame e fibra ottica), topologie di rete e tecniche di attestazione/crimpaggio.",
   "Modello ISO-OSI": "I 7 livelli della pila ISO-OSI, incapsulamento PDU, apparati di rete (Switch, Router, Hub), reti Ethernet e comandi Cisco IOS.",
 
@@ -87,6 +90,15 @@ const DESCRIPTIONS = {
   "5 OOP": "Programmazione a oggetti moderna con classi ES6: costruttori, ereditarietà con `extends`, metodi statici e proprietà private (`#`).",
   "6 Errori": "Gestione robusta delle eccezioni in runtime tramite blocchi `try`, `catch`, `finally` e creazione di errori personalizzati con `throw new Error()`.",
   "7 DOM": "Document Object Model: selezione di elementi (`querySelector`), manipolazione delle classi CSS, gestione degli eventi (`addEventListener`) e rendering dinamico.",
+  "1 Caratteristiche del Python": "Filosofia dello Zen di Python, esecuzione a bytecode tramite PVM, tipizzazione dinamica e forte, Garbage Collector e confronto sistematico con C++.",
+  "2 Le variabili e tipi di dato": "Meccanismo di binding a oggetti in Heap, tipi primitivi immutabili, Type Hints PEP 484, f-strings ed operatori aritmetici avanzati.",
+  "3 Strutture di controllo e cicli": "Indentazione a blocchi di codice, costrutti if-elif-else, match-case strutturale, cicli for con range, enumerate() e clausola while...else.",
+  "4 Le collezioni e liste": "Liste mutabili, tuple, insiemi e dizionari: indicizzazione negativa, slicing avanzato [::], metodi principali e list comprehensions.",
+  "5 Le funzioni": "Definizione con def, argomenti posizionali e kwargs, valori di default, *args e **kwargs, pass-by-object-reference e scope LEGB.",
+  "6 Gestione della memoria e riferimenti": "Reference model, funzione id(), differenza tra == e is, mutabilità vs immutabilità, shallow copy vs deepcopy e GC con Reference Counting.",
+  "7 La programmazione a oggetti (OOP)": "Classi, costruttore __init__, parametro self, incapsulamento pythonico, getter/setter con @property, dunder methods ed ereditarietà con @dataclass.",
+  "8 Gestione dei file e moduli": "Context Manager with open(), modalità di lettura/scrittura, gestione sicura delle eccezioni con try-except e manipolazione di file JSON e CSV.",
+  "9 Algoritmi e ordinamento in Python": "Ricerca lineare e binaria, algoritmi Bubble/Selection sort, algoritmo Timsort nativo, sort() in-place e sorted() con chiavi lambda.",
 
   // File individuali di Inglese
   "Competenze richieste per ogni livello": "Quadro Europeo di Riferimento (QCER): differenze di livello da A1 a C2 e parametri di valutazione B2 First.",
@@ -137,6 +149,7 @@ const DESCRIPTIONS = {
   // File individuali di Sistemi e Reti
   "Categorie di cavi": "Caratteristiche elettriche e limiti di velocità delle categorie di cavi Ethernet in rame (Cat5e, Cat6, Cat6a, Cat7, Cat8).",
   "Normativa ISO-OSI 11801": "Standard internazionali per la progettazione e la posa del cablaggio strutturato in edifici civili e commerciali.",
+  "Scenario di cablaggio strutturato": "Progetto pratico di cablaggio strutturato per un campus multi-edificio: distributori CD, BD, FD, dorsali verticali in fibra e computo metrico.",
   "Tipologia e Topologia reti": "Classificazione delle reti per estensione geografica (PAN, LAN, MAN, WAN) e topologie fisiche/logiche (stella, anello, bus, maglia).",
   "Tipologie di cavi, i tipi di segnali e il canale di comunicazione": "Mezzi trasmissivi guidati (doppino ritorto UTP/STP, cavo coassiale, fibra ottica) e propagazione dei segnali elettrici e ottici.",
   "Apparati centrali": "Funzionamento di Repeater, Hub (livello 1), Switch (livello 2) e Router (livello 3) all'interno di un'architettura di rete.",
@@ -147,6 +160,14 @@ const DESCRIPTIONS = {
   "Modello ISO-OSI 11801": "Sintesi dei livelli ISO-OSI applicati alla normativa di cablaggio e trasmissione dati.",
   "Standard basi cablaggio": "Distanze massime consentite, armadi rack, patch panel e permutatori nel sottosistema di cablaggio orizzontale e dorsale.",
   "Tecniche acceso al canale casuali": "Protocolli di contesa del canale trasmissivo: ALOHA puro, Slotted ALOHA e Carrier Sense Multiple Access (CSMA).",
+  "Automa di Moore - Riconoscitore di sequenze": "Progettazione dettagliata di un automa a stati finiti di Moore per il riconoscimento della sequenza binaria 101, confronto teorico con Mealy e tabella di traccia.",
+  "Automi a stati finiti e Diagrammi di stato": "Definizione formale di quintupla FSM, macchine a stati finiti sincrone, diagrammi a bolle e frecce e rappresentazione grafica delle transizioni.",
+  "Riconoscitori di sequenze con e senza sovrapposizione": "Analisi comparativa tra macchine sequenziali con sovrapposizione (overlapping) e senza sovrapposizione (non-overlapping) con esempi pratici.",
+  "Tabelle di transizione e trasformazione": "Rappresentazione tabellare della funzione di transizione di stato e della funzione di trasformazione delle uscite con codifica binaria degli stati.",
+  "Architettura e funzionamento del computer": "Modello di Von Neumann, ciclo Fetch-Decode-Execute della CPU, registri interni (PC, IR, MAR, MDR), gerarchia di memoria e bus di sistema.",
+  "I sistemi": "Definizione formale di sistema, modelli a scatola nera (Black Box), ingressi, uscite, stato interno e classificazione dei sistemi deterministici e stocastici.",
+  "Le porte logiche e algebra booleana": "Operatori logici fondamentali (NOT, AND, OR, NAND, NOR, XOR, XNOR), teoremi di De Morgan, tavole di verità e sintesi di reti combinatorie.",
+  "Le proprieta dei sistemi": "Proprietà e tassonomia sistemica: statici vs dinamici, stazionari vs tempo-varianti, continui vs discreti, lineari vs non lineari.",
 
   // File individuali di TIPSIT
   "Codici di sicurezza": "Metodi di rilevazione e correzione degli errori nei flussi digitali: bit di parità, codici di Hamming e checksum.",

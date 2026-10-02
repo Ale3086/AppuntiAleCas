@@ -4,7 +4,19 @@ tags:
   - informatica/css/guida-completa
   - tipologia/guida-pratica
 ---
+
+> [!SUMMARY] ⚡ In Sintesi (A Colpo d'Occhio)
+> - **Ruolo**: il CSS gestisce ==l'aspetto estetico e la disposizione spaziale== degli elementi HTML.
+> - **Inclusione**: usa sempre il foglio di stile ==esterno con `<link rel="stylesheet">`==.
+> - **Specificità**: chi vince tra regole in conflitto? ==Inline (1000) > ID (100) > Classe (10) > Tag (1)==.
+> - **Il Box Model**: ogni elemento è una scatola formata da ==Content $\rightarrow$ Padding $\rightarrow$ Border $\rightarrow$ Margin==.
+> - **Regola Salvavita**: imposta sempre ==`box-sizing: border-box;`== per non far "esplodere" le dimensioni con il padding.
+> - **Layout**: ==Flexbox== per allineamenti su un asse; ==CSS Grid== per gabbie bidimensionali.
+
+---
+
 ## Indice
+
 - [[#Cos'è il CSS e Sintassi delle Regole]]
 - [[#Come Includere il CSS in HTML]]
 - [[#I Selettori CSS]]
@@ -19,7 +31,9 @@ tags:
 - [[#Esempi Pratici di Componenti UI]]
 
 ---
+
 ## Cos'è il CSS e Sintassi delle Regole
+
 Il **CSS** (*Cascading Style Sheets* - Fogli di Stile a Cascata) è il linguaggio che governa l'estetica, la formattazione e la disposizione spaziale dei contenuti HTML.
 
 Una regola di stile è composta da tre elementi fondamentali:
@@ -43,68 +57,49 @@ h1 {
 ```
 
 ---
+
 ## Come Includere il CSS in HTML
+
 | Metodo | Dove si trova | Come si dichiara | Giudizio |
 | :--- | :--- | :--- | :--- |
-| **Esterno (`<link>`)** | File `.css` separato | `<link rel="stylesheet" href="style.css">` dentro `<head>` | ✅ **Best practice assoluta** (riutilizzabile e in cache) |
-| **Interno (`<style>`)** | Dentro la pagina HTML | `<style> body { ... } </style>` dentro `<head>` | ⚠️ Utile per prototipi o landing page singole |
-| **Inline (`style="..."`)** | Attributo nel tag HTML | `<p style="color: red;">` | ❌ **Da evitare** (disordinato e impossibile da manutenere) |
+| **Esterno (`<link>`)** | File `.css` separato | `<link rel="stylesheet" href="style.css">` dentro `<head>` | ✅ ==Best practice assoluta== (riutilizzabile e in cache) |
+| **Interno (`<style>`)** | Dentro la pagina HTML | `<style> body { ... } </style>` dentro `<head>` | ⚠️ Utile solo per test rapidi o landing page singole |
+| **Inline (`style="..."`)** | Attributo nel tag HTML | `<p style="color: red;">` | ❌ ==Da evitare== (disordinato e ingestibile) |
 
 ---
+
 ## I Selettori CSS
 
 ### 1. Selettori di Base
 - **Tag / Tipo**: seleziona tutti i tag indicati (`p`, `h2`, `button`).
 - **Classe (`.`)**: seleziona tutti gli elementi con quell'attributo `class`. Riutilizzabile ovunque:
-```css
+  ```css
   .evidenziato { background-color: #fff3cd; }
   ```
 - **ID (`#`)**: seleziona l'unico elemento con quell'attributo `id`. Deve essere univoco per pagina:
-```css
+  ```css
   #intestazione-principale { border-bottom: 2px solid #333; }
   ```
 - **Universale (`*`)**: seleziona tutti gli elementi della pagina senza eccezioni.
 
 ### 2. Combinatori
 - **Discendente (Spazio)**: qualsiasi `p` dentro un `article` (anche molto annidato):
-```css
+  ```css
   article p { line-height: 1.6; }
   ```
 - **Figlio Diretto (`>`)**: solo i figli di primo livello:
-```css
+  ```css
   ul > li { list-style: none; }
   ```
 - **Fratello Adiacente (`+`)**: il primo elemento immediatamente successivo:
-```css
+  ```css
   h2 + p { font-size: 1.1rem; }
   ```
 
-### 3. Pseudo-Classi e Pseudo-Elementi
-```css
-/* Stato: al passaggio del puntatore del mouse */
-.btn:hover {
-    background-color: #2980b9;
-}
-
-/* Stato: campo attivo con cursore di digitazione */
-input:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-/* Elemento: righe pari alternate di una tabella */
-tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
-/* Inserisce elementi decorativi prima o dopo il testo */
-.titolo::before {
-    content: "📌 ";
-}
-```
-
 ---
+
 ## La Cascata e il Calcolo della Specificità
+
 Quando più regole si applicano al medesimo elemento, il browser assegna una priorità calcolata matematicamente come una quaterna di valori:
 
 $$\text{Punteggio} = (\text{Inline}, \text{ID}, \text{Classi/Pseudo-classi}, \text{Tag})$$
@@ -119,17 +114,17 @@ flowchart TD
     I --> ID --> CL --> TAG
 ```
 
-### Esempio di scontro tra regole:
-1. `p` ha punteggio `(0, 0, 0, 1)`
-2. `.testo` ha punteggio `(0, 0, 1, 0)` $\rightarrow$ **Vince la classe!**
-3. `#banner p` ha punteggio `(0, 1, 0, 1)` $\rightarrow$ **Vince l'ID!**
-
-> [!WARNING]
-> La direttiva `!important` annulla le regole di specificità. Va usata con estrema parsimonia solo per sovrascrivere fogli di stile di librerie terze, altrimenti genera conflitti ingestibili.
+> [!DANGER] 🚫 Attenzione a `!important`
+> La direttiva `!important` annulla e scavalca le regole di specificità.  
+> Va usata con estrema parsimonia solo per sovrascrivere fogli di stile di librerie terze, altrimenti genera conflitti ingestibili!
 
 ---
+
 ## Il Box Model
-Nel rendering del browser **ogni singolo elemento HTML è una scatola rettangolare**.
+
+> [!QUESTION] ❓ Domanda d'Esame: Qual è la differenza tra Padding e Margin?
+> - **Padding**: è lo spazio ==interno== alla scatola (tra il testo e il bordo visibile).
+> - **Margin**: è lo spazio vuoto ==esterno== alla scatola (che distanzia questo elemento dagli altri vicini).
 
 ```mermaid
 flowchart TD
@@ -142,49 +137,35 @@ flowchart TD
     end
 ```
 
+> [!SUCCESS] 🎯 La Regola Salvavita: `box-sizing: border-box`
+> Di default (`content-box`), aggiungendo `padding: 20px` a una scatola larga `200px`, la larghezza visibile totale diventa $240\text{px}$, rompendo la griglia!  
+> Inserisci sempre in cima al tuo file CSS questo reset universale:
+> ```css
+> *, *::before, *::after {
+>     box-sizing: border-box; /* La larghezza dichiarata include padding e bordi! */
+> }
+> ```
+
 > [!INFO] 🖼️ Placeholder Immagine: Il Box Model visualizzato nel DevTools del browser
-> *Suggerimento per Obsidian: inserisci qui uno screenshot del pannello Elements -> Computed di Google Chrome con le 4 scatole concentriche.*
+> *Suggerimento per Obsidian: inserisci qui uno screenshot del pannello Elements -> Computed di Google Chrome con le 4 scatole concentriche.*  
 > `![[Pasted image chrome_box_model.png|500]]`
 
-### La Proprietà Salvavita: `box-sizing: border-box`
-Di default (`content-box`), se imposti `width: 200px` e poi aggiungi `padding: 20px`, la scatola diventerà larga $200 + 20 + 20 = 240\text{px}$, distruggendo spesso la gabbia grafica!
-
-Impostando universamente `box-sizing: border-box`, la larghezza dichiarata **comprende già al suo interno padding e bordi**:
-
-```css
-*, *::before, *::after {
-    box-sizing: border-box; /* Reset universale fondamentale */
-}
-```
-
 ---
-## Colori, Tipografia e Unità di Misura
 
-### Unità di Misura Relative (Responsive)
-- **`rem`**: proporzionale alla dimensione del font impostata sull'`<html>` (di base $1\text{rem} = 16\text{px}$). Garantisce l'accessibilità se l'utente ingrandisce i caratteri del browser.
-- **`%`**: percentuale rispetto alla larghezza del contenitore padre.
-- **`vw` / `vh`**: $1\%$ della larghezza (*viewport width*) o altezza (*viewport height*) della finestra del browser.
-
----
 ## La Proprietà `display`
+
 | Valore | Va a capo? | Accetta `width` e `height`? | Esempi tipici |
 | :--- | :--- | :--- | :--- |
-| **`block`** | **Sì** (occupa tutto il 100% orizzontale) | Sì | `<div>`, `<p>`, `<h1>`, `<article>` |
-| **`inline`** | **No** (si affianca sulla stessa riga) | No (ignora dimensioni e margini verticali) | `<span>`, `<a>`, `<strong>` |
-| **`inline-block`** | **No** (si affianca sulla stessa riga) | **Sì** (accetta dimensioni complete) | `<button>`, `<input>`, `<img>` |
-| **`none`** | L'elemento scompare dal rendering senza occupare spazio | | |
+| **`block`** | ==Sì== (occupa tutto il 100% orizzontale) | Sì | `<div>`, `<p>`, `<h1>`, `<article>` |
+| **`inline`** | ==No== (si affianca sulla stessa riga) | No (ignora dimensioni e margini verticali) | `<span>`, `<a>`, `<strong>` |
+| **`inline-block`** | ==No== (si affianca sulla stessa riga) | ==Sì== (accetta dimensioni complete) | `<button>`, `<input>`, `<img>` |
+| **`none`** | L'elemento scompare del tutto dal rendering | | |
 
 ---
-## Posizionamento (`position`)
-- **`static`**: posizionamento naturale nel normale flusso della pagina.
-- **`relative`**: permette di traslare l'elemento con `top`, `left`, ecc., senza alterare lo spazio occupato dagli altri. È il punto di riferimento cruciale per i figli `absolute`!
-- **`absolute`**: rimosso dal normale flusso e ancorato esattamente alle coordinate indicate rispetto al più vicino genitore con `position: relative`.
-- **`fixed`**: ancorato alla finestra del browser durante lo scroll della pagina (ideale per navbar fisse o pulsanti chat).
-- **`sticky`**: si comporta come `relative` finché non si raggiunge una soglia di scroll, dopodiché si "incolla" allo schermo.
 
----
 ## Layout Moderno con Flexbox
-Flexbox governa la disposizione degli elementi lungo **un singolo asse** (o riga o colonna).
+
+Flexbox governa la disposizione e la spaziatura degli elementi lungo ==un singolo asse== (riga o colonna).
 
 ```mermaid
 flowchart LR
@@ -211,30 +192,19 @@ flowchart LR
 ```
 
 ---
-## Layout a Griglia con CSS Grid
-Per layout bidimensionali complessi (righe e colonne contemporaneamente):
 
-```css
-.galleria {
-    display: grid;
-    /* Crea 3 colonne uguali che occupano 1 frazione (1fr) di spazio */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-```
-
----
 ## Responsive Design e Media Queries
-Permette alla pagina di adattarsi all'istante a smartphone, tablet e monitor desktop.
+
+Permette alla pagina di adattarsi all'istante a smartphone, tablet e monitor desktop:
 
 ```css
-/* Layout per Desktop */
+/* Stile Desktop */
 .layout-colonne {
     display: flex;
     flex-direction: row;
 }
 
-/* Quando la larghezza dello schermo è 768px o inferiore (Tablet / Smartphone) */
+/* Smartphone / Tablet (schermo 768px o inferiore) */
 @media (max-width: 768px) {
     .layout-colonne {
         flex-direction: column; /* Le colonne si incolonnano in verticale */
@@ -243,6 +213,7 @@ Permette alla pagina di adattarsi all'istante a smartphone, tablet e monitor des
 ```
 
 ---
+
 ## Esempi Pratici di Componenti UI
 
 ### 1. Barra di Navigazione Responsive (Navbar)

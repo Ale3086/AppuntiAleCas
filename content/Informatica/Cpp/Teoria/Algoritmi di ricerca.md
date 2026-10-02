@@ -4,13 +4,22 @@ tags:
   - informatica/cpp/algoritmi
   - tipologia/algoritmo
 ---
-Cercare se un elemento è presente all'interno di una collezione di dati (e individuare la sua posizione) è un problema cardine dell'informatica.
 
-In C++ gli algoritmi di ricerca standard su vettori sono due:
-1. **Ricerca Lineare (o Sequenziale)**: elementare, funziona su **qualsiasi array**.
-2. **Ricerca Binaria (o Dicotomica)**: velocissima, ma richiede tassativamente che l'array sia **già ordinato**.
+> [!SUMMARY] ⚡ In Sintesi (A Colpo d'Occhio)
+> - **Ricerca Lineare**: controlla cella per cella. Funziona su ==qualsiasi array== (anche disordinato). Complessità: ==$O(n)$==.
+> - **Ricerca Binaria (Dicotomica)**: dimezza lo spazio di ricerca (*Divide et Impera*). Richiede ==array obbligatoriamente già ordinato==! Complessità: ==$O(\log n)$==.
+> - **Confronto Potenza**: su 1 milione di elementi la lineare fa fino a 1.000.000 di confronti; la binaria ne fa ==al massimo 20==!
 
 ---
+
+Cercare se un elemento è presente all'interno di una collezione di dati è un problema cardine dell'informatica.
+
+In C++ gli algoritmi di ricerca standard su vettori sono due:
+1. **Ricerca Lineare (o Sequenziale)**: elementare, applicabile a qualsiasi array.
+2. **Ricerca Binaria (o Dicotomica)**: straordinariamente veloce, ma richiede che l'array sia già ordinato.
+
+---
+
 ## 1. Ricerca Lineare (Sequenziale)
 
 ### Come Funziona
@@ -37,12 +46,14 @@ int ricercaLineare(const int arr[], int dimensione, int chiave) {
 
 ### Complessità Computazionale
 - **Caso Migliore**: $O(1)$ — L'elemento cercato è il primo esaminato.
-- **Caso Peggiore e Medio**: $O(n)$ — L'elemento è l'ultimo o assente, costringendo a esaminare tutti gli $n$ elementi.
+- **Caso Peggiore e Medio**: ==$O(n)$== — L'elemento è l'ultimo o assente (dobbiamo esaminare tutti gli $n$ elementi).
 
 ---
+
 ## 2. Ricerca Binaria (Dicotomica)
-> [!IMPORTANT]
-> **Prerequisito Assoluto**: La ricerca binaria richiede un **vettore obbligatoriamente già ordinato** (crescente o decrescente). Se l'array è disordinato l'algoritmo fornirà risultati totalmente errati!
+
+> [!QUESTION] ❓ Domanda d'Esame: Qual è il prerequisito della ricerca binaria?
+> La ricerca binaria richiede **tassativamente che il vettore sia già ordinato** (in ordine crescente o decrescente). Se l'array è disordinato, l'algoritmo fallirà!
 
 ### Logica del "Divide et Impera"
 Invece di controllare un elemento alla volta, a ogni confronto **dimezziamo lo spazio di ricerca**:
@@ -59,10 +70,9 @@ flowchart TD
     Ripeti -->|"No"| NonTrovato["Dato Assente: Restituisci -1"]
 ```
 
-> [!TIP]
-> **Perché non calcolare `(inizio + fine) / 2`?**
-> Se l'array contiene miliardi di elementi, la somma `inizio + fine` può superare il valore massimo di un intero a 32 bit ($2.147.483.647$), causando un **Integer Overflow**.
-> La formula `inizio + (fine - inizio) / 2` è algebricamente identica ma totalmente al sicuro da qualsiasi overflow.
+> [!TIP] 💡 Formula Sicura contro l'Integer Overflow
+> Calcolando `(inizio + fine) / 2` su array enormi si rischia un **Integer Overflow**.  
+> Usa sempre la formula sicura: ==`medio = inizio + (fine - inizio) / 2`==.
 
 ### Codice C++ (Versione Iterativa)
 ```cpp
@@ -78,85 +88,62 @@ int ricercaBinaria(const int arr[], int dimensione, int chiave) {
         }
 
         if (arr[medio] < chiave) {
-            inizio = medio + 1; // Sposta ricerca nella metà destra
+            inizio = medio + 1; // Sposta a destra
         } else {
-            fine = medio - 1;   // Sposta ricerca nella metà sinistra
+            fine = medio - 1;   // Sposta a sinistra
         }
     }
 
-    return -1; // Dato non presente nell'array
-}
-```
-
-### Codice C++ (Versione Ricorsiva)
-```cpp
-int ricercaBinariaRicorsiva(const int arr[], int inizio, int fine, int chiave) {
-    if (inizio > fine) {
-        return -1; // Caso base di fallimento
-    }
-
-    int medio = inizio + (fine - inizio) / 2;
-
-    if (arr[medio] == chiave) {
-        return medio; // Caso base di successo
-    }
-
-    if (arr[medio] < chiave) {
-        return ricercaBinariaRicorsiva(arr, medio + 1, fine, chiave); // Ricorsione destra
-    } else {
-        return ricercaBinariaRicorsiva(arr, inizio, medio - 1, chiave); // Ricorsione sinistra
-    }
+    return -1; // Non presente
 }
 ```
 
 > [!INFO] 🖼️ Placeholder Immagine: Schema visivo ad albero del dimezzamento per la ricerca binaria
-> *Suggerimento per Obsidian: inserisci qui un disegno che illustra il restringimento progressivo dei puntatori inizio, medio e fine.*
+> *Suggerimento per Obsidian: inserisci qui un disegno che illustra il restringimento progressivo dei puntatori inizio, medio e fine.*  
 > `![[Pasted image binary_search_tree.png|550]]`
 
 ---
+
 ## 3. Confronto di Efficienza: Lineare vs Binaria
+
 La complessità temporale della ricerca binaria è logaritmica: **$O(\log_2 n)$**.
 
 | Dimensione Vettore ($n$) | Passi Massimi (Lineare $O(n)$) | Passi Massimi (Binaria $O(\log n)$) |
 | :--- | :--- | :--- |
 | **10** elementi | 10 | 4 |
 | **1.000** elementi | 1.000 | 10 |
-| **1.000.000** (1 milione) | 1.000.000 | **solo 20 passi!** |
-| **1.000.000.000** (1 miliardo) | 1.000.000.000 | **solo 30 passi!** |
+| **1.000.000** (1 milione) | 1.000.000 | ==solo 20 passi!== |
+| **1.000.000.000** (1 miliardo) | 1.000.000.000 | ==solo 30 passi!== |
 
 ---
-## 4. Programma Completo di Test
-```cpp
-#include <iostream>
-using namespace std;
 
-int ricercaBinaria(const int arr[], int dim, int chiave);
-
-int main() {
-    // Array ordinato in senso crescente
-    const int N = 7;
-    int dati[N] = {4, 9, 15, 23, 38, 51, 77};
-
-    int bersaglio = 38;
-    int posizione = ricercaBinaria(dati, N, bersaglio);
-
-    if (posizione != -1) {
-        cout << "Elemento " << bersaglio << " trovato all'indice: " << posizione << endl;
-    } else {
-        cout << "Elemento non trovato!" << endl;
-    }
-
-    return 0;
-}
-
-int ricercaBinaria(const int arr[], int dim, int chiave) {
-    int inizio = 0, fine = dim - 1;
-    while (inizio <= fine) {
-        int medio = inizio + (fine - inizio) / 2;
-        if (arr[medio] == chiave) return medio;
-        if (arr[medio] < chiave) inizio = medio + 1;
-        else fine = medio - 1;
-    }
-    return -1;
-}
-```
+> [!EXAMPLE]- 🧪 Programma Completo di Test Eseguibile (Clicca per espandere)
+> ```cpp
+> #include <iostream>
+> using namespace std;
+> 
+> int ricercaBinaria(const int arr[], int dim, int chiave);
+> 
+> int main() {
+>     const int N = 7;
+>     int dati[N] = {4, 9, 15, 23, 38, 51, 77}; // Array ordinato
+> 
+>     int bersaglio = 38;
+>     int pos = ricercaBinaria(dati, N, bersaglio);
+> 
+>     if (pos != -1) cout << "Trovato all'indice: " << pos << endl;
+>     else cout << "Non trovato!" << endl;
+>     return 0;
+> }
+> 
+> int ricercaBinaria(const int arr[], int dim, int chiave) {
+>     int inizio = 0, fine = dim - 1;
+>     while (inizio <= fine) {
+>         int medio = inizio + (fine - inizio) / 2;
+>         if (arr[medio] == chiave) return medio;
+>         if (arr[medio] < chiave) inizio = medio + 1;
+>         else fine = medio - 1;
+>     }
+>     return -1;
+> }
+> ```

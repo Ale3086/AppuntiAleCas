@@ -13,6 +13,8 @@ Normative ISO/IEC 11801, categorie di cavi Ethernet (rame e fibra ottica), topol
   Caratteristiche elettriche e limiti di velocità delle categorie di cavi Ethernet in rame (Cat5e, Cat6, Cat6a, Cat7, Cat8).
 - **[[Normativa ISO-OSI 11801]]**
   Standard internazionali per la progettazione e la posa del cablaggio strutturato in edifici civili e commerciali.
+- **[[Scenario di cablaggio strutturato]]**
+  Progetto pratico di cablaggio strutturato per un campus multi-edificio: distributori CD, BD, FD, dorsali verticali in fibra e computo metrico.
 - **[[Tipologia e Topologia reti]]**
   Classificazione delle reti per estensione geografica (PAN, LAN, MAN, WAN) e topologie fisiche/logiche (stella, anello, bus, maglia).
 - **[[Tipologie di cavi, i tipi di segnali e il canale di comunicazione]]**

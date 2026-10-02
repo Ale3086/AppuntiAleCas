@@ -4,13 +4,19 @@ tags:
   - informatica/cpp/sintassi
   - tipologia/guida-pratica
 ---
-Nei problemi reali i tipi primitivi (`int`, `float`, `string`) non bastano per descrivere entità articolate come un utente, un prodotto o un personaggio di un videogioco.
 
-Il C++ permette di creare **tipi di dati personalizzati** aggregando più variabili (e funzioni) sotto un unico nome mediante due strumenti: le **`struct`** e le **`class`**.
+> [!SUMMARY] ⚡ In Sintesi (A Colpo d'Occhio)
+> - **Classe vs Oggetto**: la ==Classe== è il progetto (*blueprint*); l'==Oggetto== è l'istanza concreta creata in RAM.
+> - **L'Unica Differenza C++**: nelle `struct` i membri sono ==`public`== di default; nelle `class` sono ==`private`==.
+> - **Incapsulamento**: variabili protette in `private`, accessibili dall'esterno solo tramite metodi `public` (getter e setter).
+> - **Costruttore**: metodo speciale con lo stesso nome della classe per inizializzare l'oggetto alla nascita.
+> - **Operatore Freccia (`->`)**: scorciatoia elegante per accedere ai membri tramite un puntatore (`ptr->metodo()`).
 
 ---
+
 ## 1. Classe vs Oggetto (Il Progetto e la Casa)
-- **Classe (o Struct)**: è il **progetto architettonico** (*blueprint*), un modello astratto che definisce quali proprietà e comportamenti avrà quell'entità.
+
+- **Classe (o Struct)**: è il **progetto architettonico** (*blueprint*), un modello che definisce proprietà e comportamenti.
 - **Oggetto (o Istanza)**: è la **casa concreta costruita** in memoria RAM a partire da quel progetto.
 
 ```mermaid
@@ -24,7 +30,9 @@ flowchart LR
 ```
 
 ---
+
 ## 2. Le Struct (Strutture Dati)
+
 Una `struct` è un tipo composto che raggruppa variabili di tipo differente, chiamate **campi** (o membri).
 
 ```cpp
@@ -32,7 +40,6 @@ Una `struct` è un tipo composto che raggruppa variabili di tipo differente, chi
 #include <string>
 using namespace std;
 
-// Definizione della struttura Videogioco
 struct Videogioco {
     string titolo;
     string genere;
@@ -41,9 +48,9 @@ struct Videogioco {
 };
 
 int main() {
-    Videogioco g1; // Creazione dell'istanza
+    Videogioco g1; // Creazione istanza
 
-    // Accesso ai campi tramite operatore punto (.)
+    // Accesso ai campi con l'operatore punto (.)
     g1.titolo = "The Legend of Zelda";
     g1.genere = "Action-Adventure";
     g1.valutazione = 9.8f;
@@ -54,36 +61,18 @@ int main() {
 }
 ```
 
-### Struct Annidate e Array di Struct
-```cpp
-struct Data {
-    int giorno, mese, anno;
-};
-
-struct Studente {
-    string nome, cognome;
-    int matricola;
-    Data dataNascita; // Struct annidata
-};
-
-int main() {
-    Studente classe[20]; // Vettore di 20 studenti
-
-    classe[0].nome = "Mario";
-    classe[0].matricola = 101;
-    classe[0].dataNascita.giorno = 15; // Doppio punto per accedere ai campi interni
-}
-```
-
 ---
-## 3. Dalle Struct alle Classi (OOP)
-In C++ l'unica differenza sintattica tra una `struct` e una `class` è la **visibilità predefinita**:
-- Nelle `struct`: tutti i membri sono **`public`** di default.
-- Nelle `class`: tutti i membri sono **`private`** di default.
 
-Per convenzione:
+## 3. Dalle Struct alle Classi (OOP)
+
+> [!QUESTION] ❓ Domanda d'Esame: Qual è l'unica differenza tra una `struct` e una `class` in C++?
+> In C++ l'unica differenza sintattica è la **visibilità predefinita**:
+> - Nelle `struct`: tutti i membri sono **`public`** di default.
+> - Nelle `class`: tutti i membri sono **`private`** di default.
+
+Per convenzione del settore:
 - Si usa `struct` per meri contenitori di dati (*Plain Old Data*).
-- Si usa `class` per la **programmazione orientata agli oggetti (OOP)** basata su **incapsulamento**.
+- Si usa `class` per la **programmazione ad oggetti (OOP)** basata su **incapsulamento**.
 
 ```mermaid
 classDiagram
@@ -98,19 +87,24 @@ classDiagram
 ```
 
 ---
+
 ## 4. Incapsulamento: `public` vs `private`
+
 L'**incapsulamento** protegge i dati interni dell'oggetto impedendo che vengano manipolati in modo errato dall'esterno.
 
 - **`private`**: visibili solo alle funzioni interne della classe stessa.
 - **`public`**: accessibili da chiunque (es. nel `main`).
 
+> [!SUCCESS] 🎯 Regola d'Oro dell'Incapsulamento: I Getter e Setter
+> Metti sempre le variabili in `private` e fornisci metodi `public` per leggerle (`getSaldo`) e modificarle (`deposita`) con controlli di validità!
+
 ```cpp
 class ContoBancario {
 private:
-    double saldo; // Nessuno dall'esterno può forzare saldo = -99999!
+    double saldo; // Protetto: nessuno può impostare saldo = -99999 dall'esterno!
 
 public:
-    // Metodo setter con validazione dei dati
+    // Metodo setter con validazione
     void deposita(double importo) {
         if (importo > 0) {
             saldo += importo;
@@ -120,7 +114,7 @@ public:
         }
     }
 
-    // Metodo getter per consultare il valore in sola lettura (metodo const)
+    // Metodo getter (const indica che è di sola lettura!)
     double getSaldo() const {
         return saldo;
     }
@@ -128,10 +122,11 @@ public:
 ```
 
 ---
+
 ## 5. Costruttori, Distruttori e il Puntatore `this`
 
 ### Il Costruttore
-Metodo speciale con lo **stesso nome della classe** e senza tipo di ritorno. Viene chiamato **automaticamente** alla nascita dell'oggetto per inizializzarne i campi:
+Metodo speciale con lo **stesso nome della classe** e senza tipo di ritorno. Viene chiamato **automaticamente** alla nascita dell'oggetto:
 
 ```cpp
 #include <iostream>
@@ -146,7 +141,7 @@ private:
 
 public:
     // 1. Costruttore di Default (senza parametri)
-    Giocatore() : nome("Sconosciuto"), puntiVita(100), livello(1) {}
+    Giocatore() : nome("Anonimo"), puntiVita(100), livello(1) {}
 
     // 2. Costruttore Parametrizzato con uso di this->
     Giocatore(string nome, int puntiVita, int livello) {
@@ -163,13 +158,13 @@ public:
 
     // Distruttore (eseguito alla distruzione dell'oggetto)
     ~Giocatore() {
-        // Qui si dealloca eventuale memoria dinamica Heap
+        // Dealloca eventuale memoria dinamica nello Heap
     }
 };
 
 int main() {
-    Giocatore g1;                     // Chiama il costruttore di default
-    Giocatore g2("Artu", 150, 5);      // Chiama il costruttore parametrizzato
+    Giocatore g1;                     // Costruttore di default
+    Giocatore g2("Artu", 150, 5);      // Costruttore parametrizzato
 
     g1.stampaScheda();
     g2.stampaScheda();
@@ -178,11 +173,13 @@ int main() {
 ```
 
 > [!INFO] 🖼️ Placeholder Immagine: Diagramma delle Classi UML e Relazione con gli Oggetti
-> *Suggerimento per Obsidian: inserisci qui uno screenshot di un diagramma UML completo con classi, attributi e metodi.*
+> *Suggerimento per Obsidian: inserisci qui uno screenshot di un diagramma UML completo con classi, attributi e metodi.*  
 > `![[Pasted image uml_classi.png|550]]`
 
 ---
+
 ## 6. Puntatori a Oggetti e l'Operatore Freccia (`->`)
+
 Quando lavoriamo con un puntatore a un oggetto o una struct, usiamo l'operatore **`->`** (freccia) invece della combinazione scomoda `(*ptr).`:
 
 ```cpp
@@ -196,10 +193,11 @@ ptr = nullptr;
 ```
 
 ---
+
 ## Tabella di Confronto: `struct` vs `class`
+
 | Proprietà | `struct` | `class` |
 | :--- | :--- | :--- |
-| **Visibilità predefinita** | `public` | `private` |
-| **Ereditarietà predefinita** | `public` | `private` |
-| **Uso prevalente** | Semplici aggregati di dati | Programmazione OOP, logica di business protetta |
-| **Supporto a Costruttori/Metodi** | Sì (in C++ hanno le stesse capacità) | Sì |
+| **Visibilità predefinita** | ==`public`== | ==`private`== |
+| **Uso prevalente** | Semplici aggregati di dati (*Plain Old Data*) | Programmazione OOP, logica di business protetta |
+| **Supporto a Metodi e Costruttori** | Sì | Sì |

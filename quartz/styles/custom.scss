@@ -18,3 +18,16 @@
     height: auto !important;
   }
 }
+
+mark {
+  background-color: rgba(255, 224, 102, 0.45);
+  color: inherit;
+  padding: 0.12em 0.35em;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+:root[saved-theme="dark"] mark {
+  background-color: rgba(255, 213, 79, 0.28);
+  color: #fff8e1;
+}
