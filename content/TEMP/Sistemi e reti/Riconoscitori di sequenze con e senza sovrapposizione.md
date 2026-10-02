@@ -8,18 +8,14 @@ tags:
   - overlapping
 draft: true
 ---
-
 # Riconoscitori di Sequenze con e senza Sovrapposizione (*Overlapping*)
-
 > [!NOTE] Definizione del Problema
 > Dato uno stream sequenziale di simboli binari in ingresso, un **riconoscitore di sequenza** ha il compito di analizzare i bit in tempo reale ed emettere un segnale di validità (**OK**) nell'istante esatto in cui viene completata una precisa sottostringa target (ad esempio `010`).
 >
 > La distinzione fondamentale riguarda come viene trattato l'ultimo bit della sequenza riconosciuta: può essere riutilizzato per avviare una nuova sequenza (**con sovrapposizione / concatenato**) oppure deve essere scartato/azzerato (**senza sovrapposizione / non concatenato**).
 
 ---
-
 ## 1. Il Concetto di Concatenazione (Overlapping)
-
 Consideriamo la sequenza target **`010`** e inviamo in ingresso la stringa di test:
 
 $$\text{Input: } \mathbf{0 \quad 1 \quad 0 \quad 1 \quad 0}$$
@@ -45,7 +41,6 @@ flowchart TD
 - **Con Sovrapposizione (Overlapping):** I caratteri finali della sequenza appena riconosciuta possono sovrapporsi ai caratteri iniziali della sequenza successiva, permettendo rilevamenti multipli ravvicinati.
 
 ---
-
 ## 2. Progettazione dell'Automa per la Sequenza `010`
 
 ### Definizione Formale:
@@ -57,9 +52,7 @@ flowchart TD
   - **$s_3$ (Visto `01` - Attesa 3° bit):** Primi due bit validi agganciati. Si aspetta `'0'`.
 
 ---
-
 ## 3. Automa SENZA Sovrapposizione (Non-Overlapping)
-
 Se la sequenza viene completata, l'automa emette $\text{OK}$ e torna allo stato iniziale $s_1$:
 
 ```mermaid
@@ -81,9 +74,7 @@ stateDiagram-v2
 > Quando arriva lo `'0'` in $s_3$, la sequenza `010` è completa: l'uscita è **$\text{OK}$**, ma l'arco punta a **$s_1$**, azzerando la memoria.
 
 ---
-
 ## 4. Automa CON Sovrapposizione (Overlapping)
-
 Se la sequenza viene completata, l'ultimo bit `'0'` è già il primo bit valido della sequenza successiva: l'automa transita quindi direttamente a $s_2$!
 
 ```mermaid
@@ -107,9 +98,7 @@ stateDiagram-v2
 > - Con sovrapposizione: punta a **$s_2$**.
 
 ---
-
 ## 5. Tabella Comparativa di Traccia Temporale
-
 Inviamo la sequenza di bit: `0  1  0  1  0  0  1  0`
 
 | Istante $t$ | $t_1$ | $t_2$ | $t_3$ | $t_4$ | $t_5$ | $t_6$ | $t_7$ | $t_8$ |
@@ -125,9 +114,7 @@ Inviamo la sequenza di bit: `0  1  0  1  0  0  1  0`
 - **Con Overlap:** **3 riconoscimenti** (agli istanti $t_3$, $t_5$ e $t_8$), perché a $t_5$ viene catturata la sequenza sovrapposta `0 1 0` a cavallo dei bit 3, 4 e 5!
 
 ---
-
 ## 6. Ambiti Applicativi Reali
-
 - **Protocolli di Rete (Framing):** Nei protocolli come **HDLC** (High-Level Data Link Control) o **PPP**, i pacchetti sono delimitati dalla sequenza speciale di flag `01111110`. L'automa del ricevitore deve individuare la fine di un frame e l'inizio del successivo senza perdere bit.
 - **Compilatori e Tokenizer:** Nell'analisi lessicale di codice sorgente, le parole chiave vengono separate senza sovrapposizione (`if`, `while`, identificatori).
 - **Crittografia e Analisi di Flussi:** Ricerca di firme malevole o pattern all'interno di pacchetti ispezionati da firewall/IDS (Intrusion Detection System).

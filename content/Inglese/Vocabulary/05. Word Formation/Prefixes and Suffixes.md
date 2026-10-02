@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/word-formation
   - tipologia/glossario
 ---
-
 Vocabulary for word formation. Crucial for language certifications (Use of English).
 
 ## 1. Negative Prefixes (Opposites)
-
 <details>
 <summary><b style="color: #569cd6;">Un-</b> (Usual ➔ <b>Unusual</b>) - <i>It is highly <b>unusual</b> for it to snow in May.</i></summary>
 Insolito - <i>È altamente <b>insolito</b> che nevichi a maggio.</i>
@@ -45,7 +43,6 @@ Illegale - <i>Scaricare film protetti da copyright gratuitamente è <b>illegale<
 </details>
 
 ## 2. Noun Suffixes (Actions and States)
-
 <details>
 <summary><b style="color: #569cd6;">-ment</b> (Argue ➔ <b>Argument</b>) - <i>They had a loud <b>argument</b> about politics.</i></summary>
 Litigio / Discussione accesa - <i>Hanno avuto un acceso <b>litigio</b> sulla politica.</i>
@@ -77,7 +74,6 @@ Indipendenza - <i>Trasferirsi fuori da casa dei suoi genitori gli ha dato <b>ind
 </details>
 
 ## 3. Noun Suffixes (Concepts and Relationships)
-
 <details>
 <summary><b style="color: #569cd6;">-ship</b> (Friend ➔ <b>Friendship</b>) - <i>Their <b>friendship</b> has lasted for over twenty years.</i></summary>
 Amicizia - <i>La loro <b>amicizia</b> è durata per oltre vent'anni.</i>
@@ -109,7 +105,6 @@ Follia - <i>Guidare con questa neve fitta è pura <b>follia</b>!</i>
 </details>
 
 ## 4. Adjective Suffixes
-
 <details>
 <summary><b style="color: #569cd6;">-ic</b> (Science ➔ <b>Scientific</b>) - <i>We need solid <b>scientific</b> evidence to prove this theory.</i></summary>
 Scientifico - <i>Ci servono solide prove <b>scientifiche</b> per dimostrare questa teoria.</i>

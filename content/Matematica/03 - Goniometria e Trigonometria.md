@@ -4,11 +4,9 @@ tags:
   - matematica/trigonometria
   - tipologia/teoria
 ---
-
 # Goniometria e Trigonometria
 
 ## 1. Misura degli Angoli: Gradi e Radianti
-
 Solitamente misuriamo gli angoli in **Gradi**, ma in matematica avanzata è fondamentale il **Radiante**.
 
 > [!info] Cos'è il Radiante?
@@ -28,7 +26,7 @@ Solitamente misuriamo gli angoli in **Gradi**, ma in matematica avanzata è fond
 > [!example] Conversione (Sistema Sessagesimale)
 > Spesso l'angolo ha la virgola (es. $35,126^\circ$). Va convertito in **Gradi, Primi e Secondi**:
 > *   $1^\circ = 60'$ (primi) e $1' = 60''$ (secondi).
-> 
+>
 > Trasformiamo **$35,126^\circ$**:
 > 1. Gradi interi = **$35^\circ$**
 > 2. Parte decimale $0,126 \times 60 = 7,56'$ (Quindi **$7'$** interi)
@@ -36,15 +34,13 @@ Solitamente misuriamo gli angoli in **Gradi**, ma in matematica avanzata è fond
 > Risultato: **$35^\circ \ 7' \ 33''$**
 
 ---
-
 ## 2. La Circonferenza Goniometrica
-
 > [!info] Definizione
 > La circonferenza goniometrica ha:
 > *   Centro nell'origine: $O(0,0)$
 > *   Raggio unitario: $r = 1$
 > *   Equazione: $x^2 + y^2 = 1$
-> 
+>
 > *Senso antiorario = Angoli Positivi.*
 
 Dato un punto $P$ individuato da un angolo $\alpha$, le funzioni base sono le sue coordinate:
@@ -56,7 +52,7 @@ Dato un punto $P$ individuato da un angolo $\alpha$, le funzioni base sono le su
 > ![[gonio_es1_circonferenza.png]]
 
 > [!abstract] Tabella Angoli Notevoli
-> 
+>
 > | Gradi | Radianti | <span style="color: #ff4d4d">Seno</span> | <span style="color: #4da6ff">Coseno</span> | <span style="color: #4dff4d">Tangente</span> |
 > | :---: | :---: | :---: | :---: | :---: |
 > | $0^\circ \text{ / } 360^\circ$ | $0 \text{ / } 2\pi$ | $0$ | $1$ | $0$ |
@@ -68,9 +64,7 @@ Dato un punto $P$ individuato da un angolo $\alpha$, le funzioni base sono le su
 > | $270^\circ$ | $\frac{3\pi}{2}$ | $-1$ | $0$ | $\nexists$ |
 
 ---
-
 ## 3. Risoluzione dei Triangoli
-
 > [!tip] Triangoli Rettangoli
 > Si usa la trigonometria di base insieme al Teorema di Pitagora:
 > *   $\text{Cateto} = \text{Ipotenusa} \cdot \color{#ff4d4d}\sin(\text{angolo opposto})$
@@ -79,15 +73,14 @@ Dato un punto $P$ individuato da un angolo $\alpha$, le funzioni base sono le su
 
 > [!tip] Triangoli Qualunque (Carnot e Seni)
 > Nei triangoli scaleni/qualsiasi, si usano questi due potenti teoremi.
-> 
+>
 > **Teorema dei Seni:** Il rapporto lato/seno è costante.
 > $$ \frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma} $$
-> 
+>
 > **Teorema del Coseno (Carnot):** Il Pitagora generalizzato.
 > $$ a^2 = b^2 + c^2 - 2bc \cdot \color{#4da6ff}\cos \alpha $$
 
 ---
-
 ## 4. Goniometria Avanzata
 
 ### La Cotangente e le Relazioni Fondamentali
@@ -112,15 +105,13 @@ Queste formule sono essenziali per risolvere espressioni con più angoli o angol
 > **Addizione/Sottrazione:**
 > $$ \sin(\alpha \pm \beta) = \sin\alpha \cos\beta \pm \cos\alpha \sin\beta $$
 > $$ \cos(\alpha \pm \beta) = \cos\alpha \cos\beta \mp \sin\alpha \sin\beta $$
-> 
+>
 > **Duplicazione (per l'angolo doppio $2\alpha$):**
 > $$ \sin(2\alpha) = 2\sin\alpha \cos\alpha $$
 > $$ \cos(2\alpha) = \cos^2\alpha - \sin^2\alpha = 1 - 2\sin^2\alpha = 2\cos^2\alpha - 1 $$
 
 ---
-
 ## 5. Equazioni e Disequazioni Goniometriche
-
 > [!info] Equazioni Elementari
 > Si presentano nella forma $\sin x = k$, $\cos x = k$ oppure $\tan x = k$.
 > Si risolvono usando la circonferenza goniometrica, trovando i **due punti** sulla circonferenza che hanno quell'ordinata, ascissa o tangente.

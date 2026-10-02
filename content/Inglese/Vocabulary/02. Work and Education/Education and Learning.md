@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/work-education
   - tipologia/glossario
 ---
-
 Vocabulary related to schools, studying, exams, and academic systems.
 
 ## 1. General Studying and Exams (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">To study</b> / <b style="color: #569cd6;">To memorize</b> - <i>I have to <b>memorize</b> twenty irregular verbs by tomorrow.</i></summary>
 Studiare / Memorizzare - <i>Devo <b>memorizzare</b> venti verbi irregolari per domani.</i>
@@ -50,7 +48,6 @@ Ripassare - <i>Devo <b>ripassare</b> i miei appunti prima dell'esame finale.</i>
 </details>
 
 ## 2. People in Education (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Student</b> / <b style="color: #569cd6;">Classmate</b> - <i>My <b>classmate</b> helped me solve the math problem.</i></summary>
 Studente / Compagno di classe - <i>Il mio <b>compagno di classe</b> mi ha aiutato a risolvere il problema di matematica.</i>
@@ -67,7 +64,6 @@ Preside - <i>Il <b>preside</b> ha convocato i miei genitori a scuola.</i>
 </details>
 
 ## 3. General Languages and Translation (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">To translate</b> / <b style="color: #569cd6;">Translation</b> - <i>Can you <b>translate</b> this Italian document into English?</i></summary>
 Tradurre / Traduzione - <i>Puoi <b>tradurre</b> questo documento italiano in inglese?</i>
@@ -94,7 +90,6 @@ Fluente / Che parla fluentemente - <i>Dopo aver vissuto in Spagna per due anni, 
 </details>
 
 ## 4. Advanced Academic Terminology (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">To cram</b> - <i>I had to <b>cram</b> all night for the biology test.</i></summary>
 Studiare intensamente all'ultimo minuto (Sgobbare/Secchiare) - <i>Ho dovuto <b>studiare intensamente</b> tutta la notte per il test di biologia.</i>
@@ -136,7 +131,6 @@ Tasse universitarie / Rette - <i>Le <b>tasse universitarie</b> negli Stati Uniti
 </details>
 
 ## 5. Advanced Languages and Literacy (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Proficiency</b> (C1) - <i>You need to prove your English <b>proficiency</b> to get the visa.</i></summary>
 Competenza / Padronanza (di una lingua) - <i>Devi dimostrare la tua <b>padronanza</b> dell'inglese per ottenere il visto.</i>

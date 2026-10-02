@@ -4,9 +4,7 @@ tags:
   - informatica/html/metadati
   - tipologia/reference
 ---
-
 ## meta
-
 Fornisce metadati alla pagina. Va sempre dentro `<head>`.
 
 ```html
@@ -46,9 +44,7 @@ Attributi principali:
 - `http-equiv` — emula header HTTP (`refresh`, `content-type`…)
 
 ---
-
 ## link
-
 Collega risorse esterne alla pagina. Va dentro `<head>`.
 
 ```html
@@ -74,9 +70,7 @@ Attributi principali:
 - `sizes` — dimensioni per le icone (es. `"32x32"`)
 
 ---
-
 ## script
-
 Incorpora o collega JavaScript. Può stare in `<head>` o in fondo a `<body>`.
 
 ```html
@@ -109,5 +103,6 @@ Attributi principali:
 - `crossorigin` — gestione CORS
 - `integrity` — hash SRI per la verifica dell'integrità
 - `nomodule` — usato come fallback per browser che supportano i moduli
---- 
+
+---
 #HTML #Linguaggio_HTML

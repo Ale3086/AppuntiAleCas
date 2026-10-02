@@ -4,9 +4,7 @@ tags:
   - informatica/html/testo
   - tipologia/reference
 ---
-
 ## Headings
-
 Titoli da `<h1>` a `<h6>`. Usare un solo `<h1>` per pagina; la gerarchia deve essere logica.
 
 ```html
@@ -23,9 +21,7 @@ Attributi utili:
 - `id` — permette di creare link ancora (es. `<a href="#sezione">`)
 
 ---
-
 ## p
-
 Paragrafo di testo. Elemento block-level; non può contenere altri elementi block.
 
 ```html
@@ -42,9 +38,7 @@ Paragrafo di testo. Elemento block-level; non può contenere altri elementi bloc
 ```
 
 ---
-
 ## Formattazione testo inline
-
 Tag che modificano il significato o l'aspetto di porzioni di testo.
 
 ```html
@@ -91,5 +85,6 @@ Attributi specifici:
 - `<abbr>`: `title` — testo esteso dell'abbreviazione (mostrato come tooltip)
 - `<q>` / `<blockquote>`: `cite` — URL della fonte
 - `<time>`: `datetime` — valore leggibile dalla macchina (es. `"2024-03-15"`, `"14:30"`)
---- 
+
+---
 #HTML #Linguaggio_HTML

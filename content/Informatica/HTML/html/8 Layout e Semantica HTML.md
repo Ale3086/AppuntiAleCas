@@ -4,9 +4,7 @@ tags:
   - informatica/html/semantica
   - tipologia/concetto
 ---
-
 ## div e span
-
 Contenitori generici senza valore semantico. Usare gli elementi semantici quando possibile.
 
 ```html
@@ -24,9 +22,7 @@ Contenitori generici senza valore semantico. Usare gli elementi semantici quando
 Non hanno attributi specifici; usano `id`, `class`, `style`, `data-*` e gli attributi globali.
 
 ---
-
 ## Elementi semantici strutturali
-
 Rimpiazzano i `<div>` generici con tag dal significato preciso.
 
 ```html
@@ -53,9 +49,7 @@ Rimpiazzano i `<div>` generici con tag dal significato preciso.
 ```
 
 ---
-
 ## article e section
-
 `<article>`: contenuto autonomo e riutilizzabile (post, scheda prodotto, commento). `<section>`: sezione tematica di un documento, solitamente con un heading.
 
 ```html
@@ -72,9 +66,7 @@ Rimpiazzano i `<div>` generici con tag dal significato preciso.
 ```
 
 ---
-
 ## aside
-
 Contenuto tangenzialmente correlato al principale (sidebar, callout, biografia autore).
 
 ```html
@@ -90,9 +82,7 @@ Contenuto tangenzialmente correlato al principale (sidebar, callout, biografia a
 ```
 
 ---
-
 ## nav
-
 Blocco di navigazione principale. Non ogni gruppo di link richiede `<nav>`.
 
 ```html
@@ -114,9 +104,7 @@ Blocco di navigazione principale. Non ogni gruppo di link richiede `<nav>`.
 ```
 
 ---
-
 ## header e footer
-
 `<header>`: intestazione di pagina o di sezione (logo, titolo, navigazione). `<footer>`: piè di pagina o di sezione (link legali, copyright, contatti).
 
 ```html
@@ -137,9 +125,7 @@ Blocco di navigazione principale. Non ogni gruppo di link richiede `<nav>`.
 ```
 
 ---
-
 ## main
-
 Contenuto principale della pagina. Ce ne deve essere uno solo visibile per documento.
 
 ```html
@@ -152,5 +138,6 @@ Contenuto principale della pagina. Ce ne deve essere uno solo visibile per docum
 Attributi utili:
 
 - `id` — convenzionalmente `"main-content"` per i link "salta al contenuto" (accessibilità)
---- 
+
+---
 #HTML #Linguaggio_HTML

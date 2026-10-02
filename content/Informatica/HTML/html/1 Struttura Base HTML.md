@@ -4,9 +4,7 @@ tags:
   - informatica/html/struttura
   - tipologia/concetto
 ---
-
 ## Struttura base
-
 Scheletro minimo di ogni documento HTML.
 
 ```html
@@ -29,9 +27,7 @@ Attributi di `<html>`:
 - `dir` — direzione del testo: `ltr` (default) o `rtl`
 
 ---
-
 ## head
-
 Contiene metadati, stili e script. Non è visibile nel browser.
 
 ```html
@@ -43,5 +39,5 @@ Contiene metadati, stili e script. Non è visibile nel browser.
   <script defer src="app.js"></script>
 </head>
 ```
---- 
+---
 #HTML #Linguaggio_HTML

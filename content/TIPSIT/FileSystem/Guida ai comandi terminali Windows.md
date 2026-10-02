@@ -4,7 +4,6 @@ tags:
   - tipsit/filesystem
   - tipologia/guida-pratica
 ---
-
 # Index
 - [Comandi da Ricordare per Primi (CMD)](#Comandi%20da%20Ricordare%20per%20Primi%20(CMD))
 - [Comandi PowerShell Fondamentali](#Comandi%20PowerShell%20Fondamentali)
@@ -19,8 +18,8 @@ tags:
 - [Servizi Windows](#Servizi%20Windows)
 - [Aprire Strumenti Windows](#Aprire%20Strumenti%20Windows)
 - [⚠️ Comandi Pericolosi - Usare con Estrema Attenzione](#⚠️%20Comandi%20Pericolosi%20-%20Usare%20con%20Estrema%20Attenzione)
-## Comandi da Ricordare per Primi (CMD)
 
+## Comandi da Ricordare per Primi (CMD)
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`cd`|`cd Desktop`|Cambiare cartella|
@@ -41,7 +40,6 @@ tags:
 |`DISM`|`DISM /Online /Cleanup-Image /RestoreHealth`|Riparare immagine Windows|
 
 ## Comandi PowerShell Fondamentali
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`Get-ChildItem`|`Get-ChildItem`|Mostra file e cartelle|
@@ -62,9 +60,7 @@ tags:
 |`Restart-Service`|`Restart-Service Spooler`|Riavvia un servizio|
 
 ---
-
 ## Navigazione nel Terminale
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`cd`|`cd`|Mostra la cartella attuale|
@@ -84,7 +80,6 @@ tags:
 |`exit`|`exit`|Chiude il terminale|
 
 ## Spostare e Rinominare
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`move`|`move file.txt D:\Backup`|Sposta un file|
@@ -94,9 +89,7 @@ tags:
 |`ren *.txt *.bak`|`ren *.txt *.bak`|⚠️ Cambia estensione a più file — usare con attenzione|
 
 ---
-
 ## Eliminare File e Cartelle
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`del`|`del file.txt`|Elimina un file|
@@ -111,7 +104,6 @@ tags:
 |`rmdir /s /q`|`rmdir /s /q "C:\Test"`|⚠️ Elimina senza chiedere conferma|
 
 ## Cercare File e Contenuti
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`dir nome* /s`|`dir "report*" /s`|Cerca file/cartelle che iniziano con "report"|
@@ -124,7 +116,6 @@ tags:
 |`findstr /n`|`findstr /n "errore" log.txt`|Mostra il numero di riga|
 
 ## Rete e Internet
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`ipconfig`|`ipconfig`|Mostra l'indirizzo IP|
@@ -142,7 +133,6 @@ tags:
 |`getmac`|`getmac`|Mostra il MAC address della scheda di rete|
 
 ## Processi e Programmi
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`tasklist`|`tasklist`|Mostra tutti i processi attivi|
@@ -154,9 +144,7 @@ tags:
 |`taskmgr`|`taskmgr`|Apre Gestione attività|
 
 ---
-
 ## Disco, Spazio e Partizioni
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`wmic logicaldisk get`|`wmic logicaldisk get caption,freespace,size`|Mostra spazio libero e totale dei dischi|
@@ -171,7 +159,6 @@ tags:
 |`format`|`format E:`|⚠️ Formatta un disco o una partizione|
 
 ## Backup e Salvataggi
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`robocopy`|`robocopy C:\Dati D:\Backup /E`|Copia cartelle e sottocartelle|
@@ -182,7 +169,6 @@ tags:
 |`cipher /w`|`cipher /w:C:`|Sovrascrive spazio libero (anti-recupero dati)|
 
 ## Servizi Windows
-
 | Comando         | Esempio                         | Spiegazione                              |
 | --------------- | ------------------------------- | ---------------------------------------- |
 | `services.msc`  | `services.msc`                  | Apre la gestione grafica dei servizi     |
@@ -195,7 +181,6 @@ tags:
 | `sc config`     | `sc config spooler start= auto` | Cambia il tipo di avvio di un servizio   |
 
 ## Aprire Strumenti Windows
-
 | Comando        | Spiegazione                         |
 | -------------- | ----------------------------------- |
 | `explorer`     | Apre Esplora File                   |
@@ -219,7 +204,6 @@ tags:
 | `msconfig`     | Apre Configurazione di sistema      |
 
 ## ⚠️ Comandi Pericolosi - Usare con Estrema Attenzione
-
 |Comando|Perché fare attenzione|
 |---|---|
 |`del /s /q`|Può eliminare molti file senza conferma|

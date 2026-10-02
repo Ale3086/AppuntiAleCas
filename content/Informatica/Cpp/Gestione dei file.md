@@ -4,7 +4,6 @@ tags:
   - informatica/cpp/sintassi
   - tipologia/guida-pratica
 ---
-
 Un file è l'unità logica di memorizzazione dei dati su memoria di massa. che consente una memorizzazione persistente dei dati, non limitata dalle dimensioni della memoria centrale.
 
 Quando un nostro processo va ad aprire un file esso viene trasferito dall'hard-disk alla RAM e per rendere la modifica persistente si deve fare un'operazione per riportare dalla RAM all'hard-disk; se non si fanno il file non si aggiorna e quindi rimane con sempre i dati iniziali. Le operazioni per avere un file con una modifica persistente sono uguali per ogni linguaggio, ma le istruzioni dentro esse sono la vera cosa che cambiano effettivamente, ma di poco. Le operazioni sono:
@@ -13,16 +12,25 @@ Quando un nostro processo va ad aprire un file esso viene trasferito dall'hard-d
 - Accediamo e lavoriamo con la risorsa;
 - Chiudiamo la risorsa.
 
-![](../Zimmagini/Pasted%20image%2020260504234351.jpg)
+```mermaid
+flowchart TD
+    A["1. Apertura Risorsa (ofstream / ifstream)"] --> B{"File aperto con successo?<br>(.is_open())"}
+    B -->|"Sì"| C["2. Lavoro sui Dati<br>(Scrittura << o Lettura getline)"]
+    B -->|"No"| ERR["Segnalazione Errore<br>(cerr << 'File non trovato')"]
+    C --> D["3. Chiusura Risorsa<br>(.close() o distruttore RAII)"]
+```
 
-Un' altra cosa importante è che i tipi di file con cui possiamo lavorare sono molteplici:
-- txt: lettura di tipo sequenziale, ovvero che per leggere la riga 20 si devono prima leggere tutte le righe precedenti, iniziando sempre dal primo record logico; sono sequenze di caratteri con record logico che può essere un singolo carattere, la parola, oppure la linea (utilizzato da noi). Per leggere il file abbiamo un puntatore che va a leggere record dopo record il file.![](../Zimmagini/Pasted%20image%2020260518102217.png)
+![[Pasted image 20260504234351.jpg]]
 
-- bin: file binari per memorizzare file o immagini, non apribili con editor di testo perché il risultato non sarà interpretabile e sarà gibberish; sono sequenze di bit.
-	
-	![](../Zimmagini/Pasted%20image%2020260518102242.jpg)
+Un'altra cosa importante è che i tipi di file con cui possiamo lavorare sono molteplici:
+- **`.txt`**: file di testo con lettura sequenziale di caratteri o righe logiche.
+- **`.bin` / `.dat`**: file binari composti da sequenze grezze di byte (non leggibili con un normale editor di testo).
+
+![[Pasted image 20260518102217.png]]
+![[Pasted image 20260518102242.jpg]]
+
+---
 ## Gestione dei File in C++ (`<fstream>`)
-
 Nel C++ moderno la gestione dei file viene eseguita tramite flussi orientati agli oggetti (**stream**) inclusi nell'header `<fstream>`.
 
 La libreria mette a disposizione tre classi principali:
@@ -31,7 +39,6 @@ La libreria mette a disposizione tre classi principali:
 3. **`fstream`**: per gestire contemporaneamente lettura e scrittura.
 
 ---
-
 ### 1. Scrivere su File con `ofstream`
 Scrivere su un file in C++ è intuitivo quanto stampare a schermo con `cout`, usando lo stesso operatore `<<`:
 
@@ -76,7 +83,6 @@ if (fileAppend.is_open()) {
 ```
 
 ---
-
 ### 2. Leggere da File con `ifstream`
 
 #### A. Lettura Riga per Riga con `getline()`
@@ -122,7 +128,6 @@ fileDati.close();
 ```
 
 ---
-
 ## Gestione dei File a Basso Livello in C (`FILE*`)
 In molti contesti didattici, di programmazione di sistemi operativi o per la manipolazione di file binari puri (`.bin`), si utilizza la libreria standard del C (`<cstdio>`).
 
@@ -146,16 +151,21 @@ Vediamo come abbiamo due puntatori, uno è name, esso ci indica il nome di come 
 La funzione di base ci ridarà l'indirizzo di memora del file se va bene, ma può anche ridarci NULL in caso di read se l'operazione non va a buon fine, dato che se il file non esiste ci darà NULL, in write invece creerà un file con il nome indicato; se invece con la modalità write cerchiamo di scrivere su un file READ-ONLY anche la ci darà un NULL.
 
 Se il file non è vuoto il puntatore potrà andare a leggere fino a leggere fino allo stato di fine file, chiamato EOF (End Of File)
+
 #### Apertura in lettura
 Il file viene aperto e il EOF sarà a fine file e avremo un puntatore che partirà dalla posizione 0 a salire fino a EOF.
-![](../Zimmagini/Pasted%20image%2020260504233648.png)
+![[Pasted image 20260504233648.png]]
+
 #### Apertura in scrittura
 Quando apriamo il file in scrittura l'EOF indipendentemente se il file in precedenza fosse vuoto o no viene posizionato all'inizio, questo perché il file viene totalmente troncato, sovrascrivendo i dati che vi erano inizialmente in caso vi ci fossero dei dati.
-![](../Zimmagini/Pasted%20image%2020260504233634.png)
+![[Pasted image 20260504233634.png]]
+
 #### Apertura in aggiunta
 Quando apriamo il file questo giro EOF si trova alla posizione successiva all'ultimo elemento significativo del file, quindi se inizialmente vi erano dei dati nel file questa volta non verranno sovrascritti, ma verranno aggiunte solo informazioni.
-![](../Zimmagini/Pasted%20image%2020260504233706.png)
+![[Pasted image 20260504233706.png]]
+
 ### Lavoro
+
 #### `fseek` - sia .txt che .bin/.dat
 La funzione `fseek` subito dopo aver aperto un file ci va a scorrere a una posizione nella memoria del file precisa. I suoi parametri sono:
 - Il primo parametro è il puntatore alla struttura `FILE` su cui operare;
@@ -218,7 +228,7 @@ fclose(f);
 ```
 
 #### `fprintf` - .txt
-Questa funzione serve a scrivere dati formattati (testo, numeri, stringhe) nel file. I suoi parametri sono: 
+Questa funzione serve a scrivere dati formattati (testo, numeri, stringhe) nel file. I suoi parametri sono:
 - Il primo parametro è il puntatore al file aperto (es. quello ottenuto con `fopen`).
 - Il secondo parametro è una stringa che contiene il testo da scrivere e gli specificatori di formato (come `%d`, `%s`, `%f`).
 - Il secondo parameto è rappresentato da argomenti variabili, ovvero le variabili che corrispondono agli specificatori indicati nella stringa di formato.
@@ -297,4 +307,4 @@ fclose(file);
 ```
 
 La quale ci darà 0 in caso l'operazione sarà riuscita correttamente e la costante EOF in caso non sia andata a buon fine l'operazione, che solitamente è -1.
-![](../Zimmagini/Pasted%20image%2020260504234630.png)
+![[Pasted image 20260504234630.png]]

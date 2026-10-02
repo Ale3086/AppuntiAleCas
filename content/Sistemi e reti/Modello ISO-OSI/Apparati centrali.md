@@ -4,8 +4,8 @@ tags:
   - sistemi-e-reti/dispositivi
   - tipologia/teoria
 ---
-
 Il modo in cui i dati viaggiano dipende dall'apparato centrale utilizzato.
+
 ## L'Hub (Il nodo "passivo")
 L'hub si comporta logicamente come un bus: quando riceve un segnale su una porta, lo inoltra a **tutte le altre**. Tutte le stazioni ricevono il frame, ma solo quella destinataria lo trattiene, mentre le altre lo ignorano. Tutti i nodi collegati a un hub formano un unico **dominio di collisione**.
 
@@ -15,7 +15,6 @@ L'hub si comporta logicamente come un bus: quando riceve un segnale su una porta
 Lo switch opera al livello **Data Link** e inoltra la trama **solo alla porta** a cui è collegato il destinatario, evitando così le collisioni.
 
 - **Dominio di collisione:** Nello switch, ogni singola porta corrisponde a un dominio di collisione separato.
-    
 - **Modalità Full-Duplex:** Utilizza canali fisici separati per ricezione e trasmissione, permettendo l'invio contemporaneo di più trame senza conflitti.
 
 ![[Pasted image 20260428183829.png|697]]
@@ -28,19 +27,20 @@ Lo switch non ha bisogno di configurazione manuale; crea dinamicamente una **tab
 Il suo funzionamento si divide in due operazioni, la prima che serve per capire a chi mandare un messaggio, stabilendo un handshake che va a identificare che quel rispettivo indirizzo MAC corrisponde a quella precisa porta; la seconda che va a mandare l'informazione sia se già sappiamo l'indirizzo di destinazione MAC sia se no.
 
 1. **Apprendimento (Sorgente):** Lo switch esamina l'indirizzo MAC di chi invia l'informazione e lo associa alla porta da cui è arrivata. Se l'indirizzo è già presente ma su una porta diversa, aggiorna la tabella, se invece non era presente lo mette nella tabella degli indirizzi MAC. Questa è chiamata un'operazione di store.
-    
+
 2. **Inoltro (Destinazione):** Lo switch guarda l'indirizzo MAC del destinatario con un'operazione di forwarding:
     - Se è presente in tabella, inoltra l'informazione sulla porta corrispondente.
-        
     - Se **non è presente**, inoltra l'informazione su tutte le porte (tranne quella di provenienza), operazione chiamata **flooding**.
 
 > **Nota sulla sicurezza:** Poiché lo switch trasmette in modo selettivo, impedisce a un computer di intercettare facilmente il traffico destinato ad altri, migliorando la sicurezza informatica della rete.
 
 ![[Pasted image 20260520164836.png]]
+
 ### Spoofing
 E' una particolare tecnica usata da hacker informatici in cui si va a rubare o falsificare l'identità di un dispositivo o di un utente (usando un indirizzo MAC in questo caso, ma anche un IP o un'email falsa) per ingannare la rete. Serve a superare i blocchi di sicurezza e a intercettare i dati altrui senza farsi scoprire. Questa particolare tecnica si utilizza seguendo tre passaggi ben definiti.
 
 ![[Pasted image 20260520163914.jpg]]
+
 #### 1. La Fase di Ricognizione (Trovare il Target)
 L'attaccante deve prima identificare l'indirizzo MAC della vittima (Dispositivo A) e idealmente quello del Gateway (il router). Questo serve a capire quale identità "rubare" per intercettare il flusso di dati interessante.
 
@@ -48,7 +48,6 @@ L'attaccante deve prima identificare l'indirizzo MAC della vittima (Dispositivo 
 L'attaccante invia pacchetti di rete falsificati in cui inserisce come mittente il MAC della vittima, ma i pacchetti partono dalla porta fisica dell'attaccante.
 
 - Lo switch, vedendo arrivare quel MAC da una nuova porta, si aggiorna istantaneamente.
-    
 - Cancella il vecchio collegamento `[MAC Vittima -> Porta della Vittima]` e lo sostituisce con `[MAC Vittima -> Porta dell'Attaccante]`.
 
 #### 3. L'Intercettazione e l'Inoltro (Ottenere i Dati)

@@ -4,9 +4,7 @@ tags:
   - informatica/css/guida-completa
   - tipologia/guida-pratica
 ---
-
 ## Indice
-
 - [[#Cos'è il CSS e Sintassi delle Regole]]
 - [[#Come Includere il CSS in HTML]]
 - [[#I Selettori CSS]]
@@ -21,320 +19,240 @@ tags:
 - [[#Esempi Pratici di Componenti UI]]
 
 ---
-
 ## Cos'è il CSS e Sintassi delle Regole
+Il **CSS** (*Cascading Style Sheets* - Fogli di Stile a Cascata) è il linguaggio che governa l'estetica, la formattazione e la disposizione spaziale dei contenuti HTML.
 
-Il **CSS** (*Cascading Style Sheets* - Fogli di Stile a Cascata) è il linguaggio utilizzato per descrivere la presentazione, il layout e l'aspetto grafico dei documenti scritti in HTML.  
-Mentre l'HTML definisce la **struttura logica e semantica** (i contenuti), il CSS ne definisce l'**estetica visiva**.
+Una regola di stile è composta da tre elementi fondamentali:
 
-Una regola CSS è composta da tre elementi:
-1. **Selettore**: indica quale elemento HTML vogliamo stilizzare.
-2. **Proprietà**: la caratteristica che vogliamo modificare (es. `color`, `font-size`, `margin`).
-3. **Valore**: l'impostazione che assegniamo a quella proprietà.
+```mermaid
+flowchart LR
+    SEL["1. Selettore<br>(h1)"] --> BLOCCO["Blocco di Dichiarazioni { }"]
+    subgraph DICHIARAZIONE ["Dichiarazione"]
+        direction TB
+        PROP["2. Proprietà: color"] --- VAL["3. Valore: #2c3e50;"]
+    end
+    BLOCCO --- DICHIARAZIONE
+```
 
 ```css
-/* Sintassi di base */
-selettore {
-    proprieta: valore;
-    altra-proprieta: valore;
-}
-
-/* Esempio reale */
 h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    text-align: center;
+    color: #2c3e50;       /* Colore del testo */
+    font-size: 2.2rem;     /* Dimensione carattere */
+    text-align: center;    /* Allineamento al centro */
 }
 ```
 
 ---
-
 ## Come Includere il CSS in HTML
-
-Esistono tre metodi per applicare stili CSS a una pagina:
-
-### 1. File Esterno (`<link>`) — Metodo Consigliato (Best Practice)
-Il foglio di stile è contenuto in un file `.css` separato, collegato nell'intestazione `<head>`:
-
-```html
-<head>
-    <link rel="stylesheet" href="style.css">
-</head>
-```
-- ✅ **Vantaggi**: separa nettamente contenuto e presentazione, viene memorizzato nella cache del browser velocizzando il caricamento di più pagine, facile da mantenere.
-
-### 2. Foglio di Stile Interno (`<style>`)
-Dichiarato direttamente all'interno dell'`<head>`:
-
-```html
-<head>
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-    </style>
-</head>
-```
-
-### 3. Stile Inline (Attributo `style`) — Da Evitare
-Applicato direttamente al singolo tag HTML:
-
-```html
-<p style="color: red; font-weight: bold;">Testo urgente</p>
-```
-- ❌ **Svantaggi**: rende il codice HTML disordinato, non riutilizzabile e difficile da manutenere.
+| Metodo | Dove si trova | Come si dichiara | Giudizio |
+| :--- | :--- | :--- | :--- |
+| **Esterno (`<link>`)** | File `.css` separato | `<link rel="stylesheet" href="style.css">` dentro `<head>` | ✅ **Best practice assoluta** (riutilizzabile e in cache) |
+| **Interno (`<style>`)** | Dentro la pagina HTML | `<style> body { ... } </style>` dentro `<head>` | ⚠️ Utile per prototipi o landing page singole |
+| **Inline (`style="..."`)** | Attributo nel tag HTML | `<p style="color: red;">` | ❌ **Da evitare** (disordinato e impossibile da manutenere) |
 
 ---
-
 ## I Selettori CSS
 
-I selettori determinano a quali elementi della pagina applicare le regole di stile.
-
 ### 1. Selettori di Base
-- **Selettore di Tipo (o Tag)**: colpisce tutti i tag specificati.
-  ```css
-  p { line-height: 1.6; }
+- **Tag / Tipo**: seleziona tutti i tag indicati (`p`, `h2`, `button`).
+- **Classe (`.`)**: seleziona tutti gli elementi con quell'attributo `class`. Riutilizzabile ovunque:
+```css
+  .evidenziato { background-color: #fff3cd; }
   ```
-- **Selettore di Classe (`.`)**: colpisce tutti gli elementi con quell'attributo `class`. Riutilizzabile più volte nella stessa pagina!
-  ```css
-  .evidenziato { background-color: #ffeaa7; }
+- **ID (`#`)**: seleziona l'unico elemento con quell'attributo `id`. Deve essere univoco per pagina:
+```css
+  #intestazione-principale { border-bottom: 2px solid #333; }
   ```
-- **Selettore di ID (`#`)**: colpisce l'unico elemento con quell'attributo `id`. Deve essere univoco per pagina!
-  ```css
-  #navigazione-principale { background-color: #333; }
-  ```
-- **Selettore Universale (`*`)**: seleziona indistintamente ogni elemento del documento.
-  ```css
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  ```
+- **Universale (`*`)**: seleziona tutti gli elementi della pagina senza eccezioni.
 
 ### 2. Combinatori
-- **Discendente (Spazio)**: seleziona qualsiasi `p` che si trova all'interno di un `article` (anche annidato in profondità).
-  ```css
-  article p { color: #555; }
+- **Discendente (Spazio)**: qualsiasi `p` dentro un `article` (anche molto annidato):
+```css
+  article p { line-height: 1.6; }
   ```
-- **Figlio Diretto (`>`)**: seleziona solo i figli immediati di primo livello.
-  ```css
-  ul > li { list-style: square; }
+- **Figlio Diretto (`>`)**: solo i figli di primo livello:
+```css
+  ul > li { list-style: none; }
   ```
-- **Fratello Adiacente (`+`)**: seleziona il primo elemento immediatamente successivo allo stesso livello gerarchico.
-  ```css
-  h2 + p { font-size: 1.2rem; }
+- **Fratello Adiacente (`+`)**: il primo elemento immediatamente successivo:
+```css
+  h2 + p { font-size: 1.1rem; }
   ```
 
 ### 3. Pseudo-Classi e Pseudo-Elementi
-Permettono di applicare stili in base allo stato dell'elemento o a parti specifiche:
-
 ```css
-/* Al passaggio del cursore del mouse */
-a:hover {
-    color: #e74c3c;
-    text-decoration: underline;
+/* Stato: al passaggio del puntatore del mouse */
+.btn:hover {
+    background-color: #2980b9;
 }
 
-/* Quando un campo input riceve il focus di digitazione */
+/* Stato: campo attivo con cursore di digitazione */
 input:focus {
     border-color: #3498db;
     outline: none;
 }
 
-/* Seleziona elementi alternati in una lista o tabella */
+/* Elemento: righe pari alternate di una tabella */
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;
 }
 
-/* Inserisce contenuto visivo prima o dopo l'elemento */
-.icona-spunta::before {
-    content: "✔ ";
-    color: green;
+/* Inserisce elementi decorativi prima o dopo il testo */
+.titolo::before {
+    content: "📌 ";
 }
 ```
 
 ---
+## La Cascata e il Calcolo della Specificità
+Quando più regole si applicano al medesimo elemento, il browser assegna una priorità calcolata matematicamente come una quaterna di valori:
 
-## La Cascata e la Specificità
+$$\text{Punteggio} = (\text{Inline}, \text{ID}, \text{Classi/Pseudo-classi}, \text{Tag})$$
 
-Quando più regole si applicano allo stesso elemento, il browser decide quale stile applicare attraverso il principio della **Specificità** (*peso della regola*).
+```mermaid
+flowchart TD
+    I["1. Stili Inline: style='...' (1, 0, 0, 0)"]
+    ID["2. Selettori di ID: #nav (0, 1, 0, 0)"]
+    CL["3. Classi e Pseudo-classi: .btn, :hover (0, 0, 1, 0)"]
+    TAG["4. Nomi di Tag: p, div, h1 (0, 0, 0, 1)"]
 
-La gerarchia di importanza è:
-1. **Stile Inline** (`style="..."`) — Peso altissimo (1000)
-2. **Selettore di ID** (`#mio-id`) — Peso alto (100)
-3. **Selettore di Classe, Attributo, Pseudo-classe** (`.btn`, `[type="text"]`, `:hover`) — Peso medio (10)
-4. **Selettore di Elemento o Pseudo-elemento** (`p`, `h1`, `::before`) — Peso base (1)
+    I --> ID --> CL --> TAG
+```
 
-Se due regole hanno esattamente lo stesso peso di specificità, **vince l'ultima regola scritta nel codice** (principio di cascata temporale).
+### Esempio di scontro tra regole:
+1. `p` ha punteggio `(0, 0, 0, 1)`
+2. `.testo` ha punteggio `(0, 0, 1, 0)` $\rightarrow$ **Vince la classe!**
+3. `#banner p` ha punteggio `(0, 1, 0, 1)` $\rightarrow$ **Vince l'ID!**
 
 > [!WARNING]
-> La direttiva `!important` sovrascrive qualsiasi altra regola di specificità.  
-> Usala solo in casi estremi (es. per sovrascrivere fogli di stile di terze parti), perché rende la manutenzione del codice un incubo.
+> La direttiva `!important` annulla le regole di specificità. Va usata con estrema parsimonia solo per sovrascrivere fogli di stile di librerie terze, altrimenti genera conflitti ingestibili.
 
 ---
-
 ## Il Box Model
+Nel rendering del browser **ogni singolo elemento HTML è una scatola rettangolare**.
 
-Nel rendering del browser **ogni singolo elemento HTML è una scatola rettangolare**.  
-Il **Box Model** descrive gli strati concentrici che compongono ogni elemento:
-
-```
-┌────────────────────────────────────────┐
-│               MARGIN                   │ (Spazio esterno trasparente)
-│   ┌────────────────────────────────┐   │
-│   │           BORDER               │   │ (Bordo visibile)
-│   │   ┌────────────────────────┐   │   │
-│   │   │       PADDING          │   │   │ (Spazio interno tra bordo e testo)
-│   │   │   ┌────────────────┐   │   │   │
-│   │   │   │    CONTENT     │   │   │   │ (Testo, immagini o figli)
-│   │   │   └────────────────┘   │   │   │
-│   │   └────────────────────────┘   │   │
-│   └────────────────────────────────┘   │
-└────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph MARGIN ["MARGIN (Spazio trasparente esterno tra elementi)"]
+        subgraph BORDER ["BORDER (Bordo visibile)"]
+            subgraph PADDING ["PADDING (Spazio interno di respiro tra bordo e testo)"]
+                CONTENT["CONTENT (Area di testo, immagini o figli)"]
+            end
+        end
+    end
 ```
 
-1. **Content**: l'area dove risiedono il testo o le immagini (`width` e `height`).
-2. **Padding**: spazio interno di respiro tra il contenuto e il bordo.
-3. **Border**: il contorno che racchiude l'elemento (`border: 2px solid #ccc;`).
-4. **Margin**: spazio esterno vuoto che separa questo elemento dagli elementi circostanti.
+> [!INFO] 🖼️ Placeholder Immagine: Il Box Model visualizzato nel DevTools del browser
+> *Suggerimento per Obsidian: inserisci qui uno screenshot del pannello Elements -> Computed di Google Chrome con le 4 scatole concentriche.*
+> `![[Pasted image chrome_box_model.png|500]]`
 
-### La Regola Salvavita: `box-sizing: border-box`
-Di default (`content-box`), se imposti `width: 200px` e poi aggiungi `padding: 20px`, la larghezza finale visibile della scatola diventerà $200 + 20 + 20 = 240\text{px}$, rompendo spesso l'impaginazione!
+### La Proprietà Salvavita: `box-sizing: border-box`
+Di default (`content-box`), se imposti `width: 200px` e poi aggiungi `padding: 20px`, la scatola diventerà larga $200 + 20 + 20 = 240\text{px}$, distruggendo spesso la gabbia grafica!
 
-Impostando `box-sizing: border-box`, la larghezza dichiarata **includerà automaticamente padding e bordo**:
+Impostando universamente `box-sizing: border-box`, la larghezza dichiarata **comprende già al suo interno padding e bordi**:
 
 ```css
 *, *::before, *::after {
-    box-sizing: border-box; /* Regola fondamentale consigliata in tutti i progetti moderni */
+    box-sizing: border-box; /* Reset universale fondamentale */
 }
 ```
 
 ---
-
 ## Colori, Tipografia e Unità di Misura
 
-### Unità di Misura
-- **Assolute**: `px` (pixel fisici, statici).
-- **Relative (Consigliate per l'accessibilità)**:
-  - `rem`: proporzionale alla dimensione del font della radice `<html>` (di default `1rem = 16px`). Adatta la pagina se l'utente ingrandisce i caratteri nel browser!
-  - `em`: proporzionale alla dimensione del font del genitore diretto.
-  - `%`: percentuale rispetto alle dimensioni del contenitore genitore.
-  - `vw` e `vh`: $1\%$ della larghezza (*viewport width*) o altezza (*viewport height*) dello schermo.
-
-### Tipografia
-```css
-body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333333;
-}
-```
+### Unità di Misura Relative (Responsive)
+- **`rem`**: proporzionale alla dimensione del font impostata sull'`<html>` (di base $1\text{rem} = 16\text{px}$). Garantisce l'accessibilità se l'utente ingrandisce i caratteri del browser.
+- **`%`**: percentuale rispetto alla larghezza del contenitore padre.
+- **`vw` / `vh`**: $1\%$ della larghezza (*viewport width*) o altezza (*viewport height*) della finestra del browser.
 
 ---
-
 ## La Proprietà `display`
-
-Determina come l'elemento si posiziona nel flusso della pagina:
-
-| Valore | Va a capo? | Accetta `width` / `height`? | Elementi HTML tipici |
+| Valore | Va a capo? | Accetta `width` e `height`? | Esempi tipici |
 | :--- | :--- | :--- | :--- |
-| **`block`** | **Sì** (occupa tutto il $100\%$ della larghezza) | Sì | `<div>`, `<p>`, `<h1>`, `<section>` |
-| **`inline`** | **No** (si posiziona uno accanto all'altro) | No (ignora larghezza e margini verticali) | `<span>`, `<a>`, `<strong>` |
-| **`inline-block`** | **No** (affiancato nella stessa riga) | **Sì** (accetta dimensioni e padding completi) | `<button>`, `<input>` |
-| **`none`** | L'elemento scompare del tutto dalla pagina e non occupa spazio | | |
+| **`block`** | **Sì** (occupa tutto il 100% orizzontale) | Sì | `<div>`, `<p>`, `<h1>`, `<article>` |
+| **`inline`** | **No** (si affianca sulla stessa riga) | No (ignora dimensioni e margini verticali) | `<span>`, `<a>`, `<strong>` |
+| **`inline-block`** | **No** (si affianca sulla stessa riga) | **Sì** (accetta dimensioni complete) | `<button>`, `<input>`, `<img>` |
+| **`none`** | L'elemento scompare dal rendering senza occupare spazio | | |
 
 ---
-
 ## Posizionamento (`position`)
-
-- **`static`**: il comportamento naturale di default. Segue il normale flusso della pagina.
-- **`relative`**: l'elemento rimane nel flusso originale, ma può essere traslato di poco con `top`, `bottom`, `left`, `right`. Serve soprattutto come punto di riferimento per i figli `absolute`!
-- **`absolute`**: l'elemento viene rimosso dal flusso normale e posizionato esattamente alle coordinate indicate rispetto al più vicino genitore con `position: relative`.
-- **`fixed`**: l'elemento rimane ancorato allo schermo anche quando l'utente fa lo scrolling (perfetto per navbar fisse o pulsanti "torna su").
-- **`sticky`**: si comporta come `relative` finché non si scorre fino a una determinata soglia dello schermo, dopodiché si "incolla" in cima rimanendo visibile.
+- **`static`**: posizionamento naturale nel normale flusso della pagina.
+- **`relative`**: permette di traslare l'elemento con `top`, `left`, ecc., senza alterare lo spazio occupato dagli altri. È il punto di riferimento cruciale per i figli `absolute`!
+- **`absolute`**: rimosso dal normale flusso e ancorato esattamente alle coordinate indicate rispetto al più vicino genitore con `position: relative`.
+- **`fixed`**: ancorato alla finestra del browser durante lo scroll della pagina (ideale per navbar fisse o pulsanti chat).
+- **`sticky`**: si comporta come `relative` finché non si raggiunge una soglia di scroll, dopodiché si "incolla" allo schermo.
 
 ---
-
 ## Layout Moderno con Flexbox
+Flexbox governa la disposizione degli elementi lungo **un singolo asse** (o riga o colonna).
 
-**Flexbox** è il sistema di layout monodimensionale ideale per allineare e distribuire elementi lungo una riga o lungo una colonna.
+```mermaid
+flowchart LR
+    subgraph CONTENITORE ["Contenitore Flex: display: flex;"]
+        direction LR
+        ITEM1["Elemento 1"] --> ITEM2["Elemento 2"] --> ITEM3["Elemento 3"]
+    end
+    AXIS["Asse Principale (Main Axis: flex-direction)"] --- CONTENITORE
+```
 
 ```css
 .container {
-    display: flex;             /* Attiva Flexbox sul contenitore */
-    flex-direction: row;       /* row (default) oppure column */
-    justify-content: space-between; /* Distribuzione sull'asse orizzontale */
-    align-items: center;       /* Allineamento sull'asse verticale */
-    gap: 1.5rem;               /* Spazio uniforme tra i figli */
-    flex-wrap: wrap;           /* Manda a capo i figli se lo spazio finisce */
+    display: flex;                  /* Attiva Flexbox */
+    flex-direction: row;            /* row (orizzontale) o column (verticale) */
+    justify-content: space-between; /* Distribuzione sull'asse principale */
+    align-items: center;            /* Allineamento sull'asse trasversale */
+    gap: 1.5rem;                    /* Spazio uniforme tra gli elementi */
+    flex-wrap: wrap;                /* Manda a capo gli elementi se lo spazio finisce */
 }
 
 .item {
-    flex: 1;                   /* I figli si espandono per occupare lo spazio disponibile in parti uguali */
+    flex: 1;                        /* Distribuisce lo spazio disponibile in parti uguali */
 }
 ```
 
-### Valori utili di `justify-content`:
-- `flex-start`: raggruppati a sinistra.
-- `center`: centrati perfettamente.
-- `flex-end`: raggruppati a destra.
-- `space-between`: primo elemento a sinistra, ultimo a destra, spazio equo in mezzo.
-- `space-around` / `space-evenly`: spazio distribuito uniformemente attorno a ciascun elemento.
-
 ---
-
-## Layout Moderno con CSS Grid
-
-**CSS Grid** è il sistema di layout bidimensionale per creare griglie complesse sia per righe che per colonne contemporaneamente:
+## Layout a Griglia con CSS Grid
+Per layout bidimensionali complessi (righe e colonne contemporaneamente):
 
 ```css
-.griglia {
+.galleria {
     display: grid;
-    /* Crea 3 colonne di larghezza uguale (1fr = 1 frazione) */
+    /* Crea 3 colonne uguali che occupano 1 frazione (1fr) di spazio */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 ```
 
 ---
-
 ## Responsive Design e Media Queries
-
-Il **Responsive Design** garantisce che un sito web si adatti automaticamente a schermi di qualsiasi dimensione (dagli smartphone ai monitor 4K).
-
-### Le Media Queries
-Permettono di applicare regole CSS solo quando lo schermo soddisfa determinate condizioni di larghezza:
+Permette alla pagina di adattarsi all'istante a smartphone, tablet e monitor desktop.
 
 ```css
-/* Stile base per Desktop (o Tablet) */
-.colonne {
+/* Layout per Desktop */
+.layout-colonne {
     display: flex;
     flex-direction: row;
 }
 
-/* Quando lo schermo è largo 768px o meno (Smartphone) */
+/* Quando la larghezza dello schermo è 768px o inferiore (Tablet / Smartphone) */
 @media (max-width: 768px) {
-    .colonne {
-        flex-direction: column; /* Dispone le colonne in verticale */
-    }
-
-    body {
-        font-size: 0.9rem;
+    .layout-colonne {
+        flex-direction: column; /* Le colonne si incolonnano in verticale */
     }
 }
 ```
 
 ---
-
 ## Esempi Pratici di Componenti UI
 
 ### 1. Barra di Navigazione Responsive (Navbar)
-
 ```html
 <nav class="navbar">
-    <div class="logo">MioSito</div>
+    <div class="logo">DevAppunti</div>
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Servizi</a></li>
-        <li><a href="#">Contatti</a></li>
+        <li><a href="#">C++</a></li>
+        <li><a href="#">Web</a></li>
     </ul>
 </nav>
 ```
@@ -346,26 +264,25 @@ Permettono di applicare regole CSS solo quando lo schermo soddisfa determinate c
     align-items: center;
     background-color: #2c3e50;
     padding: 1rem 2rem;
-    color: white;
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
+    color: white;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
 .navbar .nav-links {
     display: flex;
-    list-style: none;
     gap: 1.5rem;
+    list-style: none;
     margin: 0;
 }
 
 .navbar .nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.2s;
 }
 
 .navbar .nav-links a:hover {
@@ -373,61 +290,43 @@ Permettono di applicare regole CSS solo quando lo schermo soddisfa determinate c
 }
 ```
 
-### 2. Card UI Moderna con Ombra e Transizione
-
+### 2. Card UI Moderna con Ombra e Hover Effect
 ```html
 <div class="card">
-    <img src="copertina.jpg" alt="Immagine card">
-    <div class="card-body">
-        <h3>Titolo della Card</h3>
-        <p>Breve descrizione accattivante del prodotto o dell'articolo.</p>
-        <button class="btn">Scopri di più</button>
+    <div class="card-content">
+        <h3>Titolo Card</h3>
+        <p>Descrizione sintetica del contenuto o dell'argomento.</p>
+        <button class="btn">Approfondisci</button>
     </div>
 </div>
 ```
 
 ```css
 .card {
-    background-color: #ffffff;
+    background: white;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 300px;
     overflow: hidden;
-    max-width: 320px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card-body {
+.card-content {
     padding: 1.25rem;
 }
 
-.card-body h3 {
-    margin-top: 0;
-    color: #2d3436;
-}
-
 .btn {
-    background-color: #0984e3;
+    background-color: #3498db;
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #74b9ff;
+    font-weight: 600;
 }
 ```

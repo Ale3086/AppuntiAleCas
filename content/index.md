@@ -3,13 +3,10 @@ title: "Home Appunti"
 cssclasses:
   - dashboard
 ---
-
 # 📚 Appunti di AleCas
-
 Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in continua evoluzione mi accompagnerà fino alla quinta superiore e oltre, fungendo da vero e proprio archivio personale per ripassare e consolidare le mie conoscenze. Usa la barra laterale o seleziona una materia qui sotto per esplorare!
 
 ---
-
 ## 💻 [[_index_Informatica|Informatica]]
 Lo studio del pensiero computazionale e della logica di programmazione: linguaggi C++, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.
 

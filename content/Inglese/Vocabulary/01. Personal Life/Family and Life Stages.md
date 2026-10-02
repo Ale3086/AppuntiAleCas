@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/personal-life
   - tipologia/glossario
 ---
-
 Vocabulary related to the stages of human life, immediate and extended family members, and complex relationships.
 
 ## 1. Life Events and Actions (A2 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">To be born</b> / <b style="color: #569cd6;">Birth</b> - <i>The <b>birth</b> of her first child was a magical moment.</i></summary>
 Nascere / Nascita - <i>La <b>nascita</b> del suo primo figlio è stato un momento magico.</i>
@@ -40,7 +38,6 @@ Morte / Vedova - <i>Dopo la tragica <b>morte</b> di suo marito, la <b>vedova</b>
 </details>
 
 ## 2. General Ages and Stages of Life (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Baby</b> / <b style="color: #569cd6;">Toddler</b> - <i>The <b>toddler</b> is just learning how to walk.</i></summary>
 Neonato / Bambino piccolo (1-3 anni) - <i>Il <b>bambino piccolo</b> sta appena imparando a camminare.</i>
@@ -72,7 +69,6 @@ Vecchiaia / Anziano (rispettoso) - <i>Dovremmo sempre cedere il nostro posto a u
 </details>
 
 ## 3. The Family (A1 - A2)
-
 <details>
 <summary><b style="color: #569cd6;">Siblings</b> - <i>I have three <b>siblings</b>: two brothers and one sister.</i></summary>
 Fratelli e sorelle (in generale) - <i>Ho tre <b>fratelli/sorelle</b>: due maschi e una femmina.</i>
@@ -104,7 +100,6 @@ Nipote (di nonni - maschio) / Nipote (di nonni - femmina) - <i>I nonni erano cos
 </details>
 
 ## 4. Advanced Relationships and Life Events (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Estranged</b> (C1) - <i>He hasn't spoken to his <b>estranged</b> father in over ten years.</i></summary>
 Allontanato / Separato (emotivamente e fisicamente dalla famiglia) - <i>Non parla con il suo padre <b>allontanato</b> da oltre dieci anni.</i>
@@ -146,7 +141,6 @@ Crisi di mezza età - <i>Ha comprato un'auto sportiva rossa perché stava attrav
 </details>
 
 ## 5. Complex Relationships (B1 - B2)
-
 <details>
 <summary><b style="color: #569cd6;">Close relative</b> / <b style="color: #569cd6;">Distant relative</b> - <i>He isn't a <b>close relative</b>, just a <b>distant relative</b> of my father.</i></summary>
 Parente stretto / Parente lontano - <i>Non è un <b>parente stretto</b>, solo un <b>parente lontano</b> di mio padre.</i>

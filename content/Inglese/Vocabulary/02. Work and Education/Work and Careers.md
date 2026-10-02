@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/work-education
   - tipologia/glossario
 ---
-
 Vocabulary related to finding a job, the workplace, salaries, leaving a job, and common professions.
 
 ## 1. Getting a Job (A1 - B2)
-
 <details>
 <summary><b style="color: #569cd6;">To apply</b> - <i>I am going to <b>apply</b> for that marketing position.</i></summary>
 Candidarsi - <i>Vado a <b>candidarmi</b> per quella posizione di marketing.</i>
@@ -30,7 +28,6 @@ Colloquio di lavoro - <i>Ero così nervoso durante il mio <b>colloquio di lavoro
 </details>
 
 ## 2. Leaving a Job (A2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">To resign</b> / <b style="color: #569cd6;">To quit</b> - <i>He hated his boss, so he decided to <b>quit</b>.</i></summary>
 Dimettersi - <i>Odiava il suo capo, quindi ha deciso di <b>dimettersi</b>.</i>
@@ -57,7 +54,6 @@ Liquidazione / Buonuscita aziendale - <i>Dopo 10 anni, se n'è andata con una <b
 </details>
 
 ## 3. The Workplace and Growth
-
 <details>
 <summary><b style="color: #569cd6;">Employer</b> / <b style="color: #569cd6;">Employee</b> - <i>A good <b>employer</b> treats every <b>employee</b> with respect.</i></summary>
 Datore di lavoro / Dipendente - <i>Un buon <b>datore di lavoro</b> tratta ogni <b>dipendente</b> con rispetto.</i>
@@ -89,7 +85,6 @@ Promuovere / Promozione - <i>Lei ha lavorato sodo e ha ottenuto una <b>promozion
 </details>
 
 ## 4. Common Professions
-
 <details>
 <summary><b style="color: #569cd6;">Accountant</b> - <i>My <b>accountant</b> helps me with my taxes every year.</i></summary>
 Commercialista / Contabile - <i>Il mio <b>commercialista</b> mi aiuta con le tasse ogni anno.</i>
@@ -151,7 +146,6 @@ Veterinario - <i>Abbiamo portato il nostro cane dal <b>veterinario</b> perché n
 </details>
 
 ## 5. Advanced Corporate Culture (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Turnover</b> - <i>The company has a very high employee <b>turnover</b> because of the toxic environment.</i></summary>
 Ricambio del personale (Tasso di chi entra e chi esce) - <i>L'azienda ha un <b>ricambio del personale</b> molto alto a causa dell'ambiente tossico.</i>

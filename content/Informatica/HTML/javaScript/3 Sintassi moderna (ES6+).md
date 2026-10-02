@@ -4,9 +4,7 @@ tags:
   - informatica/javascript/es6
   - tipologia/reference
 ---
-
 ## Indice
-
 - [[#Destructuring]]
 - [[#Spread e Rest]]
 - [[#Template literals]]
@@ -17,7 +15,6 @@ tags:
 - [[#Moduli ES6]]
 
 ## Destructuring
-
 Estrae valori da array o oggetti in variabili.
 
 ```js
@@ -55,9 +52,7 @@ for (const { nome } of persone) {
 ```
 
 ---
-
 ## Spread e Rest
-
 `...` si comporta diversamente a seconda del contesto.
 
 ```js
@@ -95,9 +90,7 @@ const { a: _, ...senzaA } = { a: 1, b: 2, c: 3 };
 ```
 
 ---
-
 ## Template literals
-
 ```js
 const nome = "Alice";
 const eta = 30;
@@ -130,9 +123,7 @@ String.raw`C:\Users\nome`  // "C:\\Users\\nome"
 ```
 
 ---
-
 ## Optional chaining
-
 `?.` accede a una proprietà o chiama una funzione solo se il valore a sinistra non è `null` o `undefined`. Restituisce `undefined` invece di sollevare un errore.
 
 ```js
@@ -157,9 +148,7 @@ utente?.telefono?.numero ?? "N/D"  // "N/D"
 ```
 
 ---
-
 ## Nullish coalescing
-
 `??` restituisce il lato destro solo se il lato sinistro è `null` o `undefined` (non altri valori falsy come `0`, `""`, `false`).
 
 ```js
@@ -187,9 +176,7 @@ b &&= 99;               // b = 99 (se truthy)
 ```
 
 ---
-
 ## Shorthand properties
-
 ```js
 const nome = "Alice";
 const eta = 30;
@@ -216,9 +203,7 @@ obj3[id]; // 1
 ```
 
 ---
-
 ## Computed properties
-
 ```js
 const prefisso = "get";
 const nome = "Nome";
@@ -241,9 +226,7 @@ creaOggetto("colore", "rosso"); // { colore: "rosso" }
 ```
 
 ---
-
 ## Moduli ES6
-
 Sistema di moduli nativo del browser (e Node.js con `.mjs` o `"type": "module"`).
 
 ```js

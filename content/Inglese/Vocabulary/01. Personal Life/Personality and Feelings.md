@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/personal-life
   - tipologia/glossario
 ---
-
 Vocabulary to describe character traits, emotions, and personal qualities.
 
 ## 1. General Positive Traits (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Calm</b> / <b style="color: #569cd6;">Patient</b> - <i>A good teacher must be very <b>calm</b> and <b>patient</b> with children.</i></summary>
 Calmo / Paziente - <i>Un buon insegnante deve essere molto <b>calmo</b> e <b>paziente</b> con i bambini.</i>
@@ -50,7 +48,6 @@ Ben organizzato - <i>La sua scrivania è sempre pulita perché è <b>ben organiz
 </details>
 
 ## 2. General Negative Traits (A2 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Stubborn</b> - <i>He is too <b>stubborn</b> to admit that he was wrong.</i></summary>
 Testardo - <i>È troppo <b>testardo</b> per ammettere che aveva torto.</i>
@@ -77,7 +74,6 @@ Di mentalità chiusa / Ottuso - <i>Le sue visioni <b>di mentalità chiusa</b> re
 </details>
 
 ## 3. Basic Feelings (Nouns and Adjectives)
-
 <details>
 <summary><b style="color: #569cd6;">Happiness</b> / <b style="color: #569cd6;">Happy</b> - <i>Money cannot buy true <b>happiness</b>.</i></summary>
 Felicità / Felice - <i>I soldi non possono comprare la vera <b>felicità</b>.</i>
@@ -114,7 +110,6 @@ Solitudine / Solo (triste per la solitudine) - <i>Vivere in una nuova città pu�
 </details>
 
 ## 4. Advanced Traits and Personalities (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Resilient</b> (C1) - <i>She is incredibly <b>resilient</b>; she never gives up despite the hardships.</i></summary>
 Resiliente / Capace di riprendersi - <i>È incredibilmente <b>resiliente</b>; non si arrende mai nonostante le difficoltà.</i>
@@ -156,7 +151,6 @@ Apatico / Indifferente - <i>Gli elettori sono diventati <b>apatici</b>; semplice
 </details>
 
 ## 5. Advanced Emotions and States of Mind (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Euphoria</b> (C1) - <i>When they won the championship, the crowd erupted in pure <b>euphoria</b>.</i></summary>
 Euforia / Gioia incontenibile - <i>Quando hanno vinto il campionato, la folla è esplosa in pura <b>euforia</b>.</i>

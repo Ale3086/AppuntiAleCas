@@ -8,16 +8,12 @@ tags:
   - sintesi-automi
 draft: true
 ---
-
 # Tabelle di Transizione e Trasformazione negli Automi
-
 > [!NOTE] Ruolo delle Tabelle nella Modellazione
 > Mentre il **diagramma degli stati (grafo)** offre una visione intuitiva e visiva del funzionamento del sistema, le **tabelle di transizione e trasformazione** costituiscono la rappresentazione algebrico-matriciale rigorosa e completa. Sono il passaggio fondamentale indispensabile per procedere alla progettazione e alla sintesi circuitale hardware (con flip-flop e porte logiche) o all'implementazione software (con matrici o istruzioni `switch-case`).
 
 ---
-
 ## 1. Struttura Matriciale delle Tabelle
-
 Un sistema a stati finiti descrive la propria evoluzione attraverso due matrici bidimensionali:
 
 ```mermaid
@@ -40,9 +36,7 @@ flowchart LR
 ```
 
 ---
-
 ## 2. Caso di Studio: Distributore di Bibite (Costo 2 EUR)
-
 Analizziamo il sistema reale tratto dagli appunti: un distributore automatico in cui una lattina costa **2 EUR**.
 
 ### 1. Variabili di Ingresso ($I$)
@@ -62,9 +56,7 @@ $$(i_1, i_2) \in \{(1\text{ Euro}, \text{ON}), (2\text{ Euro}, \text{ON}), (1\te
 - **$s_4$ (Lattina in uscita):** Fase di rilascio prodotto e reset del sistema.
 
 ---
-
 ## 3. Tabella di Transizione (Stato Futuro $S(t+1)$)
-
 Specifica in quale stato transita il sistema al ciclo successivo in base allo stato presente e all'azione dell'utente:
 
 | Stato Corrente $S(t)$ | Ingresso: (1 EUR, ON) | Ingresso: (2 EUR, ON) | Ingresso: (1 EUR, OFF) | Ingresso: (2 EUR, OFF) |
@@ -75,9 +67,7 @@ Specifica in quale stato transita il sistema al ciclo successivo in base allo st
 | **$s_4$** (Erogazione) | $s_1$ (Reset a 0 EUR) | $s_1$ (Reset a 0 EUR) | $s_1$ (Reset a 0 EUR) | $s_1$ (Reset a 0 EUR) |
 
 ---
-
 ## 4. Tabella di Trasformazione (Uscita $U(t)$)
-
 Specifica lo stato dell'uscita (erogazione lattina: $\text{ON}$ oppure $\text{OFF}$):
 
 | Stato Corrente $S(t)$ | Ingresso: (1 EUR, ON) | Ingresso: (2 EUR, ON) | Ingresso: (1 EUR, OFF) | Ingresso: (2 EUR, OFF) |
@@ -88,9 +78,7 @@ Specifica lo stato dell'uscita (erogazione lattina: $\text{ON}$ oppure $\text{OF
 | **$s_4$** (Erogazione) | ON | ON | OFF | OFF |
 
 ---
-
 ## 5. Corrispondenza con il Grafo degli Stati
-
 ```mermaid
 stateDiagram-v2
     direction TB
@@ -116,11 +104,8 @@ stateDiagram-v2
 > - Nella Tabella di Transizione troviamo: **$s_4$** (il sistema passa allo stato di erogazione).
 > - Nella Tabella di Trasformazione troviamo: **ON** (il motorino della lattina viene attivato immediatamente).
 
-
 ---
-
 ## 6. Dalla Tabella alla Sintesi Circuitale (Flip-Flop)
-
 Per trasformare queste tabelle in un circuito elettronico reale:
 1. **Codifica degli Stati in Binario:** Avendo 4 stati ($s_1, s_2, s_3, s_4$), servono:
    $$K = \lceil \log_2 4 \rceil = 2 \text{ bit di memoria (Flip-Flop } Q_1, Q_0)$$

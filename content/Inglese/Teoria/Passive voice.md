@@ -4,9 +4,7 @@ tags:
   - inglese/grammatica/passive-voice
   - tipologia/teoria
 ---
-
 # Passive Voice
-
 > [!info] 🧠 The Basics
 > The passive voice is used when the focus is on the action and the receiver of the action, rather than who or what is performing the action. In a passive sentence, the object of an active sentence becomes the subject. The person or thing doing the action is called the "agent" and can be introduced at the end of the sentence with the preposition **by**, though it is often omitted if it is unknown, obvious, or not important.
 
@@ -33,14 +31,14 @@ tags:
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > # Voce Passiva
 > La voce passiva si usa quando l'attenzione è concentrata sull'azione e su chi la subisce, piuttosto che su chi la compie. In una frase passiva, il complemento oggetto di una frase attiva diventa il soggetto. Chi o cosa compie l'azione è chiamato "agente" e può essere introdotto alla fine della frase con la preposizione **by** (da), anche se spesso viene omesso se è sconosciuto, ovvio o non importante.
-> 
+>
 > ### Regole Generali: da Attivo a Passivo
 > Per trasformare una frase da attiva a passiva, segui questi passaggi:
 > 1. Il **complemento oggetto** della frase attiva diventa il **soggetto** della frase passiva.
 > 2. Aggiungi il verbo ausiliare **to be** (essere) nello *stesso tempo verbale* del verbo principale della frase attiva.
 > 3. Metti il verbo principale della frase attiva al **participio passato** (3° colonna dei paradigmi, o -ed).
 > 4. (Opzionale) Aggiungi **by** seguito dal soggetto originale (l'agente d'azione).
-> 
+>
 > ##### Esempio Passo-Passo:
 > - **Attiva:** Shakespeare (Soggetto) scrisse (Past Simple) l'Amleto (Oggetto).
 > - *Passaggio 1:* L'Amleto... (L'Oggetto diventa Soggetto)
@@ -48,14 +46,13 @@ tags:
 > - *Passaggio 3:* L'Amleto fu scritto... (Verbo principale "scrivere" al Participio Passato)
 > - *Passaggio 4:* L'Amleto fu scritto da Shakespeare. (Aggiungi "by/da" + Agente)
 > - **Passiva:** L'Amleto fu scritto da Shakespeare.
-> 
+>
 > **Strutture:**
 > - **Positiva:** `Soggetto + to be (nel tempo corretto) + Participio Passato`
 > - **Negativa:** `Soggetto + to be (nel tempo corretto) + NOT + Participio Passato`
 > - **Interrogativa:** `To be (nel tempo corretto) + Soggetto + Participio Passato?`
 
 ## 1. Present Simple
-
 > [!important] ⚙️ Structure
 > `Subject + am/is/are + Past Participle`
 
@@ -65,13 +62,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + am/is/are + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** They make cars in Germany. (Loro producono automobili in Germania.)
 > - **Passiva:** Cars are made in Germany. (Le automobili vengono/sono prodotte in Germania.)
 
 ## 2. Present Continuous
-
 > [!important] ⚙️ Structure
 > `Subject + am/is/are + being + Past Participle`
 
@@ -81,13 +77,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + am/is/are + being + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** The chef is cooking the meal. (Lo chef sta cucinando il pasto.)
 > - **Passiva:** The meal is being cooked by the chef. (Il pasto sta venendo cucinato dallo chef.)
 
 ## 3. Past Simple
-
 > [!important] ⚙️ Structure
 > `Subject + was/were + Past Participle`
 
@@ -97,13 +92,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + was/were + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** Shakespeare wrote Hamlet. (Shakespeare scrisse l'Amleto.)
 > - **Passiva:** Hamlet was written by Shakespeare. (L'Amleto fu/è stato scritto da Shakespeare.)
 
 ## 4. Past Continuous
-
 > [!important] ⚙️ Structure
 > `Subject + was/were + being + Past Participle`
 
@@ -113,13 +107,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + was/were + being + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** The mechanic was repairing my car when I arrived. (Il meccanico stava riparando la mia auto quando sono arrivato.)
 > - **Passiva:** My car was being repaired by the mechanic when I arrived. (La mia auto stava venendo riparata dal meccanico quando sono arrivato.)
 
 ## 5. Present Perfect
-
 > [!important] ⚙️ Structure
 > `Subject + have/has + been + Past Participle`
 
@@ -129,13 +122,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + have/has + been + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** Someone has stolen my bike. (Qualcuno ha rubato la mia bici.)
 > - **Passiva:** My bike has been stolen. (La mia bici è stata rubata.)
 
 ## 6. Past Perfect
-
 > [!important] ⚙️ Structure
 > `Subject + had + been + Past Participle`
 
@@ -145,13 +137,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + had + been + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** They had finished the project before the deadline. (Avevano finito il progetto prima della scadenza.)
 > - **Passiva:** The project had been finished before the deadline. (Il progetto era stato finito prima della scadenza.)
 
 ## 7. Future Simple (Will)
-
 > [!important] ⚙️ Structure
 > `Subject + will + be + Past Participle`
 
@@ -161,13 +152,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + will + be + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** The company will hire new employees next month. (L'azienda assumerà nuovi dipendenti il mese prossimo.)
 > - **Passiva:** New employees will be hired by the company next month. (Nuovi dipendenti saranno assunti dall'azienda il mese prossimo.)
 
 ## 8. Future with "Going to"
-
 > [!important] ⚙️ Structure
 > `Subject + am/is/are + going to be + Past Participle`
 
@@ -177,13 +167,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + am/is/are + going to be + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** They are going to build a new hospital here. (Hanno intenzione di costruire un nuovo ospedale qui.)
 > - **Passiva:** A new hospital is going to be built here. (Un nuovo ospedale sta per essere costruito qui.)
 
 ## 9. Modals (can, could, should, must, might, etc.)
-
 > [!important] ⚙️ Structure
 > `Subject + modal + be + Past Participle`
 
@@ -193,13 +182,12 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + modale + be + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** You must wear a seatbelt. (Devi indossare la cintura di sicurezza.)
 > - **Passiva:** A seatbelt must be worn. (La cintura di sicurezza deve essere indossata.)
 
 ## 10. Modals in the past (could have, should have, etc.)
-
 > [!important] ⚙️ Structure
 > `Subject + modal + have been + Past Participle`
 
@@ -209,7 +197,7 @@ tags:
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
 > **Struttura:** `Soggetto + modale + have been + Participio Passato`
-> 
+>
 > **Esempio di trasformazione:**
 > - **Attiva:** You should have told me earlier. (Avresti dovuto dirmelo prima.)
 > - **Passiva:** I should have been told earlier. (Sarei dovuto essere informato prima.)

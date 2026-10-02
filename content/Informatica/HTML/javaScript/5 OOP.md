@@ -4,9 +4,7 @@ tags:
   - informatica/javascript/oop
   - tipologia/concetto
 ---
-
 ## Indice
-
 - [[#Classi]]
 - [[#Ereditarietà]]
 - [[#Getter e Setter]]
@@ -16,7 +14,6 @@ tags:
 - [[#Proxy e Reflect]]
 
 ## Classi
-
 Sintassi ES6 per la programmazione orientata agli oggetti. Basata internamente su prototipi.
 
 ```js
@@ -66,9 +63,7 @@ gatto.constructor === Animale // true
 ```
 
 ---
-
 ## Ereditarietà
-
 `extends` crea una sottoclasse. `super` chiama il costruttore o i metodi della classe padre.
 
 ```js
@@ -112,9 +107,7 @@ paperino.vola();  // "Paperino vola"
 ```
 
 ---
-
 ## Getter e Setter
-
 Permettono di intercettare la lettura e la scrittura di una proprietà.
 
 ```js
@@ -153,9 +146,7 @@ obj.sola_lettura; // 42
 ```
 
 ---
-
 ## Metodi statici
-
 Appartengono alla classe, non alle istanze. Utili per factory, utility e costanti.
 
 ```js
@@ -178,9 +169,7 @@ EstesaMath.PI;            // 3.14159
 ```
 
 ---
-
 ## Symbol
-
 Tipo primitivo che produce un valore unico e immutabile. Usato come chiave di proprietà per evitare collisioni.
 
 ```js
@@ -222,9 +211,7 @@ Object.prototype.toString.call(new Lista()); // "[object Lista]"
 ```
 
 ---
-
 ## Iteratori e generatori
-
 Un iteratore è un oggetto con `next()`. Un generatore è una funzione che produce iteratori usando `yield`.
 
 ```js
@@ -290,9 +277,7 @@ for await (const pagina of fetchPagine("/api/items")) {
 ```
 
 ---
-
 ## Proxy e Reflect
-
 `Proxy` intercetta operazioni su un oggetto. `Reflect` fornisce i metodi di default per le stesse operazioni.
 
 ```js

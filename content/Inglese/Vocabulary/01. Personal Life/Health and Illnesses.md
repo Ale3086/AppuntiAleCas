@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/personal-life
   - tipologia/glossario
 ---
-
 Vocabulary related to body parts, medical symptoms, injuries, and treatments.
 
 ## 1. General Symptoms and Illnesses (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Cold</b> / <b style="color: #569cd6;">Flu</b> - <i>I can't come to work today, I caught a bad <b>flu</b>.</i></summary>
 Raffreddore / Influenza - <i>Non posso venire a lavoro oggi, ho preso una brutta <b>influenza</b>.</i>
@@ -40,7 +38,6 @@ Intossicazione alimentare - <i>Quel sushi economico mi ha fatto venire una terri
 </details>
 
 ## 2. Basic Medical Care (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Health center</b> / <b style="color: #569cd6;">Clinic</b> - <i>I went to the local <b>health center</b> to get checked.</i></summary>
 Centro medico / Clinica - <i>Sono andato al <b>centro medico</b> locale per farmi visitare.</i>
@@ -67,7 +64,6 @@ Antidolorifico - <i>Prendi un <b>antidolorifico</b> se il mal di testa peggiora.
 </details>
 
 ## 3. Injuries
-
 <details>
 <summary><b style="color: #569cd6;">To hurt</b> / <b style="color: #569cd6;">To injure</b> - <i>He <b>injured</b> his back while lifting heavy boxes.</i></summary>
 Fare male / Ferirsi - <i>Si è <b>ferito</b> alla schiena sollevando scatole pesanti.</i>
@@ -109,7 +105,6 @@ Gonfio - <i>Il mio dito è rimasto incastrato nella porta e ora è incredibilmen
 </details>
 
 ## 4. Advanced Symptoms and Illnesses (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Concussion</b> (C1) - <i>The rugby player suffered a severe <b>concussion</b> after the hit.</i></summary>
 Commozione cerebrale - <i>Il giocatore di rugby ha subito una grave <b>commozione cerebrale</b> dopo il colpo.</i>
@@ -141,7 +136,6 @@ Focolaio / Scoppio (di un'epidemia) - <i>C'è stato un improvviso <b>focolaio</b
 </details>
 
 ## 5. Advanced Medical Care and Emergencies (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Resuscitation (CPR)</b> (C2) - <i>The paramedics immediately performed cardiopulmonary <b>resuscitation</b>.</i></summary>
 Rianimazione (RCP) - <i>I paramedici hanno immediatamente eseguito la <b>rianimazione</b> cardiopolmonare.</i>

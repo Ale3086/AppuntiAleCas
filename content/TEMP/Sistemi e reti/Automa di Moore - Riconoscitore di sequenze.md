@@ -9,16 +9,12 @@ tags:
   - riconoscitore-sequenze
 draft: true
 ---
-
 # Automa di Moore e Riconoscitore di Sequenze (101)
-
 > [!NOTE] Obiettivo del Progetto
 > Progettare un automa a stati finiti deterministico che riceve in ingresso uno stream continuo di bit binari ($0$ e $1$) e genera in uscita una segnalazione di **Riconoscimento ($R$)** ogni volta che rileva la sequenza target **`101`**, emettendo **Non Riconosciuto ($NR$)** in tutti gli altri istanti.
 
 ---
-
 ## 1. Il Modello di Moore vs il Modello di Mealy
-
 La differenza cardine risiede nel punto in cui viene calcolata l'uscita:
 
 ```mermaid
@@ -43,9 +39,7 @@ flowchart TD
 | **Risposta Temporale** | Immediata all'arrivo dell'ingresso | Ritardata di un ciclo di clock (stabile e senza glitch) |
 
 ---
-
 ## 2. Riconoscimento della Sequenza `101`: Approccio di Mealy
-
 Nel modello di Mealy, l'uscita di riconoscimento $R$ viene emessa direttamente sull'arco di transizione nel momento stesso in cui arriva l'ultimo bit `'1'`.
 
 ### Definizione degli Stati:
@@ -66,9 +60,7 @@ stateDiagram-v2
 ```
 
 ---
-
 ## 3. Riconoscimento della Sequenza `101`: Approccio di Moore
-
 Nell'automa di Moore, l'uscita **non può trovarsi sull'arco**. Per segnalare il riconoscimento $R$, l'automa deve necessariamente entrare in uno **stato dedicato** la cui etichetta interna produce $R$.
 
 ### Definizione degli Stati (Prefissi Minimi):
@@ -115,9 +107,7 @@ Quando l'automa si trova nello stato di successo $S_3$ (ha appena visto `101`):
 2. **Se riceve `1`:** La sequenza diventa `...1 0 1 1`. L'ultimo bit è `1`, quindi l'automa transita nello stato **$S_1$**.
 
 ---
-
 ## 4. Tabella di Transizione e Trasformazione (Moore)
-
 | Stato Attuale | Uscita Emessa | Prossimo Stato (Ingresso = 0) | Prossimo Stato (Ingresso = 1) |
 | :---: | :---: | :---: | :---: |
 | **$S_0$** (Vuoto) | **$NR$** | $S_0$ | $S_1$ |
@@ -126,9 +116,7 @@ Quando l'automa si trova nello stato di successo $S_3$ (ha appena visto `101`):
 | **$S_3$** (Visto `101`) | **$R$** | $S_2$ | $S_1$ |
 
 ---
-
 ## 5. Esempio Pratico con Traccia Temporale
-
 Supponiamo di inviare la stringa binaria di ingresso: `1  0  1  0  1  1  0`
 
 | Passo Temporale $t$ | $t_0$ | $t_1$ | $t_2$ | $t_3$ | $t_4$ | $t_5$ | $t_6$ | $t_7$ |

@@ -4,14 +4,11 @@ tags:
   - matematica/geometria-analitica
   - tipologia/teoria
 ---
-
 # La Retta (Geometria Analitica)
-
 > [!info] Cos'è la retta?
 > La retta è una funzione lineare e rappresenta uno dei concetti fondamentali della geometria analitica.
 
 ## Le due forme dell'equazione della retta
-
 Esistono principalmente due modi per scrivere l'equazione di una retta nel piano cartesiano:
 
 > [!abstract] 1. Forma Implicita
@@ -22,7 +19,7 @@ Esistono principalmente due modi per scrivere l'equazione di una retta nel piano
 > [!abstract] 2. Forma Esplicita
 > L'equazione è esplicitata rispetto alla $\color{#ff4d4d}y$:
 > $$ \color{#ff4d4d}y \color{white}= \color{#4dff4d}m \color{white}\color{#4da6ff}x \color{white}+ \color{#d24dff}q $$
-> 
+>
 > In questa forma possiamo identificare subito due parametri chiave:
 > *   **<span style="color: #4dff4d">$m$ (Coefficiente angolare o pendenza)</span>:** Indica l'inclinazione della retta rispetto all'asse $x$.
 >     *   Se $m > 0$, la retta è crescente ($\nearrow$).
@@ -31,9 +28,7 @@ Esistono principalmente due modi per scrivere l'equazione di una retta nel piano
 > *   **<span style="color: #d24dff">$q$ (Ordinata all'origine o intercetta)</span>:** Indica il punto in cui la retta interseca l'asse $y$, ovvero il punto $(0, q)$.
 
 ---
-
 ## Passaggio da una forma all'altra
-
 > [!tip] Da Implicita a Esplicita
 > Partiamo da $ax + by + c = 0$:
 > 1.  Isoliamo la $y$: $by = -ax - c$
@@ -42,22 +37,18 @@ Esistono principalmente due modi per scrivere l'equazione di una retta nel piano
 > $$ \color{#4dff4d}m = -\frac{a}{b} \quad \text{e} \quad \color{#d24dff}q = -\frac{c}{b} $$
 
 ---
-
 ## Disegnare una retta
-
 Per tracciare il grafico di una retta, è sufficiente trovare **due punti** che vi appartengono tramite una tabella $x, y$.
 
 > [!example] Esempio pratico
 > Disegniamo la retta $y = 2x - 1$
 > *   Se $\color{#4da6ff}x = 0 \color{white}\Rightarrow y = -1 \Rightarrow \textbf{A(0, -1)}$
 > *   Se $\color{#4da6ff}x = 1 \color{white}\Rightarrow y = 1 \Rightarrow \textbf{B(1, 1)}$
-> 
+>
 > ![[retta_es1_disegno.png]]
 
 ---
-
 ## Condizioni di Parallelismo e Perpendicolarità
-
 Date due rette $r: y = m_1x + q_1$ e $s: y = m_2x + q_2$:
 
 > [!info] Rette Parallele ($r \parallel s$)
@@ -84,9 +75,7 @@ Date due rette $r: y = m_1x + q_1$ e $s: y = m_2x + q_2$:
 > Le rette $y=8x+7$ e $y=-3x+5$ NON sono né parallele né perpendicolari poiché non soddisfano nessuna delle due condizioni.
 
 ---
-
 ## Formule Fondamentali
-
 > [!tip] 1. Equazione della retta passante per un punto $P(x_P, y_P)$ con $m$ noto
 > $$ y - y_P = \color{#4dff4d}m\color{white}(x - x_P) $$
 > **Esempio:** Retta per $P(1, -2)$ con $m = 3$.

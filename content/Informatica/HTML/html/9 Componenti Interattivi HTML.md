@@ -4,9 +4,7 @@ tags:
   - informatica/html/interattivita
   - tipologia/reference
 ---
-
 ## details e summary
-
 Widget di disclosure nativo: contenuto espandibile/collassabile senza JavaScript.
 
 ```html
@@ -30,9 +28,7 @@ Attributi di `<details>`:
 - `open` — espande il contenuto di default
 
 ---
-
 ## dialog
-
 Finestra modale o non modale nativa. Gestita via JavaScript o con `method="dialog"` in un form interno.
 
 ```html
@@ -53,9 +49,7 @@ Attributi principali:
 - `open` — rende il dialog visibile (senza backdrop; usare `.show()` / `.showModal()` via JS)
 
 ---
-
 ## template
-
 Frammento HTML inerte: non viene reso né eseguito. Usato via JavaScript per creare contenuto dinamico.
 
 ```html
@@ -76,9 +70,7 @@ Frammento HTML inerte: non viene reso né eseguito. Usato via JavaScript per cre
 ```
 
 ---
-
 ## canvas
-
 Area di disegno bitmap manipolabile via JavaScript (grafici, animazioni, giochi).
 
 ```html
@@ -99,9 +91,7 @@ Attributi principali:
 - `height` — altezza in pixel (default 150)
 
 ---
-
 ## svg inline
-
 SVG incorporato direttamente nell'HTML. Più flessibile dei file `.svg` esterni (stile CSS, script).
 
 ```html
@@ -125,5 +115,6 @@ Attributi principali di `<svg>`:
 - `fill` — colore di riempimento default
 - `stroke` — colore del bordo default
 - `role` / `aria-labelledby` — accessibilità
---- 
+
+---
 #HTML #Linguaggio_HTML

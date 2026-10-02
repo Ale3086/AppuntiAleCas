@@ -4,9 +4,7 @@ tags:
   - informatica/html/attributi
   - tipologia/reference
 ---
-
 ## Attributi globali
-
 Utilizzabili su qualsiasi elemento HTML.
 
 ```html
@@ -41,9 +39,7 @@ Utilizzabili su qualsiasi elemento HTML.
 - `data-*` — attributi personalizzati leggibili via `dataset` in JavaScript
 
 ---
-
 ## Attributi aria
-
 Attributi ARIA migliorano l'accessibilità per tecnologie assistive (screen reader).
 
 ```html
@@ -94,5 +90,6 @@ Attributi principali:
 - `aria-modal` — `true` per dialog modali
 - `aria-required` — `true` per campi obbligatori
 - `aria-invalid` — `true`, `false`, `grammar`, `spelling`
---- 
+
+---
 #HTML #Linguaggio_HTML

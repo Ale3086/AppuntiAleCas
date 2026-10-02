@@ -4,16 +4,13 @@ tags:
   - informatica/javascript/asincrono
   - tipologia/concetto
 ---
-
 ## Indice
-
 - [[#Callback]]
 - [[#Promise]]
 - [[#async e await]]
 - [[#Fetch API]]
 
 ## Callback
-
 Una funzione passata come argomento a un'altra funzione, chiamata al termine di un'operazione asincrona.
 
 ```js
@@ -46,9 +43,7 @@ faiA((errA, risA) => {
 ```
 
 ---
-
 ## Promise
-
 Rappresenta il completamento (o il fallimento) di un'operazione asincrona. Tre stati: `pending`, `fulfilled`, `rejected`.
 
 ```js
@@ -101,9 +96,7 @@ risultati.forEach(r => {
 ```
 
 ---
-
 ## async e await
-
 Sintassi per scrivere codice asincrono in modo sincrono. Una funzione `async` restituisce sempre una Promise.
 
 ```js
@@ -155,9 +148,7 @@ async function leggiStream(stream) {
 ```
 
 ---
-
 ## Fetch API
-
 Interfaccia per richieste HTTP. Restituisce una Promise.
 
 ```js

@@ -4,9 +4,7 @@ tags:
   - informatica/javascript/strutture-dati
   - tipologia/reference
 ---
-
 ## Indice
-
 - [[#String]]
 - [[#Number]]
 - [[#Array]]
@@ -18,7 +16,6 @@ tags:
 - [[#JSON]]
 
 ## String
-
 Le stringhe sono immutabili. I metodi restituiscono sempre una nuova stringa.
 
 ```js
@@ -97,9 +94,7 @@ evidenzia`Ciao ${nome}, hai ${età} anni`; // "Ciao <b>Alice</b>, hai <b>30</b> 
 ```
 
 ---
-
 ## Number
-
 ```js
 // Letterali
 42          // intero
@@ -170,9 +165,7 @@ Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON // true (confronto sicuro)
 ```
 
 ---
-
 ## Array
-
 Gli array sono oggetti con indici numerici. I metodi sono divisi in mutanti (modificano l'array) e non mutanti (restituiscono uno nuovo).
 
 ```js
@@ -262,9 +255,7 @@ Object.entries({a:1, b:2})            // [["a",1],["b",2]]
 ```
 
 ---
-
 ## Object
-
 ```js
 // Creazione
 const persona = { nome: "Alice", eta: 30 };
@@ -331,9 +322,7 @@ Object.setPrototypeOf(persona, null) // rimuove il prototipo (sconsigliato per p
 ```
 
 ---
-
 ## Map
-
 Mappa chiave→valore. Le chiavi possono essere di qualsiasi tipo (anche oggetti). Mantiene l'ordine di inserimento.
 
 ```js
@@ -373,9 +362,7 @@ Object.fromEntries(m)  // { a: 1, b: 2 }
 ```
 
 ---
-
 ## Set
-
 Collezione di valori unici. Mantiene l'ordine di inserimento.
 
 ```js
@@ -410,9 +397,7 @@ const unici = [...new Set([1, 1, 2, 3, 3])]; // [1, 2, 3]
 ```
 
 ---
-
 ## WeakMap e WeakSet
-
 Come Map e Set, ma le chiavi (WeakMap) o i valori (WeakSet) devono essere oggetti e sono tenuti debolmente: se non ci sono altri riferimenti, il garbage collector li può rimuovere.
 
 ```js
@@ -446,9 +431,7 @@ function visita(nodo) {
 ```
 
 ---
-
 ## Date
-
 ```js
 // Creazione
 const ora = new Date();                        // adesso
@@ -508,9 +491,7 @@ traUnMese.setMonth(traUnMese.getMonth() + 1);
 ```
 
 ---
-
 ## JSON
-
 Formato di serializzazione testo. Supporta: oggetti, array, stringhe, numeri, booleani, null. Non supporta: `undefined`, funzioni, `Date`, `Map`, `Set`, `Symbol`.
 
 ```js

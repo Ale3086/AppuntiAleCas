@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/society-world
   - tipologia/glossario
 ---
-
 Vocabulary related to geographical features, climate change, and protecting the planet.
 
 ## 1. General Geographical Features (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Beach</b> / <b style="color: #569cd6;">Ocean</b> - <i>We spent the afternoon swimming in the <b>ocean</b> at the <b>beach</b>.</i></summary>
 Spiaggia / Oceano - <i>Abbiamo passato il pomeriggio nuotando nell'<b>oceano</b> in <b>spiaggia</b>.</i>
@@ -45,7 +43,6 @@ Calotta glaciale / Ghiacciaio - <i>Gli orsi polari stanno perdendo il loro habit
 </details>
 
 ## 2. General Environmental Problems (A2 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Pollution</b> - <i>Air <b>pollution</b> in big cities causes severe breathing problems.</i></summary>
 Inquinamento - <i>L'<b>inquinamento</b> dell'aria nelle grandi città causa gravi problemi respiratori.</i>
@@ -77,7 +74,6 @@ Disastro nucleare / Fuoriuscita di petrolio - <i>La <b>fuoriuscita di petrolio</
 </details>
 
 ## 3. Protecting the Planet (A2 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Eco-friendly</b> - <i>We should buy more <b>eco-friendly</b> products.</i></summary>
 Ecologico / Rispettoso dell'ambiente - <i>Dovremmo comprare più prodotti <b>ecologici</b>.</i>
@@ -99,7 +95,6 @@ Cestino (bidone) / Fare la raccolta differenziata - <i>Assicurati di <b>fare la 
 </details>
 
 ## 4. Advanced Environment and Ecology (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Biodiversity</b> (C1) - <i>The Amazon rainforest is famous for its incredible <b>biodiversity</b>.</i></summary>
 Biodiversità - <i>La foresta amazzonica è famosa per la sua incredibile <b>biodiversità</b>.</i>
@@ -136,7 +131,6 @@ Bracconaggio / Bracconiere - <i>Gli elefanti sono pesantemente cacciati dai <b>b
 </details>
 
 ## 5. Advanced Sustainability (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Renewable energy</b> - <i>Solar and wind power are excellent sources of <b>renewable energy</b>.</i></summary>
 Energia rinnovabile - <i>L'energia solare ed eolica sono ottime fonti di <b>energia rinnovabile</b>.</i>

@@ -5,15 +5,11 @@ tags:
   - tipsit/multimedialita
   - tipologia/sintesi
 ---
-
 # 🎯 Sintesi, Formulario Rapido e Mappa Concettuale
-
 Questa pagina raccoglie in un unico colpo d'occhio tutti i concetti chiave del modulo di **Digitalizzazione e Multimedialità**, fornendo un formulario immediato per il calcolo dei pesi e un glossario dei termini specialistici.
 
 ---
-
 ## 🗺️ Mappa Sinottica d'Insieme
-
 ```mermaid
 flowchart TD
     subgraph S1["1. TEORIA DEI SEGNALI"]
@@ -39,7 +35,6 @@ flowchart TD
 ```
 
 ---
-
 ## 📐 Formulario Rapido per le Verifiche Scritte
 
 ### 1. Frequenza di Campionamento e Teorema di Shannon
@@ -65,9 +60,7 @@ $$\mathbf{\text{Peso Totale (Byte)} = \left(\frac{b \times h \times p_{\text{ind
 $$\mathbf{\text{Dimensione (Byte)} = \frac{\text{Larghezza} \times \text{Altezza} \times \text{Profondità (bit)} \times \text{FPS} \times \text{Durata (secondi)}}{8}}$$
 
 ---
-
 ## 📖 Glossario delle Parole Chiave (Techwords)
-
 - **Aliasing**: Distorsione ed effetto di scalettatura che si verifica quando la frequenza di campionamento è insufficiente ($f_c < 2 f_{\max}$) o quando una linea vettoriale viene rasterizzata senza antialiasing.
 - **Antialiasing**: Tecnica che attenua i bordi seghettati dei pixel sfumandoli gradualmente con tonalità intermedie di colore verso lo sfondo.
 - **Canale Alfa (Alpha Channel)**: Informazione accessoria a 8 bit associata a ciascun pixel che ne definisce il grado di trasparenza (da 0 = completamente trasparente a 255 = completamente opaco).

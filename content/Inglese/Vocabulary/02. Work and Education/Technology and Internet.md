@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/work-education
   - tipologia/glossario
 ---
-
 Vocabulary related to computers, hardware, software, and going online.
 
 ## 1. Hardware and Devices (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Screen</b> / <b style="color: #569cd6;">Monitor</b> - <i>Staring at a computer <b>screen</b> all day hurts my eyes.</i></summary>
 Schermo - <i>Fissare uno <b>schermo</b> del computer tutto il giorno mi fa male agli occhi.</i>
@@ -30,7 +28,6 @@ Chiavetta USB / Disco fisso - <i>Il mio computer è andato in crash perché il <
 </details>
 
 ## 2. Using a Computer (A1 - B2)
-
 <details>
 <summary><b style="color: #569cd6;">To click on</b> - <i>Don't <b>click on</b> that link, it might be a virus!</i></summary>
 Cliccare su - <i>Non <b>cliccare su</b> quel link, potrebbe essere un virus!</i>
@@ -52,7 +49,6 @@ Sistema operativo - <i>Quale <b>sistema operativo</b> stai usando, Windows o Mac
 </details>
 
 ## 3. Going Online (A2 - B2)
-
 <details>
 <summary><b style="color: #569cd6;">To go online</b> / <b style="color: #569cd6;">To surf the web</b> - <i>I usually <b>go online</b> to check the news in the morning.</i></summary>
 Andare su internet / Navigare in rete - <i>Di solito <b>vado su internet</b> per controllare le notizie al mattino.</i>
@@ -74,7 +70,6 @@ Trasmettere in streaming - <i>Preferisco <b>guardare in streaming</b> i film piu
 </details>
 
 ## 4. Email Actions
-
 <details>
 <summary><b style="color: #569cd6;">To forward</b> - <i>Could you <b>forward</b> that document to the manager?</i></summary>
 Inoltrare - <i>Potresti <b>inoltrare</b> quel documento al manager?</i>
@@ -86,7 +81,6 @@ Tornare indietro (email non consegnata) - <i>Ho provato a inviare l'email, ma è
 </details>
 
 ## 5. Advanced Tech and Software (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">To troubleshoot</b> (C1) - <i>The IT guy spent hours trying to <b>troubleshoot</b> the server issue.</i></summary>
 Risolvere problemi (tecnici) / Fare diagnostica - <i>Il tizio dell'IT ha passato ore a cercare di <b>risolvere</b> il problema del server.</i>

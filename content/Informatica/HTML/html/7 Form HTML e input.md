@@ -4,9 +4,7 @@ tags:
   - informatica/html/form
   - tipologia/reference
 ---
-
 ## form
-
 Contenitore per i controlli di input. Gestisce la raccolta e l'invio dei dati.
 
 ```html
@@ -27,9 +25,7 @@ Attributi principali:
 - `name` — nome del form (usato da JavaScript)
 
 ---
-
 ## input
-
 Il campo di input più versatile. Il comportamento dipende da `type`.
 
 ```html
@@ -90,9 +86,7 @@ Attributi principali:
 - `list` — `id` di un `<datalist>` per suggerimenti
 
 ---
-
 ## textarea
-
 Campo di testo multiriga.
 
 ```html
@@ -122,9 +116,7 @@ Attributi principali:
 - `spellcheck` — `true` o `false`
 
 ---
-
 ## select
-
 Menù a tendina. Le opzioni sono `<option>`, raggruppabili con `<optgroup>`.
 
 ```html
@@ -167,9 +159,7 @@ Attributi di `<optgroup>`:
 - `disabled` — disabilita tutte le opzioni del gruppo
 
 ---
-
 ## button
-
 Pulsante cliccabile. Preferibile a `<input type="submit">` per la flessibilità del contenuto.
 
 ```html
@@ -206,9 +196,7 @@ Attributi principali:
 - `popovertargetaction` — `show`, `hide`, `toggle`
 
 ---
-
 ## label
-
 Etichetta associata a un controllo del form. Cliccando sull'etichetta si attiva il campo.
 
 ```html
@@ -229,9 +217,7 @@ Attributi principali:
 - `form` — `id` del form di riferimento
 
 ---
-
 ## fieldset e legend
-
 Raggruppa controlli correlati in un form con un titolo opzionale.
 
 ```html
@@ -254,5 +240,6 @@ Attributi di `<fieldset>`:
 - `disabled` — disabilita tutti i campi interni
 - `form` — `id` del form di riferimento
 - `name` — nome del fieldset
---- 
+
+---
 #HTML #Linguaggio_HTML

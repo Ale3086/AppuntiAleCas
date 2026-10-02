@@ -221,13 +221,10 @@ title: "Home Appunti"
 cssclasses:
   - dashboard
 ---
-
 # 📚 Appunti di AleCas
-
 Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in continua evoluzione mi accompagnerà fino alla quinta superiore e oltre, fungendo da vero e proprio archivio personale per ripassare e consolidare le mie conoscenze. Usa la barra laterale o seleziona una materia qui sotto per esplorare!
 
 ---
-
 ## 💻 [[_index_Informatica|Informatica]]
 ${getDescription("Informatica", dir)}
 
@@ -300,13 +297,10 @@ ${getDescription("TIPSIT", dir)}
 title: ${JSON.stringify(folderName)}
 description: ${JSON.stringify(currentFolderDesc)}
 ---
-
 # 📂 ${folderName}
-
 ${currentFolderDesc}
 
 ---
-
 ## 📌 Indice dei Contenuti
 `;
 
@@ -314,7 +308,7 @@ ${currentFolderDesc}
     content += `\n### 📁 Cartelle e Moduli\n`;
     for (const s of subdirs) {
       const subDesc = getDescription(s.name, dir);
-      content += `\n- **[[_index_${s.name}|${s.name}]]**\n  ${subDesc}\n`;
+      content += `- **[[_index_${s.name}|${s.name}]]**\n  ${subDesc}\n`;
     }
   }
 
@@ -323,7 +317,7 @@ ${currentFolderDesc}
     for (const f of finalMdFiles) {
       const baseName = cleanName(f);
       const fileDesc = getDescription(baseName);
-      content += `\n- **[[${baseName}]]**\n  ${fileDesc}\n`;
+      content += `- **[[${baseName}]]**\n  ${fileDesc}\n`;
     }
   }
 

@@ -4,15 +4,12 @@ tags:
   - informatica/javascript/errori
   - tipologia/concetto
 ---
-
 ## Indice
-
 - [[#try catch finally]]
 - [[#Tipi di errore]]
 - [[#Errori custom]]
 
 ## try catch finally
-
 Gestione degli errori a runtime.
 
 ```js
@@ -50,9 +47,7 @@ try {
 ```
 
 ---
-
 ## Tipi di errore
-
 ```js
 // Errori nativi
 new Error("messaggio generico")
@@ -80,9 +75,7 @@ try {
 ```
 
 ---
-
 ## Errori custom
-
 ```js
 class AppError extends Error {
   constructor(message, code, details = {}) {

@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/personal-life
   - tipologia/glossario
 ---
-
 Vocabulary for eating out, describing food, diets, and cooking.
 
 ## 1. Describing Food and Science (A2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Raw</b> vs <b style="color: #569cd6;">Well-done</b> - <i>I like my steak medium, not <b>raw</b> and not <b>well-done</b>.</i></summary>
 Crudo vs Ben cotto - <i>Mi piace la mia bistecca media, né <b>cruda</b> né <b>ben cotta</b>.</i>
@@ -60,7 +58,6 @@ Conservanti / Additivi - <i>Il cibo biologico viene coltivato senza <b>conservan
 </details>
 
 ## 2. Meals, Diets and Habits
-
 <details>
 <summary><b style="color: #569cd6;">Breakfast</b> / <b style="color: #569cd6;">Lunch</b> / <b style="color: #569cd6;">Dinner</b> - <i>I usually have a very light <b>lunch</b> at work.</i></summary>
 Colazione / Pranzo / Cena - <i>Di solito faccio un <b>pranzo</b> molto leggero al lavoro.</i>
@@ -102,7 +99,6 @@ Abbuffata (Mangiare in modo compulsivo) - <i>Lo stress può spesso scatenare epi
 </details>
 
 ## 3. Cooking Methods (B1 - C1)
-
 <details>
 <summary><b style="color: #569cd6;">To boil</b> - <i>You need to <b>boil</b> the water before adding the pasta.</i></summary>
 Bollire - <i>Devi <b>bollire</b> l'acqua prima di aggiungere la pasta.</i>
@@ -134,7 +130,6 @@ Saltare in padella - <i><b>Salta in padella</b> velocemente l'aglio e le cipolle
 </details>
 
 ## 4. Advanced Restaurant and Service (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">To book a table</b> - <i>It's a very popular place, so we need to <b>book a table</b>.</i></summary>
 Prenotare un tavolo - <i>È un posto molto popolare, quindi dobbiamo <b>prenotare un tavolo</b>.</i>

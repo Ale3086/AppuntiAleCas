@@ -4,13 +4,10 @@ tags:
   - matematica/algebra
   - tipologia/teoria
 ---
-
 # Algebra Avanzata e Irrazionali
-
 Oltre alle disequazioni standard (II grado e fratte), il programma prevede la risoluzione di equazioni/disequazioni di grado superiore e quelle con valori assoluti o radici (irrazionali).
 
 ## 1. Grado Superiore al Secondo (Ruffini)
-
 Se ci troviamo di fronte a polinomi di $3^\circ, 4^\circ$ grado ecc. ($ax^3 + bx^2 + cx + d = 0$), non c'è la "formula magica" come il $\Delta$. Dobbiamo **scomporre in fattori**.
 
 > [!abstract] Metodi di Scomposizione
@@ -19,9 +16,7 @@ Se ci troviamo di fronte a polinomi di $3^\circ, 4^\circ$ grado ecc. ($ax^3 + bx
 > 2. **Regola di Ruffini:** Se non si può raccogliere, bisogna trovare uno "zero" del polinomio (un numero che sostituito alla $x$ dia $0$ come risultato). Si provano i divisori del termine noto. Trovato lo zero, si costruisce la tabella di Ruffini per abbassare il grado del polinomio!
 
 ---
-
 ## 2. Valori Assoluti (Modulo)
-
 L'equazione o disequazione contiene l'incognita all'interno di un modulo: $|f(x)|$.
 
 > [!info] Definizione di Valore Assoluto
@@ -34,9 +29,7 @@ L'equazione o disequazione contiene l'incognita all'interno di un modulo: $|f(x)
 > *   $|f(x)| > k \implies f(x) < -k \ \lor \ f(x) > k$ (Unione, soluzioni esterne)
 
 ---
-
 ## 3. Equazioni e Disequazioni Irrazionali
-
 Un'equazione è irrazionale quando l'incognita si trova **sotto una radice**.
 
 > [!warning] La Condizione di Esistenza (C.E.)
@@ -53,7 +46,7 @@ Un'equazione è irrazionale quando l'incognita si trova **sotto una radice**.
 > \end{cases}
 > $$
 
-> [!tip] Disequazioni Irrazionali con segno $<$ 
+> [!tip] Disequazioni Irrazionali con segno $<$
 > Forma: $\sqrt{A(x)} < B(x)$
 > Il sistema diventa:
 > $$

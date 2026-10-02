@@ -9,16 +9,12 @@ tags:
   - rack
 draft: true
 ---
-
 # Scenario Tipico di Cablaggio Strutturato (Norma ISO/IEC 11801)
-
 > [!NOTE] Obiettivo del Progetto
 > Analizzare la progettazione e l'implementazione pratica di un **impianto di cablaggio strutturato** per un campus multi-edificio, seguendo gli standard internazionali **ISO/IEC 11801** e la norma europea **EN 50173**, dall'architettura gerarchica dei distributori (CD, BD, FD) fino al dimensionamento dei cavi e delle postazioni su planimetria reale.
 
 ---
-
 ## 1. La Gerarchia dei Sottosistemi di Cablaggio
-
 La normativa suddivide il cablaggio strutturato in una **topologia logica a stella gerarchica** articolata su tre livelli principali:
 
 ```mermaid
@@ -45,7 +41,6 @@ flowchart TD
 ```
 
 ---
-
 ## 2. Definizione dei Distributori e Ruoli Funzionali
 
 ### 1. CD (Campus Distributor - Distributore di Comprensorio)
@@ -67,9 +62,7 @@ flowchart TD
   - **UPS (Gruppo di Continuità):** Per alimentare gli switch anche in caso di blackout elettrico.
 
 ---
-
 ## 3. Le Regole delle Distanze e il Canale Orizzontale a 100 Metri
-
 > [!IMPORTANT] La Regola Aurea dei 100 Metri
 > Nel cablaggio orizzontale in rame su doppino ritorto (UTP / STP / FTP), la distanza totale massima per un canale di trasmissione dati Ethernet a norma di legge è rigorosamente pari a **100 metri**:
 
@@ -89,9 +82,7 @@ flowchart LR
 $$\text{Lunghezza Totale Canale} = \underbrace{90\text{ m}}_{\text{Permanent Link (Cavo fisso)}} + \underbrace{10\text{ m}}_{\text{Patch Cord complessivi (Rack + Utente)}} \le 100\text{ m}$$
 
 ---
-
 ## 4. Analisi della Planimetria (Piano Terra dell'Edificio A)
-
 Nella seconda pagina degli appunti è riportata la pianta distributiva di un piano ufficio tipo:
 
 ```mermaid
@@ -121,7 +112,6 @@ flowchart TD
 ```
 
 ### Regole Pratiche di Progettazione e Dimensionamento:
-
 1. **Numero di Prese per Postazione Lavoro:**
    - La normativa raccomanda **almeno 2 frutti RJ45 per postazione**:
      - *Presa 1:* Connessione dati PC / Workstation.
@@ -137,9 +127,7 @@ flowchart TD
      - **Margine di scorta prudenziale:** Si aggiunge un **$10\% - 15\%$** sul metraggio teorico totale per compensare curve, angoli e sfridi di posa.
 
 ---
-
 ## 5. Tabella di Sintesi delle Normative di Riferimento
-
 | Norma | Ente Emettitore | Oggetto della Norma |
 | :--- | :--- | :--- |
 | **ISO/IEC 11801** | Internazionale (ISO) | Standard mondiale universale per il cablaggio strutturato generico di edifici commerciali. |

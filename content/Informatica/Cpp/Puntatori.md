@@ -4,168 +4,175 @@ tags:
   - informatica/cpp/sintassi
   - tipologia/guida-pratica
 ---
-
-I **puntatori** sono una delle funzionalità più potenti ed esclusive del C e del C++. Consentono di interagire direttamente con la memoria RAM del computer, offrendo velocità estrema e controllo totale sulle risorse di sistema.
+I **puntatori** sono una delle funzionalità più caratteristiche e potenti del C e del C++. Consentono di interagire direttamente con la memoria RAM, offrendo massima velocità e controllo totale sull'hardware.
 
 ---
-
-## 1. Cos'è un Indirizzo di Memoria?
-
-Ogni volta che dichiari una variabile:
+## 1. Variabili e Indirizzi di Memoria
+Ogni volta che dichiariamo una variabile:
 ```cpp
-int x = 42;
+int numero = 42;
 ```
-il sistema operativo riserva nella memoria RAM uno spazio di 4 byte per contenere il valore `42`.  
-Ogni singola cella di memoria RAM possiede un **indirizzo numerico univoco** (simile al numero civico di una casa o alle coordinate GPS), solitamente espresso in formato esadecimale (ad esempio `0x7ffee4b1`).
+il sistema operativo riserva nella RAM uno spazio di 4 byte per contenere il dato `42`.
+La cella possiede un **indirizzo fisico univoco** (espresso in esadecimale, es. `0x7ffd5e8b41ac`).
 
-- Con `x` accedi al **valore** contenuto nella scatola (`42`).
-- Con l'operatore **`&x`** (operatore *indirizzo*) ottieni l'**indirizzo di memoria** in cui si trova la scatola.
+```mermaid
+flowchart LR
+    subgraph RAM ["Memoria RAM"]
+        Cella["Valore: 42<br>Indirizzo: 0x7ffd5e8b41ac<br>Nome: numero"]
+    end
+
+    OP_VAL["Accesso al valore: numero"] --> Cella
+    OP_IND["Accesso all'indirizzo: &numero"] --> Cella
+```
+
+- Con `numero` leggiamo o scriviamo il **valore** (`42`).
+- Con l'operatore **`&numero`** (*address-of*) otteniamo l'**indirizzo di memoria** della variabile.
 
 ---
-
 ## 2. Cos'è un Puntatore?
+Un **puntatore** è una variabile speciale che **memorizza l'indirizzo di memoria di un'altra variabile**.
 
-Un **puntatore** è una variabile speciale che **non memorizza un valore comune, ma memorizza l'indirizzo di memoria di un'altra variabile**.
+```mermaid
+flowchart LR
+    subgraph PUNTATORE ["Puntatore: int* ptr"]
+        P_IND["Indirizzo: 0x2000"]
+        P_VAL["Valore contenuto: 0x1000"]
+    end
 
-In sintesi:
-- Una variabile normale contiene un dato (`int`, `float`, `char`).
-- Un puntatore "punta" alla scatola di qualcun altro.
+    subgraph TARGET ["Variabile Bersaglio: int x"]
+        T_IND["Indirizzo: 0x1000"]
+        T_VAL["Valore: 50"]
+    end
 
-```
-Variabile 'a':     [ Valore: 10 ]      Indirizzo: 0x100
-                         ▲
-                         │ (punta a)
-Puntatore 'ptr':   [ Valore: 0x100 ]   Indirizzo: 0x200
+    P_VAL -->|"Punta all'indirizzo"| T_IND
 ```
 
 ---
-
 ## 3. I Due Operatori Fondamentali: `&` e `*`
-
-| Operatore | Nome | Cosa fa | Esempio |
+| Simbolo | Nome | Cosa fa | Esempio |
 | :--- | :--- | :--- | :--- |
-| **`&`** | Operatore Indirizzo (*address-of*) | Restituisce l'indirizzo di memoria di una variabile | `ptr = &numero;` |
-| **`*`** | Operatore Dereferenziazione (*indirection*) | Accede al valore contenuto all'indirizzo puntato | `cout << *ptr;` |
+| **`&`** | Operatore Indirizzo (*address-of*) | Estrae la posizione in memoria di una variabile | `int *p = &x;` |
+| **`*`** | Operatore Dereferenziazione (*indirection*) | Accede al **contenuto** della cella puntata dal puntatore | `cout << *p;` oppure `*p = 99;` |
 
-### Dichiarazione e Inizializzazione
+### Codice Completo di Esempio
 ```cpp
 #include <iostream>
 using namespace std;
 
 int main() {
-    int numero = 25;
+    int valore = 25;
+    int *ptr = &valore; // 'ptr' punta alla cella di 'valore'
 
-    // Dichiarazione di un puntatore a intero
-    int *ptr = &numero; // 'ptr' memorizza l'indirizzo di 'numero'
+    cout << "Valore della variabile:            " << valore << endl; // 25
+    cout << "Indirizzo della variabile (&valore): " << &valore << endl; // es. 0x61ff08
+    cout << "Indirizzo memorizzato in ptr:        " << ptr << endl;    // 0x61ff08
+    cout << "Dato puntato da ptr (*ptr):         " << *ptr << endl;   // 25
 
-    cout << "Valore di numero:            " << numero << endl; // 25
-    cout << "Indirizzo di numero (&numero): " << &numero << endl; // es. 0x61ff08
-    cout << "Valore contenuto in ptr:     " << ptr << endl;    // identico a &numero
-    cout << "Valore puntato (*ptr):       " << *ptr << endl;   // 25 (dereferenziazione)
-
-    // MODIFICA TRAMITE PUNTATORE:
-    *ptr = 100; // Modifichiamo il dato all'indirizzo memorizzato
-    cout << "Nuovo valore di numero:      " << numero << endl; // 100!
+    // MODIFICA INDIRETTA TRAMITE PUNTATORE:
+    *ptr = 100; // Modifica la cella di memoria puntata
+    cout << "Nuovo valore della variabile:        " << valore << endl; // 100!
 
     return 0;
 }
 ```
 
 > [!IMPORTANT]
-> **Inizializzazione sicura con `nullptr`**:  
-> Non lasciare mai un puntatore non inizializzato (`int *p;`), altrimenti punterà a un'area casuale e pericolosa della memoria. Se non hai ancora un indirizzo da assegnargli, inizializzalo a `nullptr`:
-> ```cpp
-> int *p = nullptr; // Punta a "nulla" in modo controllato e sicuro
+> **Inizializzazione sicura con `nullptr`**:
+> Non lasciare mai un puntatore "orfano" (`int *p;`). Se non hai ancora una variabile a cui farlo puntare, inizializzalo a `nullptr`:
+>```cpp
+> int *p = nullptr; // Indica esplicitamente che non punta a nessun dato valido
 > ```
 
 ---
+## 4. Puntatori vs Riferimenti (`&`)
+Spesso si fa confusione tra puntatori e riferimenti. Ecco le 4 differenze sostanziali:
 
-## 4. Puntatori e Array: Il Legame Segreto
+| Caratteristica | Puntatore (`int *p`) | Riferimento (`int &r`) |
+| :--- | :--- | :--- |
+| **Può essere nullo?** | **Sì** (`nullptr`) | **No**, deve riferirsi a una variabile reale esistente |
+| **Riassegnabile?** | **Sì**, può puntare a un'altra variabile in seguito | **No**, una volta legato rimane tale per sempre |
+| **Sintassi di accesso** | Richiede l'operatore di dereferenziazione `*p` | Trasparente, si usa direttamente il nome `r` |
+| **Occupazione memoria** | Occupa 8 byte (su OS a 64 bit) | È un semplice alias a livello di compilatore |
 
-In C++, il nome di un array **è già a tutti gli effetti un puntatore costante al suo primo elemento**:
+---
+## 5. Puntatori e Array
+In C++ il nome di un array **è già un puntatore costante al suo primo elemento**:
 
 ```cpp
 int arr[3] = {10, 20, 30};
-
-// Queste due scritture sono assolutamente identiche:
-cout << arr << endl;       // Indirizzo del primo elemento
-cout << &arr[0] << endl;   // Indirizzo del primo elemento
+// Queste scritture sono equivalenti:
+cout << arr << " e' uguale a " << &arr[0] << endl;
 ```
 
 ### Aritmetica dei Puntatori
-Quando incrementi un puntatore (`ptr + 1`), il compilatore non aggiunge 1 byte, ma si sposta in avanti di **tanti byte quanti ne occupa il tipo di dato puntato** (`sizeof(tipo)`):
+Quando aggiungi `1` a un puntatore (`p + 1`), il processore avanza di tanti byte quanti ne occupa il tipo di dato (`sizeof(int) = 4 byte`):
 
 ```cpp
 int arr[3] = {10, 20, 30};
-int *p = arr; // Punta ad arr[0]
+int *p = arr;
 
 cout << *p << endl;       // 10 (arr[0])
 cout << *(p + 1) << endl; // 20 (arr[1])
 cout << *(p + 2) << endl; // 30 (arr[2])
 ```
-Da qui nasce la sintassi `arr[i]`, che per il compilatore è semplicemente una scorciatoia per `*(arr + i)`.
 
 ---
+## 6. Memoria Dinamica: Stack vs Heap
+```mermaid
+flowchart TD
+    subgraph RAM_ARCH ["Architettura della Memoria di un Programma"]
+        STACK["STACK (Memoria Automatica)<br>• Veloce<br>• Dimensione fissa in compilazione<br>• Variabili locali e parametri"]
+        GAP["Spazio libero"]
+        HEAP["HEAP / Free Store (Memoria Dinamica)<br>• Controllata dallo sviluppatore con new / delete<br>• Dimensione decisa a runtime<br>• Rimane allocata finché non la liberi esplicitamente!"]
 
-## 5. Memoria Dinamica: Stack vs Heap
-
-Fino ad ora tutte le variabili create venivano allocate nello **Stack**:
-- Memoria gestita automaticamente dal compilatore.
-- Dimensione fissa decisa prima dell'avvio del programma.
-- Viene ripulita non appena la funzione o il blocco termina.
-
-Se però vogliamo creare variabili o array la cui dimensione viene decisa dall'utente durante l'esecuzione del programma, dobbiamo ricorrere allo **Heap (Free Store)** mediante l'allocazione dinamica.
-
-### Gli Operatori `new` e `delete`
-- **`new`**: alloca spazio nello Heap e restituisce l'indirizzo di memoria della cella creata.
-- **`delete`**: libera la memoria allocata quando non serve più (obbligatorio, altrimenti la RAM rimane occupata!).
-
-#### Singola Variabile Dinamica
-```cpp
-int *p = new int; // Alloca un intero nello Heap
-*p = 50;
-cout << *p << endl;
-
-delete p;         // Libera la memoria
-p = nullptr;      // Buona pratica: evita puntatori pendenti
+        STACK --- GAP --- HEAP
+    end
 ```
 
-#### Array Dinamico (Dimensione scelta a runtime)
+### Gli Operatori `new` e `delete`
+Se la quantità di dati dipende da cosa inserisce l'utente a runtime, allochiamo memoria dinamica nello Heap:
+
 ```cpp
 #include <iostream>
 using namespace std;
 
 int main() {
     int dimensione;
-    cout << "Quanti elementi vuoi inserire? ";
+    cout << "Quanti numeri vuoi salvare? ";
     cin >> dimensione;
 
-    // Allocazione dinamica di un array di dimensione specificata dall'utente
+    // 1. ALLOCAZIONE DINAMICA NELLO HEAP (new[])
     int *vettore = new int[dimensione];
 
     for (int i = 0; i < dimensione; i++) {
         vettore[i] = (i + 1) * 10;
     }
 
-    cout << "Elementi inseriti: ";
+    cout << "Numeri salvati: ";
     for (int i = 0; i < dimensione; i++) {
         cout << vettore[i] << " ";
     }
     cout << endl;
 
-    // DEALLOCAZIONE OBBLIGATORIA (notare le parentesi quadre delete[])
+    // 2. DEALLOCAZIONE OBBLIGATORIA (delete[])
     delete[] vettore;
-    vettore = nullptr;
+    vettore = nullptr; // Buona norma per evitare puntatori pendenti
 
     return 0;
 }
 ```
 
 ---
+## 7. I Tre Errori Critici con i Puntatori
+```mermaid
+flowchart TD
+    E1["1. Memory Leak: allochi con new ma ti dimentichi di fare delete.<br>La RAM rimane occupata fino alla chiusura del programma!"]
+    E2["2. Dangling Pointer: fai delete su un'area ma continui a usare il puntatore.<br>Punti a memoria non più valida!"]
+    E3["3. Null Pointer Dereference: tenti di fare *ptr quando ptr == nullptr.<br>Crash immediato del programma (Segmentation Fault)!"]
 
-## 6. Errori Gravi e Trabocchetti Comuni
+    E1 --- E2 --- E3
+```
 
-> [!WARNING]
-> 1. **Memory Leak (Perdita di memoria)**: si verifica quando allochi memoria con `new` e ti dimentichi di fare `delete`. La memoria rimane bloccata fino alla chiusura del programma; se ripetuto in un ciclo, esaurisce tutta la RAM del PC.
-> 2. **Dangling Pointer (Puntatore pendente)**: un puntatore che continua a puntare a un'area di memoria già liberata con `delete`. Usarlo provoca crash istantanei.
-> 3. **Dereferenziazione di `nullptr`**: tentare di fare `*p` quando `p == nullptr` causa un crash immediato (*Segmentation Fault*). Prima di usare un puntatore dubbio, controlla sempre `if (p != nullptr)`.
+> [!INFO] 🖼️ Placeholder Immagine: Rappresentazione visiva di Memory Leak e Dangling Pointer
+> *Suggerimento per Obsidian: inserisci qui uno schema grafico che mostra blocchi orfani nello Heap non più raggiungibili dal programma.*
+> `![[Pasted image memory_leak.png|550]]`

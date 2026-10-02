@@ -4,9 +4,7 @@ tags:
   - informatica/html/link
   - tipologia/concetto
 ---
-
 ## a
-
 Crea collegamenti ipertestuali. Può avvolgere anche elementi block-level.
 
 ```html
@@ -44,5 +42,6 @@ Attributi principali:
 - `hreflang` — lingua della pagina di destinazione (es. `"en"`, `"it"`)
 - `type` — MIME type della risorsa collegata
 - `ping` — URL a cui inviare una notifica POST al click (tracking)
---- 
+
+---
 #HTML #Linguaggio_HTML

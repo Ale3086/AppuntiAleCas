@@ -4,10 +4,9 @@ tags:
   - inglese/grammatica/verb-tenses
   - tipologia/teoria
 ---
-
 # **Present Tenses**
-## 1. Present Simple
 
+## 1. Present Simple
 > [!summary] 🎯 What is it for?
 > Used to talk about habits, routines, general truths and permanent states.
 
@@ -47,7 +46,6 @@ tags:
 > - Istruzioni: First, you **mix** the flour and the sugar. (Prima, mescoli la farina e lo zucchero.)
 
 ## 2. Present Continuous
-
 > [!summary] 🎯 What is it for?
 > Used to talk about actions that are happening now or around now.
 
@@ -85,7 +83,6 @@ tags:
 > - Lamentela con "always": He **is always leaving** his shoes in the hallway. (Lascia sempre le scarpe nell'ingresso.)
 
 ## 3. Present Perfect
-
 > [!summary] 🎯 What is it for?
 > Used to connect the past to the present, without saying exactly when something happened.
 
@@ -127,7 +124,6 @@ tags:
 > - Risultato visibile ora: I **have lost** my keys. (Ho perso le chiavi.)
 
 ## 4. Present Perfect Continuous
-
 > [!summary] 🎯 What is it for?
 > Used to emphasize the duration of an action started in the past and connected to the present.
 
@@ -164,8 +160,8 @@ tags:
 
 ---
 # **Past Tenses**
-## 5. Past Simple
 
+## 5. Past Simple
 > [!summary] 🎯 What is it for?
 > Used to talk about a finished action in the past.
 
@@ -201,7 +197,6 @@ tags:
 > - Persone morte/fatti storici: Leonardo da Vinci **painted** the Mona Lisa. (Leonardo da Vinci dipinse la Gioconda.)
 
 ## 6. Past Continuous
-
 > [!summary] 🎯 What is it for?
 > Used to describe an action that was in progress at a specific moment in the past.
 
@@ -237,7 +232,6 @@ tags:
 > - Azione interrotta: I **was watching** TV when the phone **rang**. (Stavo guardando la TV quando il telefono ha squillato.)
 
 ## 7. Past Perfect
-
 > [!summary] 🎯 What is it for?
 > Used to show that an action happened and finished before another action in the past.
 
@@ -275,7 +269,6 @@ tags:
 > - Sequenza tra due fatti passati: I **had never seen** snow before I moved to Turin. (Non avevo mai visto la neve prima di trasferirmi a Torino.)
 
 ## 8. Past Perfect Continuous
-
 > [!summary] 🎯 What is it for?
 > Used to emphasize the duration of an action that happened before another past action.
 
@@ -310,8 +303,8 @@ tags:
 
 ---
 # **Future Tenses**
-## 9. Future Simple
 
+## 9. Future Simple
 > [!info] 🧠 The Basics
 > The Future Simple category includes several ways to express future actions: WILL, Going to, Present Simple, Present Continuous and Shall.
 
@@ -319,7 +312,6 @@ tags:
 > La categoria Future Simple comprende diversi modi per esprimere azioni future: WILL, Going to, Present Simple, Present Continuous e Shall.
 
 ### WILL
-
 > [!summary] 🎯 What is it for?
 > Used for decisions, promises and predictions about the future that we are not fully sure about.
 
@@ -355,7 +347,6 @@ tags:
 > - Richiesta: **Will** you help me with this bag? (Mi aiuti con questa borsa?)
 
 ### Going to
-
 > [!summary] 🎯 What is it for?
 > Used for plans already decided and predictions based on evidence we can see now.
 
@@ -391,7 +382,6 @@ tags:
 > - Intenzione dichiarata: They **are going to renovate** the kitchen next month. (Ristruttureranno la cucina il mese prossimo.)
 
 ### Present Simple (future use)
-
 > [!summary] 🎯 What is it for?
 > Used for future events that follow a fixed timetable or a scheduled routine.
 
@@ -424,7 +414,6 @@ tags:
 > - Dopo "before/after/until": Wait here until I **come** back. (Aspetta qui finché non torno.)
 
 ### Present Continuous (future use)
-
 > [!summary] 🎯 What is it for?
 > Used for future plans already arranged with other people, for a specific time and place.
 
@@ -451,7 +440,6 @@ tags:
 > - Evento confermato: We **are flying** to Spain next Friday. (Voliamo in Spagna venerdì prossimo.)
 
 ### Shall
-
 > [!summary] 🎯 What is it for?
 > Used mainly with I/We for polite suggestions and offers.
 
@@ -482,7 +470,6 @@ tags:
 > - Futuro formale (raro, inglese britannico): I **shall** be there by noon. (Sarò lì entro mezzogiorno.)
 
 ## 10. Future Continuous
-
 > [!summary] 🎯 What is it for?
 > Used for an action that will be in progress at a specific moment in the future.
 
@@ -516,7 +503,6 @@ tags:
 > - Domanda cortese sui piani di qualcuno: **Will** you **be using** the car this evening? (Userai la macchina stasera?)
 
 ## 11. Future Perfect
-
 > [!summary] 🎯 What is it for?
 > Used for an action that will be completed by a certain point in the future.
 
@@ -548,7 +534,6 @@ tags:
 > - Con "by the time": By the time you arrive, we **will have eaten** dinner. (Quando arriverai, avremo già cenato.)
 
 ## 12. Future Perfect Continuous
-
 > [!summary] 🎯 What is it for?
 > Used to emphasise the duration of an action up to a specific point in the future.
 

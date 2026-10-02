@@ -7,16 +7,12 @@ tags:
   - automi
 draft: true
 ---
-
 # Teoria dei Sistemi: Fondamenti e Modellazione
-
 > [!NOTE] Obiettivo della trattazione
 > Comprendere cos'è un sistema, come viene schematizzato attraverso il modello a scatola nera (*black box*), come si descrivono gli stati interni e in che modo le funzioni di transizione e trasformazione ne determinano l'evoluzione temporale.
 
 ---
-
 ## 1. Cos'è un Sistema?
-
 Un **sistema** è un insieme di elementi o componenti interconnessi tra loro che interagiscono in modo coordinato secondo leggi ben definite per raggiungere un **obiettivo comune** (uno scopo o una funzione specifica).
 
 ```mermaid
@@ -32,9 +28,7 @@ flowchart LR
 - **Ambiente esterno:** Tutto ciò che si trova al di fuori del confine e con cui il sistema scambia informazioni, energia o materia.
 
 ---
-
 ## 2. Sistemi, Sottosistemi ed Elementi
-
 La definizione di ciò che è "sistema" dipende sempre dalla scala di osservazione (*punto di vista dello studio*):
 
 ```mermaid
@@ -51,9 +45,7 @@ graph TD
 - **Elemento semplice:** Se una parte non viene ulteriormente scomposta e viene considerata come indivisibile nel contesto della nostra analisi (es. un singolo bullone o la candela), essa prende il nome di *elemento*.
 
 ---
-
 ## 3. Il Modello a Scatola Nera (*Black Box*)
-
 Nello studio ingegneristico dei sistemi non è sempre necessario o conveniente conoscere ogni singolo dettaglio costruttivo interno. Spesso si adotta l'approccio a **Scatola Nera (Black Box)**: si osserva il sistema solo dal punto di vista delle relazioni di causa-effetto tra ciò che entra e ciò che esce.
 
 ```mermaid
@@ -85,9 +77,7 @@ $$S = \{s_1, s_2, \dots, s_n\}$$
 > Lo stato è come una **fotografia istantanea** del sistema scattata all'istante di tempo $t$. Rappresenta la memoria storica del sistema: conserva la traccia di tutti gli ingressi passati che influenzano il presente.
 
 ---
-
 ## 4. Le Funzioni Matematiche del Sistema
-
 Per descrivere completamente il comportamento e l'evoluzione temporale di un sistema a stati discreti, si utilizzano due funzioni fondamentali:
 
 ### A. La Funzione di Transizione di Stato ($f$)
@@ -108,9 +98,7 @@ Determina il valore dell'**uscita** generata dal sistema:
    $$U(t) = g(S(t))$$
 
 ---
-
 ## 5. Esempio Pratico: Il Circuito Interruttore-Lampadina
-
 Analizziamo il classico esempio descritto negli appunti: un circuito formato da un interruttore manuale e una lampadina.
 
 ```mermaid
@@ -145,9 +133,7 @@ Indica la luminosità emessa dal sistema:
 *(Se considerata come macchina di Moore pura, l'uscita dipenderebbe direttamente solo dallo stato: $s_1 \rightarrow \text{Buio}$, $s_2 \rightarrow \text{Luce}$)*.
 
 ---
-
 ## 6. Schema di Riepilogo
-
 | Componente | Simbolo | Significato | Esempio Pratico |
 | :--- | :---: | :--- | :--- |
 | **Ingresso** | $I(t)$ | Stimolo proveniente dall'esterno | Pressione pulsante, moneta inserita |

@@ -4,9 +4,7 @@ tags:
   - informatica/javascript/fondamenti
   - tipologia/concetto
 ---
-
 ## Indice
-
 - [[#Variabili]]
 - [[#Tipi di dato]]
 - [[#Operatori]]
@@ -19,7 +17,6 @@ tags:
 - [[#Hoisting]]
 
 ## Variabili
-
 `var` è function-scoped e soggetta a hoisting (evitare). `let` è block-scoped e riassegnabile. `const` è block-scoped e non riassegnabile (ma l'oggetto/array a cui punta è mutabile).
 
 ```js
@@ -41,9 +38,7 @@ arr.push(4);                    // OK
 ```
 
 ---
-
 ## Tipi di dato
-
 JavaScript ha 7 tipi primitivi e il tipo `object`.
 
 ```js
@@ -81,9 +76,7 @@ Object.prototype.toString.call([]) // "[object Array]"
 ```
 
 ---
-
 ## Operatori
-
 ```js
 // Aritmetici
 5 + 3   // 8
@@ -151,9 +144,7 @@ delete obj.prop               // rimuove la proprietà, restituisce true
 ```
 
 ---
-
 ## Conversioni di tipo
-
 JavaScript esegue conversioni implicite (coercizione). Preferire conversioni esplicite.
 
 ```js
@@ -207,9 +198,7 @@ Number.isInteger(42.5)    // false
 ```
 
 ---
-
 ## Condizionali
-
 ```js
 // if / else if / else
 if (punteggio >= 90) {
@@ -255,9 +244,7 @@ function elabora(input) {
 ```
 
 ---
-
 ## Cicli
-
 ```js
 // for classico
 for (let i = 0; i < 5; i++) {
@@ -313,9 +300,7 @@ outer: for (let i = 0; i < 3; i++) {
 ```
 
 ---
-
 ## Funzioni
-
 ```js
 // Dichiarazione (hoisted)
 function somma(a, b) {
@@ -369,9 +354,7 @@ function args() {
 ```
 
 ---
-
 ## Arrow function
-
 Sintassi compatta. Non ha proprio `this`, `arguments`, né `prototype`. Non può essere usata come costruttore.
 
 ```js
@@ -412,9 +395,7 @@ const obj = {
 ```
 
 ---
-
 ## Scope e closures
-
 Lo scope determina dove una variabile è accessibile. Le closures permettono a una funzione di ricordare il proprio scope esterno.
 
 ```js
@@ -459,9 +440,7 @@ for (let i = 0; i < 3; i++) {
 ```
 
 ---
-
 ## Hoisting
-
 Le dichiarazioni di variabili e funzioni vengono "sollevate" in cima al loro scope prima dell'esecuzione.
 
 ```js
@@ -484,5 +463,5 @@ let y = 5;
 // console.log(fn()); // TypeError: fn is not a function
 const fn = () => "ciao";
 ```
---- 
+---
 #HTML #JavaScript

@@ -8,16 +8,12 @@ tags:
   - algebra-booleana
 draft: true
 ---
-
 # Le Porte Logiche e l'Algebra Booleana
-
 > [!NOTE] Concetto Base
 > Le **porte logiche** sono i blocchi elementari costitutivi di qualsiasi circuito elettronico digitale e microprocessore. Ciascuna porta logica riceve uno o più segnali binari in ingresso ($0$ o $1$, fisicamente rappresentati da livelli di tensione) ed elabora **un'unica uscita binaria** secondo le regole dell'algebra di George Boole.
 
 ---
-
 ## 1. La Tavola di Verità (*Truth Table*)
-
 La **tavola di verità** è lo strumento matematico fondamentale per descrivere univocamente il comportamento di una porta o di una rete logica. Elenca tutte le possibili combinazioni dei valori di ingresso e la corrispondente uscita prodotta.
 
 Per un circuito con $N$ ingressi binari, la tavola di verità conterrà esattamente $2^N$ righe:
@@ -25,9 +21,7 @@ Per un circuito con $N$ ingressi binari, la tavola di verità conterrà esattame
 - Con 3 ingressi: $2^3 = 8$ combinazioni.
 
 ---
-
 ## 2. Le Porte Logiche Fondamentali e Derivate
-
 ```mermaid
 flowchart LR
     subgraph FONDAMENTALI [Porte Fondamentali]
@@ -57,7 +51,6 @@ Produce in uscita il complemento logico dell'unico ingresso applicato.
 | 1 | 0 |
 
 ---
-
 ### 2. Porta AND (Prodotto Logico)
 L'uscita è $1$ **solo se tutti gli ingressi sono contemporaneamente $1$**. Se anche un solo ingresso è $0$, l'uscita è $0$.
 - **Espressione algebrica:** $X = A \cdot B$ (oppure $X = AB$)
@@ -70,7 +63,6 @@ L'uscita è $1$ **solo se tutti gli ingressi sono contemporaneamente $1$**. Se a
 | 1 | 1 | **1** |
 
 ---
-
 ### 3. Porta OR (Somma Logica)
 L'uscita è $1$ **se almeno uno degli ingressi è $1$**. L'uscita è $0$ unicamente se tutti gli ingressi sono a $0$.
 - **Espressione algebrica:** $X = A + B$
@@ -83,7 +75,6 @@ L'uscita è $1$ **se almeno uno degli ingressi è $1$**. L'uscita è $0$ unicame
 | 1 | 1 | 1 |
 
 ---
-
 ### 4. Porta NAND (Negazione di AND)
 È una porta AND seguita da un invertitore. L'uscita è $0$ solo quando tutti gli ingressi sono $1$. In tutti gli altri casi l'uscita è $1$.
 - **Espressione algebrica:** $X = \overline{A \cdot B}$
@@ -99,7 +90,6 @@ L'uscita è $1$ **se almeno uno degli ingressi è $1$**. L'uscita è $0$ unicame
 > La porta NAND è detta **porta universale** perché combinando solo porte NAND è possibile realizzare qualsiasi altra funzione logica (NOT, AND, OR, XOR, ecc.).
 
 ---
-
 ### 5. Porta NOR (Negazione di OR)
 È una porta OR seguita da un invertitore. L'uscita è $1$ esclusivamente se tutti gli ingressi sono contemporaneamente a $0$.
 - **Espressione algebrica:** $X = \overline{A + B}$
@@ -112,7 +102,6 @@ L'uscita è $1$ **se almeno uno degli ingressi è $1$**. L'uscita è $0$ unicame
 | 1 | 1 | 0 |
 
 ---
-
 ### 6. Porta XOR (Exclusive OR - Disgiunzione Esclusiva)
 L'uscita è $1$ **se e solo se gli ingressi sono diversi tra loro** (uno a 0 e l'altro a 1). Se gli ingressi sono identici, l'uscita vale $0$.
 - **Espressione algebrica:** $X = A \oplus B = A\overline{B} + \overline{A}B$
@@ -125,7 +114,6 @@ L'uscita è $1$ **se e solo se gli ingressi sono diversi tra loro** (uno a 0 e l
 | 1 | 1 | 0 |
 
 ---
-
 ### 7. Porta XNOR (Coincidenza o Equivalenza)
 L'uscita è $1$ **se gli ingressi sono identici/uguali** (`00` oppure `11`). Se gli ingressi sono discordi, l'uscita vale $0$.
 - **Espressione algebrica:** $X = \overline{A \oplus B} = AB + \overline{A}\,\overline{B}$
@@ -138,11 +126,9 @@ L'uscita è $1$ **se gli ingressi sono identici/uguali** (`00` oppure `11`). Se 
 | 1 | 1 | **1** |
 
 ---
-
 ## 3. Analisi delle Reti Combinatorie
 
 ### Esercizio 1: Dallo Schema alla Funzione Booleana
-
 Consideriamo il circuito studiato negli appunti:
 1. Gli ingressi $A$ e $B$ entrano in una porta AND $\implies Y = A \cdot B$.
 2. L'uscita intermedia $Y$ e il terzo ingresso $C$ entrano in una porta OR $\implies Z = Y + C = (A \cdot B) + C$.
@@ -159,7 +145,6 @@ flowchart LR
 ```
 
 #### Tavola di Verità Completa del Circuito:
-
 | $A$ | $B$ | $C$ | $Y = A \cdot B$ | $Z = Y + C$ | $X = \overline{Z}$ |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | 0 | 0 | 0 | 0 | 0 | **1** |
@@ -172,9 +157,7 @@ flowchart LR
 | 1 | 1 | 1 | 1 | 1 | **0** |
 
 ---
-
 ### Esercizio 2: Dalla Funzione Booleana allo Schema Circuitale
-
 Consideriamo l'espressione logica:
 $$F = \overline{\overline{A} + \overline{B + C}}$$
 
@@ -208,9 +191,7 @@ $$F = \overline{\overline{A}} \cdot \overline{\overline{B + C}} = A \cdot (B + C
 > Con la forma semplificata $F = A \cdot (B + C)$ servono solamente **due porte logiche** (un OR e un AND), risparmiando componenti, spazio su circuito stampato, consumo energetico e tempo di propagazione!
 
 ---
-
 ## 4. Teoremi Fondamentali dell'Algebra di Boole
-
 | Nome del Teorema | Forma AND (Prodotto) | Forma OR (Somma) |
 | :--- | :--- | :--- |
 | **Identità** | $A \cdot 1 = A$ | $A + 0 = A$ |

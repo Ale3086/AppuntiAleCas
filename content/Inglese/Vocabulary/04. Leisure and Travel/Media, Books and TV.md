@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/leisure-travel
   - tipologia/glossario
 ---
-
 Vocabulary related to television, literature, journalism, and describing entertainment.
 
 ## 1. General TV, Radio, and News (A2 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Channel</b> / <b style="color: #569cd6;">Network</b> - <i>Can you change the <b>channel</b>? I don't want to watch this show.</i></summary>
 Canale / Rete (televisiva) - <i>Puoi cambiare <b>canale</b>? Non voglio guardare questo programma.</i>
@@ -40,7 +38,6 @@ Telecomando - <i>Non riesco ad accendere la TV, ho perso il <b>telecomando</b>.<
 </details>
 
 ## 2. General Books and Literature (A2 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Novel</b> - <i>Stephen King's new <b>novel</b> is a terrifying horror story.</i></summary>
 Romanzo - <i>Il nuovo <b>romanzo</b> di Stephen King è una storia horror terrificante.</i>
@@ -67,7 +64,6 @@ Trama - <i>La recitazione era buona, ma la <b>trama</b> del film non aveva alcun
 </details>
 
 ## 3. Adjectives to Describe Media (B1 - B2)
-
 <details>
 <summary><b style="color: #569cd6;">Moving</b> / <b style="color: #569cd6;">Touching</b> - <i>The documentary about the orphans was deeply <b>moving</b>.</i></summary>
 Commovente / Toccante - <i>Il documentario sugli orfani è stato profondamente <b>commovente</b>.</i>
@@ -89,7 +85,6 @@ Esilarante / Divertentissimo - <i>Il nuovo spettacolo del comico su Netflix è <
 </details>
 
 ## 4. Advanced Media and Journalism (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Sensationalism</b> (C1) - <i>The newspaper is famous for its cheap <b>sensationalism</b> to get more readers.</i></summary>
 Sensazionalismo - <i>Il giornale è famoso per il suo <b>sensazionalismo</b> da quattro soldi per ottenere più lettori.</i>
@@ -121,7 +116,6 @@ Plagio - <i>Il giornalista è stato licenziato quando hanno scoperto il suo <b>p
 </details>
 
 ## 5. Advanced TV and Entertainment (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Binge-watching</b> - <i>We spent the whole weekend <b>binge-watching</b> the new Netflix series.</i></summary>
 Maratona televisiva (Guardare episodi uno dietro l'altro) - <i>Abbiamo passato l'intero fine settimana a fare una <b>maratona</b> della nuova serie Netflix.</i>

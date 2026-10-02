@@ -4,13 +4,10 @@ tags:
   - matematica/geometria-analitica
   - tipologia/teoria
 ---
-
 # Ellisse e Iperbole
-
 Oltre a Parabola e Circonferenza, le altre due coniche fondamentali sono l'Ellisse e l'Iperbole.
 
 ## 1. L'Ellisse
-
 > [!info] Definizione
 > L'ellisse è il luogo geometrico dei punti del piano per i quali è **costante la somma** delle distanze da due punti fissi detti <span style="color: #ffff4d">Fuochi ($F_1, F_2$)</span>.
 > $$ \overline{PF_1} + \overline{PF_2} = 2a $$
@@ -33,9 +30,7 @@ Oltre a Parabola e Circonferenza, le altre due coniche fondamentali sono l'Ellis
 > ![[ellisse_es1.png]]
 
 ---
-
 ## 2. L'Iperbole
-
 > [!info] Definizione
 > L'iperbole è il luogo geometrico dei punti per i quali è **costante la differenza** (in valore assoluto) delle distanze da due punti fissi detti <span style="color: #ffff4d">Fuochi</span>.
 > $$ |\overline{PF_1} - \overline{PF_2}| = 2a $$
@@ -57,9 +52,7 @@ Oltre a Parabola e Circonferenza, le altre due coniche fondamentali sono l'Ellis
 > ![[iperbole_es1.png]]
 
 ---
-
 ## 3. L'Iperbole Equilatera e Funzione Omografica
-
 Un caso speciale si ha quando $a = b$. L'iperbole si dice **equilatera** e i suoi asintoti sono perpendicolari tra loro.
 Spesso, ruotandola di 45°, si ottiene la famosa equazione $xy = k$.
 

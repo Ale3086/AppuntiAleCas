@@ -4,11 +4,9 @@ tags:
   - matematica/geometria-analitica
   - tipologia/teoria
 ---
-
 # Le Coniche: Parabola e Circonferenza
 
 ## 1. La Parabola
-
 > [!info] Definizione
 > Si definisce **parabola** il luogo geometrico dei punti del piano equidistanti da un punto fisso detto <span style="color: #ffff4d">Fuoco ($F$)</span> e da una retta fissa detta <span style="color: #4dff4d">Direttrice ($d$)</span>.
 > $\overline{PF} = d(P, d)$
@@ -38,9 +36,7 @@ Dall'equazione generica possiamo calcolare i punti e le rette notevoli:
 > ![[coniche_es1_parabola.png]]
 
 ---
-
 ## 2. La Circonferenza
-
 > [!info] Definizione
 > La **circonferenza** è il luogo geometrico dei punti del piano equidistanti da un punto fisso detto <span style="color: #ffffff">Centro ($C$)</span>. Tale distanza si chiama <span style="color: #ffff4d">Raggio ($r$)</span>.
 
@@ -56,7 +52,6 @@ Dall'equazione generica possiamo calcolare i punti e le rette notevoli:
 > *   **Raggio:** $r = \sqrt{\left(-\frac{a}{2}\right)^2 + \left(-\frac{b}{2}\right)^2 - c}$
 
 ### Esempio Notevole: Centro nell'Origine
-
 Se la circonferenza ha il centro coincidente con l'origine degli assi $C(0,0)$ e raggio $r$, l'equazione si semplifica notevolmente.
 
 > [!example] Esempio Pratico
@@ -65,9 +60,7 @@ Se la circonferenza ha il centro coincidente con l'origine degli assi $C(0,0)$ e
 > ![[coniche_es2_circonferenza.png]]
 
 ---
-
 ## 3. Parabola con Asse Orizzontale
-
 Se scambiamo la $x$ con la $y$ nell'equazione, otteniamo una parabola "sdraiata".
 
 > [!abstract] Equazione
@@ -81,9 +74,7 @@ Se scambiamo la $x$ con la $y$ nell'equazione, otteniamo una parabola "sdraiata"
 > ![[coniche_es3_parabola_orizz.png]]
 
 ---
-
 ## 4. Intersezioni Retta-Conica
-
 Per trovare i punti di intersezione tra una retta e una conica (es. circonferenza o parabola), si mette a **Sistema** l'equazione della retta con quella della conica.
 
 > [!tip] Metodo di Risoluzione (Il Delta)

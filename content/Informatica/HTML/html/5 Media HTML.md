@@ -4,9 +4,7 @@ tags:
   - informatica/html/media
   - tipologia/reference
 ---
-
 ## img
-
 Incorpora un'immagine. Elemento void (nessun tag di chiusura).
 
 ```html
@@ -37,9 +35,7 @@ Attributi principali:
 - `usemap` — collega a una `<map>` client-side
 
 ---
-
 ## picture
-
 Permette di servire formati o immagini diverse in base a media query o supporto del browser.
 
 ```html
@@ -64,9 +60,7 @@ Attributi di `<source>`:
 - `width` / `height`
 
 ---
-
 ## figure
-
 Raggruppa contenuto autonomo (immagine, codice, grafico) con una didascalia opzionale.
 
 ```html
@@ -84,9 +78,7 @@ Raggruppa contenuto autonomo (immagine, codice, grafico) con una didascalia opzi
 `<figcaption>` è opzionale e può stare sopra o sotto il contenuto.
 
 ---
-
 ## video
-
 Incorpora un video. Supporta più sorgenti come fallback.
 
 ```html
@@ -121,9 +113,7 @@ Attributi di `<track>`:
 - `default` — traccia attiva di default
 
 ---
-
 ## audio
-
 Incorpora un file audio.
 
 ```html
@@ -146,9 +136,7 @@ Attributi principali:
 - `preload` — `none`, `metadata`, `auto`
 
 ---
-
 ## iframe
-
 Incorpora un documento HTML esterno (mappa, video YouTube, widget).
 
 ```html
@@ -186,5 +174,6 @@ Attributi principali:
 - `sandbox` — restringe le funzionalità: `allow-scripts`, `allow-forms`, `allow-same-origin`…
 - `referrerpolicy` — politica del referrer
 - `name` — nome del frame (usato come `target` nei link)
---- 
+
+---
 #HTML #Linguaggio_HTML

@@ -4,9 +4,7 @@ tags:
   - informatica/html/tabelle-e-liste
   - tipologia/reference
 ---
-
 ## ul e ol
-
 Liste non ordinate (`<ul>`) e ordinate (`<ol>`). Ogni elemento è un `<li>`.
 
 ```html
@@ -43,9 +41,7 @@ Attributi di `<li>`:
 - `value` — valore specifico in una `<ol>` (sovrascrive il contatore)
 
 ---
-
 ## dl
-
 Lista di definizioni: coppie termine (`<dt>`) / descrizione (`<dd>`).
 
 ```html
@@ -65,9 +61,7 @@ Lista di definizioni: coppie termine (`<dt>`) / descrizione (`<dd>`).
 Un `<dt>` può essere seguito da più `<dd>`, e più `<dt>` possono condividere un `<dd>`.
 
 ---
-
 ## table
-
 Struttura tabellare per dati bidimensionali.
 
 ```html
@@ -115,5 +109,6 @@ Attributi di `<td>` e `<th>`:
 Attributi di `<col>` / `<colgroup>`:
 
 - `span` — numero di colonne a cui si applica
---- 
+
+---
 #HTML #Linguaggio_HTML

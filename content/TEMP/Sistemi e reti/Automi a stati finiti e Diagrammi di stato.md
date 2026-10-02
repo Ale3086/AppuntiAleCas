@@ -8,16 +8,12 @@ tags:
   - diagrammi-di-stato
 draft: true
 ---
-
 # Automi a Stati Finiti e Diagrammi di Stato
-
 > [!NOTE] Cos'è un Automa a Stati Finiti (FSM)?
 > Un **Automa a Stati Finiti** (*Finite State Machine - FSM*) è un modello matematico di computazione costituito da un insieme discreto e finito di **stati**, da un alfabeto di **ingressi**, da un alfabeto di **uscite** e da regole che governano le **transizioni** da uno stato all'altro in risposta agli stimoli esterni.
 
 ---
-
 ## 1. Definizione Formale dell'Automa
-
 Formalmente, un automa a stati finiti deterministico è rappresentato dalla sestupla:
 
 $$M = \langle I, U, S, f, g, s_0 \rangle$$
@@ -33,9 +29,7 @@ $$M = \langle I, U, S, f, g, s_0 \rangle$$
 - **$s_0 \in S$ (Stato Iniziale):** Lo stato in cui si trova il sistema all'avvio.
 
 ---
-
 ## 2. Anatomia del Diagramma degli Stati (Grafo delle Transizioni)
-
 Il **diagramma degli stati** è una rappresentazione visuale a grafo orientato:
 
 ```mermaid
@@ -57,9 +51,7 @@ stateDiagram-v2
 | **Etichetta sull'Arco** | Specifica la condizione di attivazione e l'effetto prodotto:<br/>**`Ingresso / Uscita`** (sintassi Mealy). | `1 EUR / Eroga` |
 
 ---
-
 ## 3. Caso di Studio: Distributore Automatico con Resto
-
 Analizziamo il sistema reale modellato negli appunti: un **distributore automatico di bibite** (costo bevanda: **2 EUR**) che accetta monete da **1 EUR** e **2 EUR** ed è in grado di erogare la bibita scelta (Aranciata, Cola) ed erogare il corretto resto.
 
 ### 1. Definizione delle Variabili di Sistema
@@ -74,9 +66,7 @@ Analizziamo il sistema reale modellato negli appunti: un **distributore automati
   - **$s_2$ (Credito 1 EUR - Attesa seconda moneta):** Il sistema memorizza che è già stato inserito 1 EUR.
 
 ---
-
 ### 4. Diagramma degli Stati del Distributore (Modello di Mealy)
-
 ```mermaid
 stateDiagram-v2
     direction LR

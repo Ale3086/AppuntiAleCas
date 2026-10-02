@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/society-world
   - tipologia/glossario
 ---
-
 Vocabulary related to crimes, types of criminals, police investigations, and the justice system.
 
 ## 1. General Crimes and Criminals (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">To steal</b> - <i>Someone managed to <b>steal</b> my phone on the subway.</i></summary>
 Rubare (verbo generale) - <i>Qualcuno è riuscito a <b>rubare</b> il mio telefono in metropolitana.</i>
@@ -55,7 +53,6 @@ Vandalismo / Vandalo - <i>Distruggere il vetro della fermata dell'autobus è un 
 </details>
 
 ## 2. Police and Investigation
-
 <details>
 <summary><b style="color: #569cd6;">Cop</b> / <b style="color: #569cd6;">Police officer</b> - <i>The <b>cop</b> asked to see my driver's license.</i></summary>
 Poliziotto ("Cop" è informale ma comunissimo) - <i>Il <b>poliziotto</b> ha chiesto di vedere la mia patente.</i>
@@ -92,7 +89,6 @@ Incolpare formalmente / Imputare (termine legale) - <i>L'uomo è stato ufficialm
 </details>
 
 ## 3. The Court and Justice System (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">To sue</b> / <b style="color: #569cd6;">Lawsuit</b> - <i>If the company refuses to pay, I will <b>sue</b> them.</i></summary>
 Fare causa a qualcuno / Causa legale - <i>Se l'azienda si rifiuta di pagare, le <b>farò causa</b>.</i>
@@ -134,7 +130,6 @@ Citazione in giudizio / Mandato di comparizione - <i>Ha ricevuto una <b>citazion
 </details>
 
 ## 4. Useful Phrasal Verbs (Investigation)
-
 <details>
 <summary><b style="color: #569cd6;">To look for</b> - <i>The police are still <b>looking for</b> the missing weapon.</i></summary>
 Cercare - <i>La polizia sta ancora <b>cercando</b> l'arma scomparsa.</i>
@@ -156,7 +151,6 @@ Risolvere / Capire come è successo (Figure out è usatissimo negli USA) - <i>Il
 </details>
 
 ## 5. Advanced and Major Crimes (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Grand theft auto (GTA)</b> - <i>He was arrested for <b>grand theft auto</b> after stealing the sports car.</i></summary>
 Furto d'auto aggravato (termine legale americano) - <i>È stato arrestato per <b>furto d'auto aggravato</b> dopo aver rubato l'auto sportiva.</i>

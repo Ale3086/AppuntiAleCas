@@ -4,7 +4,6 @@ tags:
   - tipsit/filesystem
   - tipologia/guida-pratica
 ---
-
 # Indice
 - [Comandi da Ricordare per Primi](#Comandi%20da%20Ricordare%20per%20Primi)
 - [Navigazione nel Terminale](#Navigazione%20nel%20Terminale)
@@ -25,7 +24,6 @@ tags:
 - [⚠️ Comandi Pericolosi - Usare con Estrema Attenzione](#⚠️%20Comandi%20Pericolosi%20-%20Usare%20con%20Estrema%20Attenzione)
 
 ## Comandi da Ricordare per Primi
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`cd`|`cd Documenti`|Cambiare cartella|
@@ -46,7 +44,6 @@ tags:
 |`sudo`|`sudo comando`|Eseguire come amministratore|
 
 ## Navigazione nel Terminale
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`pwd`|`pwd`|Mostra la cartella in cui ti trovi|
@@ -67,7 +64,6 @@ tags:
 |`history`|`history`|Mostra i comandi usati in precedenza|
 
 ## Gestire File e Cartelle
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`touch`|`touch file.txt`|Crea un file vuoto|
@@ -84,7 +80,6 @@ tags:
 |`file`|`file documento.pdf`|Mostra il tipo di un file|
 
 ## Spostare, Copiare e Rinominare
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`cp`|`cp file.txt /backup/`|Copia un file|
@@ -95,7 +90,6 @@ tags:
 |`mv` (rinomina)|`mv vecchio.txt nuovo.txt`|Rinomina un file o cartella|
 
 ## Eliminare File e Cartelle
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`rm`|`rm file.txt`|Elimina un file|
@@ -107,7 +101,6 @@ tags:
 |`rm -rf`|`rm -rf Cartella/`|⚠️ Elimina tutto senza conferma|
 
 ## Cercare File e Contenuti
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`find`|`find . -name "report*"`|Cerca file/cartelle che iniziano con "report"|
@@ -123,7 +116,6 @@ tags:
 |`grep -v`|`grep -v "errore" log.txt`|Mostra le righe che **non** contengono la parola|
 
 ## Rete e Internet
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`ip a`|`ip a`|Mostra tutti gli indirizzi IP e interfacce|
@@ -143,7 +135,6 @@ tags:
 |`nmap`|`nmap 192.168.1.1`|Scansiona porte di un host (se installato)|
 
 ## Processi e Programmi
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`ps aux`|`ps aux`|Mostra tutti i processi attivi|
@@ -160,7 +151,6 @@ tags:
 |`nohup`|`nohup script.sh &`|Esegue un comando anche dopo il logout|
 
 ## Disco, Spazio e Partizioni
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`df -h`|`df -h`|Mostra spazio libero e totale dei dischi|
@@ -175,7 +165,6 @@ tags:
 |`blkid`|`blkid`|Mostra UUID e tipo di tutte le partizioni|
 
 ## Backup e Salvataggi
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`rsync`|`rsync -av /dati/ /backup/`|Copia cartelle e sottocartelle|
@@ -189,7 +178,6 @@ tags:
 |`dd`|`sudo dd if=/dev/sda of=/dev/sdb bs=4M status=progress`|⚠️ Clona interi dischi|
 
 ## Permessi e Proprietà
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`chmod`|`chmod 755 script.sh`|Cambia i permessi di un file|
@@ -204,7 +192,6 @@ tags:
 |`su`|`su nomeutente`|Cambia utente nella sessione|
 
 ## Servizi (systemd)
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`systemctl status`|`systemctl status apache2`|Mostra lo stato di un servizio|
@@ -221,7 +208,6 @@ tags:
 ## Gestione Pacchetti
 
 ### Debian / Ubuntu (apt)
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`apt update`|`sudo apt update`|Aggiorna la lista dei pacchetti disponibili|
@@ -234,7 +220,6 @@ tags:
 |`dpkg -l`|`dpkg -l`|Elenca tutti i pacchetti installati|
 
 ### Red Hat / Fedora (dnf)
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`dnf update`|`sudo dnf update`|Aggiorna tutti i pacchetti|
@@ -243,7 +228,6 @@ tags:
 |`dnf search`|`dnf search editor`|Cerca un pacchetto|
 
 ## Utenti e Gruppi
-
 |Comando|Esempio|Spiegazione|
 |---|---|---|
 |`whoami`|`whoami`|Mostra l'utente attuale|
@@ -257,7 +241,6 @@ tags:
 |`groups`|`groups davide`|Mostra i gruppi di un utente|
 
 ## ⚠️ Comandi Pericolosi - Usare con Estrema Attenzione
-
 |Comando|Perché fare attenzione|
 |---|---|
 |`rm -rf /`|Elimina **tutto** il file system — il sistema diventa inutilizzabile|

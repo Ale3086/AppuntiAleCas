@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/word-formation
   - tipologia/glossario
 ---
-
 Vocabulary consisting of compound nouns (two words joined together) and compound adjectives.
 
 ## 1. Compound Adjectives (Work and Lifestyle)
-
 <details>
 <summary><b style="color: #569cd6;">Full-time</b> / <b style="color: #569cd6;">Part-time</b> - <i>I am looking for a <b>part-time</b> job while I finish university.</i></summary>
 A tempo pieno / A tempo parziale (Part-time) - <i>Sto cercando un lavoro <b>part-time</b> mentre finisco l'università.</i>
@@ -30,7 +28,6 @@ Benestante / Ricco - <i>La sua famiglia è abbastanza <b>benestante</b>, quindi 
 </details>
 
 ## 2. Compound Adjectives (Describing People)
-
 <details>
 <summary><b style="color: #569cd6;">Good-looking</b> - <i>She is dating a very <b>good-looking</b> actor.</i></summary>
 Di bell'aspetto / Bello - <i>Sta uscendo con un attore di <b>bell'aspetto</b>.</i>
@@ -52,7 +49,6 @@ Dagli occhi blu / Dagli occhi marroni - <i>Il ragazzo <b>dagli occhi blu</b> sor
 </details>
 
 ## 3. Compound Nouns (Health and Emergencies)
-
 <details>
 <summary><b style="color: #569cd6;">Health center</b> - <i>I need to go to the <b>health center</b> for a quick check-up.</i></summary>
 Centro medico / Clinica - <i>Devo andare al <b>centro medico</b> per un controllo veloce.</i>

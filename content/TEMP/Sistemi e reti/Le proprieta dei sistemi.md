@@ -7,9 +7,7 @@ tags:
   - classificazione
 draft: true
 ---
-
 # Proprietà e Classificazione dei Sistemi
-
 > [!NOTE] Perché si classificano i sistemi?
 > Le proprietà dei sistemi servono a categorizzare il loro comportamento matematico e operativo. Classificare un sistema consente di scegliere il modello formale corretto (es. equazioni differenziali, automi a stati finiti, circuiti logici combinatori o sequenziali) per analizzarlo, simularlo o progettarlo.
 
@@ -31,16 +29,14 @@ flowchart TD
 ```
 
 ---
-
 ## 1. Statico vs Dinamico (Memoria del Sistema)
-
 Questa proprietà indica se il sistema ha o meno una **memoria** del proprio passato.
 
 ### Sistema Statico (Senza Memoria)
 - **Definizione:** L'uscita a un qualsiasi istante $t$ dipende **esclusivamente** dal valore dell'ingresso applicato nello stesso istante $t$:
   $$U(t) = g(I(t))$$
 - **Caratteristiche:** Il sistema non possiede stati interni; cessato lo stimolo in ingresso, l'effetto svanisce all'istante.
-- **Esempio:** 
+- **Esempio:**
   - Una resistenza elettrica ($V = R \cdot I$, la tensione ai capi dipende all'istante dalla corrente).
   - Una porta logica elementare (es. porta AND o invertitore NOT).
 
@@ -54,9 +50,7 @@ Questa proprietà indica se il sistema ha o meno una **memoria** del proprio pas
   - Un computer o un flip-flop.
 
 ---
-
 ## 2. Combinatorio vs Sequenziale
-
 È la formulazione adottata in **elettronica digitale e informatica** per i sistemi statici e dinamici:
 
 ```mermaid
@@ -81,9 +75,7 @@ flowchart LR
 - **Sistema Sequenziale:** Contiene celle di memoria (flip-flop, latch, registri). L'uscita futura dipende dalla sequenza temporale di tutti gli stimoli ricevuti in passato.
 
 ---
-
 ## 3. Naturale vs Artificiale
-
 Classificazione basata sull'origine fisica del sistema:
 
 - **Sistema Naturale:** Esiste e opera in natura spontaneamente, senza l'intervento costruttivo dell'uomo.
@@ -92,9 +84,7 @@ Classificazione basata sull'origine fisica del sistema:
   - *Esempi:* Un computer, un'automobile, un distributore automatico di bevande, un protocollo di rete.
 
 ---
-
 ## 4. Deterministico vs Stocastico (Probabilistico)
-
 Classificazione basata sulla prevedibilità matematica del comportamento:
 
 ### Sistema Deterministico
@@ -103,15 +93,13 @@ Classificazione basata sulla prevedibilità matematica del comportamento:
 
 ### Sistema Stocastico (Probabilistico)
 - **Definizione:** Il comportamento del sistema è soggetto a variabili casuali, rumore o distribuzioni di probabilità. A parità di condizioni iniziali e ingressi, l'uscita non è determinabile a priori in modo univoco, ma solo in termini statistici.
-- **Esempio:** 
+- **Esempio:**
   - Il lancio di un dado o la roulette.
   - Il modello di arrivo dei pacchetti su un router Internet (traffico poissoniano).
   - Le previsioni meteorologiche.
 
 ---
-
 ## 5. Continuo vs Discreto
-
 Riguarda il dominio del **tempo** e l'insieme dei **valori** assunti dalle grandezze:
 
 ```mermaid
@@ -133,9 +121,7 @@ flowchart TD
 | **Discreto** | Le variabili assumono solo valori appartenenti a un insieme finito o numerabile, e/o il tempo scorre a intervalli discreti (scandito da un clock). | Orologio digitale, file binario, tastiera, registri della CPU. |
 
 ---
-
 ## 6. Variante vs Invariante nel Tempo (Stazionario)
-
 Indica se le regole intrinseche e i parametri fisici del sistema cambiano col passare del tempo.
 
 - **Sistema Invariante (Stazionario):**
@@ -147,9 +133,7 @@ Indica se le regole intrinseche e i parametri fisici del sistema cambiano col pa
   - *Esempio:* I componenti elettronici soggetti a surriscaldamento o esaurimento (una batteria la cui resistenza interna sale con i cicli di carica).
 
 ---
-
 ## 7. Proprio (Moore) vs Improprio (Mealy)
-
 Questa distinzione riguarda la dipendenza diretta dell'uscita negli automi e nei sistemi dinamici:
 
 ```mermaid
@@ -174,9 +158,7 @@ classDiagram
   $$U(t) = g(S(t), I(t))$$
 
 ---
-
 ## 8. Tavola Sinottica di Classificazione Rapida
-
 | Criterio | Valore A | Valore B | Domanda Guida per Riconoscerlo |
 | :--- | :--- | :--- | :--- |
 | **Memoria** | Statico | Dinamico | *L'uscita dipende solo dall'adesso o ricorda gli ingressi passati?* |

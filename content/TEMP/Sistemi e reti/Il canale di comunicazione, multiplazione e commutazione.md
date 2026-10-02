@@ -9,16 +9,12 @@ tags:
   - protocolli
 draft: true
 ---
-
 # Il Canale di Comunicazione: Multiplazione e Commutazione
-
 > [!NOTE] Introduzione
 > Il **canale di comunicazione** è il collegamento fisico o logico che unisce una sorgente a un destinatario. Per consentire a milioni di utenti di scambiare dati in modo efficiente ed economico, le reti adottano tecniche avanzate di **multiplazione** (condivisione del mezzo) e di **commutazione** (instradamento dei flussi attraverso nodi intermedi).
 
 ---
-
 ## 1. Architettura della Comunicazione e Nodi di Rete
-
 ```mermaid
 flowchart LR
     Host1["Host 1 (Sorgente / TX)<br/>[Nodo Terminale]"] --> Switch1["Switch Locale"]
@@ -46,9 +42,7 @@ flowchart LR
 > - **Temporizzazione:** Sequenza temporale corretta degli scambi e gestione degli errori/timeout.
 
 ---
-
 ## 2. Modalità d'Uso del Canale (Direzione del Flusso)
-
 La trasmissione tra due dispositivi può essere classificata in tre modalità operative:
 
 ```mermaid
@@ -66,9 +60,7 @@ flowchart TD
 | **Full-Duplex** | $A \rightleftarrows B$<br/>*(simultaneo)* | La trasmissione può avvenire **contemporaneamente in entrambe le direzioni** senza interferenza reciproca. | Conversazione telefonica, cavi Ethernet moderni (coppie Tx e Rx fisicamente separate con switch). |
 
 ---
-
 ## 3. Tecniche di Multiplazione (*Multiplexing - MUX*)
-
 La **multiplazione** è la tecnica che consente di trasmettere più flussi di comunicazione indipendenti attraverso **un unico canale fisico condiviso**, ottimizzando l'uso della banda disponibile.
 
 ```mermaid
@@ -101,9 +93,7 @@ flowchart LR
 - **Utilizzo:** Telefonia cellulare 3G (UMTS), sistemi satellitari GPS.
 
 ---
-
 ## 4. Tecniche di Commutazione (*Switching*)
-
 La **commutazione** definisce come i dati vengono instradati e trasportati da un nodo all'altro attraverso l'infrastruttura di rete.
 
 ```mermaid
@@ -118,7 +108,6 @@ flowchart TD
 ```
 
 ---
-
 ### A. Commutazione di Circuito
 Richiede l'instaurazione preventiva di un circuito fisico o logico **dedicato e continuo** tra sorgente e destinatario prima che qualsiasi dato possa essere scambiato:
 1. **Fase di Setup (Chiamata):** Si riserva la risorsa lungo tutti i nodi della tratta.
@@ -130,7 +119,6 @@ Richiede l'instaurazione preventiva di un circuito fisico o logico **dedicato e 
 - **Esempio:** La rete telefonica fissa tradizionale (PSTN / ISDN).
 
 ---
-
 ### B. Commutazione di Pacchetto
 I dati vengono spezzati in unità di trasmissione elementari chiamate **pacchetti** (formati da un *Header* con indirizzi e dati di controllo, e da un *Payload* con i dati utili). I nodi intermedi usano la logica **Store-and-Forward** (ricevono il pacchetto, verificano il checksum ed effettuano l'inoltro).
 
@@ -156,9 +144,7 @@ Si articola in due filosofie fondamentali:
 - **Esempi:** Reti storiche X.25, Frame Relay, reti ATM (Asynchronous Transfer Mode), e il moderno MPLS (*Multi-Protocol Label Switching*).
 
 ---
-
 ## 5. Confronto di Sintesi
-
 | Caratteristica | Commutazione di Circuito | Commutazione di Pacchetto (Datagram) |
 | :--- | :--- | :--- |
 | **Instaurazione Connessione** | Obbligatoria prima di trasmettere | Non richiesta (Connectionless) |

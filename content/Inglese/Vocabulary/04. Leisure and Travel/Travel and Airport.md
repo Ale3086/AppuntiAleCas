@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/leisure-travel
   - tipologia/glossario
 ---
-
 Vocabulary for navigating airports, taking flights, vehicles, and traveling abroad.
 
 ## 1. General Vehicles and Stations (A1 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Van</b> / <b style="color: #569cd6;">Truck</b> - <i>The <b>truck</b> was carrying a heavy load of bricks.</i></summary>
 Furgone / Camion - <i>Il <b>camion</b> trasportava un pesante carico di mattoni.</i>
@@ -35,7 +33,6 @@ Tariffa (il costo del viaggio) - <i>La <b>tariffa</b> dell'autobus è aumentata 
 </details>
 
 ## 2. Accommodation and Tourism (B1 - C1)
-
 <details>
 <summary><b style="color: #569cd6;">Amenities</b> (C1) - <i>The hotel offers great <b>amenities</b>, including a spa and a gym.</i></summary>
 Servizi (comfort offerti da un hotel) - <i>L'hotel offre ottimi <b>servizi</b>, inclusi una spa e una palestra.</i>
@@ -57,7 +54,6 @@ Trappola per turisti - <i>Non mangiare in quel ristorante vicino al Colosseo, è
 </details>
 
 ## 3. Travel Phrasal Verbs
-
 <details>
 <summary><b style="color: #569cd6;">To check in</b> - <i>We need to <b>check in</b> at the hotel before 3 PM.</i></summary>
 Registrarsi (in hotel o aeroporto) - <i>Dobbiamo <b>registrarci</b> in hotel prima delle 15:00.</i>
@@ -79,7 +75,6 @@ Rompersi / Avere un guasto meccanico - <i>La nostra auto è riuscita a <b>romper
 </details>
 
 ## 4. Advanced Airport and Flying (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Jet lag</b> - <i>It took me three days to recover from the terrible <b>jet lag</b>.</i></summary>
 Fuso orario (il malessere causato dal cambio di fuso) - <i>Mi ci sono voluti tre giorni per riprendermi dal terribile <b>jet lag</b>.</i>
@@ -116,7 +111,6 @@ Franchigia bagaglio (peso/limite consentito) - <i>Controlla il sito della compag
 </details>
 
 ## 5. Advanced Ground Travel (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Gridlock</b> (C1) - <i>The accident on the bridge caused massive traffic <b>gridlock</b>.</i></summary>
 Ingorgo totale / Paralisi del traffico - <i>L'incidente sul ponte ha causato una massiccia <b>paralisi del traffico</b>.</i>

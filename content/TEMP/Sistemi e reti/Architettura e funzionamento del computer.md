@@ -9,16 +9,12 @@ tags:
   - memorie
 draft: true
 ---
-
 # Architettura e Funzionamento del Computer
-
 > [!NOTE] Obiettivo
 > Questo appunto approfondisce l'architettura interna del calcolatore digitale, dal modello teorico di Von Neumann all'esecuzione delle istruzioni nella CPU (pipeline, RISC vs CISC), la gerarchia delle memorie, la sicurezza del boot hardware/software e gli standard moderni di connessione e I/O.
 
 ---
-
 ## 1. Il Modello di Von Neumann
-
 La quasi totalità dei calcolatori moderni si basa sul modello teorizzato dal matematico **John von Neumann** nel 1945. La sua intuizione rivoluzionaria fu il concetto di **programma memorizzato**: dati e istruzioni di programma risiedono nello stesso spazio di memoria fisica e sono trattati entrambi in formato binario.
 
 ```mermaid
@@ -83,11 +79,9 @@ Linee fisiche di collegamento in rame o piste stampate su scheda madre:
 - **Bus di Controllo (Control Bus):** *Misto/Bidirezionale*. Trasporta segnali di sincronizzazione e comando (segnale di Clock, Read/Write, Interrupt Request `IRQ`, Bus Grant, Reset).
 
 ---
-
 ## 2. Il Ciclo Macchina e le Architetture di Istruzione
 
 ### Il Ciclo di Esecuzione (Fetch-Decode-Execute)
-
 Ogni istruzione di un programma attraversa un ciclo rigorosamente sincronizzato dal clock della CPU:
 
 ```mermaid
@@ -113,7 +107,6 @@ Nei processori tradizionali non-pipelined, ogni istruzione deve completare tutte
 > A regime, il processore completa **un'istruzione per ogni ciclo di clock**, moltiplicando le prestazioni complessive (*throughput*).
 
 ### Confronto Architetturale: RISC vs CISC
-
 ```mermaid
 flowchart LR
     subgraph CISC [Architettura CISC - Complex]
@@ -138,9 +131,7 @@ flowchart LR
 | **Efficienza Energetica**| Più energivoro (richiede decodificatori complessi) | Altamente efficiente (ideale per smartphone ed embedded) |
 
 ---
-
 ## 3. Gerarchia delle Memorie e Sistemi RAID
-
 Nessuna tecnologia di memoria possiede contemporaneamente massima velocità, massima capienza e costo minimo. L'architettura adotta quindi una **struttura gerarchica a piramide**:
 
 ```mermaid
@@ -169,9 +160,7 @@ Combina più dischi fisici indipendenti per incrementare la velocità, la toller
 | **RAID 10 (1+0)** | Mirroring + Striping (minimo 4 dischi) | ✅ Tolleranza al guasto di 1 disco per coppia speculare | ⚡ Altissima velocità sia in lettura che in scrittura | $50\%$ | Ideale per server di produzione mission-critical. |
 
 ---
-
 ## 4. Il Processo di Avvio del Computer (Boot Sequence)
-
 All'accensione, la memoria RAM è completamente vuota e la CPU non ha alcun programma da eseguire. Per risolvere questo "stallo iniziale", il processore è cablato per puntare a un indirizzo fisso nella memoria non-volatile:
 
 ```mermaid
@@ -192,9 +181,7 @@ flowchart TD
 - **UEFI (Unified Extensible Firmware Interface):** Standard moderno a 32/64 bit con interfaccia grafica, supporto al partizionamento GPT (dischi oltre 2 TB e partizioni virtualmente illimitate) e supporto a **Secure Boot**.
 
 ---
-
 ## 5. Fasi di Avvio del Sistema Operativo Windows
-
 Nei moderni sistemi basati su UEFI e Windows 10/11, la sequenza di avvio si articola in 4 fasi:
 
 ```mermaid
@@ -218,7 +205,6 @@ sequenceDiagram
 - **Secure Boot:** Blocca l'esecuzione di bootkit o driver malevoli prima del caricamento del sistema operativo, accettando solo codice firmato digitalmente da un'autorità fidata (Microsoft o costruttore OEM).
 
 ---
-
 ## 6. Periferiche e Bus di Connessione
 
 ### Classificazione delle Periferiche
@@ -227,7 +213,6 @@ sequenceDiagram
 - **Input/Output (I/O):** Schede di rete Ethernet/Wi-Fi, memorie di massa (dischi SSD, pendrive USB), touchscreen.
 
 ### Standard di Connessione Principali:
-
 | Bus / Interfaccia | Tipologia | Velocità Tipica | Utilizzo Principale |
 | :--- | :--- | :--- | :--- |
 | **PCI Express (PCIe)** | Seriale interna punto-punto ad altissime prestazioni (da x1 a x16 corsie) | Gen 4: ~2 GB/s per corsia (x16 = 32 GB/s)<br/>Gen 5: ~4 GB/s per corsia (x16 = 64 GB/s) | Schede video dedicate (GPU), SSD NVMe M.2 ultra-veloci, schede di rete 10/100 GbE. |

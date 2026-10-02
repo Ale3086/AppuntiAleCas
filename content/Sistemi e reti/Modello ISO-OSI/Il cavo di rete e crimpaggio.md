@@ -4,7 +4,6 @@ tags:
   - sistemi-e-reti/cablaggio
   - tipologia/guida-pratica
 ---
-
 ## Significati colori e simboli
 Per crimpare un cavo di rete (doppino) in rame ci sono due modi per crimpare i fili, utilizzando rispettivamente due standard, usando **due normative**; di conseguenza ordinando i colori in modi diversi.
 ![[Pasted image 20260519122120.png]]

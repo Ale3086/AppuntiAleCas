@@ -4,11 +4,9 @@ tags:
   - inglese/vocabulary/society-world
   - tipologia/glossario
 ---
-
 Vocabulary relating to nations, government systems, elections, and civic duties.
 
 ## 1. General Government and Leadership (A2 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">Democracy</b> / <b style="color: #569cd6;">Republic</b> - <i>In a true <b>democracy</b>, the power belongs to the people.</i></summary>
 Democrazia / Repubblica - <i>In una vera <b>democrazia</b>, il potere appartiene al popolo.</i>
@@ -35,7 +33,6 @@ Inno nazionale - <i>Tutti si sono alzati in piedi quando hanno suonato l'<b>inno
 </details>
 
 ## 2. General Elections and Law (A2 - B1)
-
 <details>
 <summary><b style="color: #569cd6;">General election</b> - <i>The country will hold a <b>general election</b> next November.</i></summary>
 Elezioni generali / politiche - <i>Il paese terrà le <b>elezioni generali</b> il prossimo novembre.</i>
@@ -72,7 +69,6 @@ Cittadino / Cittadinanza - <i>Dopo aver superato il test, ha finalmente ottenuto
 </details>
 
 ## 3. Advanced Politics and Elections (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Bipartisan</b> (C1) - <i>The new law was passed with strong <b>bipartisan</b> support.</i></summary>
 Bipartisan (Supportato da entrambi i principali partiti politici) - <i>La nuova legge è stata approvata con un forte supporto <b>bipartisan</b>.</i>
@@ -104,7 +100,6 @@ Lobbista (Chi fa pressioni sui politici per conto di aziende) - <i>Le compagnie 
 </details>
 
 ## 4. Advanced Law, State, and Society (B2 - C2)
-
 <details>
 <summary><b style="color: #569cd6;">Impeachment</b> - <i>The President faces <b>impeachment</b> for abuse of power.</i></summary>
 Messa in stato d'accusa (di un'alta carica dello Stato) - <i>Il Presidente affronta la <b>messa in stato d'accusa</b> per abuso di potere.</i>

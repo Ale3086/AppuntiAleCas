@@ -4,9 +4,7 @@ tags:
   - informatica/javascript/dom
   - tipologia/reference
 ---
-
 ## Indice
-
 - [[#Selezione elementi]]
 - [[#Modifica elementi]]
 - [[#Creazione e rimozione nodi]]
@@ -34,7 +32,6 @@ tags:
 - [[#Memoization]]
 
 ## Selezione elementi
-
 ```js
 // Selettori moderni (restituiscono null se non trovato)
 document.querySelector(".card")              // primo elemento
@@ -61,9 +58,7 @@ el.closest(".wrapper")     // primo antenato che corrisponde al selettore
 ```
 
 ---
-
 ## Modifica elementi
-
 ```js
 const el = document.querySelector(".card");
 
@@ -99,9 +94,7 @@ input.select();            // seleziona il testo
 ```
 
 ---
-
 ## Creazione e rimozione nodi
-
 ```js
 // Creazione
 const div   = document.createElement("div");
@@ -135,9 +128,7 @@ document.querySelector("ul").appendChild(frag); // un solo reflow
 ```
 
 ---
-
 ## Classi e stili
-
 ```js
 const el = document.querySelector(".card");
 
@@ -171,9 +162,7 @@ document.documentElement.style.setProperty("--primario", "#4f46e5"); // globale
 ```
 
 ---
-
 ## Attributi
-
 ```js
 const el = document.querySelector("a");
 
@@ -209,9 +198,7 @@ el.disabled = false;
 ```
 
 ---
-
 ## Traversal del DOM
-
 ```js
 const el = document.querySelector(".card");
 
@@ -248,9 +235,7 @@ el.scrollIntoView({ behavior: "smooth", block: "start" })
 ```
 
 ---
-
 ## Eventi
-
 ```js
 const btn = document.querySelector("#btn");
 
@@ -328,9 +313,7 @@ el.addEventListener("mioEvento", e => console.log(e.detail));
 ```
 
 ---
-
 ## Event delegation
-
 Invece di mettere un listener su ogni figlio, se ne mette uno sul genitore sfruttando il bubbling.
 
 ```js
@@ -352,9 +335,7 @@ lista.appendChild(nuovoItem); // gestito automaticamente
 ```
 
 ---
-
 ## MutationObserver
-
 Osserva le modifiche al DOM senza polling.
 
 ```js
@@ -389,9 +370,7 @@ const pending = observer.takeRecords(); // ottiene mutation non processate
 ```
 
 ---
-
 ## IntersectionObserver
-
 Osserva quando un elemento entra o esce dal viewport (o da un altro elemento).
 
 ```js
@@ -426,9 +405,7 @@ document.querySelectorAll("img[data-src]").forEach(img => imgObserver.observe(im
 ```
 
 ---
-
 ## ResizeObserver
-
 Osserva i cambiamenti di dimensione di un elemento.
 
 ```js
@@ -450,9 +427,7 @@ observer.disconnect();
 ```
 
 ---
-
 ## localStorage e sessionStorage
-
 Archiviazione dati nel browser. `localStorage` persiste tra sessioni, `sessionStorage` solo nella scheda corrente.
 
 ```js
@@ -484,9 +459,7 @@ window.addEventListener("storage", (event) => {
 ```
 
 ---
-
 ## Cookies
-
 ```js
 // Scrittura
 document.cookie = "nome=Alice";
@@ -519,9 +492,7 @@ document.cookie = "nome=; max-age=0; path=/";
 ```
 
 ---
-
 ## URL e History API
-
 ```js
 // URL API
 const url = new URL("https://example.com/percorso?q=test&pagina=2#sezione");
@@ -567,9 +538,7 @@ location.replace("/nuova")  // naviga senza aggiungere alla history
 ```
 
 ---
-
 ## setTimeout e setInterval
-
 ```js
 // setTimeout — esegue una volta dopo N ms
 const id = setTimeout(() => {
@@ -609,9 +578,7 @@ await delay(1000); // attende 1 secondo
 ```
 
 ---
-
 ## requestAnimationFrame
-
 Schedula una callback prima del prossimo frame del browser. Ideale per animazioni.
 
 ```js
@@ -643,9 +610,7 @@ requestAnimationFrame(loop);
 ```
 
 ---
-
 ## Clipboard API
-
 ```js
 // Copia testo (richiede gesto utente o permesso)
 await navigator.clipboard.writeText("testo copiato");
@@ -675,9 +640,7 @@ function copiaClassico(testo) {
 ```
 
 ---
-
 ## Geolocation API
-
 ```js
 // Posizione singola
 navigator.geolocation.getCurrentPosition(
@@ -709,9 +672,7 @@ navigator.geolocation.clearWatch(watchId);
 ```
 
 ---
-
 ## Notification API
-
 ```js
 // Richiesta permesso
 const permesso = await Notification.requestPermission();
@@ -741,9 +702,7 @@ if (permesso === "granted") {
 ```
 
 ---
-
 ## Web Workers
-
 Eseguono JavaScript in un thread separato (no DOM access).
 
 ```js
@@ -793,9 +752,7 @@ shared.port.start();
 ```
 
 ---
-
 ## Console
-
 ```js
 // Output base
 console.log("Messaggio normale");
@@ -845,9 +802,7 @@ console.clear();
 ```
 
 ---
-
 ## Clonazione oggetti
-
 ```js
 // Shallow clone (copia solo il primo livello)
 const shallow1 = { ...originale };
@@ -871,9 +826,7 @@ const trasferito = structuredClone({ buffer }, { transfer: [buffer] });
 ```
 
 ---
-
 ## Debounce e throttle
-
 ```js
 // Debounce — esegue solo dopo N ms dall'ultima chiamata
 function debounce(fn, delay) {
@@ -915,9 +868,7 @@ function debounceLeading(fn, delay) {
 ```
 
 ---
-
 ## Currying
-
 Trasforma una funzione con N argomenti in una catena di funzioni ognuna con 1 argomento.
 
 ```js
@@ -960,9 +911,7 @@ doppio(5); // 10
 ```
 
 ---
-
 ## Memoization
-
 Cache dei risultati di funzioni pure costose.
 
 ```js
@@ -1007,5 +956,5 @@ function memoizeOggetto(fn) {
 }
 ```
 
---- 
+---
 #HTML #JavaScript

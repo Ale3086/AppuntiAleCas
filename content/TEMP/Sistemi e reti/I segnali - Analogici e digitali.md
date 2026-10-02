@@ -8,16 +8,12 @@ tags:
   - analogico-digitale
 draft: true
 ---
-
 # I Segnali nelle Telecomunicazioni: Analogici e Digitali
-
 > [!NOTE] Cos'è un Segnale?
 > Nelle telecomunicazioni, un **segnale** è la variazione nel tempo di una grandezza fisica (solitamente una tensione elettrica, una corrente, un'onda elettromagnetica o un impulso luminoso) a cui è associata un'**informazione** da trasmettere a distanza.
 
 ---
-
 ## 1. Lo Schema di un Sistema di Telecomunicazione
-
 Ogni sistema di trasmissione a distanza si articola su tre elementi fondamentali:
 
 ```mermaid
@@ -36,9 +32,7 @@ flowchart LR
 3. **Etere (Spazio libero / Aria):** L'informazione viaggia sotto forma di **onde elettromagnetiche** a radiofrequenza o microonde (es. Wi-Fi, 4G/5G, ponti radio, satelliti).
 
 ---
-
 ## 2. Segnale Analogico vs Segnale Digitale
-
 ```mermaid
 flowchart TD
     S["Tipologie di Segnali"]
@@ -55,9 +49,7 @@ flowchart TD
 ```
 
 ---
-
 ## 3. Il Segnale Analogico e i Parametri Fondamentali
-
 Un segnale analogico periodico elementare è descritto dall'equazione della sinusoide:
 
 $$s(t) = A \cdot \sin(2\pi f t + \varphi)$$
@@ -85,9 +77,7 @@ flowchart LR
    *(Per le onde radio nel vuoto $v \approx c = 3 \times 10^8 \text{ m/s}$)*.
 
 ---
-
 ## 4. Il Segnale Digitale e la Trasmissione Binaria
-
 Nel segnale digitale, l'informazione è codificata attraverso livelli discreti di tensione:
 - **Segnale a più livelli ($M$-ario):** Può assumere $M$ valori distinti (es. a 5 livelli: $\{-2\text{V}, -1\text{V}, 0\text{V}, +1\text{V}, +2\text{V}\}$).
 - **Segnale Binario ($M=2$):** Assume esclusivamente due livelli logici:
@@ -95,7 +85,6 @@ Nel segnale digitale, l'informazione è codificata attraverso livelli discreti d
   - Livello Basso (**0 logico**): tipicamente $0\text{V}$.
 
 ### Forma d'Onda Ideale vs Segnale Reale nel Mezzo:
-
 ```mermaid
 flowchart TD
     IDEAL["Onda Quadra Ideale emessa dal TX (Transizioni nette a gradino 0/1)"] --> MEZZO["Passaggio nel Canale Fisico (Attenuazione, Capacità parassita, Rumore termico)"]
@@ -107,9 +96,7 @@ flowchart TD
 > In un segnale analogico, qualsiasi disturbo o rumore introdotto dal cavo degrada irrimediabilmente l'informazione (fruscio audio, neve video). In un segnale digitale, finché il disturbo non è così forte da far scambiare uno `0` per un `1`, il ricevitore può **ricostruire e rigenerare perfettamente** la sequenza originale di bit senza perdita di qualità!
 
 ---
-
 ## 5. La Conversione Analogico-Digitale (A/D)
-
 Poiché l'essere umano genera e percepisce grandezze fisiche analogiche (la voce, i suoni, la luce), mentre i computer elaborano solo bit binari, è necessaria una conversione in tre passaggi:
 
 ```mermaid

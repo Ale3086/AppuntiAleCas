@@ -4,118 +4,160 @@ tags:
   - informatica/cpp/sintassi
   - tipologia/guida-pratica
 ---
+Nei programmi reali scrivere tutto il codice all'interno del `main()` genera software disordinato, difficile da comprendere e quasi impossibile da testare o correggere.
 
-Nei programmi reali scrivere tutto il codice all'interno del `main()` porta rapidamente a programmi disordinati, difficili da comprendere e impossibili da correggere.
+La soluzione architetturale è la **modularizzazione**: dividere un grande problema in sotto-problemi più piccoli e indipendenti, implementati tramite **funzioni** e **procedure**.
 
-La soluzione è la **modularizzazione**: scomporre un problema complesso in sottoproblemi più piccoli e indipendenti, implementati tramite **funzioni** e **procedure**.
+```mermaid
+flowchart TD
+    M["Funzione Principale: main()"]
+    F1["leggiDati()"]
+    F2["calcolaMedia()"]
+    F3["stampaReport()"]
 
-I grandi vantaggi sono:
-- **Riusabilità (Principio DRY - Don't Repeat Yourself)**: scrivi un blocco di logica una sola volta e lo richiami ovunque serva.
-- **Leggibilità**: il `main()` diventa un elenco ordinato e chiaro delle operazioni principali ad alto livello.
-- **Facilità di Debugging**: se c'è un errore, puoi testare e correggere isolatamente la singola funzione senza toccare il resto del codice.
-
----
-
-## 1. Funzioni vs Procedure
-
-In C++ la sintassi di base è la stessa, ma concettualmente distinguiamo due ruoli:
-
-| Concetto | Tipo di Ritorno | Scopo | Istruzione `return` |
-| :--- | :--- | :--- | :--- |
-| **Funzione** | Un tipo di dato (`int`, `float`, `string`, `bool`...) | Calcola un risultato e lo restituisce al chiamante | Obbligatoria: `return valore;` |
-| **Procedura** | **`void`** (nessun valore restituito) | Esegue un'azione (stampa a schermo, modifica variabili, ecc.) | Opzionale (solo `return;` per uscire anticipatamente) |
-
----
-
-## 2. Anatomia di una Funzione
-
-Una funzione è composta da quattro parti:
-1. **Tipo di ritorno**: il tipo del valore che la funzione produce.
-2. **Nome identificatore**: il nome con cui viene chiamata (es. `calcolaArea`).
-3. **Parametri formali**: le variabili in ingresso tra parentesi tonde.
-4. **Corpo**: il blocco di codice tra parentesi graffe `{ }`.
-
-```cpp
-// Funzione che calcola e restituisce il quadrato di un numero intero
-int quadrato(int n) {
-    int risultato = n * n;
-    return risultato; // Restituisce il valore calcolato
-}
-
-// Procedura che si limita a stampare un saluto formattato
-void saluta(string nome) {
-    cout << "Ciao, " << nome << "! Benvenuto nel programma." << endl;
-}
+    M -->|"1. Input dati"| F1
+    M -->|"2. Elaborazione"| F2
+    M -->|"3. Output risultati"| F3
 ```
 
 ---
+## 1. I Grandi Vantaggi della Modularizzazione
+- **Riusabilità (Principio DRY - *Don't Repeat Yourself*)**: scrivi una routine complessa una sola volta e la richiami da qualsiasi parte del programma.
+- **Leggibilità**: il `main()` diventa un indice compatto e chiaro delle operazioni svolte ad alto livello.
+- **Isolamento dei bug**: se si verifica un errore, puoi testare la singola funzione in modo indipendente senza dover riesaminare l'intero programma.
+- **Lavoro in team**: programmatori diversi possono sviluppare e testare funzioni diverse in parallelo.
 
-## 3. I Prototipi di Funzione (Forward Declaration)
+---
+## 2. Funzioni vs Procedure
+In C++ la sintassi di base è identica, ma concettualmente si distinguono due ruoli:
 
-Il compilatore C++ legge il codice dall'alto verso il basso. Se provi a chiamare una funzione nel `main()` prima di averla scritta, il compilatore genererà un errore di *"funzione non dichiarata"*.
+| Proprietà | Funzione | Procedura |
+| :--- | :--- | :--- |
+| **Tipo di Ritorno** | Un tipo di dato concreto (`int`, `float`, `string`, `bool`...) | **`void`** (nessun valore restituito) |
+| **Scopo** | Riceve input, **calcola un risultato** e lo restituisce al chiamante | Compie un'**azione** (stampa a schermo, modifica file, ecc.) |
+| **Istruzione `return`** | **Obbligatoria**: `return valore;` | Opzionale (si usa solo `return;` per uscire in anticipo) |
+| **Uso nel chiamante** | Assegnata a una variabile o stampata: `x = radice(16);` | Invocata come comando isolato: `pulisciSchermo();` |
 
-Per organizzare il file in modo pulito ed elegante (mettendo il `main()` in alto e le funzioni sotto), si usano i **prototipi** (o dichiarazioni anticipate):
+---
+## 3. Parametri Formali vs Parametri Attuali (Argomenti)
+Questa è una delle distinzioni teoriche più importanti e richieste in ambito didattico:
+
+```cpp
+// Definizione della funzione:
+int moltiplica(int a, int b)   <-- 'a' e 'b' sono PARAMETRI FORMALI
+{
+    return a * b;
+}
+
+int main() 
+{
+    int x = 4;
+    int risultato = moltiplica(x, 5);  <-- 'x' e '5' sono PARAMETRI ATTUALI
+}
+```
+
+```mermaid
+flowchart LR
+    subgraph CHIAMANTE ["Contesto Chiamante: main()"]
+        PA["Parametri Attuali (x = 4, 5)"]
+    end
+    subgraph FUNZIONE ["Contesto Funzione: moltiplica(a, b)"]
+        PF["Parametri Formali (int a, int b)"]
+    end
+
+    PA -->|"Binding / Copia dei dati"| PF
+```
+
+### Tabella Comparativa
+| Aspetto | Parametri Formali | Parametri Attuali (o Argomenti) |
+| :--- | :--- | :--- |
+| **Dove si trovano?** | Nell'**intestazione (firma)** della definizione o prototipo della funzione. | Nella **chiamata** alla funzione (es. dentro il `main`). |
+| **Cosa sono?** | Variabili "segnaposto" con tipo e nome (`int a, int b`). | I valori o le variabili reali passati (`x, 5, y + 2`). |
+| **Durata di vita** | Esistono solo finché la funzione è in esecuzione nello Stack. | Esistono nel contesto di chi esegue la chiamata. |
+
+> [!NOTE]
+> Il processo con cui i parametri attuali vengono associati ai parametri formali durante la chiamata prende il nome di **binding dei parametri**.
+
+---
+## 4. Anatomia di una Funzione
+Una funzione in C++ è composta da 4 elementi fondamentali:
+
+```cpp
+tipo_ritorno nomeFunzione(tipo1 param1, tipo2 param2) {
+    // Corpo della funzione: dichiarazioni locali e logica
+    return espressione; // Restituisce il valore calcolato
+}
+```
+
+1. **Tipo di Ritorno**: specifica il tipo del dato prodotto (`int`, `double`, `bool`, `void` per procedure).
+2. **Identificatore (Nome)**: segue le stesse regole dei nomi di variabile (es. `calcolaIva`, `massimoTraDue`).
+3. **Parametri Formali**: elenco tra parentesi tonde dei dati in ingresso con il relativo tipo.
+4. **Corpo**: racchiuso tra parentesi graffe `{ }`, contiene le istruzioni da eseguire.
+
+---
+## 5. Prototipi di Funzione (Forward Declaration)
+Il compilatore C++ legge il file riga per riga dall'alto verso il basso. Se incontra una chiamata prima che la funzione sia stata scritta, solleverà un errore (*"funzione non dichiarata"*).
+
+Per mantenere il codice ordinato (con il `main()` in cima come panoramica e le funzioni implementate in basso), si definiscono i **prototipi** prima del `main`:
 
 ```cpp
 #include <iostream>
 using namespace std;
 
-// 1. PROTOTIPI (comunicano al compilatore l'esistenza della funzione)
-int somma(int a, int b);
-void stampaMenu();
+// 1. PROTOTIPI (comunicano al compilatore nome, parametri e tipo di ritorno)
+int quadrato(int n);
+void stampaSeparatore();
 
-// 2. MAIN
+// 2. MAIN (subito visibile in cima al sorgente)
 int main() {
-    stampaMenu();
-    int totale = somma(15, 25);
-    cout << "Totale: " << totale << endl;
+    stampaSeparatore();
+    cout << "Il quadrato di 6 e': " << quadrato(6) << endl;
+    stampaSeparatore();
     return 0;
 }
 
 // 3. DEFINIZIONE DELLE FUNZIONI
-int somma(int a, int b) {
-    return a + b;
+int quadrato(int n) {
+    return n * n;
 }
 
-void stampaMenu() {
-    cout << "=== MENU GESTIONALE ===" << endl;
+void stampaSeparatore() {
+    cout << "-----------------------------------" << endl;
 }
 ```
 
 ---
-
-## 4. Modalità di Passaggio dei Parametri
-
-Questo è uno dei concetti più importanti di tutta la programmazione in C++.
+## 6. Meccanismi di Passaggio dei Parametri
+Il C++ supporta tre modalità distinte di passaggio:
 
 ### A. Passaggio per Valore (Copia)
-È la modalità predefinita. La funzione riceve una **copia indipendente** del valore.  
-Se modifichi il parametro all'interno della funzione, la variabile originale nel `main()` **non cambia**.
+- **Come funziona**: il parametro formale riceve una **copia esatta** del valore del parametro attuale.
+- **Effetto collaterale**: qualsiasi modifica apportata al parametro all'interno della funzione **non si riflette** sulla variabile originale.
 
 ```cpp
-void incrementaFalso(int x) {
-    x = x + 1; // Modifica solo la copia locale!
+void raddoppiaFalso(int x) {
+    x = x * 2; // Modifica solo la copia locale nello Stack frame
 }
 
 int main() {
-    int numero = 10;
-    incrementaFalso(numero);
-    cout << numero << endl; // Stampa ancora 10!
+    int valore = 10;
+    raddoppiaFalso(valore);
+    cout << valore << endl; // Stampa ancora 10!
 }
 ```
 
 ---
-
 ### B. Passaggio per Riferimento (`&`)
-Aggiungendo il simbolo `&` dopo il tipo del parametro formale, non viene creata alcuna copia: la funzione riceve un **alias diretto** della variabile originale.  
-Qualsiasi modifica apportata al parametro **si riflette immediatamente sulla variabile originale**!
+- **Come funziona**: inserendo il simbolo `&` dopo il tipo, il parametro formale non crea una nuova variabile ma diventa un **alias diretto** della variabile originale.
+- **Effetto collaterale**: qualunque modifica fatta all'interno della funzione **modifica istantaneamente la variabile originale nel chiamante**!
 
-L'esempio classico è la funzione per scambiare due variabili (*swap*):
+L'esempio per eccellenza è la funzione `scambia` (*swap*):
 
 ```cpp
 #include <iostream>
 using namespace std;
 
+// Le variabili a e b sono riferimenti a x e y
 void scambia(int &a, int &b) {
     int temp = a;
     a = b;
@@ -123,96 +165,126 @@ void scambia(int &a, int &b) {
 }
 
 int main() {
-    int x = 5;
-    int y = 10;
+    int x = 3;
+    int y = 9;
 
     cout << "Prima: x = " << x << ", y = " << y << endl;
     scambia(x, y);
-    cout << "Dopo:  x = " << x << ", y = " << y << endl; // x = 10, y = 5!
+    cout << "Dopo:  x = " << x << ", y = " << y << endl; // x = 9, y = 3!
 
     return 0;
 }
 ```
 
 ---
-
 ### C. Passaggio per Riferimento Costante (`const &`)
-Quando passiamo oggetti di grandi dimensioni (come stringhe lunghe, oggetti o strutture complesse), il passaggio per valore è lento perché obbliga a copiare tutti i byte in RAM.  
-Usando `const Tipo &` otteniamo:
-1. **Velocità massima**: zero copie in memoria.
-2. **Sicurezza totale**: il modificatore `const` impedisce modifiche accidentali all'originale.
+Quando passiamo strutture o oggetti pesanti (come stringhe molto lunghe o grandi vettori), il passaggio per valore è lento perché obbliga a copiare migliaia di byte.
+Il passaggio per riferimento costante unisce il meglio dei due mondi:
+1. **Velocità massima**: zero copie in memoria (passa solo l'indirizzo interno).
+2. **Sicurezza totale**: il prefisso `const` impedisce modifiche accidentali al dato originale.
 
 ```cpp
-void analizzaTesto(const string &testo) {
-    cout << "Lunghezza testo: " << testo.length() << endl;
-    // testo = "modifica"; // ERRORE in compilazione: const protegge il dato!
+void stampaMessaggio(const string &msg) {
+    cout << "Messaggio: " << msg << endl;
+    // msg += " mod"; // ERRORE in compilazione: const garantisce la sola lettura!
 }
 ```
 
 ---
+## 7. Il Call Stack e lo Stack Frame
+Cosa succede nella memoria RAM quando invochi una funzione?
 
-## 5. Scope e Visibilità delle Variabili
+1. Nel momento della chiamata, il programma alloca nello **Stack** una nuova porzione di memoria chiamata **Stack Frame** (o record di attivazione).
+2. Lo Stack Frame contiene:
+   - I parametri formali ricevuti;
+   - Le variabili locali create nella funzione;
+   - L'indirizzo di ritorno (dove tornare nel `main` una volta finito).
+3. Quando la funzione incontra `return` o la parentesi finale `}`, il suo Stack Frame viene **distrutto all'istante** e la memoria viene liberata.
 
-- **Variabili Locali**: dichiarate all'interno di una funzione o di un blocco `{ }`. Esistono solo finché la funzione è in esecuzione e vengono distrutte all'uscita dal blocco.
-- **Variabili Globali**: dichiarate all'esterno di tutte le funzioni, visibili da chiunque.  
+```mermaid
+sequenceDiagram
+    participant Main as main() Stack Frame
+    participant Func as calcolaArea() Stack Frame
+
+    Main->>Func: Chiamata con parametri attuali (base=5, altezza=4)
+    Note over Func: Alloca variabili locali nello Stack
+    Func-->>Main: Restituisce valore (20) e distrugge lo Stack Frame
+    Note over Main: Riprende l'esecuzione
+```
+
+> [!INFO] 🖼️ Placeholder Immagine: Rappresentazione dello Stack Frame in memoria RAM
+> *Suggerimento per Obsidian: inserisci qui uno schema visivo della memoria Stack con i record di attivazione impilati l'uno sull'altro.*
+> `![[Pasted image stack_frame.png|550]]`
+
+---
+## 8. Scope e Visibilità delle Variabili
+- **Variabili Locali**: dichiarate dentro una funzione o tra parentesi `{ }`. Nascono quando il blocco viene eseguito e muoiono alla sua chiusura.
+- **Variabili Globali**: dichiarate all'esterno di qualunque funzione. Visibili ovunque.
   > [!WARNING]
-  > Le variabili globali sono considerate una **pessima pratica** perché rendono il codice imprevedibile e favoriscono bug difficilissimi da tracciare (*side effects*).
+  > Evita le variabili globali! Rendono il codice instabile, aumentano l'accoppiamento e causano bug invisibili (*side effects*). Usa sempre parametri e valori di ritorno.
 
 ---
-
-## 6. Overloading delle Funzioni (Sovraccarico)
-
-In C++ è possibile definire **più funzioni con lo stesso nome**, a patto che abbiano un numero o un tipo di parametri diverso (*firma diversa*). Il compilatore capirà automaticamente quale chiamare in base agli argomenti passati.
+## 9. Overloading delle Funzioni (Sovraccarico)
+In C++ possiamo definire **più funzioni con lo stesso nome**, a patto che abbiano una lista parametri differente per tipo o numero (*firma univoca*). Il compilatore individuerà automaticamente quale versione invocare:
 
 ```cpp
-// Somma di due interi
-int somma(int a, int b) {
-    return a + b;
+// 1. Calcola l'area di un quadrato
+int area(int lato) {
+    return lato * lato;
 }
 
-// Somma di due numeri decimali
-double somma(double a, double b) {
-    return a + b;
+// 2. Calcola l'area di un rettangolo (stesso nome, due parametri)
+int area(int base, int altezza) {
+    return base * altezza;
 }
 
-// Somma di tre interi
-int somma(int a, int b, int c) {
-    return a + b + c;
+// 3. Calcola l'area di un cerchio con decimali (stesso nome, parametro float)
+float area(float raggio) {
+    return 3.14159f * raggio * raggio;
 }
 ```
 
 ---
+## 10. La Ricorsione
+Una funzione si definisce **ricorsiva** quando richiama se stessa per risolvere una porzione più piccola dello stesso problema.
 
-## 7. La Ricorsione
+Ogni funzione ricorsiva deve obbligatoriamente contenere:
+1. **Caso Base (Condizione di arresto)**: il caso semplice che non richiede ulteriori chiamate. Senza di esso il programma va in loop infinito esaurendo lo Stack (*Stack Overflow*).
+2. **Passo Ricorsivo**: la chiamata a se stessa con un parametro ridotto che converge verso il caso base.
 
-Una funzione si definisce **ricorsiva** quando chiama se stessa all'interno del proprio corpo.
+```mermaid
+flowchart TD
+    F5["fattoriale(5) = 5 * fattoriale(4)"]
+    F4["fattoriale(4) = 4 * fattoriale(3)"]
+    F3["fattoriale(3) = 3 * fattoriale(2)"]
+    F2["fattoriale(2) = 2 * fattoriale(1)"]
+    F1["fattoriale(1) = 1 (Caso Base)"]
 
-Per non cadere in un ciclo infinito che esaurisce la memoria dello Stack (*Stack Overflow*), ogni funzione ricorsiva deve avere obbligatoriamente:
-1. **Caso Base (Condizione di terminazione)**: un caso banale risolvibile direttamente senza ulteriori chiamate.
-2. **Passo Ricorsivo**: la chiamata alla funzione su una porzione ridotta del problema, che si avvicina al caso base.
+    F5 --> F4 --> F3 --> F2 --> F1
+    F1 -.->|Risoluzione verso l'alto| F2
+    F2 -.-> F3
+    F3 -.-> F4
+    F4 -.-> F5
+```
 
-### Esempio classico: Calcolo del Fattoriale ($n!$)
-Matematicamente:
-- $0! = 1$ (caso base)
-- $n! = n \times (n - 1)!$ (passo ricorsivo)
-
+### Codice Completo di Esempio (Fattoriale)
 ```cpp
 #include <iostream>
 using namespace std;
 
 long long fattoriale(int n) {
-    // 1. Caso base
+    // 1. Caso Base: 0! = 1 e 1! = 1
     if (n <= 1) {
         return 1;
     }
-    // 2. Passo ricorsivo
+    // 2. Passo Ricorsivo
     return n * fattoriale(n - 1);
 }
 
 int main() {
-    int num = 5;
-    cout << "Il fattoriale di " << num << " e': " << fattoriale(num) << endl; 
-    // Calcolo: 5 * 4 * 3 * 2 * 1 = 120
+    int valore = 5;
+    cout << "Fattoriale di " << valore << ": " << fattoriale(valore) << endl; 
+    // Risultato: 5 * 4 * 3 * 2 * 1 = 120
     return 0;
 }
 ```
