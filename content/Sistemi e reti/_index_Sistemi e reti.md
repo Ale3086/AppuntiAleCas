@@ -13,8 +13,8 @@ Architettura delle reti di calcolatori, standard di cablaggio strutturato, appar
 
 ### 📁 Cartelle e Moduli
 
-- **[[index_Cablaggio strutturato|Cablaggio strutturato]]**
+- **[[_index_Cablaggio strutturato|Cablaggio strutturato]]**
   Normative ISO/IEC 11801, categorie di cavi Ethernet (rame e fibra ottica), topologie di rete e tecniche di attestazione/crimpaggio.
 
-- **[[index_Modello ISO-OSI|Modello ISO-OSI]]**
+- **[[_index_Modello ISO-OSI|Modello ISO-OSI]]**
   I 7 livelli della pila ISO-OSI, incapsulamento PDU, apparati di rete (Switch, Router, Hub), reti Ethernet e comandi Cisco IOS.

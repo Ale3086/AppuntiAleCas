@@ -13,16 +13,16 @@ Guida strategica e materiale di preparazione per superare l'esame Cambridge B2 F
 
 ### 📁 Cartelle e Moduli
 
-- **[[index_Listening|Listening]]**
+- **[[_index_Listening|Listening]]**
   Esercitazioni e tecniche pratiche per affrontare con successo le tracce audio della prova di comprensione orale.
 
-- **[[index_Reading|Reading]]**
+- **[[_index_Reading|Reading]]**
   Tecniche di lettura rapida (skimming/scanning), Use of English, cloze test e trasformazioni grammaticali con parola chiave.
 
-- **[[index_Speaking|Speaking]]**
+- **[[_index_Speaking|Speaking]]**
   Preparazione alla prova orale: interazione con l'esaminatore, confronto a due tra candidati, descrizione di immagini e discussione collaborativa.
 
-- **[[index_Writing|Writing]]**
+- **[[_index_Writing|Writing]]**
   Modelli, regole di impaginazione e criteri di valutazione per essay (saggi argomentativi), email/lettere, articoli, report e recensioni.
 
 ### 📄 Note e Argomenti

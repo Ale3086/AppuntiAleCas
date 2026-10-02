@@ -31,7 +31,7 @@ export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
     const filename = segments[segments.length - 1]
     const ext = filename.lastIndexOf(".") !== -1 ? filename.slice(filename.lastIndexOf(".")) : ""
     const base = filename.slice(0, filename.length - ext.length)
-    if (/^index(\[.*\]|[\s_-].*)?$/i.test(base)) {
+    if (/^_?index(\[.*\]|[\s_-].*)?$/i.test(base)) {
       segments[segments.length - 1] = "index" + ext
       return _slugifyFilePath(segments.join("/") as FilePath, excludeExt)
     }

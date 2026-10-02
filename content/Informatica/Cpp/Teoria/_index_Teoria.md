@@ -13,10 +13,13 @@ Concetti teorici del C++, architettura dei calcolatori e analisi computazionale 
 
 ### 📁 Cartelle e Moduli
 
-- **[[index_Algoritmi di ordinamento|Algoritmi di ordinamento]]**
+- **[[_index_Algoritmi di ordinamento|Algoritmi di ordinamento]]**
   Implementazione, funzionamento passo-passo e complessità computazionale di Bubble Sort, Insertion Sort e Selection Sort.
 
 ### 📄 Note e Argomenti
+
+- **[[Algoritmi di ricerca]]**
+  Ricerca lineare su insiemi non ordinati e ricerca binaria (dicotomica) ad alta efficienza O(log n) con prerequisito di ordinamento.
 
 - **[[Caratteristiche]]**
   Panoramica delle caratteristiche fondanti del C++: efficienza, tipizzazione forte, compilazione diretta in linguaggio macchina.

@@ -13,10 +13,7 @@ Programmazione in C++: gestione della memoria, puntatori, array, funzioni, struc
 
 ### 📁 Cartelle e Moduli
 
-- **[[index_Librerie|Librerie]]**
-  Prontuario delle librerie standard di C++ (iostream, string, vector, algorithm) con funzioni, metodi e casi d'uso pratici.
-
-- **[[index_Teoria|Teoria]]**
+- **[[_index_Teoria|Teoria]]**
   Concetti teorici del C++, architettura dei calcolatori e analisi computazionale degli algoritmi di ordinamento.
 
 ### 📄 Note e Argomenti
@@ -38,3 +35,6 @@ Programmazione in C++: gestione della memoria, puntatori, array, funzioni, struc
 
 - **[[Puntatori]]**
   Concetto di indirizzo di memoria, operatore di dereferenziazione (`*`), aritmetica dei puntatori e gestione dinamica con `new`/`delete`.
+
+- **[[Strutture di controllo e cicli]]**
+  Istruzioni condizionali (if, else if, else, switch-case) e cicli iterativi (while, do-while, for) con controlli logici e salti di flusso.

@@ -2,13 +2,26 @@
 title: "Le struct e le classi"
 tags:
   - informatica/cpp/sintassi
-  - tipologia/concetto
+  - tipologia/guida-pratica
 ---
 
-Le struct sono come delle grandi variabili pubbliche e visibili da tutti che vanno ad allocare spazio in memoria uno dopo l'altro, allocando anche differenti tipi di dati uno dopo l'altro. Una struct va a definire un nuovo tipo di dato strutturato esclusivo in quel programma che, a differenza degli array che può contenere solo stessi tipi di dati semplici, può contenere come già detto varie tipologie di dati insieme sotto un unico nome.
+Nei problemi reali i tipi di dati primitivi (`int`, `float`, `string`) non bastano per descrivere entità complesse del mondo reale, come un utente, un prodotto di e-commerce o un personaggio di un videogioco.
 
+Il C++ permette di creare **tipi di dati personalizzati** aggregando più variabili e funzioni sotto un unico nome mediante due strumenti: le **`struct`** e le **`class`**.
+
+---
+
+## 1. Le Struct (Strutture Dati)
+
+Una `struct` è un tipo di dato composito che raggruppa variabili di tipo differente, chiamate **campi** (o membri).
+
+### Definizione di una Struct
 ```cpp
-// Definizione della struttura per un videogioco
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Definizione della struttura Videogioco
 struct Videogioco {
     string titolo;
     string genere;
@@ -17,128 +30,199 @@ struct Videogioco {
 };
 ```
 
-Per accedere ai vari campi o membri (i tipi di dati interni contenuti in una struct) si usa l'operatore `.` in cui prima del punto ci va il nome del dato e dopo il punto ci va il nome del campo che volgiamo gestire.
+### Creazione e Accesso ai Campi (Operatore Punto `.`)
+Per accedere ai singoli campi si usa l'operatore punto `.`:
 
 ```cpp
-// Creazione della variabile compelssa
-Videogioco g1;
+int main() {
+    // Creazione di una variabile di tipo Videogioco
+    Videogioco g1;
 
-// Inizializzazione dei campi con l'operatore .
-g1.titolo = "The Legend of Zelda";
-g1.genere = "Action-Adventure";
-g1.valutazione = 9.8;
-g1.annoUscita = 2017;
+    // Assegnazione dei valori ai campi
+    g1.titolo = "The Legend of Zelda";
+    g1.genere = "Action-Adventure";
+    g1.valutazione = 9.8f;
+    g1.annoUscita = 2017;
+
+    cout << "Titolo: " << g1.titolo << " (" << g1.annoUscita << ")" << endl;
+    cout << "Voto: " << g1.valutazione << "/10" << endl;
+
+    return 0;
+}
 ```
 
-Le struct poi possono anche essere annidate fra loro, andando sostanzialmente ad avere dentro un tipo di variabile complesso altri tipi di variabili complesse .
+---
+
+## 2. Struct Annidate e Array di Struct
+
+### Struct Annidate
+Una struct può contenere al suo interno un'altra struct come campo:
 
 ```cpp
-struct data1 {
+struct Data {
     int giorno;
     int mese;
     int anno;
 };
 
-struct studente {
+struct Studente {
     string nome;
     string cognome;
     int matricola;
-    data1 data_nascita;
+    Data dataNascita; // Struct annidata
 };
+
+int main() {
+    Studente s;
+    s.nome = "Giulia";
+    s.dataNascita.giorno = 24; // Doppio punto per accedere alla sotto-struttura
+    s.dataNascita.mese = 10;
+    s.dataNascita.anno = 2005;
+}
 ```
 
-I quali si ci può accedere ripetendo l'operatore del `.` più volte.
+### Array di Struct
+Possiamo creare vettori di strutture per gestire collezioni di record (es. un registro di studenti):
 
 ```cpp
-studente s1;
+Studente classe[20]; // Vettore di 20 studenti
 
-// Assegnazione campi semplici
-s1.nome = "Giulia";
-s1.cognome = "Bianchi";
-s1.matricola = 556677;
+// Assegnazione dello studente all'indice [0]
+classe[0].nome = "Mario";
+classe[0].cognome = "Rossi";
+classe[0].matricola = 10234;
 
-// Accesso alla sotto-struttura data_nascita (doppio punto)
-s1.data_nascita.giorno = 24;
-s1.data_nascita.mese = 10;
-s1.data_nascita.anno = 2001;
+// Assegnazione dello studente all'indice [1]
+classe[1].nome = "Anna";
+classe[1].cognome = "Verdi";
+classe[1].matricola = 10235;
 ```
 
-Con le struct oltre che fare delle variabili con strutture complesse possiamo anche definire degli array con strutture complesse.
+---
+
+## 3. Dalle Struct alle Classi (OOP)
+
+In C++ l'unica differenza sintattica tra una `struct` e una `class` è la **visibilità predefinita**:
+- Nelle `struct`: tutti i membri sono **`public`** di default (visibili a chiunque).
+- Nelle `class`: tutti i membri sono **`private`** di default (protetti e inaccessibili dall'esterno).
+
+Per convenzione:
+- Si usa `struct` per semplici contenitori di dati (Plain Old Data).
+- Si usa `class` per la **programmazione orientata agli oggetti (OOP)**, dove dati e logica operativa vengono protetti e incapsulati insieme.
+
+---
+
+## 4. I Modificatori di Accesso: `public` vs `private`
+
+L'**incapsulamento** è il principio OOP che consiste nel nascondere i dati interni di un oggetto proteggendoli da modifiche errate o non autorizzate.
+
+- **`private`**: le variabili e i metodi possono essere usati **solo all'interno della classe stessa**.
+- **`public`**: le variabili e i metodi sono accessibili dall'esterno (es. nel `main`).
 
 ```cpp
-studente studenti[5];
-```
-
-I quali si vanno ad accedere ai vari campi di dato nello stesso modo di prima.
-
-```cpp
-// Assegnazione dei campi dello studente con indice [1]
-studenti[5].nome = "Giulia";
-studenti[5].cognome = "Bianchi";
-studenti[5].matricola = 556677;
-studenti[5].data_nascita.giorno = 24;
-studenti[5].data_nascita.mese = 10;
-studenti[5].data_nascita.anno = 2001;
-```
-
-In contrapposizione alle struct, che sono pubbliche, se vogliamo gestire dei dati privati e sensibili andremo a dichiarare un tipo di dato strutturato più privato, ovvero la class, la quale va a definire quali campi sono privati e quali campi invece sono pubblichi, garantendo maggiore privacy.
-
-```cpp
-class Esempio {
-public:
-    // VARIABILE PUBBLICA
-    int numeroPubblico;
-
+class ContoBancario {
 private:
-    // VARIABILE PRIVATA (nascosta)
-    int numeroPrivato;
+    double saldo; // Nessuno dall'esterno può impostare il saldo arbitrariamente!
+
+public:
+    // Metodo pubblico per versare denaro con controllo di validità
+    void deposita(double importo) {
+        if (importo > 0) {
+            saldo += importo;
+            cout << "Depositati: " << importo << " euro." << endl;
+        } else {
+            cout << "Importo non valido!" << endl;
+        }
+    }
+
+    // Metodo getter per leggere il saldo in sola lettura
+    double getSaldo() {
+        return saldo;
+    }
 };
 ```
 
-Per accedere ai campi di una class i metodi tra la parte privata e pubblica cambiano:
-- **Parte Pubblica (`public`):** È come una variabile normale. Puoi usare l'operatore punto `.` per leggere o scrivere il valore direttamente (`oggetto.nomeVariabile = 10;`).
-    
-- **Parte Privata (`private`):** È protetta. Il compilatore ti impedisce di toccarla direttamente. Per farlo, devi passare attraverso un metodo (una funzione) che tu stesso hai definito nella parte `public`.
+---
+
+## 5. Il Costruttore (Inizializzazione Automatica)
+
+Il **Costruttore** è un metodo speciale che ha lo **stesso identico nome della classe** e non ha alcun tipo di ritorno (nemmeno `void`).  
+Viene eseguito **automaticamente** nel momento esatto in cui un nuovo oggetto viene creato in memoria.
+
+Serve a garantire che l'oggetto non nasca con dati spazzatura o incoerenti.
 
 ```cpp
 #include <iostream>
+#include <string>
 using namespace std;
 
-class Esempio {
-public:
-    // VARIABILE PUBBLICA
-    int numeroPubblico;
-
+class Giocatore {
 private:
-    // VARIABILE PRIVATA (nascosta)
-    int numeroPrivato;
+    string nome;
+    int puntiVita;
+    int livello;
 
 public:
-    // Metodo per impostare il valore privato
-    void setPrivato(int valore) {
-        numeroPrivato = valore;
+    // 1. Costruttore di Default (senza argomenti)
+    Giocatore() {
+        nome = "Anonimo";
+        puntiVita = 100;
+        livello = 1;
     }
 
-    // Metodo per leggere il valore privato
-    int getPrivato() {
-        return numeroPrivato;
+    // 2. Costruttore Parametrizzato (con lista di inizializzazione)
+    Giocatore(string n, int pv, int liv) : nome(n), puntiVita(pv), livello(liv) {
+        // I campi sono inizializzati direttamente nella lista prima del corpo!
+    }
+
+    // Metodo di stampa
+    void stampaScheda() {
+        cout << "Guerriero: " << nome 
+             << " | PV: " << puntiVita 
+             << " | Livello: " << livello << endl;
+    }
+
+    // Distruttore (chiamato alla cancellazione dell'oggetto)
+    ~Giocatore() {
+        // Qui si libera eventuale memoria dinamica allocata dall'oggetto
     }
 };
 
 int main() {
-    Esempio oggetto;
+    // Oggetto creato con il costruttore di default:
+    Giocatore g1;
+    g1.stampaScheda(); // Guerriero: Anonimo | PV: 100 | Livello: 1
 
-    // 1. ACCESSO PUBBLICO: 
-    // Uso l'operatore punto direttamente sulla variabile
-    oggetto.numeroPubblico = 10;
-    cout << "Valore pubblico: " << oggetto.numeroPubblico << endl;
-
-    // 2. ACCESSO PRIVATO: 
-    // Non posso scrivere "oggetto.numeroPrivato = 5;" (dà errore!)
-    // Devo usare il metodo pubblico che fa da ponte
-    oggetto.setPrivato(20); 
-    cout << "Valore privato: " << oggetto.getPrivato() << endl;
+    // Oggetto creato con il costruttore parametrizzato:
+    Giocatore g2("Artu", 150, 5);
+    g2.stampaScheda(); // Guerriero: Artu | PV: 150 | Livello: 5
 
     return 0;
 }
 ```
+
+---
+
+## 6. Puntatori a Oggetti e l'Operatore Freccia (`->`)
+
+Se abbiamo un puntatore a una struct o a una classe, per accedere ai suoi membri possiamo usare l'operatore **`->`** (freccia), che unisce la dereferenziazione `(*ptr)` e l'accesso con punto `.`:
+
+```cpp
+Giocatore *ptr = new Giocatore("Lancillotto", 120, 3);
+
+// Invece di scrivere: (*ptr).stampaScheda();
+ptr->stampaScheda(); // Molto più leggibile e pulito!
+
+delete ptr; // Libera la memoria
+```
+
+---
+
+## Tabella di Confronto: `struct` vs `class`
+
+| Caratteristica | `struct` | `class` |
+| :--- | :--- | :--- |
+| **Visibilità predefinita** | `public` | `private` |
+| **Scopo principale** | Raccolta di dati semplici | Incapsulamento e logica OOP |
+| **Uso tipico** | Record, coordinate geometriche, tuple | Entità complesse, modelli di business |
+| **Supporto a metodi e costruttori** | Sì (in C++ entrambe li supportano) | Sì |

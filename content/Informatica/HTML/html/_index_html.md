@@ -42,6 +42,3 @@ Elementi fondamentali dell'HTML5: metadati, tag di testo, link, form, tabelle, c
 
 - **[[9 Componenti Interattivi HTML]]**
   Elementi interattivi HTML5 nativi: `details`, `summary`, modali con `<dialog>` e menu a tendina.
-
-- **[[Senza nome]]**
-  Appunti e bozze varie di approfondimento.

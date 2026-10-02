@@ -53,6 +53,7 @@ const DESCRIPTIONS = {
   "Sistemi operativi": "Architettura interna del sistema operativo: Kernel monolitico vs microkernel, Shell, modalità Ring (User/Kernel mode) e chiamate di sistema (System Call).",
 
   // File individuali di Informatica
+  "Strutture di controllo e cicli": "Istruzioni condizionali (if, else if, else, switch-case) e cicli iterativi (while, do-while, for) con controlli logici e salti di flusso.",
   "Le variabili": "Dichiarazione, tipi primitivi, modificatori di tipo, costanti e allocazione delle variabili nello Stack.",
   "Gli array": "Vettori statici monodimensionali e bidimensionali (matrici), indicizzazione e scorrimento con cicli for.",
   "Le funzioni e procedure": "Modularizzazione del codice, prototipi, passaggio dei parametri per valore o riferimento (`&`) e ricorsione.",
@@ -64,6 +65,7 @@ const DESCRIPTIONS = {
   "string": "Metodi della classe `std::string`: concatenazione, ricerca di sottostringhe, lunghezza, comparazione e conversioni numeriche.",
   "vector": "Array dinamici della Standard Template Library: inserimento con `push_back`, iteratori, ridimensionamento e accesso sicuro con `at()`.",
   "Caratteristiche": "Panoramica delle caratteristiche fondanti del C++: efficienza, tipizzazione forte, compilazione diretta in linguaggio macchina.",
+  "Algoritmi di ricerca": "Ricerca lineare su insiemi non ordinati e ricerca binaria (dicotomica) ad alta efficienza O(log n) con prerequisito di ordinamento.",
   "Bubble sort": "Algoritmo di ordinamento a bolle: logica di scambio adiacente, ottimizzazione con flag e complessità temporale O(n²).",
   "Insertion sort": "Ordinamento per inserimento: logica simile all'ordinamento di una mano di carte, ottimo per insiemi di dati quasi ordinati.",
   "Selection Sort": "Ordinamento per selezione: ricerca progressiva del valore minimo e posizionamento nell'indice corrente.",
@@ -78,7 +80,6 @@ const DESCRIPTIONS = {
   "8 Layout e Semantica HTML": "Tag semantici HTML5 per la struttura della pagina: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`.",
   "9 Componenti Interattivi HTML": "Elementi interattivi HTML5 nativi: `details`, `summary`, modali con `<dialog>` e menu a tendina.",
   "10 Attributi HTML": "Attributi globali fondamentali: `id`, `class`, `style`, `title`, `data-*` personalizzati e attributi di accessibilità ARIA.",
-  "Senza nome": "Appunti e bozze varie di approfondimento.",
   "1 Fondamentali": "Tipi di dato primitivi, variabili (`let`, `const`), operatori logico-aritmetici, strutture di controllo (`if`, `switch`) e cicli.",
   "2 Strutture dati": "Oggetti letterali, array in JavaScript, metodi funzionali (`map`, `filter`, `reduce`), `Set` e `Map`.",
   "3 Sintassi moderna (ES6+)": "Destructuring di array e oggetti, Spread/Rest operator, Arrow functions, template literals e moduli `import`/`export`.",
@@ -227,19 +228,19 @@ Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in 
 
 ---
 
-## 💻 [[index_Informatica|Informatica]]
+## 💻 [[_index_Informatica|Informatica]]
 ${getDescription("Informatica", dir)}
 
-## 🇬🇧 [[index_Inglese|Inglese]]
+## 🇬🇧 [[_index_Inglese|Inglese]]
 ${getDescription("Inglese", dir)}
 
-## 📐 [[index_Matematica|Matematica]]
+## 📐 [[_index_Matematica|Matematica]]
 ${getDescription("Matematica", dir)}
 
-## 🌐 [[index_Sistemi e reti|Sistemi e reti]]
+## 🌐 [[_index_Sistemi e reti|Sistemi e reti]]
 ${getDescription("Sistemi e reti", dir)}
 
-## ⚙️ [[index_TIPSIT|TIPSIT]]
+## ⚙️ [[_index_TIPSIT|TIPSIT]]
 ${getDescription("TIPSIT", dir)}
 `;
     fs.writeFileSync(path.join(dir, "index.md"), content, "utf8");
@@ -255,21 +256,26 @@ ${getDescription("TIPSIT", dir)}
     return;
   }
 
-  // Inside a folder: index_folderName.md
-  const indexFileName = `index_${folderName}.md`;
+  // Inside a folder: _index_folderName.md
+  const indexFileName = `_index_${folderName}.md`;
   const indexPath = path.join(dir, indexFileName);
 
-  // Remove previous bracket index if present
+  // Remove previous bracket or un-underscored index if present
   const oldBracketIndex = path.join(dir, `index[${folderName}].md`);
   if (fs.existsSync(oldBracketIndex)) {
     fs.unlinkSync(oldBracketIndex);
     console.log(`Removed old bracket index: ${oldBracketIndex}`);
   }
+  const oldSimpleIndex = path.join(dir, `index_${folderName}.md`);
+  if (fs.existsSync(oldSimpleIndex)) {
+    fs.unlinkSync(oldSimpleIndex);
+    console.log(`Removed old simple index: ${oldSimpleIndex}`);
+  }
 
   // Check if there are other files in this directory (excluding index*)
   const currentEntries = fs.readdirSync(dir, { withFileTypes: true });
   const mdFiles = currentEntries
-    .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('index_') && !e.name.startsWith('index['))
+    .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('_index_') && !e.name.startsWith('index_') && !e.name.startsWith('index['))
     .map(e => e.name);
 
   // Remove any loose files with the same name as subfolders if present in this directory
@@ -283,7 +289,7 @@ ${getDescription("TIPSIT", dir)}
 
   // Re-read mdFiles after cleaning loose files
   const finalMdFiles = fs.readdirSync(dir, { withFileTypes: true })
-    .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('index_') && !e.name.startsWith('index['))
+    .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('_index_') && !e.name.startsWith('index_') && !e.name.startsWith('index['))
     .map(e => e.name);
 
   console.log(`Creating ${indexPath} with ${subdirs.length} subfolders and ${finalMdFiles.length} files...`);
@@ -308,7 +314,7 @@ ${currentFolderDesc}
     content += `\n### 📁 Cartelle e Moduli\n`;
     for (const s of subdirs) {
       const subDesc = getDescription(s.name, dir);
-      content += `\n- **[[index_${s.name}|${s.name}]]**\n  ${subDesc}\n`;
+      content += `\n- **[[_index_${s.name}|${s.name}]]**\n  ${subDesc}\n`;
     }
   }
 

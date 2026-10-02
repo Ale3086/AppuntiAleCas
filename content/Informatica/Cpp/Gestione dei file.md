@@ -21,9 +21,112 @@ Un' altra cosa importante è che i tipi di file con cui possiamo lavorare sono m
 - bin: file binari per memorizzare file o immagini, non apribili con editor di testo perché il risultato non sarà interpretabile e sarà gibberish; sono sequenze di bit.
 	
 	![](../Zimmagini/Pasted%20image%2020260518102242.jpg)
+## Gestione dei File in C++ (`<fstream>`)
 
-## Operazioni gestione file 
-### Apertura
+Nel C++ moderno la gestione dei file viene eseguita tramite flussi orientati agli oggetti (**stream**) inclusi nell'header `<fstream>`.
+
+La libreria mette a disposizione tre classi principali:
+1. **`ofstream`** (*Output File Stream*): per creare e **scrivere** dati su file.
+2. **`ifstream`** (*Input File Stream*): per aprire e **leggere** dati da file.
+3. **`fstream`**: per gestire contemporaneamente lettura e scrittura.
+
+---
+
+### 1. Scrivere su File con `ofstream`
+Scrivere su un file in C++ è intuitivo quanto stampare a schermo con `cout`, usando lo stesso operatore `<<`:
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    // 1. Apertura / Creazione del file in scrittura
+    ofstream fileScrittura("registro.txt");
+
+    // 2. Controllo apertura
+    if (!fileScrittura.is_open()) {
+        cerr << "Errore: impossibile creare o aprire il file!" << endl;
+        return 1;
+    }
+
+    // 3. Scrittura con l'operatore <<
+    fileScrittura << "Mario Rossi 8.5" << endl;
+    fileScrittura << "Luigi Bianchi 7.0" << endl;
+    fileScrittura << "Anna Verdi 9.5" << endl;
+
+    // 4. Chiusura del flusso
+    fileScrittura.close();
+    cout << "Dati scritti con successo nel file!" << endl;
+
+    return 0;
+}
+```
+
+#### Modalità di apertura aggiuntiva (`ios::app`)
+Di default `ofstream` sovrascrive interamente il file. Se desideri aggiungere dati in coda senza cancellare quelli già esistenti, specifica la modalità `ios::app` (*append*):
+
+```cpp
+ofstream fileAppend("registro.txt", ios::app);
+if (fileAppend.is_open()) {
+    fileAppend << "Nuovo Studente 10.0" << endl;
+    fileAppend.close();
+}
+```
+
+---
+
+### 2. Leggere da File con `ifstream`
+
+#### A. Lettura Riga per Riga con `getline()`
+È la modalità ideale per leggere file di testo in cui ogni riga rappresenta un record o una frase:
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    ifstream fileLettura("registro.txt");
+    string riga;
+
+    if (!fileLettura.is_open()) {
+        cerr << "File non trovato!" << endl;
+        return 1;
+    }
+
+    // Il ciclo while continua finché ci sono righe disponibili (fino a EOF)
+    while (getline(fileLettura, riga)) {
+        cout << "Riga letta: " << riga << endl;
+    }
+
+    fileLettura.close();
+    return 0;
+}
+```
+
+#### B. Lettura Formattata con l'Operatore `>>`
+Se conosci l'esatta formattazione del file (es. parole o numeri separati da spazi), puoi estrarre direttamente i dati nelle singole variabili:
+
+```cpp
+ifstream fileDati("registro.txt");
+string nome, cognome;
+float voto;
+
+while (fileDati >> nome >> cognome >> voto) {
+    cout << "Studente: " << cognome << " " << nome << " | Voto: " << voto << endl;
+}
+fileDati.close();
+```
+
+---
+
+## Gestione dei File a Basso Livello in C (`FILE*`)
+In molti contesti didattici, di programmazione di sistemi operativi o per la manipolazione di file binari puri (`.bin`), si utilizza la libreria standard del C (`<cstdio>`).
+
+### Apertura in C (`fopen`)
 Per aprire un file usiamo in C una funzione che si chiama `fopen`:
 
 ```C
