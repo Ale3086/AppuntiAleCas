@@ -13,8 +13,8 @@ Esercitazioni e tecniche pratiche per affrontare con successo le tracce audio de
 
 ### 📁 Cartelle e Moduli
 
-- **[[index[Esercizi]|Esercizi]]**
-  Appunti e nozioni di approfondimento su Esercizi.
+- **[[index_Esercizi|Esercizi]]**
+  Tracce audio ed esercizi guidati di comprensione orale Cambridge B2.
 
-- **[[index[Strategie]|Strategie]]**
-  Appunti e nozioni di approfondimento su Strategie.
+- **[[index_Strategie|Strategie]]**
+  Strategie specifiche per le domande a risposta multipla, completamento frasi e abbinamento dell'ascolto.

@@ -13,10 +13,10 @@ Sviluppo Web Frontend: struttura semantica delle pagine in HTML5, fogli di stile
 
 ### 📁 Cartelle e Moduli
 
-- **[[index[html]|html]]**
+- **[[index_html|html]]**
   Elementi fondamentali dell'HTML5: metadati, tag di testo, link, form, tabelle, componenti multimediali e semantica del layout.
 
-- **[[index[javaScript]|javaScript]]**
+- **[[index_javaScript|javaScript]]**
   Programmazione client-side con JS: fondamenti, strutture dati, sintassi moderna ES6+, programmazione asincrona, OOP e manipolazione del DOM.
 
 ### 📄 Note e Argomenti

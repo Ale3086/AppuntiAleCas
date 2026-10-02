@@ -13,11 +13,11 @@ Programmazione in C++: gestione della memoria, puntatori, array, funzioni, struc
 
 ### 📁 Cartelle e Moduli
 
-- **[[index[Librerie]|Librerie]]**
+- **[[index_Librerie|Librerie]]**
   Prontuario delle librerie standard di C++ (iostream, string, vector, algorithm) con funzioni, metodi e casi d'uso pratici.
 
-- **[[index[Teoria]|Teoria]]**
-  Regole grammaticali complete della lingua inglese: tempi verbali, conditionals, passive voice ed esercizi di consolidamento.
+- **[[index_Teoria|Teoria]]**
+  Concetti teorici del C++, architettura dei calcolatori e analisi computazionale degli algoritmi di ordinamento.
 
 ### 📄 Note e Argomenti
 

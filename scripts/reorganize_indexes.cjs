@@ -227,19 +227,19 @@ Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in 
 
 ---
 
-## 💻 [[index[Informatica]|Informatica]]
+## 💻 [[index_Informatica|Informatica]]
 ${getDescription("Informatica", dir)}
 
-## 🇬🇧 [[index[Inglese]|Inglese]]
+## 🇬🇧 [[index_Inglese|Inglese]]
 ${getDescription("Inglese", dir)}
 
-## 📐 [[index[Matematica]|Matematica]]
+## 📐 [[index_Matematica|Matematica]]
 ${getDescription("Matematica", dir)}
 
-## 🌐 [[index[Sistemi e reti]|Sistemi e reti]]
+## 🌐 [[index_Sistemi e reti|Sistemi e reti]]
 ${getDescription("Sistemi e reti", dir)}
 
-## ⚙️ [[index[TIPSIT]|TIPSIT]]
+## ⚙️ [[index_TIPSIT|TIPSIT]]
 ${getDescription("TIPSIT", dir)}
 `;
     fs.writeFileSync(path.join(dir, "index.md"), content, "utf8");
@@ -255,14 +255,21 @@ ${getDescription("TIPSIT", dir)}
     return;
   }
 
-  // Inside a folder: index[folderName].md
-  const indexFileName = `index[${folderName}].md`;
+  // Inside a folder: index_folderName.md
+  const indexFileName = `index_${folderName}.md`;
   const indexPath = path.join(dir, indexFileName);
 
-  // Check if there are other files in this directory (excluding index[...])
+  // Remove previous bracket index if present
+  const oldBracketIndex = path.join(dir, `index[${folderName}].md`);
+  if (fs.existsSync(oldBracketIndex)) {
+    fs.unlinkSync(oldBracketIndex);
+    console.log(`Removed old bracket index: ${oldBracketIndex}`);
+  }
+
+  // Check if there are other files in this directory (excluding index*)
   const currentEntries = fs.readdirSync(dir, { withFileTypes: true });
   const mdFiles = currentEntries
-    .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('index['))
+    .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('index_') && !e.name.startsWith('index['))
     .map(e => e.name);
 
   // Remove any loose files with the same name as subfolders if present in this directory
@@ -276,7 +283,7 @@ ${getDescription("TIPSIT", dir)}
 
   // Re-read mdFiles after cleaning loose files
   const finalMdFiles = fs.readdirSync(dir, { withFileTypes: true })
-    .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('index['))
+    .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('index_') && !e.name.startsWith('index['))
     .map(e => e.name);
 
   console.log(`Creating ${indexPath} with ${subdirs.length} subfolders and ${finalMdFiles.length} files...`);
@@ -300,8 +307,8 @@ ${currentFolderDesc}
   if (subdirs.length > 0) {
     content += `\n### 📁 Cartelle e Moduli\n`;
     for (const s of subdirs) {
-      const subDesc = getDescription(s.name);
-      content += `\n- **[[index[${s.name}]|${s.name}]]**\n  ${subDesc}\n`;
+      const subDesc = getDescription(s.name, dir);
+      content += `\n- **[[index_${s.name}|${s.name}]]**\n  ${subDesc}\n`;
     }
   }
 

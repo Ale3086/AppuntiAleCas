@@ -13,8 +13,8 @@ Lo studio del pensiero computazionale e della logica di programmazione: linguagg
 
 ### 📁 Cartelle e Moduli
 
-- **[[index[Cpp]|Cpp]]**
+- **[[index_Cpp|Cpp]]**
   Programmazione in C++: gestione della memoria, puntatori, array, funzioni, struct, classi, librerie e algoritmi di ordinamento.
 
-- **[[index[HTML]|HTML]]**
+- **[[index_HTML|HTML]]**
   Sviluppo Web Frontend: struttura semantica delle pagine in HTML5, fogli di stile CSS3 e programmazione interattiva con JavaScript.

@@ -10,17 +10,17 @@ Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in 
 
 ---
 
-## 💻 [[index[Informatica]|Informatica]]
+## 💻 [[index_Informatica|Informatica]]
 Lo studio del pensiero computazionale e della logica di programmazione: linguaggi C++, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.
 
-## 🇬🇧 [[index[Inglese]|Inglese]]
+## 🇬🇧 [[index_Inglese|Inglese]]
 Regole grammaticali complete, teoria dei tempi verbali, lessico tematico e preparazione intensiva per la certificazione linguistica Cambridge B2 First.
 
-## 📐 [[index[Matematica]|Matematica]]
+## 📐 [[index_Matematica|Matematica]]
 Geometria analitica (retta, coniche, circonferenza, parabola, ellisse, iperbole), goniometria, trigonometria, disequazioni e algebra avanzata.
 
-## 🌐 [[index[Sistemi e reti]|Sistemi e reti]]
+## 🌐 [[index_Sistemi e reti|Sistemi e reti]]
 Architettura delle reti di calcolatori, standard di cablaggio strutturato, apparati di rete e analisi approfondita dei 7 livelli del modello ISO-OSI.
 
-## ⚙️ [[index[TIPSIT]|TIPSIT]]
+## ⚙️ [[index_TIPSIT|TIPSIT]]
 Tecnologie Informatiche e Progettazione: sistemi operativi, digitalizzazione multimediale, teoria dei segnali, conversioni binarie e comandi shell.

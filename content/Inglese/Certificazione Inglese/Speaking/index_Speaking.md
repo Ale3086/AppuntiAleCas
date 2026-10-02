@@ -13,11 +13,11 @@ Preparazione alla prova orale: interazione con l'esaminatore, confronto a due tr
 
 ### 📁 Cartelle e Moduli
 
-- **[[index[Esercizi]|Esercizi]]**
-  Appunti e nozioni di approfondimento su Esercizi.
+- **[[index_Esercizi|Esercizi]]**
+  Domande tipo, simulazioni d'esame e tracce per fare pratica di conversazione.
 
-- **[[index[Strategie]|Strategie]]**
-  Appunti e nozioni di approfondimento su Strategie.
+- **[[index_Strategie|Strategie]]**
+  Frasari utili, connettivi logici e strategie per gestire le quattro parti dello Speaking test.
 
 ### 📄 Note e Argomenti
 

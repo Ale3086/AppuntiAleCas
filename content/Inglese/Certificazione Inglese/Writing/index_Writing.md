@@ -13,11 +13,11 @@ Modelli, regole di impaginazione e criteri di valutazione per essay (saggi argom
 
 ### 📁 Cartelle e Moduli
 
-- **[[index[Esercizi]|Esercizi]]**
-  Appunti e nozioni di approfondimento su Esercizi.
+- **[[index_Esercizi|Esercizi]]**
+  Tracce ed esercizi pratici di scrittura per il B2 First.
 
-- **[[index[Esercizi svolti]|Esercizi svolti]]**
-  Appunti e nozioni di approfondimento su Esercizi svolti.
+- **[[index_Esercizi svolti|Esercizi svolti]]**
+  Composizioni svolte con punteggio massimo ed analisi degli errori tipici da evitare.
 
-- **[[index[Strategie]|Strategie]]**
-  Appunti e nozioni di approfondimento su Strategie.
+- **[[index_Strategie|Strategie]]**
+  Formule di apertura/chiusura, registro linguistico (formale vs informale) e pianificazione del testo.

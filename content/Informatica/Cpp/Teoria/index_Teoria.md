@@ -13,7 +13,7 @@ Concetti teorici del C++, architettura dei calcolatori e analisi computazionale 
 
 ### 📁 Cartelle e Moduli
 
-- **[[index[Algoritmi di ordinamento]|Algoritmi di ordinamento]]**
+- **[[index_Algoritmi di ordinamento|Algoritmi di ordinamento]]**
   Implementazione, funzionamento passo-passo e complessità computazionale di Bubble Sort, Insertion Sort e Selection Sort.
 
 ### 📄 Note e Argomenti

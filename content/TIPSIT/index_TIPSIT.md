@@ -13,16 +13,16 @@ Tecnologie Informatiche e Progettazione: sistemi operativi, digitalizzazione mul
 
 ### 📁 Cartelle e Moduli
 
-- **[[index[Digitalizzazione e Multimedialità]|Digitalizzazione e Multimedialità]]**
+- **[[index_Digitalizzazione e Multimedialità|Digitalizzazione e Multimedialità]]**
   Teoria dei segnali, campionamento ADC (Nyquist-Shannon), raster vs vettoriale, modelli di colore (RGB/CMYK), compressione e video digitale.
 
-- **[[index[FileSystem]|FileSystem]]**
+- **[[index_FileSystem|FileSystem]]**
   Struttura gerarchica dei file system, gestione delle partizioni e guida pratica ai comandi terminali Linux (Bash) e Windows (PowerShell/CMD).
 
-- **[[index[Operazioni coi binari e conversioni]|Operazioni coi binari e conversioni]]**
+- **[[index_Operazioni coi binari e conversioni|Operazioni coi binari e conversioni]]**
   Sistemi numerici posizionali (binario, ottale, esadecimale), algoritmi di conversione con virgola, aritmetica binaria e complemento a due.
 
-- **[[index[Sistemi operativi]|Sistemi operativi]]**
+- **[[index_Sistemi operativi|Sistemi operativi]]**
   Architettura interna del sistema operativo: Kernel monolitico vs microkernel, Shell, modalità Ring (User/Kernel mode) e chiamate di sistema (System Call).
 
 ### 📄 Note e Argomenti
