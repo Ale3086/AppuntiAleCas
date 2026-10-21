@@ -387,11 +387,40 @@ for (const t of topics) {
         console.warn(`  -> No HTML content extracted for ${t.folderName}`);
     }
     
-    // Aggiorna l'index con la scheda NotebookLM
+    // Aggiorna l'index con la scheda NotebookLM (senza mai duplicare)
     const indexPath = path.join(t.dir, t.indexFile);
     let indexContent = fs.readFileSync(indexPath, "utf8");
     
-    const cardRegex = /<div class="notebooklm-box">[\s\S]*?<\/div>(\s*<\/div>)?/i;
+    // Rimuovi prima qualsiasi scheda o frammento preesistente
+    while (indexContent.includes('<div class="notebooklm-box">')) {
+        const startIdx = indexContent.indexOf('<div class="notebooklm-box">');
+        let depth = 0;
+        let endIdx = -1;
+        const divRegex = /<\/?div\b[^>]*>/gi;
+        divRegex.lastIndex = startIdx;
+        let match;
+        while ((match = divRegex.exec(indexContent)) !== null) {
+            if (match[0].startsWith('</')) {
+                depth--;
+                if (depth === 0) {
+                    endIdx = match.index + match[0].length;
+                    break;
+                }
+            } else {
+                depth++;
+            }
+        }
+        if (endIdx !== -1) {
+            indexContent = indexContent.slice(0, startIdx) + indexContent.slice(endIdx);
+        } else {
+            indexContent = indexContent.replace(/<div class="notebooklm-box">[\s\S]*$/i, "");
+            break;
+        }
+    }
+    indexContent = indexContent.replace(/<p class="notebooklm-desc">[\s\S]*?<\/div>\s*<\/div>/gi, "");
+    indexContent = indexContent.replace(/<div class="notebooklm-actions">[\s\S]*?<\/div>/gi, "");
+    indexContent = indexContent.replace(/<a[^>]+class="[^"]*btn-notebooklm[^"]*"[^>]*>[\s\S]*?<\/a>/gi, "");
+
     const cardHtml = `<div class="notebooklm-box">
   <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
   <p class="notebooklm-desc">
@@ -404,25 +433,21 @@ for (const t of topics) {
   </div>
 </div>`;
     
-    if (cardRegex.test(indexContent)) {
-        indexContent = indexContent.replace(cardRegex, cardHtml);
+    // Inserisci dopo H1
+    const h1Match = indexContent.match(/^(# [^\r\n]+\r?\n(?:[^\r\n#]+\r?\n)?)/m);
+    if (h1Match) {
+        indexContent = indexContent.replace(h1Match[0], `${h1Match[0]}\n${cardHtml}\n\n`);
     } else {
-        // Inserisci sotto al primo titolo H1
-        const h1Match = indexContent.match(/^# [^\r\n]+/m);
-        if (h1Match) {
-            const h1 = h1Match[0];
-            indexContent = indexContent.replace(h1, `${h1}\n\n${cardHtml}`);
+        const fmMatch = indexContent.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
+        if (fmMatch) {
+            indexContent = indexContent.replace(fmMatch[0], `${fmMatch[0]}\n${cardHtml}\n\n`);
         } else {
-            // Inserisci dopo il frontmatter o in cima
-            const fmMatch = indexContent.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
-            if (fmMatch) {
-                indexContent = indexContent.replace(fmMatch[0], `${fmMatch[0]}\n${cardHtml}\n\n`);
-            } else {
-                indexContent = `${cardHtml}\n\n${indexContent}`;
-            }
+            indexContent = `${cardHtml}\n\n${indexContent}`;
         }
     }
     
+    indexContent = indexContent.replace(/^[ \t]+$/gm, "");
+    indexContent = indexContent.replace(/\n{3,}/g, "\n\n").trim() + "\n";
     fs.writeFileSync(indexPath, indexContent, "utf8");
     console.log(`  -> Updated index: ${t.indexFile}`);
     processedCount++;

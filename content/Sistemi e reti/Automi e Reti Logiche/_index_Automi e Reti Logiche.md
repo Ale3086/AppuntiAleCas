@@ -15,15 +15,7 @@ description: "Teoria degli automi a stati finiti (FSM), modelli di Moore e Mealy
     </a>
   </div>
 </div>
-  <p class="notebooklm-desc">
-    Esporta l'intero modulo (<strong>4 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
-  </p>
-  <div class="notebooklm-actions">
-    <a href="Automi_e_Reti_Logiche_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
-      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
-    </a>
-  </div>
-</div>
+
 Teoria degli automi a stati finiti (FSM), modelli di Moore e Mealy, tabelle di transizione/trasformazione e circuiti sequenziali sincroni.
 
 ### **[[Automa di Moore - Riconoscitore di sequenze]]**

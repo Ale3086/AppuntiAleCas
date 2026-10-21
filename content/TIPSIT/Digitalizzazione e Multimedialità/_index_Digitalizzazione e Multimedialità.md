@@ -15,15 +15,7 @@ description: "Teoria dei segnali, campionamento ADC (Nyquist-Shannon), raster vs
     </a>
   </div>
 </div>
-  <p class="notebooklm-desc">
-    Esporta l'intero modulo (<strong>5 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
-  </p>
-  <div class="notebooklm-actions">
-    <a href="Digitalizzazione_e_Multimedialità_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
-      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
-    </a>
-  </div>
-</div>
+
 Teoria dei segnali, campionamento ADC (Nyquist-Shannon), raster vs vettoriale, modelli di colore (RGB/CMYK), compressione e video digitale.
 
 ### **[[1. Teoria dei Segnali e Conversione Analogico-Digitale]]**

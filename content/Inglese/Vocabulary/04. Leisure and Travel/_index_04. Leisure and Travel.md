@@ -15,15 +15,7 @@ description: "Parole ed espressioni per vacanze, aeroporto, trasporti, hotel, ho
     </a>
   </div>
 </div>
-  <p class="notebooklm-desc">
-    Esporta l'intero modulo (<strong>2 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
-  </p>
-  <div class="notebooklm-actions">
-    <a href="04._Leisure_and_Travel_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
-      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
-    </a>
-  </div>
-</div>
+
 Parole ed espressioni per vacanze, aeroporto, trasporti, hotel, hobby, media, cinema e tempo libero.
 
 ### **[[Media, Books and TV]]**

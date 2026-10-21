@@ -15,15 +15,7 @@ description: "Regole grammaticali complete della lingua inglese: tempi verbali, 
     </a>
   </div>
 </div>
-  <p class="notebooklm-desc">
-    Esporta l'intero modulo (<strong>4 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
-  </p>
-  <div class="notebooklm-actions">
-    <a href="Teoria_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
-      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
-    </a>
-  </div>
-</div>
+
 Regole grammaticali complete della lingua inglese: tempi verbali, conditionals, passive voice ed esercizi di consolidamento.
 
 ### **[[Conditionals]]**

@@ -16,27 +16,8 @@ I 7 livelli della pila ISO-OSI, incapsulamento PDU, apparati di rete (Switch, Ro
     </a>
   </div>
 </div>
-  <p class="notebooklm-desc">
-    Esporta l'intero modulo (<strong>9 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
-  </p>
-  <div class="notebooklm-actions">
-    <a href="Modello_ISO-OSI_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
-      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
-    </a>
-  </div>
-</div>
-  <p class="notebooklm-desc">
-    Esporta l'intero modulo (<strong>10 lezioni complete + tutti i 22 schemi, immagini e diagrammi</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
-  </p>
-  <div class="notebooklm-actions">
-    <a href="Modello_ISO-OSI_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
-      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
-    </a>
-  </div>
-</div>
 
-
-### **[[01_Introduzione alle reti informatiche]]**
+  ### **[[01_Introduzione alle reti informatiche]]**
 Concetti fondamentali delle reti di calcolatori: definizione, obiettivi primari, le 5 componenti essenziali (Host, Apparati, Mezzi, Protocolli, Servizi) e il modello universale di comunicazione.
 
 ### **[[02_Paradigmi di rete - Client-Server e Peer-to-Peer]]**
