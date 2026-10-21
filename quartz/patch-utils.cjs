@@ -5,6 +5,7 @@ const targets = [
   "node_modules/@quartz-community/utils/dist/path.js",
   "node_modules/@quartz-community/utils/dist/index.js",
   "node_modules/@quartz-community/crawl-links/dist/index.js",
+  "node_modules/@quartz-community/obsidian-flavored-markdown/dist/index.js",
 ];
 
 for (const target of targets) {
@@ -74,6 +75,52 @@ for (const target of targets) {
 
     if (content.includes(crawlOrig)) {
       content = content.replaceAll(crawlOrig, crawlReplacement);
+      modified = true;
+    }
+
+    const highlightOrig = `              if (opts.highlight) {
+                node2.value = node2.value.replace(
+                  /==((?!=).+?)==/g,
+                  \`<span class="text-highlight">$1</span>\`
+                );
+              }`;
+
+    const highlightReplacement = `              if (opts.highlight) {
+                node2.value = node2.value.replace(
+                  /==((?!=).+?)==/g,
+                  (_match, inner) => {
+                    const formatted = inner
+                      .replace(/\\*\\*(.+?)\\*\\*/g, "<strong>$1</strong>")
+                      .replace(/(?<!\\*)\\*([^*]+)\\*(?!\\*)/g, "<em>$1</em>");
+                    return \`<span class="text-highlight">\${formatted}</span>\`;
+                  }
+                );
+              }`;
+
+    if (content.includes(highlightOrig)) {
+      content = content.replaceAll(highlightOrig, highlightReplacement);
+      modified = true;
+    }
+
+    const astHighlightOrig = `                const highlightNode = node2;
+                const text6 = highlightNode.children?.map(getLiteralValue).join("") ?? "";
+                parent.children[index2] = {
+                  type: "html",
+                  value: \`<span class="text-highlight">\${text6}</span>\`
+                };`;
+
+    const astHighlightReplacement = `                const highlightNode = node2;
+                const text6 = highlightNode.children?.map(getLiteralValue).join("") ?? "";
+                const formatted = text6
+                  .replace(/\\*\\*(.+?)\\*\\*/g, "<strong>$1</strong>")
+                  .replace(/(?<!\\*)\\*([^*]+)\\*(?!\\*)/g, "<em>$1</em>");
+                parent.children[index2] = {
+                  type: "html",
+                  value: \`<span class="text-highlight">\${formatted}</span>\`
+                };`;
+
+    if (content.includes(astHighlightOrig)) {
+      content = content.replaceAll(astHighlightOrig, astHighlightReplacement);
       modified = true;
     }
 

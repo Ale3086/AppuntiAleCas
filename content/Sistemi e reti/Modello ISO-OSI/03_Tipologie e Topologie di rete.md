@@ -11,8 +11,8 @@ tags:
 # Tipologie e Topologie delle Reti Informatiche
 
 > [!NOTE] Distinzione Fondamentale
-> - ==**Tipologia di rete:**== definisce l'==**estensione geografica**== e la scala territoriale coperta (*quanto distano i nodi tra loro*).
-> - ==**Topologia di rete:**== definisce la ==**geometria**== e la disposizione logica o fisica dei collegamenti (*come sono interconnessi i nodi*).
+> - **==Tipologia di rete:==** definisce l'**==estensione geografica==** e la scala territoriale coperta (*quanto distano i nodi tra loro*).
+> - **==Topologia di rete:==** definisce la **==geometria==** e la disposizione logica o fisica dei collegamenti (*come sono interconnessi i nodi*).
 
 ---
 
@@ -33,7 +33,7 @@ La copertura geografica determina le tecnologie trasmissive e le prestazioni del
 | **GAN** | *Global Area Network* | Globale | ==Rete planetaria== interconnessa tramite dorsali sottomarine in fibra e satelliti. |
 
 > [!NOTE] Internet: WAN planetaria o GAN?
-> Nei testi scolastici **GAN** identifica una rete globale (Internet). In ambito ingegneristico, Internet è formalmente una ==**federazione mondiale di WAN interconnesse**== appartenenti a diversi *Autonomous Systems* (AS), coordinate dal protocollo di routing BGP (*Border Gateway Protocol*).
+> Nei testi scolastici **GAN** identifica una rete globale (Internet). In ambito ingegneristico, Internet è formalmente una **==federazione mondiale di WAN interconnesse==** appartenenti a diversi *Autonomous Systems* (AS), coordinate dal protocollo di routing BGP (*Border Gateway Protocol*).
 
 ---
 
@@ -49,10 +49,10 @@ La copertura geografica determina le tecnologie trasmissive e le prestazioni del
 
 ### Segmentazione Perimetrale Enterprise
 
-- ==**Intranet:**== rete interna protetta, ==riservata esclusivamente al personale autorizzato== (gestionali interni, cartelle condivise, registri).
-- ==**Extranet:**== sezione protetta della rete resa accessibile a ==partner commerciali, fornitori o filiali remote tramite VPN== cifrata.
-- ==**DMZ (*De-Militarized Zone*):**== sottorete cuscinetto perimetrale che ==espone all'esterno i servizi pubblici (Web, DNS, mail)==. Se un server in DMZ viene compromesso, la LAN interna resta segregata e protetta.
-- ==**Isolamento Didattico (VLAN):**== nelle scuole, la rete cablata viene ==suddivisa in VLAN isolate== (Presidenza, Segreteria, Laboratori studenti), affiancata da Wi-Fi con Captive Portal.
+- **==Intranet:==** rete interna protetta, ==riservata esclusivamente al personale autorizzato== (gestionali interni, cartelle condivise, registri).
+- **==Extranet:==** sezione protetta della rete resa accessibile a ==partner commerciali, fornitori o filiali remote tramite VPN== cifrata.
+- **==DMZ (*De-Militarized Zone*):==** sottorete cuscinetto perimetrale che ==espone all'esterno i servizi pubblici (Web, DNS, mail)==. Se un server in DMZ viene compromesso, la LAN interna resta segregata e protetta.
+- **==Isolamento Didattico (VLAN):==** nelle scuole, la rete cablata viene ==suddivisa in VLAN isolate== (Presidenza, Segreteria, Laboratori studenti), affiancata da Wi-Fi con Captive Portal.
 
 ---
 
@@ -74,8 +74,8 @@ Nelle infrastrutture reali convivono due tecnologie complementari:
 ## 4. Topologia Fisica e Logica
 
 > [!IMPORTANT] Topologia Fisica vs Topologia Logica
-> - ==**Topologia Fisica:**== disposizione geometrica reale di cavi e apparati (*come sono posati fisicamente i fili*).
-> - ==**Topologia Logica:**== percorso e modalità con cui i segnali transitano sul canale (*come viaggiano effettivamente i frame*).
+> - **==Topologia Fisica:==** disposizione geometrica reale di cavi e apparati (*come sono posati fisicamente i fili*).
+> - **==Topologia Logica:==** percorso e modalità con cui i segnali transitano sul canale (*come viaggiano effettivamente i frame*).
 > *(Esempio d'esame: una rete fisicamente collegata a **Stella** tramite un vecchio Hub opera logicamente come un **Bus condiviso**).*
 
 ![[Topologia-reti-informatiche-750x600.webp]]

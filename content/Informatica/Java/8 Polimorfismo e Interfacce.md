@@ -6,13 +6,13 @@ tags:
 ---
 ## 1. Cos'è il Polimorfismo
 
-Il termine ==**Polimorfismo**== (dal greco *poly* = molti, *morphé* = forma) è il ==terzo pilastro fondamentale== della programmazione ad oggetti, dopo Incapsulamento ed Ereditarietà.
+Il termine **==Polimorfismo==** (dal greco *poly* = molti, *morphé* = forma) è il ==terzo pilastro fondamentale== della programmazione ad oggetti, dopo Incapsulamento ed Ereditarietà.
 
 Indica la ==capacità di un'entità software di assumere forme e comportamenti differenti== a seconda dell'oggetto a cui si riferisce a tempo di esecuzione.
 
 Si divide in due macro-categorie:
-1. ==**Polimorfismo per i Dati**== (Riferimento Polimorfico e Collezioni Eterogenee).
-2. ==**Polimorfismo per i Metodi**== (Overloading a compile-time vs Overriding a runtime).
+1. **==Polimorfismo per i Dati==** (Riferimento Polimorfico e Collezioni Eterogenee).
+2. **==Polimorfismo per i Metodi==** (Overloading a compile-time vs Overriding a runtime).
 
 ---
 
@@ -76,12 +76,12 @@ if (f1 instanceof Cerchio) {
 
 | Caratteristica | Overloading (Sovraccarico) | Overriding (Sovrascrittura) |
 | :--- | :--- | :--- |
-| **Dove si applica?** | Nella ==**stessa classe**== | Tra ==**Superclasse e Sottoclasse**== |
+| **Dove si applica?** | Nella **==stessa classe==** | Tra **==Superclasse e Sottoclasse==** |
 | **Nome del metodo** | Identico | Identico |
-| **Lista Parametri** | ==**DIVERSA**== (per numero o tipo di dati) | ==**IDENTICA**== per numero e tipi |
+| **Lista Parametri** | **==DIVERSA==** (per numero o tipo di dati) | **==IDENTICA==** per numero e tipi |
 | **Tipo di Ritorno** | Può essere diverso | Deve essere identico (o covariante) |
-| **Momento di Risoluzione**| ==**Compile-Time**== (Static / Early Binding) | ==**Runtime**== (Dynamic / Late Binding) |
-| **Annotazione** | Nessuna | ==**`@Override`**== |
+| **Momento di Risoluzione**| **==Compile-Time==** (Static / Early Binding) | **==Runtime==** (Dynamic / Late Binding) |
+| **Annotazione** | Nessuna | **==`@Override`==** |
 
 ### Late Binding (Dynamic Dispatch)
 Quando invochi `fig.calcolaArea()`, il compilatore non sa quale formula verrà eseguita.  
@@ -97,7 +97,7 @@ Caratteristiche fondamentali:
 - Si dichiara con la parola chiave ==`interface`==.
 - Tutti i metodi sono implicitamente ==`public abstract`== (firme pure senza corpo).
 - Non possiede variabili di istanza, solo costanti ==`public static final`==.
-- ==**Ereditarietà Multipla Permessa**==: una classe può implementare ==un numero illimitato di interfacce== tramite la parola chiave ==`implements`==!
+- **==Ereditarietà Multipla Permessa==**: una classe può implementare ==un numero illimitato di interfacce== tramite la parola chiave ==`implements`==!
 
 ```mermaid
 classDiagram
@@ -164,9 +164,9 @@ public class Cerchio extends Figura implements Disegnabile, Stampabile3D {
 | Criterio | Classe Astratta (`abstract class`) | Interfaccia (`interface`) |
 | :--- | :--- | :--- |
 | **Relazione concettuale** | Relazione di appartenenza: ==**"is-a"** (È un)== | Relazione di abilità: ==**"can-do"** (Sa fare)== |
-| **Ereditarietà** | ==**Singola**==: solo 1 superclasse (`extends`) | ==**Multipla**==: $N$ interfacce (`implements`) |
+| **Ereditarietà** | **==Singola==**: solo 1 superclasse (`extends`) | **==Multipla==**: $N$ interfacce (`implements`) |
 | **Attributi** | Può avere attributi di istanza (`private`, `protected`) | ==Solo costanti pubbliche statiche== (`public static final`) |
-| **Costruttori** | ==**Sì**==, per inizializzare i campi ereditati | ==**No**==, non può avere alcun costruttore |
+| **Costruttori** | **==Sì==**, per inizializzare i campi ereditati | **==No==**, non può avere alcun costruttore |
 | **Scopo Primario** | Condivisione di stato e codice comune | Garanzia di un protocollo o contratto di comunicazione |
 
 ---
@@ -178,10 +178,10 @@ public class Cerchio extends Figura implements Disegnabile, Stampabile3D {
 > - **Cosa ricercare su Google / Web**:  
 >   *"NClass UML interface realization dashed triangle arrow"*, *"Polymorphism UML class diagram interface implementation"*.
 > - **Come disegnarlo passo-passo su NClass**:
->   1. Su **NClass**, seleziona lo strumento ==**Interface**== nella barra superiore e posizionalo sul foglio.
+>   1. Su **NClass**, seleziona lo strumento **==Interface==** nella barra superiore e posizionalo sul foglio.
 >   2. Nominalo `Disegnabile` e aggiungi il metodo `disegna(): void`. NClass apporrà automaticamente lo stereotipo ==`<<interface>>`==.
 >   3. Crea la classe concreta `Cerchio`.
->   4. Seleziona lo strumento ==**Realization**== (noto anche come *Implementation*: ==freccia tratteggiata con triangolo vuoto `- - - ▷`==).
+>   4. Seleziona lo strumento **==Realization==** (noto anche come *Implementation*: ==freccia tratteggiata con triangolo vuoto `- - - ▷`==).
 >   5. Trascina la freccia da `Cerchio` fino a `Disegnabile`.
 >   6. Esporta il diagramma e inseriscilo nel vault come `java_uml_nclass_interfacce_polimorfismo.png`.
 

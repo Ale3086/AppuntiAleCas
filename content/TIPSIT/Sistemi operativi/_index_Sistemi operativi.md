@@ -3,6 +3,27 @@ title: "Sistemi operativi"
 description: "Architettura interna del sistema operativo: Kernel monolitico vs microkernel, Shell, modalità Ring (User/Kernel mode) e chiamate di sistema (System Call)."
 ---
 # 📂 Sistemi operativi
+
+<div class="notebooklm-box">
+  <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
+  <p class="notebooklm-desc">
+    Esporta l'intero modulo (<strong>3 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
+  </p>
+  <div class="notebooklm-actions">
+    <a href="Sistemi_operativi_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
+      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
+    </a>
+  </div>
+</div>
+  <p class="notebooklm-desc">
+    Esporta l'intero modulo (<strong>3 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
+  </p>
+  <div class="notebooklm-actions">
+    <a href="Sistemi_operativi_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
+      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
+    </a>
+  </div>
+</div>
 Architettura interna del sistema operativo: Kernel monolitico vs microkernel, Shell, modalità Ring (User/Kernel mode) e chiamate di sistema (System Call).
 
 ### **[[1. Il Ruolo del Sistema Operativo]]**

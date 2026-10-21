@@ -6,11 +6,11 @@ tags:
 ---
 ## 1. Cos'è un Costruttore
 
-Il ==**Costruttore**== è il componente deputato a far nascere un oggetto in uno stato coerente e garantito.
+Il **==Costruttore==** è il componente deputato a far nascere un oggetto in uno stato coerente e garantito.
 
 In Java, il costruttore ha due caratteristiche sintattiche inconfondibili:
-1. Ha ==**esattamente lo stesso nome della classe**== (rispettando maiuscole e minuscole).
-2. ==**Non specifica alcun tipo di ritorno**==, nemmeno la parola chiave `void`.
+1. Ha **==esattamente lo stesso nome della classe==** (rispettando maiuscole e minuscole).
+2. **==Non specifica alcun tipo di ritorno==**, nemmeno la parola chiave `void`.
 
 ```java
 public class Smartphone {
@@ -115,7 +115,7 @@ public Monoposto(int cavalli, float peso, String colore) {
 ### 3. Costruttore di Copia (*Copy Constructor*)
 Se scriviamo `Monoposto b = a;`, **non stiamo duplicando la vettura**: abbiamo solo creato due puntatori nello Stack che guardano la stessa identica macchina nello Heap (==effetto aliasing==). Modificando `b`, cambierà anche `a`!
 
-Per creare una ==**vera copia indipendente**== usiamo il costruttore di copia:
+Per creare una **==vera copia indipendente==** usiamo il costruttore di copia:
 ```java
 public Monoposto(Monoposto sorgente) {
     // Clona tutti i valori dell'oggetto sorgente nel nuovo oggetto
@@ -130,7 +130,7 @@ public Monoposto(Monoposto sorgente) {
 
 ## 3. La Parola Chiave `this`
 
-La parola chiave ==**`this`**== è un riferimento implicito all'**istanza corrente** su cui è stato invocato il codice. Ha due utilizzi capitali:
+La parola chiave **==`this`==** è un riferimento implicito all'**istanza corrente** su cui è stato invocato il codice. Ha due utilizzi capitali:
 
 ### A. Disambiguazione di Nomi (Shadowing)
 Quando il nome del parametro formale del costruttore è identico al nome dell'attributo della classe, l'attributo viene "nascosto" (*shadowed*). Per indicare al compilatore l'attributo usiamo ==`this.`==:
@@ -184,10 +184,10 @@ flowchart LR
     style OBJ fill:#ffe873,stroke:#ffd43b,color:#000
 ```
 
-1. ==**Allocazione**==: riserva un blocco contiguo di byte nello Heap sufficiente a contenere tutti gli attributi della classe.
-2. ==**Inizializzazione di Default**==: azzera tutti i bit dei campi (numeri a $0$, booleani a `false`, riferimenti a `null`).
-3. ==**Esecuzione Costruttore**==: esegue le istruzioni del corpo del costruttore passato con i parametri specificati.
-4. ==**Assegnazione Riferimento**==: l'indirizzo esadecimale dell'oggetto allocato nello Heap viene memorizzato nella variabile `f1` nello Stack.
+1. **==Allocazione==**: riserva un blocco contiguo di byte nello Heap sufficiente a contenere tutti gli attributi della classe.
+2. **==Inizializzazione di Default==**: azzera tutti i bit dei campi (numeri a $0$, booleani a `false`, riferimenti a `null`).
+3. **==Esecuzione Costruttore==**: esegue le istruzioni del corpo del costruttore passato con i parametri specificati.
+4. **==Assegnazione Riferimento==**: l'indirizzo esadecimale dell'oggetto allocato nello Heap viene memorizzato nella variabile `f1` nello Stack.
 
 ---
 

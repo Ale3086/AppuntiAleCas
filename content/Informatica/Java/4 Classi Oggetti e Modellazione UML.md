@@ -28,25 +28,25 @@ flowchart TD
     style O fill:#d4edda,stroke:#28a745,color:#155724
 ```
 
-- ==**Classe**==: è il **modello astratto**, il progetto architettonico o stampo (es. la scheda tecnica di una vettura di Formula 1).
-- ==**Oggetto (o Istanza)**==: è l'**esemplare reale, tangibile**, generato a partire dalla classe e residente nella memoria Heap (es. la singola monoposto con telaio #16 guidata da Leclerc).
+- **==Classe==**: è il **modello astratto**, il progetto architettonico o stampo (es. la scheda tecnica di una vettura di Formula 1).
+- **==Oggetto (o Istanza)==**: è l'**esemplare reale, tangibile**, generato a partire dalla classe e residente nella memoria Heap (es. la singola monoposto con telaio #16 guidata da Leclerc).
 
 ---
 
 ## 2. Anatomia di una Classe in UML (Software NClass)
 
-Nei progetti software professionali le classi si progettano visivamente con lo standard universale ==**UML (Unified Modeling Language)**==, utilizzando strumenti visuali come **NClass**.
+Nei progetti software professionali le classi si progettano visivamente con lo standard universale **==UML (Unified Modeling Language)==**, utilizzando strumenti visuali come **NClass**.
 
-Nel diagramma UML, una classe è rappresentata graficamente come una scatola divisa in ==**tre scomparti orizzontali**==:
+Nel diagramma UML, una classe è rappresentata graficamente come una scatola divisa in **==tre scomparti orizzontali==**:
 
 ![[Pasted image 20261020103245.png|277]]
 
-1. ==**Scomparto Superiore (Intestazione)**==:  
-   Contiene il **Nome della Classe**, scritto obbligatoriamente con la prima lettera maiuscola in notazione ==**PascalCase**== (es. `Monoposto`, `ContoCorrente`).
-2. ==**Scomparto Centrale (Attributi / Campi)**==:  
+1. **==Scomparto Superiore (Intestazione)==**:  
+   Contiene il **Nome della Classe**, scritto obbligatoriamente con la prima lettera maiuscola in notazione **==PascalCase==** (es. `Monoposto`, `ContoCorrente`).
+2. **==Scomparto Centrale (Attributi / Campi)==**:  
    Elenca le variabili di istanza che definiscono lo **stato** dell'oggetto.  
    *Sintassi UML*: `visibilità nomeAttributo : Tipo` (es. `- cavalli : int`).
-3. ==**Scomparto Inferiore (Metodi / Operazioni)**==:  
+3. **==Scomparto Inferiore (Metodi / Operazioni)==**:  
    Elenca le funzioni che definiscono il **comportamento** dell'oggetto.  
    *Sintassi UML*: `visibilità nomeMetodo(parametro : Tipo) : TipoRitorno` (es. `+ accelera(delta : int) : int`).
 
@@ -58,17 +58,17 @@ In Java e nei diagrammi UML, ogni attributo e metodo è preceduto da un simbolo 
 
 | Simbolo UML | Modificatore Java   | Livello di Visibilità      | Spiegazione Dettagliata                                                                                                                                |
 | :---------: | :------------------ | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ==**`-`**== | ==**`private`**==   | **Solo la Classe stessa**  | I membri privati sono invisibili a chiunque all'esterno della classe (pilastro dell'Incapsulamento).                                                   |
-| ==**`+`**== | ==**`public`**==    | **Tutto il Mondo**         | Accessibili liberamente da qualsiasi altra classe di qualsiasi package dell'applicazione.                                                              |
-| ==**`#`**== | ==**`protected`**== | **Package + Sottoclassi**  | Accessibili dalle classi nello stesso package e da tutte le classi figlie che ereditano, ovunque siano.                                                |
-|             | ==*(Default)*==     | **Solo lo Stesso Package** | Detto ==**Package-Private**==. Se non scrivi alcun modificatore, il membro è visibile solo alle classi situate nella stessa identica cartella/package. |
+| **==`-`==** | **==`private`==**   | **Solo la Classe stessa**  | I membri privati sono invisibili a chiunque all'esterno della classe (pilastro dell'Incapsulamento).                                                   |
+| **==`+`==** | **==`public`==**    | **Tutto il Mondo**         | Accessibili liberamente da qualsiasi altra classe di qualsiasi package dell'applicazione.                                                              |
+| **==`#`==** | **==`protected`==** | **Package + Sottoclassi**  | Accessibili dalle classi nello stesso package e da tutte le classi figlie che ereditano, ovunque siano.                                                |
+|             | ==*(Default)*==     | **Solo lo Stesso Package** | Detto **==Package-Private==**. Se non scrivi alcun modificatore, il membro è visibile solo alle classi situate nella stessa identica cartella/package. |
 
 
 ---
 
 ## 4. Incapsulamento: Metodi Query (Getter) e Modificatori (Setter)
 
-L'==**Incapsulamento (*Information Hiding*)**== è la regola cardine della OOP:
+L'**==Incapsulamento (*Information Hiding*)==** è la regola cardine della OOP:
 $$\text{==Gli attributi devono essere SEMPRE privati (-) e mai accessibili direttamente dall'esterno!==}$$
 
 Se un attributo fosse `public`, qualsiasi codice esterno potrebbe impostare dati privi di senso, corrompendo lo stato dell'oggetto (es. `auto.velocita = -300;` oppure `auto.cavalli = 0;`).
@@ -88,14 +88,14 @@ flowchart LR
     style SET fill:#d4edda,stroke:#28a745,color:#155724
 ```
 
-1. ==**Metodi Query (o Getter / Ispettori)**==:  
+1. **==Metodi Query (o Getter / Ispettori)==**:  
    Hanno lo scopo di **interrogare e leggere** lo stato dell'oggetto restituendo il valore dell'attributo, senza modificarlo:
    ```java
    public int getVelocita() {
        return this.velocita;
    }
    ```
-2. ==**Metodi Modificatori (o Setter)**==:  
+2. **==Metodi Modificatori (o Setter)==**:  
    Hanno lo scopo di **aggiornare** il valore dell'attributo, ==applicando tassativamente controlli di coerenza e validazione== prima della scrittura:
    ```java
    public void setVelocita(int nuovaVelocita) {

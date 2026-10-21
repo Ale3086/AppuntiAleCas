@@ -15,7 +15,7 @@ Inizialmente battezzato con il nome di *Oak* (quercia), il linguaggio venne poi 
 A differenza del C++ (progettato per dare il massimo controllo sull'hardware a discapito della portabilità), Java nasceva con l'obiettivo rivoluzionario di superare la frammentazione dei sistemi operativi:
 $$\text{==\"Write Once, Run Anywhere\"== (Scrivi una volta, esegui ovunque)}$$
 
-Oggi Java è ampiamente open-source attraverso il progetto ==**OpenJDK**==, e non richiede l'acquisto di licenze proprietarie per lo sviluppo standard.
+Oggi Java è ampiamente open-source attraverso il progetto **==OpenJDK==**, e non richiede l'acquisto di licenze proprietarie per lo sviluppo standard.
 
 ---
 
@@ -44,9 +44,9 @@ flowchart TD
 ```
 
 1. **Fase di Compilazione Statica (`javac`)**:  
-   Il file sorgente con estensione `.java` viene analizzato dal compilatore `javac`. Il risultato non è un eseguibile binario nativo (come accade in C++ con i file `.exe`), bensì un file binario intermedio e indipendente dall'architettura hardware chiamato ==**Bytecode**== (con estensione `.class`).
+   Il file sorgente con estensione `.java` viene analizzato dal compilatore `javac`. Il risultato non è un eseguibile binario nativo (come accade in C++ con i file `.exe`), bensì un file binario intermedio e indipendente dall'architettura hardware chiamato **==Bytecode==** (con estensione `.class`).
 2. **Fase di Esecuzione Virtuale (JVM)**:  
-   Il bytecode viene preso in carico dalla ==**Java Virtual Machine (JVM)**== installata sul computer dell'utente finale, che lo interpreta ed esegue.
+   Il bytecode viene preso in carico dalla **==Java Virtual Machine (JVM)==** installata sul computer dell'utente finale, che lo interpreta ed esegue.
 
 ---
 
@@ -73,9 +73,9 @@ flowchart TD
 
 | Componente  | Nome Esteso                | Cosa Contiene?                                                                                                                 | A Chi Serve?                                                                    |
 | :---------- | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------ |
-| ==**JVM**== | *Java Virtual Machine*     | Motore software che interpreta il bytecode, compila le parti critiche a runtime (JIT) e gestisce la RAM col Garbage Collector. | È il componente che **esegue** effettivamente le istruzioni.                    |
-| ==**JRE**== | *Java Runtime Environment* | La **JVM** + tutte le **librerie standard di runtime** precompilate (Class Library).                                           | Serve all'utente finale per poter ==eseguire i programmi Java== sul proprio PC. |
-| ==**JDK**== | *Java Development Kit*     | Il **JRE** + tutti gli **strumenti per lo sviluppatore**: compilatore `javac`, archiviatore `jar`, debugger `jdb`, `javadoc`.  | Serve al programmatore per ==scrivere e compilare== nuovo codice Java.          |
+| **==JVM==** | *Java Virtual Machine*     | Motore software che interpreta il bytecode, compila le parti critiche a runtime (JIT) e gestisce la RAM col Garbage Collector. | È il componente che **esegue** effettivamente le istruzioni.                    |
+| **==JRE==** | *Java Runtime Environment* | La **JVM** + tutte le **librerie standard di runtime** precompilate (Class Library).                                           | Serve all'utente finale per poter ==eseguire i programmi Java== sul proprio PC. |
+| **==JDK==** | *Java Development Kit*     | Il **JRE** + tutti gli **strumenti per lo sviluppatore**: compilatore `javac`, archiviatore `jar`, debugger `jdb`, `javadoc`.  | Serve al programmatore per ==scrivere e compilare== nuovo codice Java.          |
 
 ![[Pasted image 20261020093904.png]]
 

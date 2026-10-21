@@ -17,11 +17,11 @@ public class Calcolatrice {
 }
 ```
 
-- ==**`public`**==: il metodo è accessibile dall'esterno da parte della JVM.
-- ==**`static`**==: il metodo appartiene alla classe e può essere invocato dalla JVM senza dover prima istanziare un oggetto.
-- ==**`void`**==: non restituisce alcun valore al sistema operativo.
-- ==**`main`**==: il nome convenzionale del punto di avvio.
-- ==**`String[] args`**==: array di stringhe contenente gli eventuali argomenti passati da riga di comando.
+- **==`public`==**: il metodo è accessibile dall'esterno da parte della JVM.
+- **==`static`==**: il metodo appartiene alla classe e può essere invocato dalla JVM senza dover prima istanziare un oggetto.
+- **==`void`==**: non restituisce alcun valore al sistema operativo.
+- **==`main`==**: il nome convenzionale del punto di avvio.
+- **==`String[] args`==**: array di stringhe contenente gli eventuali argomenti passati da riga di comando.
 
 ---
 
@@ -50,14 +50,14 @@ flowchart TD
 
 | Tipo              | Dimensione      | Note & Regole di Sintassi                                              |
 | :---------------- | :-------------- | :--------------------------------------------------------------------- |
-| ==**`byte`**==    | 8 bit (1 byte)  | Utile per buffer grezzi di byte e socket di rete.                      |
-| ==**`short`**==   | 16 bit (2 byte) |                                                                        |
-| ==**`int`**==     | 32 bit (4 byte) | Tipo predefinito per numeri interi.                                    |
-| ==**`long`**==    | 64 bit (8 byte) | ==Richiede obbligatoriamente il suffisso `L`==.                        |
-| ==**`float`**==   | 32 bit (4 byte) | ==Richiede obbligatoriamente il suffisso `f`==.                        |
-| ==**`double`**==  | 64 bit (8 byte) | Tipo predefinito standard per numeri decimali.                         |
-| ==**`char`**==    | 16 bit (2 byte) | Apici singoli `'...'`. ==Supporta caratteri internazionali ed emoji==! |
-| ==**`boolean`**== | 1 bit logico    | ==NON è un numero intero== (nessun cast da/verso 0 e 1 come in C++!).  |
+| **==`byte`==**    | 8 bit (1 byte)  | Utile per buffer grezzi di byte e socket di rete.                      |
+| **==`short`==**   | 16 bit (2 byte) |                                                                        |
+| **==`int`==**     | 32 bit (4 byte) | Tipo predefinito per numeri interi.                                    |
+| **==`long`==**    | 64 bit (8 byte) | ==Richiede obbligatoriamente il suffisso `L`==.                        |
+| **==`float`==**   | 32 bit (4 byte) | ==Richiede obbligatoriamente il suffisso `f`==.                        |
+| **==`double`==**  | 64 bit (8 byte) | Tipo predefinito standard per numeri decimali.                         |
+| **==`char`==**    | 16 bit (2 byte) | Apici singoli `'...'`. ==Supporta caratteri internazionali ed emoji==! |
+| **==`boolean`==** | 1 bit logico    | ==NON è un numero intero== (nessun cast da/verso 0 e 1 come in C++!).  |
 
 ---
 
@@ -65,7 +65,7 @@ flowchart TD
 
 In Java i tipi primitivi non sono oggetti (per massimizzare la velocità nei calcoli elementari nello Stack). Tuttavia, le strutture dati dinamiche della libreria standard (come `ArrayList`) richiedono necessariamente oggetti.
 
-A tale scopo, ogni tipo primitivo possiede una corrispondente ==**Classe Wrapper**== (*Involucro*):
+A tale scopo, ogni tipo primitivo possiede una corrispondente **==Classe Wrapper==** (*Involucro*):
 - `int` $\rightarrow$ ==`Integer`==
 - `double` $\rightarrow$ ==`Double`==
 - `char` $\rightarrow$ ==`Character`==
@@ -115,12 +115,12 @@ In Java le stringhe non sono semplici array di caratteri terminati da `\0` come 
 ## 5. Conversioni di Tipo (Casting) e Parsing
 
 ### A. Casting Implicito ed Esplicito
-- ==**Widening (Allargamento implicito)**==: assegnazione da tipo più piccolo a uno più capiente senza perdita di precisione (es. da `int` a `double`):
+- **==Widening (Allargamento implicito)==**: assegnazione da tipo più piccolo a uno più capiente senza perdita di precisione (es. da `int` a `double`):
   ```java
   int x = 10;
   double d = x; // Automatico: d vale 10.0
   ```
-- ==**Narrowing (Restringimento esplicito)**==: forzatura manuale con cast tra parentesi tonde, rischiando troncamento:
+- **==Narrowing (Restringimento esplicito)==**: forzatura manuale con cast tra parentesi tonde, rischiando troncamento:
   ```java
   double pi = 3.99;
   int intero = (int) pi; // Tronca la parte decimale: intero vale 3!

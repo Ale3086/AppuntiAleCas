@@ -125,7 +125,7 @@ public class Monoposto {
 ---
 
 ### 5. Generalizzazione (*Generalization* - relazione ==\"is-a\"==)
-Rappresenta l'==**ereditarietà**== tra una superclasse generale e una sottoclasse specifica.
+Rappresenta l'**==ereditarietà==** tra una superclasse generale e una sottoclasse specifica.
 - La sottoclasse "è una" versione specializzata della classe base.
 - **Simbolo UML**: linea continua con ==**freccia a triangolo vuoto** `—▷`== che punta verso la classe genitore.
 - *Esempio*: la classe `Monoposto` è una generalizzazione di `VeicoloDaCorsa`.

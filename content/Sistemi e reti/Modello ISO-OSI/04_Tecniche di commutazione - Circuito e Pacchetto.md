@@ -13,8 +13,8 @@ tags:
 > [!NOTE] Definizione di Commutazione
 > La **commutazione** (*switching*) è il processo con cui i nodi intermedi di una rete instradano le informazioni dall'interfaccia di ingresso a quella di uscita corretta, consentendo il collegamento tra nodi non direttamente connessi tra loro da un cavo dedicato.
 > I due paradigmi fondamentali sono:
-> - ==**Commutazione di Circuito:**== canale ==dedicato ed esclusivo==.
-> - ==**Commutazione di Pacchetto:**== canale ==condiviso e instradamento dinamico a blocchi==.
+> - **==Commutazione di Circuito:==** canale ==dedicato ed esclusivo==.
+> - **==Commutazione di Pacchetto:==** canale ==condiviso e instradamento dinamico a blocchi==.
 
 ---
 
@@ -26,9 +26,9 @@ Tecnologia classica concepita per le telecomunicazioni vocali analogiche (rete t
 
 ### Le 3 Fasi Sequenziali del Collegamento
 
-1. ==**Instaurazione del circuito (*Call Setup*):**== prima di scambiare dati, la rete stabilisce un ==percorso fisico e logico continuo ed esclusivo== tra mittente e destinatario.
-2. ==**Trasferimento dati (*Data Transfer*):**== per l'intera durata della sessione, la banda e le tratte assegnate restano ==riservate ad uso esclusivo dei due nodi==.
-3. ==**Abbattimento del circuito (*Teardown*):**== al termine della sessione, le risorse impegnate vengono ==esplicitamente rilasciate== per altri utenti.
+1. **==Instaurazione del circuito (*Call Setup*):==** prima di scambiare dati, la rete stabilisce un ==percorso fisico e logico continuo ed esclusivo== tra mittente e destinatario.
+2. **==Trasferimento dati (*Data Transfer*):==** per l'intera durata della sessione, la banda e le tratte assegnate restano ==riservate ad uso esclusivo dei due nodi==.
+3. **==Abbattimento del circuito (*Teardown*):==** al termine della sessione, le risorse impegnate vengono ==esplicitamente rilasciate== per altri utenti.
 
 ### Punti di Forza e Limiti
 
@@ -45,13 +45,13 @@ Architettura alla base di **Internet, di tutte le reti IP, di Ethernet e dei mod
 
 ### Fasi Operative della Trasmissione a Pacchetto
 
-1. ==**Frammentazione:**== il messaggio originale viene suddiviso in unità elementari indipendenti denominate ==**Pacchetti (*datagrammi*)**==.
-2. ==**Intestazione (*Header*):**== a ogni frammento viene applicata un'intestazione contenente:
+1. **==Frammentazione:==** il messaggio originale viene suddiviso in unità elementari indipendenti denominate **==Pacchetti (*datagrammi*)==**.
+2. **==Intestazione (*Header*):==** a ogni frammento viene applicata un'intestazione contenente:
    - ==`IP sorgente` e `IP destinazione`==.
    - ==`Numero di sequenza`== progressivo per il riordino.
    - ==Codice di controllo errore (`Checksum` o `CRC`)==.
-3. ==**Instradamento autonomo (*Store and Forward*):**== ciascun pacchetto attraversa i router in modo indipendente: router diversi possono instradare pacchetti dello stesso messaggio su ==percorsi fisici differenti in base al traffico istantaneo==.
-4. ==**Riassemblaggio:**== l'host destinatario riceve i pacchetti (anche se pervenuti fuori ordine) e li ==ricompone fedelmente grazie al numero di sequenza==.
+3. **==Instradamento autonomo (*Store and Forward*):==** ciascun pacchetto attraversa i router in modo indipendente: router diversi possono instradare pacchetti dello stesso messaggio su ==percorsi fisici differenti in base al traffico istantaneo==.
+4. **==Riassemblaggio:==** l'host destinatario riceve i pacchetti (anche se pervenuti fuori ordine) e li ==ricompone fedelmente grazie al numero di sequenza==.
 
 ### Il Meccanismo del Multiplexing Statistico
 Le dorsali di trasmissione non sono mai riservate a una sola persona: flussi di pacchetti appartenenti a centinaia di utenti diversi si alternano in tempo reale sulla stessa fibra ottica. Quando un utente è inattivo, la banda viene ==immediatamente allocata ai pacchetti di altri nodi==, raggiungendo un'efficienza d'uso del canale vicina al $100\%$.

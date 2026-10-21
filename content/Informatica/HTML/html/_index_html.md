@@ -3,6 +3,27 @@ title: "html"
 description: "Elementi fondamentali dell'HTML5: metadati, tag di testo, link, form, tabelle, componenti multimediali e semantica del layout."
 ---
 # 📂 html
+
+<div class="notebooklm-box">
+  <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
+  <p class="notebooklm-desc">
+    Esporta l'intero modulo (<strong>10 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
+  </p>
+  <div class="notebooklm-actions">
+    <a href="html_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
+      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
+    </a>
+  </div>
+</div>
+  <p class="notebooklm-desc">
+    Esporta l'intero modulo (<strong>10 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
+  </p>
+  <div class="notebooklm-actions">
+    <a href="html_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
+      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
+    </a>
+  </div>
+</div>
 Elementi fondamentali dell'HTML5: metadati, tag di testo, link, form, tabelle, componenti multimediali e semantica del layout.
 
 ### **[[1 Struttura Base HTML]]**
