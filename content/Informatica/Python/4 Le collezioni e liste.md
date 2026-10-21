@@ -1,4 +1,4 @@
----
+﻿---
 title: "4 Le collezioni e liste"
 tags:
   - informatica/python/strutture-dati
@@ -117,7 +117,7 @@ matrice = [
 print(matrice[1][2]) # Stampa 6 (riga 1, colonna 2)
 ```
 
-> [!DANGER] 🚫 Trappola di Inizializzazione delle Matrici
+> [!TRAPPOLA] 🚫 Trappola di Inizializzazione delle Matrici
 > **NON inizializzare mai una matrice in questo modo**:
 > ```python
 > righe, colonne = 3, 3
@@ -211,7 +211,7 @@ print(studente.get("email", "Non fornita"))  # Restituisce il default senza ecce
 
 ## 6. Domande d'Esame e Concetti Chiave
 
-> [!QUESTION] ❓ Domande di Verifica
+> [!INTERROGAZIONE] ❓ Domande di Verifica
 > 1. *Qual è il vantaggio computazionale di usare un `set` o un `dict` per cercare un elemento rispetto a una `list`?*  
 >    **Risposta**: La ricerca in una lista richiede tempo lineare $O(n)$ scorrendo tutti gli elementi. In `set` e `dict`, basati su tabella hash, la verifica di esistenza avviene in tempo costante medio $O(1)$.
 > 2. *Cosa restituisce l'espressione `lista[::-1]`?*  

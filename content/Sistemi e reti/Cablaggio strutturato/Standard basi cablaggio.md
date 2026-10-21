@@ -1,4 +1,4 @@
----
+﻿---
 title: "Standard e Regole Base del Cablaggio Strutturato"
 description: "Guida pratica agli standard internazionali di cablaggio (TIA-568, ISO 11801), regola dei 100 metri, sbinatura massima IDC, armadi rack 19 pollici, unità modulari U ed etichettatura TIA-606."
 tags:
@@ -50,7 +50,7 @@ $$\text{Canale Completo} = \underbrace{90\text{ m}}_{\text{Cavo Rigido Murato (P
 ### 2. Regola della Sbinatura Massima (Limite di 13 mm)
 Durante la punzonatura dei singoli fili sul connettore RJ45 o sul patch panel:
 
-> [!IMPORTANT] Limite di Untwist: 13 mm
+> [!REGOLA] Limite di Untwist: 13 mm
 > I doppini non devono mai essere separati (*sbinati*) per più di **13 mm (0.5 pollici)** rispetto al punto di taglio della guaina esterna.
 > Sbinare eccessivamente i fili distrugge la cancellazione reciproca dei campi magnetici, provocando gravissimi fenomeni di diafonia (**NEXT - Near-End Crosstalk**) e facendo fallire la certificazione strumentale!
 

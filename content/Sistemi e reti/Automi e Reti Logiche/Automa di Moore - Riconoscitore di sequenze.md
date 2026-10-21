@@ -9,7 +9,7 @@ tags:
   - riconoscitore-sequenze
 ---
 # Automa di Moore e Riconoscitore di Sequenze (101)
-> [!NOTE] Obiettivo del Progetto
+> [!PROGETTO] Obiettivo del Progetto
 > Progettare un automa a stati finiti deterministico che riceve in ingresso uno stream continuo di bit binari ($0$ e $1$) e genera in uscita una segnalazione di **Riconoscimento ($R$)** ogni volta che rileva la sequenza target **`101`**, emettendo **Non Riconosciuto ($NR$)** in tutti gli altri istanti.
 
 ---
@@ -107,12 +107,12 @@ Quando l'automa si trova nello stato di successo $S_3$ (ha appena visto `101`):
 
 ---
 ## 4. Tabella di Transizione e Trasformazione (Moore)
-| Stato Attuale | Uscita Emessa | Prossimo Stato (Ingresso = 0) | Prossimo Stato (Ingresso = 1) |
-| :---: | :---: | :---: | :---: |
-| **$S_0$** (Vuoto) | **$NR$** | $S_0$ | $S_1$ |
-| **$S_1$** (Visto `1`) | **$NR$** | $S_2$ | $S_1$ |
-| **$S_2$** (Visto `10`) | **$NR$** | $S_0$ | $S_3$ |
-| **$S_3$** (Visto `101`) | **$R$** | $S_2$ | $S_1$ |
+|      Stato Attuale      | Uscita Emessa | Prossimo Stato (Ingresso = 0) | Prossimo Stato (Ingresso = 1) |
+| :---------------------: | :-----------: | :---------------------------: | :---------------------------: |
+|    **$S_0$** (Vuoto)    |   **$NR$**    |             $S_0$             |             $S_1$             |
+|  **$S_1$** (Visto `1`)  |   **$NR$**    |             $S_2$             |             $S_1$             |
+| **$S_2$** (Visto `10`)  |   **$NR$**    |             $S_0$             |             $S_3$             |
+| **$S_3$** (Visto `101`) |    **$R$**    |             $S_2$             |             $S_1$             |
 
 ---
 ## 5. Esempio Pratico con Traccia Temporale

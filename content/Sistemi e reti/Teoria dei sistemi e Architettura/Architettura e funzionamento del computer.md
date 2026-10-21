@@ -143,7 +143,7 @@ flowchart TD
     R --- C --- M --- S --- H --- N
 ```
 
-> [!IMPORTANT] Regola della Gerarchia
+> [!REGOLA] Regola della Gerarchia
 > Salendo verso il vertice: **aumenta la velocità** e il **costo per bit**, ma **diminuisce la capacità**. Scendendo verso la base: aumenta la capacità e diminuisce il costo, ma aumentano i tempi di latenza.
 
 ### Tecnologia RAID (Redundant Array of Independent Disks)

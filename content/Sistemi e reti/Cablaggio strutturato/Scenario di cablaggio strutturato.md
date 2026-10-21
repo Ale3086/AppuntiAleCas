@@ -9,7 +9,7 @@ tags:
   - rack
 ---
 # Scenario Tipico di Cablaggio Strutturato (Norma ISO/IEC 11801)
-> [!NOTE] Obiettivo del Progetto
+> [!PROGETTO] Obiettivo del Progetto
 > Analizzare la progettazione e l'implementazione pratica di un **impianto di cablaggio strutturato** per un campus multi-edificio, seguendo gli standard internazionali **ISO/IEC 11801** e la norma europea **EN 50173**, dall'architettura gerarchica dei distributori (CD, BD, FD) fino al dimensionamento dei cavi e delle postazioni su planimetria reale.
 
 ---
@@ -61,7 +61,7 @@ flowchart TD
 
 ---
 ## 3. Le Regole delle Distanze e il Canale Orizzontale a 100 Metri
-> [!IMPORTANT] La Regola Aurea dei 100 Metri
+> [!REGOLA] La Regola Aurea dei 100 Metri
 > Nel cablaggio orizzontale in rame su doppino ritorto (UTP / STP / FTP), la distanza totale massima per un canale di trasmissione dati Ethernet a norma di legge è rigorosamente pari a **100 metri**:
 
 ```mermaid

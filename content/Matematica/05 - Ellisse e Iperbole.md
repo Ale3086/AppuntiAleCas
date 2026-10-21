@@ -1,4 +1,4 @@
----
+﻿---
 title: "05 - Ellisse e Iperbole"
 tags:
   - matematica/geometria-analitica
@@ -8,17 +8,17 @@ tags:
 Oltre a Parabola e Circonferenza, le altre due coniche fondamentali sono l'Ellisse e l'Iperbole.
 
 ## 1. L'Ellisse
-> [!info] Definizione
+> [!DEFINIZIONE] Definizione
 > L'ellisse è il luogo geometrico dei punti del piano per i quali è **costante la somma** delle distanze da due punti fissi detti <span style="color: #ffff4d">Fuochi ($F_1, F_2$)</span>.
 > $$ \overline{PF_1} + \overline{PF_2} = 2a $$
 
-> [!abstract] Equazione Canonica
+> [!FORMULA] Equazione Canonica
 > L'equazione di un'ellisse centrata nell'origine degli assi è:
 > $$ \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 $$
 > *   $a$: semiasse orizzontale (sull'asse X)
 > *   $b$: semiasse verticale (sull'asse Y)
 
-> [!tip] Formule e Parametri dell'Ellisse
+> [!FORMULA] Formule e Parametri dell'Ellisse
 > *   **Distanza focale ($2c$):** La distanza tra i due fuochi. $c$ si trova con Pitagora:
 >     *   Se i fuochi sono sull'asse X ($a > b$): $c^2 = a^2 - b^2$
 >     *   Se i fuochi sono sull'asse Y ($b > a$): $c^2 = b^2 - a^2$
@@ -31,17 +31,17 @@ Oltre a Parabola e Circonferenza, le altre due coniche fondamentali sono l'Ellis
 
 ---
 ## 2. L'Iperbole
-> [!info] Definizione
+> [!DEFINIZIONE] Definizione
 > L'iperbole è il luogo geometrico dei punti per i quali è **costante la differenza** (in valore assoluto) delle distanze da due punti fissi detti <span style="color: #ffff4d">Fuochi</span>.
 > $$ |\overline{PF_1} - \overline{PF_2}| = 2a $$
 
-> [!abstract] Equazione Canonica
+> [!FORMULA] Equazione Canonica
 > L'equazione di un'iperbole con i fuochi sull'asse X è:
 > $$ \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 $$
 > Se i fuochi sono sull'asse Y, l'equazione diventa:
 > $$ \frac{x^2}{a^2} - \frac{y^2}{b^2} = -1 $$
 
-> [!tip] Formule e Parametri dell'Iperbole
+> [!FORMULA] Formule e Parametri dell'Iperbole
 > *   **Relazione tra parametri:** A differenza dell'ellisse, qui vale sempre $c^2 = a^2 + b^2$.
 > *   **Eccentricità ($e$):** $e = \frac{c}{a}$ (sempre $e > 1$).
 > *   **Asintoti:** Sono le due rette <span style="color: #4dff4d">verdi</span> a cui i rami dell'iperbole si avvicinano all'infinito senza mai toccarle.
@@ -56,7 +56,7 @@ Oltre a Parabola e Circonferenza, le altre due coniche fondamentali sono l'Ellis
 Un caso speciale si ha quando $a = b$. L'iperbole si dice **equilatera** e i suoi asintoti sono perpendicolari tra loro.
 Spesso, ruotandola di 45°, si ottiene la famosa equazione $xy = k$.
 
-> [!info] Funzione Omografica
+> [!DEFINIZIONE] Funzione Omografica
 > Se prendiamo un'iperbole equilatera e ne trasliamo il centro in un punto generico, otteniamo la **Funzione Omografica**, utilissima in analisi matematica:
 > $$ y = \frac{ax + b}{cx + d} $$
 >

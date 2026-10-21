@@ -1,4 +1,4 @@
----
+﻿---
 title: "Gli array"
 tags:
   - informatica/cpp/sintassi
@@ -29,7 +29,7 @@ flowchart LR
     end
 ```
 
-> [!QUESTION] ❓ Domanda d'Esame: Perché gli indici partono da 0?
+> [!INTERROGAZIONE] ❓ Domanda d'Esame: Perché gli indici partono da 0?
 > L'indice rappresenta l'==offset (scostamento)== rispetto alla prima cella di memoria:  
 > $$\text{Indirizzo}(arr[i]) = \text{IndirizzoBase} + (i \times \text{dimensione\_tipo})$$  
 > Per il primo elemento lo scostamento è zero ($0 \times 4\text{ byte} = 0$), quindi si trova esattamente all'indirizzo base!
@@ -104,7 +104,7 @@ int primiDue[5] = {3, 7}; // Diventa: 3, 7, 0, 0, 0
 
 ## 3. Il Pericolo "Out-of-Bounds"
 
-> [!DANGER] 🚫 Errore Gravissimo: Accesso Fuori Limiti
+> [!TRAPPOLA] 🚫 Errore Gravissimo: Accesso Fuori Limiti
 > In un array `int arr[5]`, gli indici validi vanno da `0` a `4`.  
 > Il C++ ==non controlla i limiti a runtime== per massimizzare le prestazioni.  
 > Se tenti di accedere a `arr[5]` o `arr[10]`, leggerai o sovrascriverai memoria casuale, causando crash improvvisi (*Segmentation Fault*) o corruzione silenziosa dei dati!

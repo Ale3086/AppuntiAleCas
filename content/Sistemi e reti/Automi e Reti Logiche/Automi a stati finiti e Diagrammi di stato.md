@@ -8,7 +8,7 @@ tags:
   - diagrammi-di-stato
 ---
 # Automi a Stati Finiti e Diagrammi di Stato
-> [!NOTE] Cos'è un Automa a Stati Finiti (FSM)?
+> [!DEFINIZIONE] Cos'è un Automa a Stati Finiti (FSM)?
 > Un **Automa a Stati Finiti** (*Finite State Machine - FSM*) è un modello matematico di computazione costituito da un insieme discreto e finito di **stati**, da un alfabeto di **ingressi**, da un alfabeto di **uscite** e da regole che governano le **transizioni** da uno stato all'altro in risposta agli stimoli esterni.
 
 ---

@@ -1,4 +1,4 @@
----
+﻿---
 title: "04 - Disequazioni di II grado e Fratte"
 tags:
   - matematica/algebra
@@ -9,7 +9,7 @@ Una disequazione di secondo grado si presenta nella forma:
 $$ a\color{#ffff4d}x^2 \color{white}+ b\color{#ffff4d}x \color{white}+ c > 0 \quad (\text{oppure } \ge, <, \le) $$
 
 ## 1. Risoluzione con Metodo della Parabola
-> [!abstract] Passaggi Operativi
+> [!TRUCCO] Passaggi Operativi
 > 1.  **Trovare le soluzioni:** Risolvere l'equazione associata ($ax^2 + bx + c = 0$) trovando $x_1$ e $x_2$.
 > 2.  **Disegnare:**
 >     *   *(Trucco: Se $a < 0$, cambia tutti i segni e il verso della disequazione, così $a$ diventa positivo e la parabola sorride sempre $\cup$)*.
@@ -43,7 +43,7 @@ $$ a\color{#ffff4d}x^2 \color{white}+ b\color{#ffff4d}x \color{white}+ c > 0 \qu
 Si presentano come una frazione:
 $$ \frac{N(x)}{D(x)} \ge 0 $$
 
-> [!abstract] Studio del Segno
+> [!REGOLA] Studio del Segno
 > 1.  Poni **SEMPRE** numeratore e denominatore **Maggiori di Zero**, ignorando il verso originale (solo il Numeratore può avere l'uguale $\ge$ se c'era nel testo).
 >     *   $N(x) > 0$
 >     *   $D(x) > 0$ (**mai uguale**)

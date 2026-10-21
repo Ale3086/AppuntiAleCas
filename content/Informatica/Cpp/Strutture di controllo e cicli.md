@@ -1,4 +1,4 @@
----
+﻿---
 title: "Strutture di controllo e cicli"
 tags:
   - informatica/cpp/sintassi
@@ -107,7 +107,7 @@ switch (scelta) {
 }
 ```
 
-> [!DANGER] 🚫 Errore da Matita Rossa: Dimenticare il `break` (Fall-Through)
+> [!TRAPPOLA] 🚫 Errore da Matita Rossa: Dimenticare il `break` (Fall-Through)
 > Se ometti l'istruzione `break`, il programma continuerà a eseguire indistintamente anche i `case` sottostanti anche se la condizione non corrisponde!
 
 ---
@@ -128,7 +128,7 @@ flowchart LR
     end
 ```
 
-> [!QUESTION] ❓ Domanda d'Esame: Differenza tra `while` e `do-while`
+> [!INTERROGAZIONE] ❓ Domanda d'Esame: Differenza tra `while` e `do-while`
 > - **`while`**: la condizione viene controllata **prima**. Se è falsa subito, il ciclo esegue ==0 iterazioni==.
 > - **`do-while`**: la condizione viene controllata **dopo**. Il corpo viene eseguito ==almeno 1 volta garantita==.
 

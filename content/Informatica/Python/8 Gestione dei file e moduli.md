@@ -1,4 +1,4 @@
----
+﻿---
 title: "8 Gestione dei file e moduli"
 tags:
   - informatica/python/file-io
@@ -170,7 +170,7 @@ with open("registro.csv", "r", encoding="utf-8") as f:
 
 ## 7. Domande d'Esame e Concetti Chiave
 
-> [!QUESTION] ❓ Domande di Verifica
+> [!INTERROGAZIONE] ❓ Domande di Verifica
 > 1. *Perché è fondamentale usare `with open(...)` rispetto a `open()` semplice?*  
 >    **Risposta**: Perché il costrutto `with` sfrutta il protocollo del Context Manager, assicurando che la chiamata di chiusura `.close()` sul file avvenga in modo garantito al termine del blocco, perfino se si verifica un crash o viene sollevata un'eccezione.
 > 2. *Qual è il vantaggio dell'iterazione diretta `for riga in f:` rispetto a `f.readlines()`?*  

@@ -4,307 +4,496 @@ tags:
   - informatica/cpp/sintassi
   - tipologia/guida-pratica
 ---
-Un file è l'unità logica di memorizzazione dei dati su memoria di massa. che consente una memorizzazione persistente dei dati, non limitata dalle dimensioni della memoria centrale.
+## 1. Il Concetto di File e la Memoria di Massa
+Un **file** è un'unità logica di memorizzazione allocata su memorie secondarie persistenti (SSD, hard disk, pendrive). A differenza delle variabili allocate nella memoria centrale RAM (che è volatile e si azzera allo spegnimento del computer), i file permettono la **conservazione duratura** dei dati.
 
-Quando un nostro processo va ad aprire un file esso viene trasferito dall'hard-disk alla RAM e per rendere la modifica persistente si deve fare un'operazione per riportare dalla RAM all'hard-disk; se non si fanno il file non si aggiorna e quindi rimane con sempre i dati iniziali. Le operazioni per avere un file con una modifica persistente sono uguali per ogni linguaggio, ma le istruzioni dentro esse sono la vera cosa che cambiano effettivamente, ma di poco. Le operazioni sono:
-
-- Apriamo la risorsa;
-- Accediamo e lavoriamo con la risorsa;
-- Chiudiamo la risorsa.
+Quando il nostro programma apre un file:
+1. Il sistema operativo carica i blocchi dal supporto di massa a un **buffer in RAM**.
+2. Il programma lavora sui dati in RAM.
+3. Per rendere definitive le modifiche, i dati devono essere sincronizzati nuovamente su disco (*flush*), operazione che avviene automaticamente alla chiusura.
 
 ```mermaid
 flowchart TD
-    A["1. Apertura Risorsa (ofstream / ifstream)"] --> B{"File aperto con successo?<br>(.is_open())"}
-    B -->|"Sì"| C["2. Lavoro sui Dati<br>(Scrittura << o Lettura getline)"]
+    A["1. Apertura Flusso\n(ifstream / ofstream / fstream)"] --> B{"File aperto con successo?<br>(.is_open())"}
+    B -->|"Sì"| C["2. Lavoro sui Dati\n(Lettura >> / getline o Scrittura << / write)"]
     B -->|"No"| ERR["Segnalazione Errore<br>(cerr << 'File non trovato')"]
-    C --> D["3. Chiusura Risorsa<br>(.close() o distruttore RAII)"]
+    C --> D["3. Chiusura Risorsa\n(.close() o distruttore RAII)"]
+
+    style A fill:#2b5b84,stroke:#306998,color:#fff
+    style B fill:#ffe873,stroke:#ffd43b,color:#000
+    style C fill:#d4edda,stroke:#28a745,color:#155724
+    style D fill:#d1ecf1,stroke:#17a2b8,color:#0c5460
+    style ERR fill:#f8d7da,stroke:#dc3545,color:#721c24
 ```
 
-![[Pasted image 20260504234351.jpg]]
+I file si distinguono principalmente in due categorie:
+- **File di Testo (`.txt`, `.csv`, `.json`)**: sequenze di caratteri ASCII/UTF-8 organizzate in righe logiche delimitate da caratteri di a-capo (`\n`).
+- **File Binari (`.bin`, `.dat`, `.exe`)**: sequenze grezze di byte che rispecchiano la rappresentazione nativa dei dati in memoria RAM.
 
-Un'altra cosa importante è che i tipi di file con cui possiamo lavorare sono molteplici:
-- **`.txt`**: file di testo con lettura sequenziale di caratteri o righe logiche.
-- **`.bin` / `.dat`**: file binari composti da sequenze grezze di byte (non leggibili con un normale editor di testo).
-
-![[Pasted image 20260518102217.png]]
-![[Pasted image 20260518102242.jpg]]
+![[Pasted image 20260518102217.png|385]]![[Pasted image 20260518102242.jpg|385]]
 
 ---
-## Gestione dei File in C++ (`<fstream>`)
-Nel C++ moderno la gestione dei file viene eseguita tramite flussi orientati agli oggetti (**stream**) inclusi nell'header `<fstream>`.
 
-La libreria mette a disposizione tre classi principali:
-1. **`ofstream`** (*Output File Stream*): per creare e **scrivere** dati su file.
-2. **`ifstream`** (*Input File Stream*): per aprire e **leggere** dati da file.
-3. **`fstream`**: per gestire contemporaneamente lettura e scrittura.
+## 2. L'Architettura Stream in C++ (`<fstream>`)
+
+Nel C++ la gestione dei file è orientata agli oggetti e sfrutta il concetto di **Stream** (flusso continuo di dati).  
+La libreria standard mette a disposizione tre classi principali incluse nell'header `<fstream>`:
+
+```mermaid
+flowchart TD
+    IOS["ios_base / basic_ios\n(Stato del flusso, flag e formattazione)"]
+    IOS --> IS["istream\n(Operazioni di Input, cin)"]
+    IOS --> OS["ostream\n(Operazioni di Output, cout)"]
+    IS --> IFS["ifstream\n(Input File Stream: Lettura da file)"]
+    OS --> OFS["ofstream\n(Output File Stream: Scrittura su file)"]
+    IS --> FS["fstream\n(File Stream: Lettura E Scrittura)"]
+    OS --> FS
+
+    style IFS fill:#cce5ff,stroke:#007bff,color:#004085
+    style OFS fill:#d4edda,stroke:#28a745,color:#155724
+    style FS fill:#fff3cd,stroke:#ffc107,color:#856404
+```
+
+1. **`ifstream`** (*Input File Stream*): apre file in sola **lettura**.
+2. **`ofstream`** (*Output File Stream*): crea o apre file in **scrittura**.
+3. **`fstream`**: flusso bidirezionale in grado di eseguire sia **lettura che scrittura** sullo stesso file.
+
+> [!TIP] 💡 Il Paradigma RAII e la Chiusura Automatica
+> In C++ non è strettamente obbligatorio chiamare `file.close()` se l'oggetto stream è dichiarato localmente in una funzione o blocco. Grazie al paradigma **RAII** (*Resource Acquisition Is Initialization*), quando la variabile stream esce dal suo ambito di validità (`}`), il distruttore viene invocato automaticamente chiudendo il file e svuotando il buffer, anche in presenza di `return` anticipati o eccezioni!
 
 ---
-### 1. Scrivere su File con `ofstream`
-Scrivere su un file in C++ è intuitivo quanto stampare a schermo con `cout`, usando lo stesso operatore `<<`:
+
+## 3. Modalità di Apertura ed i Flag `ios::*`
+
+Quando apriamo un file, possiamo specificare una o più modalità combinandole tramite l'operatore bitwise OR **`|`**:
+
+$$\mathbf{fstream} \text{ file}(\text{"archivio.dat"}, \mathbf{ios::in} \mid \mathbf{ios::out} \mid \mathbf{ios::binary});$$
+
+| Flag | Nome Completo | Descrizione e Comportamento |
+| :--- | :--- | :--- |
+| **`ios::in`** | Input | Apre il file per la **lettura** (impostato di default per `ifstream`). |
+| **`ios::out`** | Output | Apre il file per la **scrittura** (impostato di default per `ofstream`). **Azzera il file** se esiste già! |
+| **`ios::app`** | Append | **Aggiunta in coda**: posiziona il cursore alla fine. I vecchi dati non vengono toccati. |
+| **`ios::trunc`** | Truncate | **Troncamento**: cancella completamente il contenuto preesistente all'apertura. |
+| **`ios::binary`** | Binary | **Modalità binaria pura**: disattiva ogni traduzione di caratteri speciali di a-capo. |
+| **`ios::ate`** | At The End | Apre il file e sposta immediatamente il cursore alla fine, ma consente di riposizionarsi altrove. |
+
+### Perché `ios::binary` è Cruciale?
+Nei sistemi operativi Windows, un a-capo nei file di testo è codificato con due byte: Carriage Return (`\r`, ASCII 13) e Line Feed (`\n`, ASCII 10). In modalità testo standard, il C++ converte automaticamente la sequenza `\r\n` in un singolo `\n` durante la lettura, e viceversa in scrittura.  
+Nei **file binari** questa traduzione corrompe irreversibilmente immagini, numeri float o struct! Con **`ios::binary`**, il flusso tratta i dati come byte esatti senza alcuna alterazione.
+
+```cpp
+// Esempio: Creare un file di testo in modalità append (senza sovrascrivere)
+ofstream fileLog("eventi.log", ios::out | ios::app);
+
+// Esempio: Aprire un file binario sia in lettura che in scrittura
+fstream fileDati("archivio.dat", ios::in | ios::out | ios::binary);
+```
+
+---
+
+## 4. Controllo dello Stato del Flusso e Gestione Errori
+
+Ogni oggetto stream mantiene una maschera interna di bit che descrive lo stato del canale di comunicazione:
+
+```mermaid
+flowchart LR
+    FLUSSO["Stato Stream"]
+    FLUSSO --> GOOD[".good() -> Flusso integro e funzionante"]
+    FLUSSO --> FAIL[".fail() -> Errore logico di formato o dato non corrispondente"]
+    FLUSSO --> BAD[".bad() -> Errore critico hardware o di sistema"]
+    FLUSSO --> EOF[".eof() -> Raggiunta la fine del file (End Of File)"]
+
+    style GOOD fill:#d4edda,stroke:#28a745,color:#155724
+    style FAIL fill:#fff3cd,stroke:#ffc107,color:#856404
+    style BAD fill:#f8d7da,stroke:#dc3545,color:#721c24
+    style EOF fill:#cce5ff,stroke:#007bff,color:#004085
+```
+
+- **`file.is_open()`**: verifica se il file è stato effettivamente aperto dal sistema operativo.
+- **`file.fail()`**: vero se si è verificato un errore logico di estrazione (es. si cercava di leggere un numero ma nel file c'era una parola).
+- **`file.clear()`**: **ripristina i flag di stato** azzerando gli errori, operazione indispensabile per riutilizzare lo stream dopo aver toccato l'EOF.
+
+> [!DANGER] 🚫 Errore da Principiante: `while (!file.eof())`
+> **NON usare mai `while (!file.eof())` come condizione di lettura!**
+> ```cpp
+> // CODICE SBAGLIATO CHE DUPLICA L'ULTIMA RIGA:
+> while (!file.eof()) {
+>     file >> dato;
+>     cout << dato << endl; // Verrà stampato due volte l'ultimo valore!
+> }
+> ```
+> Il flag `eofbit` diventa `true` **solo DOPO** che un'operazione di lettura ha già fallito tentando di leggere oltre la fine!  
+> **Pattern Corretto Idiomatico:**
+> ```cpp
+> while (file >> dato) {
+>     cout << dato << endl; // Eseguito SOLO se la lettura ha avuto pieno successo!
+> }
+> ```
+
+---
+
+## 5. Operazioni su File di Testo (`.txt`, `.csv`)
+
+### A. Scrittura Formattata con `ofstream` e `<<`
+Scrivere su file usa la medesima sintassi di `cout`:
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+int main() {
+    std::ofstream fout("catalogo.txt");
+    if (!fout.is_open()) {
+        std::cerr << "Errore creazione file!" << std::endl;
+        return 1;
+    }
+
+    fout << std::fixed << std::setprecision(2);
+    fout << "Mouse_Wireless" << " " << 25.99 << std::endl;
+    fout << "Tastiera_RGB" << " " << 59.50 << std::endl;
+    fout << "Monitor_4K" << " " << 320.00 << std::endl;
+
+    fout.close();
+    return 0;
+}
+```
+
+### B. Lettura Parola per Parola con `>>`
+L'operatore `>>` salta automaticamente spazi bianchi, tabulazioni e caratteri di a-capo:
+```cpp
+std::ifstream fin("catalogo.txt");
+std::string prodotto;
+double prezzo;
+
+while (fin >> prodotto >> prezzo) {
+    std::cout << "Articolo: " << prodotto << " | Prezzo: €" << prezzo << std::endl;
+}
+fin.close();
+```
+
+### C. Lettura di Intere Righe con `std::getline()`
+Quando le stringhe contengono spazi (nomi, descrizioni, frasi intere), si usa **`std::getline(flusso, stringa, [delimitatore])`**:
 
 ```cpp
 #include <iostream>
 #include <fstream>
 #include <string>
-using namespace std;
 
 int main() {
-    // 1. Apertura / Creazione del file in scrittura
-    ofstream fileScrittura("registro.txt");
+    std::ifstream file("rubrica.txt");
+    std::string riga;
 
-    // 2. Controllo apertura
-    if (!fileScrittura.is_open()) {
-        cerr << "Errore: impossibile creare o aprire il file!" << endl;
-        return 1;
+    // Legge fino al carattere '\n'
+    while (std::getline(file, riga)) {
+        std::cout << "Riga letta: " << riga << std::endl;
     }
-
-    // 3. Scrittura con l'operatore <<
-    fileScrittura << "Mario Rossi 8.5" << endl;
-    fileScrittura << "Luigi Bianchi 7.0" << endl;
-    fileScrittura << "Anna Verdi 9.5" << endl;
-
-    // 4. Chiusura del flusso
-    fileScrittura.close();
-    cout << "Dati scritti con successo nel file!" << endl;
-
     return 0;
 }
 ```
 
-#### Modalità di apertura aggiuntiva (`ios::app`)
-Di default `ofstream` sovrascrive interamente il file. Se desideri aggiungere dati in coda senza cancellare quelli già esistenti, specifica la modalità `ios::app` (*append*):
+#### Parsing di File CSV con Delimitatore Personalizzato
+`getline` accetta un terzo parametro facoltativo: il **delimitatore** (di default `'\n'`). Possiamo usarlo per separare campi CSV delimitati da virgole o punti e virgola:
 
 ```cpp
-ofstream fileAppend("registro.txt", ios::app);
-if (fileAppend.is_open()) {
-    fileAppend << "Nuovo Studente 10.0" << endl;
-    fileAppend.close();
+std::ifstream fileCSV("studenti.csv");
+std::string matricola, nome, media;
+
+// Legge campi separati da virgola
+while (std::getline(fileCSV, matricola, ',') &&
+       std::getline(fileCSV, nome, ',') &&
+       std::getline(fileCSV, media)) { // L'ultimo campo termina con \n!
+    std::cout << "Matr: " << matricola << " | Nome: " << nome << " | Media: " << media << std::endl;
 }
 ```
 
+> [!WARNING] ⚠️ La Trappola del Buffer: `>>` seguito da `getline()`
+> Se alterni una lettura con `file >> numero` e una successiva con `std::getline(file, stringa)`, `getline()` leggerà immediatamente una **stringa vuota**! Questo accade perché `>>` estrae il numero ma lascia il carattere `\n` in sospeso nel buffer.  
+> **Soluzione**: inserisci sempre `file.ignore()` prima del `getline()`!
+
 ---
-### 2. Leggere da File con `ifstream`
 
-#### A. Lettura Riga per Riga con `getline()`
-È la modalità ideale per leggere file di testo in cui ogni riga rappresenta un record o una frase:
+## 6. Operazioni su File Binari (`ios::binary`)
 
+Nei file binari non si convertono i numeri in caratteri: si memorizza l'esatta rappresentazione a byte della memoria centrale RAM.
+
+I metodi fondamentali sono:
+- **`flusso.write(const char* buffer, streamsize num_byte)`**
+- **`flusso.read(char* buffer, streamsize num_byte)`**
+
+Entrambi i metodi richiedono che il puntatore alla variabile venga convertito in un puntatore a caratteri grezzi (`char*`) tramite l'operatore di cast del C++ moderno: **`reinterpret_cast`**.
+
+```mermaid
+flowchart LR
+    RAM["Struttura in RAM\nstruct Player {\n  int id;\n  float hp;\n};"] 
+    RAM -->|reinterpret_cast<const char*>&p| WRITE["file.write(..., sizeof(Player))"]
+    WRITE --> DISCO["File Binario su Disco\n[01 00 00 00  00 00 C8 42]\n(Byte grezzi in esadecimale)"]
+    DISCO -->|reinterpret_cast<char*>&p| READ["file.read(..., sizeof(Player))"]
+    READ --> RAM2["Struttura Ricaricata in RAM"]
+
+    style RAM fill:#cce5ff,stroke:#007bff,color:#004085
+    style DISCO fill:#ffe873,stroke:#ffd43b,color:#000
+    style RAM2 fill:#d4edda,stroke:#28a745,color:#155724
+```
+
+### A. Scrittura Binaria di una `struct`
 ```cpp
 #include <iostream>
 #include <fstream>
-#include <string>
-using namespace std;
+
+struct Giocatore {
+    int id;
+    char username[24]; // Dimensione FISSA per allocazione contigua
+    int livello;
+    float punteggio;
+};
 
 int main() {
-    ifstream fileLettura("registro.txt");
-    string riga;
+    Giocatore g1 = {1001, "CyberKnight", 15, 8450.5f};
 
-    if (!fileLettura.is_open()) {
-        cerr << "File non trovato!" << endl;
-        return 1;
-    }
+    std::ofstream fout("salvataggio.dat", std::ios::out | std::ios::binary);
+    if (!fout.is_open()) return 1;
 
-    // Il ciclo while continua finché ci sono righe disponibili (fino a EOF)
-    while (getline(fileLettura, riga)) {
-        cout << "Riga letta: " << riga << endl;
-    }
+    // Scrive l'intero blocco di byte della struct in un unico colpo
+    fout.write(reinterpret_cast<const char*>(&g1), sizeof(Giocatore));
+    fout.close();
 
-    fileLettura.close();
+    std::cout << "Salvataggio completato (" << sizeof(Giocatore) << " byte scritti)." << std::endl;
     return 0;
 }
 ```
 
-#### B. Lettura Formattata con l'Operatore `>>`
-Se conosci l'esatta formattazione del file (es. parole o numeri separati da spazi), puoi estrarre direttamente i dati nelle singole variabili:
+### B. Lettura Binaria con Verifica dei Byte Effettivi
+Il metodo `file.gcount()` restituisce il numero esatto di byte effettivamente estratti dall'ultima chiamata `.read()`:
 
 ```cpp
-ifstream fileDati("registro.txt");
-string nome, cognome;
-float voto;
+Giocatore caricato;
+std::ifstream fin("salvataggio.dat", std::ios::in | std::ios::binary);
 
-while (fileDati >> nome >> cognome >> voto) {
-    cout << "Studente: " << cognome << " " << nome << " | Voto: " << voto << endl;
+if (fin.is_open()) {
+    fin.read(reinterpret_cast<char*>(&caricato), sizeof(Giocatore));
+    
+    if (fin.gcount() == sizeof(Giocatore)) {
+        std::cout << "Giocatore: " << caricato.username 
+                  << " | Livello: " << caricato.livello 
+                  << " | Punti: " << caricato.punteggio << std::endl;
+    }
+    fin.close();
 }
-fileDati.close();
+```
+
+> [!DANGER] 🚫 Trappola Mortale: MAI usare `std::string` o Puntatori grezzi dentro struct per file binari!
+> Una classe dinamica come `std::string` memorizza i caratteri del testo nello **Heap** e possiede al suo interno solo un puntatore all'indirizzo RAM. Se scrivi una `std::string` con `file.write(&str, sizeof(str))`, salverai sul disco l'**indirizzo di memoria virtuale**, non il testo!  
+> Quando riaprirai il file in una successiva esecuzione, quell'indirizzo conterrà dati casuali o non validi, provocando un disastroso crash per **Segmentation Fault**.  
+> **Regola d'oro per file binari**: usa array di caratteri a dimensione fissa (`char nome[32]`) o strutture composte solo da tipi primitivi (dette *Trivially Copyable*).
+
+---
+
+## 7. Accesso Diretto (Random Access): `seekg`, `seekp`, `tellg`, `tellp`
+
+Nei file binari e nei database non serve rileggere tutto da capo per consultare o modificare un record: possiamo saltare istantaneamente all'offset di byte desiderato.
+
+I due flussi hanno puntatori indipendenti:
+- **`g` (get)**: cursore del flusso di **lettura** (`seekg` e `tellg`).
+- **`p` (put)**: cursore del flusso di **scrittura** (`seekp` e `tellp`).
+
+### Sintassi di Posizionamento:
+$$\mathbf{file.seekg}(\text{offset}, \text{punto\_riferimento});$$
+$$\mathbf{file.seekp}(\text{offset}, \text{punto\_riferimento});$$
+
+I punti di riferimento sono definiti nell'oggetto `std::ios`:
+1. **`std::ios::beg`**: Inizio del file (offset positivo verso destra).
+2. **`std::ios::cur`**: Posizione attuale del cursore.
+3. **`std::ios::end`**: Fine del file (offset tipicamente negativo a ritroso).
+
+### Trucco: Calcolare la Dimensione di Qualsiasi File in C++
+```cpp
+std::ifstream file("video.mp4", std::ios::binary | std::ios::ate);
+if (file.is_open()) {
+    // Poiché abbiamo usato ios::ate, il cursore si trova già alla fine!
+    std::streamsize grandezza = file.tellg();
+    std::cout << "Peso del file: " << grandezza << " byte (" 
+              << grandezza / (1024.0 * 1024.0) << " MB)" << std::endl;
+    file.close();
+}
+```
+
+### Modifica di un Record Specifico in Mezzo al File
+```cpp
+std::fstream fs("database.dat", std::ios::in | std::ios::out | std::ios::binary);
+
+int indice_record = 3; // Vogliamo modificare il quarto record (indice 3)
+long offset = indice_record * sizeof(Giocatore);
+
+// 1. Spostiamo il puntatore di lettura sul record e lo leggiamo
+fs.seekg(offset, std::ios::beg);
+Giocatore g;
+fs.read(reinterpret_cast<char*>(&g), sizeof(Giocatore));
+
+// 2. Modifichiamo il dato in memoria
+g.livello += 1;
+
+// 3. Spostiamo il puntatore di SCRITTURA sullo stesso offset per sovrascriverlo
+fs.seekp(offset, std::ios::beg);
+fs.write(reinterpret_cast<const char*>(&g), sizeof(Giocatore));
+
+fs.close();
 ```
 
 ---
-## Gestione dei File a Basso Livello in C (`FILE*`)
-In molti contesti didattici, di programmazione di sistemi operativi o per la manipolazione di file binari puri (`.bin`), si utilizza la libreria standard del C (`<cstdio>`).
 
-### Apertura in C (`fopen`)
-Per aprire un file usiamo in C una funzione che si chiama `fopen`:
+## 8. Domande d'Esame e Concetti Chiave
 
-```C
-FILE *file;
-file=fopen(char *name, char *mode);
-```
+> [!QUESTION] ❓ Domande di Verifica
+> 1. *Cosa accade se ometti il flag `ios::binary` quando salvi una struct su file in Windows?*  
+>    **Risposta**: Qualsiasi byte all'interno dei dati binari della struct avente valore $10$ (Line Feed `\n`) verrà trasformato automaticamente nella coppia di byte $13, 10$ (`\r\n`), alterando la dimensione dei dati e corrompendo la struttura al caricamento successivo.
+> 2. *Qual è la differenza pratica tra `file.seekg(10, ios::beg)` e `file.seekg(10, ios::cur)`?*  
+>    **Risposta**: `ios::beg` posiziona il cursore esattamente al decimo byte a partire dall'inizio del file; `ios::cur` sposta il cursore di 10 byte in avanti a partire dalla posizione in cui si trova in quel momento.
+> 3. *Perché `getline(cin, s)` fallisce se preceduta da un'operazione `cin >> x`? Come si risolve?*  
+>    **Risposta**: L'operatore `>>` consuma il valore numerico ma lascia il carattere `\n` generato dal tasto Invio all'interno del buffer di input. La successiva `getline()` incontra subito quel `\n` e termina immediatamente restituendo una stringa vuota. Si risolve invocando `cin.ignore()` per svuotare il carattere residuo.
 
-Vediamo come abbiamo due puntatori, uno è name, esso ci indica il nome di come il file viene salvato il file nel filesystem; quindi ci indica la directory. Poi successivamente troviamo mode, ovvero la modalità con cui apriamo il file, la quale può essere:
-- "r" in lettura (read);
-- "w" in scrittura (write);
-- "r+" sia in scrittura che lettura;
-- "a" scrittura, aggiunta in fondo (append);
-- "b" a fianco ad una delle precedenti, indica che il file è binario (se non specificato, il file è di testo);
-- "rb" in lettura del file binario;
-- "rb+" in lettura e scrittura del file binario;
+---
 
-La funzione di base ci ridarà l'indirizzo di memora del file se va bene, ma può anche ridarci NULL in caso di read se l'operazione non va a buon fine, dato che se il file non esiste ci darà NULL, in write invece creerà un file con il nome indicato; se invece con la modalità write cerchiamo di scrivere su un file READ-ONLY anche la ci darà un NULL.
+## 9. Programmi Esecutivi Completi in C++
 
-Se il file non è vuoto il puntatore potrà andare a leggere fino a leggere fino allo stato di fine file, chiamato EOF (End Of File)
+> [!EXAMPLE]- 🧪 Programma 1: Gestione Anagrafica Studenti con File CSV e `getline()`
+> ```cpp
+> #include <iostream>
+> #include <fstream>
+> #include <string>
+> #include <vector>
+> #include <sstream>
+> 
+> struct Studente {
+>     std::string cognome;
+>     std::string nome;
+>     float media;
+> };
+> 
+> const std::string NOME_FILE = "studenti.csv";
+> 
+> void inserisci_studente(const Studente& s) {
+>     std::ofstream fout(NOME_FILE, std::ios::out | std::ios::app);
+>     if (fout.is_open()) {
+>         fout << s.cognome << "," << s.nome << "," << s.media << "\n";
+>         fout.close();
+>         std::cout << "✅ Salvato: " << s.cognome << " " << s.nome << std::endl;
+>     }
+> }
+> 
+> void stampa_registro() {
+>     std::ifstream fin(NOME_FILE);
+>     if (!fin.is_open()) {
+>         std::cout << "⚠️ Registro vuoto o non trovato." << std::endl;
+>         return;
+>     }
+> 
+>     std::string riga;
+>     std::cout << "\n--- REGISTRO SCOLASTICO CSV ---" << std::endl;
+>     std::cout << "Cognome             Nome                Media" << std::endl;
+>     std::cout << "-----------------------------------------------" << std::endl;
+> 
+>     while (std::getline(fin, riga)) {
+>         if (riga.empty()) continue;
+>         
+>         std::stringstream ss(riga);
+>         std::string cognome, nome, str_media;
+> 
+>         if (std::getline(ss, cognome, ',') &&
+>             std::getline(ss, nome, ',') &&
+>             std::getline(ss, str_media)) {
+>             
+>             float media = std::stof(str_media);
+>             std::cout << cognome << "\t\t" << nome << "\t\t" << media << std::endl;
+>         }
+>     }
+>     fin.close();
+> }
+> 
+> int main() {
+>     inserisci_studente({"Casetti", "Alessandro", 8.9f});
+>     inserisci_studente({"Verdi", "Giuseppe", 7.5f});
+>     inserisci_studente({"Bianchi", "Laura", 9.4f});
+> 
+>     stampa_registro();
+>     return 0;
+> }
+> ```
 
-#### Apertura in lettura
-Il file viene aperto e il EOF sarà a fine file e avremo un puntatore che partirà dalla posizione 0 a salire fino a EOF.
-![[Pasted image 20260504233648.png]]
-
-#### Apertura in scrittura
-Quando apriamo il file in scrittura l'EOF indipendentemente se il file in precedenza fosse vuoto o no viene posizionato all'inizio, questo perché il file viene totalmente troncato, sovrascrivendo i dati che vi erano inizialmente in caso vi ci fossero dei dati.
-![[Pasted image 20260504233634.png]]
-
-#### Apertura in aggiunta
-Quando apriamo il file questo giro EOF si trova alla posizione successiva all'ultimo elemento significativo del file, quindi se inizialmente vi erano dei dati nel file questa volta non verranno sovrascritti, ma verranno aggiunte solo informazioni.
-![[Pasted image 20260504233706.png]]
-
-### Lavoro
-
-#### `fseek` - sia .txt che .bin/.dat
-La funzione `fseek` subito dopo aver aperto un file ci va a scorrere a una posizione nella memoria del file precisa. I suoi parametri sono:
-- Il primo parametro è il puntatore alla struttura `FILE` su cui operare;
-- Il secondo parametro è Il numero di byte di cui spostarsi, chiamato offset; il quale può essere positivo per andare avanti e negativo per andare indietro
-- Il terzo parametro è una fra tre costanti definite che rappresenta il punto di riferimento da cui iniziare a calcolare l'offset:
-	- **`SEEK_SET`**: Inizia il conteggio dall'**inizio del file**. L'offset deve essere positivo.
-	- **`SEEK_CUR`**: Inizia il conteggio dalla **posizione attuale** del cursore.
-	- **`SEEK_END`**: Inizia il conteggio dalla **fine del file**. Utile per muoversi a ritroso dall'ultima posizione.
-
-```C
-FILE *f = fopen("game.bin", "rb");
-// Salta i primi 10 byte dall'inizio del file
-fseek(f, 10, SEEK_SET); 
-fclose(f);
-```
-La seguente funzione sposta ci permette di spostarci alla posizione di inizio della variabile 4.
-
-#### `ftell` - sia .txt che .bin/.dat
-La funzione **`ftell`** è molto semplice poiché ha un solo parametro. Serve a dirti l'esatta posizione attuale del cursore all'interno del file e il parametro prima indicato è:
-- il puntatore alla struttura `FILE` su cui operare.
-
-```C
-FILE *f = fopen("game.bin", "rb");
-long posizione;
-
-fseek(f, 0, SEEK_END);          // Si sposta alla fine del file
-posizione = ftell(f);           // Legge la posizione (ovvero la dimensione del file)
-
-printf("Il file occupa %ld byte\n", posizione);
-fclose(f);
-```
-
-#### `fread` - .bin/.dat
-La funzione `fread` che ci permette di lavorare con i dati interni del file. Questa funzione ci va a caricare in RAM i dati contenuti letti. Il suo output sostanzialmente è un numero che ci rappresenta gli elementi letti. I parametri di questa funzione sono:
-- Il primo parametro ci rappresenta l'indirizzo di memora dove i dati letti verranno salvati;
-- Il secondo parametro ci va a dire la grandezza dei blocchi in byte da leggere in memoria, calcolata in automatico tramite `sizeof()`;
-- Il terzo parametro ci dice i blocchi di codice da leggere;
-- Il quarto parametro infine è il puntatore alla struttura `FILE` da cui leggere.
-```C
-struct Player p2;
-FILE *f = fopen("game.bin", "rb");
-fread(&p2, sizeof(struct Player), 1, f); // Carica i dati in p2
-fclose(f);
-```
-
-#### `fwrite` - .bin/.dat
-Infine troviamo la funzione `fwrite`, la quale va semplicemente a stampare i dati contenuti nella memoria RAM del processo nel file. I parametri della seguente funzione sono:
-- Il primo parametro è l'indirizzo di memoria della variabile che contiene i dati che vogliamo salvare nel file;
-- Il secondo parametro ci va a dire la grandezza dei blocchi in byte da scrivere nel file, calcolata in automatico tramite `sizeof()`;
-- Il terzo parametro rappresenta il numero degli elementi da scrivere nel file;
-- Il quarto parametro infine è il puntatore alla struttura `FILE` su cui scrivere.
-
-```C
-struct Player { int id; float score; };
-struct Player p1 = {1, 95.5};
-
-FILE *f = fopen("game.bin", "wb");
-fwrite(&p1, sizeof(struct Player), 1, f);
-fclose(f);
-```
-
-#### `fprintf` - .txt
-Questa funzione serve a scrivere dati formattati (testo, numeri, stringhe) nel file. I suoi parametri sono:
-- Il primo parametro è il puntatore al file aperto (es. quello ottenuto con `fopen`).
-- Il secondo parametro è una stringa che contiene il testo da scrivere e gli specificatori di formato (come `%d`, `%s`, `%f`).
-- Il secondo parameto è rappresentato da argomenti variabili, ovvero le variabili che corrispondono agli specificatori indicati nella stringa di formato.
-
-```C
-int anni = 25;
-FILE *f = fopen("info.txt", "w");
-fprintf(f, "L'utente ha %d anni\n", anni);
-fclose(f);
-```
-
-#### `fscanf` - .txt
-Questa funzione serve a leggere dati formattati dal file, interpretandoli secondo il tipo specificato. I suoi parametri sono:
-- Il primo è il puntatore al file da cui leggere.
-- Il secondo è la stringa con gli specificatori che indicano come interpretare i caratteri nel file (es. `%d` per un intero).
-- Il terzo sono i puntatori (indirizzi di memoria) delle variabili in cui salvare i dati letti (es. `&variabile`).
-
-```C
-int valore;
-FILE *f = fopen("info.txt", "r");
-fscanf(f, "L'utente ha %d", &valore); // Estrae il numero 25
-fclose(f);
-```
-
-#### `fgets` - .txt
-È la funzione più sicura per leggere una riga di testo intera (inclusi gli spazi). I suoi parametri sono:
-- Il primo parametro è un puntatore all'array di caratteri (buffer) dove verrà memorizzata la stringa letta.
-- Il secondo parametro è il numero massimo di caratteri da leggere, inclusi lo zero terminale (`\0`). Di solito si passa la dimensione dell'array.
-- L'ultimo parametro è il puntatore al file da cui leggere.
-
-```C
-char riga[100];
-FILE *f = fopen("nota.txt", "r");
-fgets(riga, 100, f); // Legge fino a 99 caratteri o al primo '\n'
-fclose(f);
-```
-
-#### `fputs` - .txt
-Scrive una stringa di testo nel file così com'è, senza formattazione aggiuntiva. Ha soli due parametri che sono:
-- Il primo è la stringa (array di caratteri) da scrivere nel file.
-- Il secondo è il puntatore al file in cui scrivere.
-
-```C
-FILE *f = fopen("nota.txt", "w");
-fputs("Ciao Mondo!", f);
-fclose(f);
-```
-
-#### `fgetc` - .txt
-Legge un singolo carattere alla volta dal file. Ha un solo argomento che è:
-- Il puntatore al file da cui prelevare il carattere.
-
-```C
-FILE *f = fopen("carattere.txt", "r");
-int c = fgetc(f); // Legge un carattere (restituisce 'A')
-fclose(f);
-```
-
-- _Nota_: Non ha parametri per il buffer perché restituisce il carattere letto direttamente come valore di ritorno (castato a `int`).
-
-#### `fputc` - .txt
-Scrive un singolo carattere nel file. Ha solo due argomenti molto semplici che sono:
-- Il primo argomento è il singolo carattere da scrivere (passato come intero).
-- Il secondo è il puntatore al file in cui scrivere il carattere.
-
-```C
-FILE *f = fopen("carattere.txt", "w");
-fputc('A', f); // Scrive solo la lettera A
-fclose(f);
-```
-
-### Chiusura
-La chiusura si andrà a fare con la funzione in C `fclose`:
-```C
-fclose(file);
-```
-
-La quale ci darà 0 in caso l'operazione sarà riuscita correttamente e la costante EOF in caso non sia andata a buon fine l'operazione, che solitamente è -1.
-![[Pasted image 20260504234630.png]]
+> [!EXAMPLE]- 🧪 Programma 2: Database Binario di Record di Gioco con Accesso Diretto (Seek/Tell)
+> ```cpp
+> #include <iostream>
+> #include <fstream>
+> #include <cstring>
+> 
+> struct RecordAccount {
+>     int id;
+>     char nickname[24];
+>     int monete;
+>     bool attivo;
+> };
+> 
+> const char* DB_FILE = "accounts.bin";
+> 
+> void inizializza_db() {
+>     std::ofstream fout(DB_FILE, std::ios::out | std::ios::binary | std::ios::trunc);
+>     RecordAccount accts[3] = {
+>         {1, "GamerPro99", 500, true},
+>         {2, "ShadowBlade", 1200, true},
+>         {3, "PixelHero", 350, false}
+>     };
+> 
+>     fout.write(reinterpret_cast<const char*>(accts), sizeof(accts));
+>     fout.close();
+>     std::cout << "Database binario creato con 3 account iniziali." << std::endl;
+> }
+> 
+> void aggiungi_monete(int indice_account, int bonus) {
+>     // Apertura bidirezionale binaria
+>     std::fstream fs(DB_FILE, std::ios::in | std::ios::out | std::ios::binary);
+>     if (!fs.is_open()) {
+>         std::cerr << "Errore apertura database!" << std::endl;
+>         return;
+>     }
+> 
+>     long pos = indice_account * sizeof(RecordAccount);
+>     
+>     // 1. Posizionamento in lettura
+>     fs.seekg(pos, std::ios::beg);
+>     RecordAccount acc;
+>     fs.read(reinterpret_cast<char*>(&acc), sizeof(RecordAccount));
+> 
+>     if (fs.gcount() == sizeof(RecordAccount)) {
+>         std::cout << "Monete attuali per " << acc.nickname << ": " << acc.monete << std::endl;
+>         acc.monete += bonus;
+> 
+>         // 2. Posizionamento nello stesso offset in scrittura
+>         fs.seekp(pos, std::ios::beg);
+>         fs.write(reinterpret_cast<const char*>(&acc), sizeof(RecordAccount));
+>         std::cout << "✅ Accreditate " << bonus << " monete. Nuovo saldo: " << acc.monete << std::endl;
+>     }
+>     fs.close();
+> }
+> 
+> void mostra_tutti() {
+>     std::ifstream fin(DB_FILE, std::ios::in | std::ios::binary);
+>     RecordAccount temp;
+>     std::cout << "\n--- STATO FINALE DATABASE BINARIO ---" << std::endl;
+>     while (fin.read(reinterpret_cast<char*>(&temp), sizeof(RecordAccount))) {
+>         std::cout << "ID: " << temp.id 
+>                   << " | Nick: " << temp.nickname 
+>                   << " | Monete: " << temp.monete 
+>                   << " | Attivo: " << (temp.attivo ? "SÌ" : "NO") << std::endl;
+>     }
+>     fin.close();
+> }
+> 
+> int main() {
+>     inizializza_db();
+>     // Aggiungiamo 300 monete al secondo account (indice 1: ShadowBlade)
+>     aggiungi_monete(1, 300);
+>     mostra_tutti();
+>     return 0;
+> }
+> ```

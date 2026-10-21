@@ -1,4 +1,4 @@
----
+﻿---
 title: "Le struct e le classi"
 tags:
   - informatica/cpp/sintassi
@@ -65,7 +65,7 @@ int main() {
 
 ## 3. Dalle Struct alle Classi (OOP)
 
-> [!QUESTION] ❓ Domanda d'Esame: Qual è l'unica differenza tra una `struct` e una `class` in C++?
+> [!INTERROGAZIONE] ❓ Domanda d'Esame: Qual è l'unica differenza tra una `struct` e una `class` in C++?
 > In C++ l'unica differenza sintattica è la **visibilità predefinita**:
 > - Nelle `struct`: tutti i membri sono **`public`** di default.
 > - Nelle `class`: tutti i membri sono **`private`** di default.

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Verb Tenses"
 tags:
   - inglese/grammatica/verb-tenses
@@ -14,7 +14,7 @@ tags:
 > - Does not require a time expression
 > - Requires the -s/-es ending on the verb for the 3rd person singular
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + verb (base form) / verb + s,es (3rd person singular)`
 > Negative: `Subject + don't/doesn't + verb (base form)`
 > Interrogative: `Do/Does + subject + verb (base form)?`
@@ -53,7 +53,7 @@ tags:
 > - Does not require a time expression
 > - Not normally used with stative verbs (know, believe, want, own, love, etc.), unless they take on a dynamic meaning
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + am/is/are + verb-ing`
 > Negative: `Subject + am/is/are + not + verb-ing`
 > Interrogative: `Am/Is/Are + subject + verb-ing?`
@@ -90,7 +90,7 @@ tags:
 > - Does not require/want a specific time expression (no yesterday, in 2020, last week)
 > - Often used with ever, never, just, yet, already, for, since
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + have/has + past participle`
 > Negative: `Subject + have/has + not + past participle`
 > Interrogative: `Have/Has + subject + past participle?`
@@ -131,7 +131,7 @@ tags:
 > - Requires for/since (or another duration expression) to specify how long the action has lasted
 > - Not normally used with stative verbs
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + have/has been + verb-ing (+ for/since + time)`
 > Negative: `Subject + have/has + not + been + verb-ing`
 > Interrogative: `Have/Has + subject + been + verb-ing?`
@@ -168,7 +168,7 @@ tags:
 > [!warning] ⚠️ Requirements
 > - Requires a time expression (yesterday, last week, in 2010, etc.)
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + verb (past form) + time expression`
 > Negative: `Subject + did + not + verb (base form)`
 > Interrogative: `Did + subject + verb (base form)?`
@@ -203,7 +203,7 @@ tags:
 > [!warning] ⚠️ Requirements
 > - Requires a specific past moment or another action to refer to (often introduced by when/while)
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + was/were + verb-ing`
 > Negative: `Subject + was/were + not + verb-ing`
 > Interrogative: `Was/Were + subject + verb-ing?`
@@ -239,7 +239,7 @@ tags:
 > - Requires a reference to another more recent past action (often with before/after)
 > - Cannot be used alone to describe a single past action
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + had + past participle + before + subject + verb (past simple)`
 > `After + subject + had + past participle, subject + verb (past simple)`
 > Negative: `Subject + had + not + past participle`
@@ -276,7 +276,7 @@ tags:
 > - Requires for + duration to emphasize how long the action lasted
 > - Requires a reference to another past action
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + had been + verb-ing + for + time + before...`
 > Negative: `Subject + had + not + been + verb-ing`
 > Interrogative: `Had + subject + been + verb-ing?`
@@ -305,7 +305,7 @@ tags:
 # **Future Tenses**
 
 ## 9. Future Simple
-> [!info] 🧠 The Basics
+> [!DEFINIZIONE] 🧠 The Basics
 > The Future Simple category includes several ways to express future actions: WILL, Going to, Present Simple, Present Continuous and Shall.
 
 > [!NOTE]- 🇮🇹 TRADUZIONE
@@ -318,7 +318,7 @@ tags:
 > [!warning] ⚠️ Requirements
 > - Does not require a plan made in advance (used for decisions made on the spot)
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + will + verb (base form)`
 > Negative: `Subject + will + not (won't) + verb (base form)`
 > Interrogative: `Will + subject + verb (base form)?`
@@ -354,7 +354,7 @@ tags:
 > - Requires the intention/plan to already exist before the moment of speaking
 > - Requires visible evidence for predictions
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + be (am/is/are) + going to + verb (base form)`
 > Negative: `Subject + be + not + going to + verb`
 > Interrogative: `Be + subject + going to + verb?`
@@ -389,7 +389,7 @@ tags:
 > - Requires a fixed timetable or schedule, or a subordinate time clause (when, as soon as, after, before, until)
 > - Does not want "will" inside these subordinate time clauses
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + verb (base form / verb+s)`
 
 > [!example] 📝 Usage & Examples
@@ -420,7 +420,7 @@ tags:
 > [!warning] ⚠️ Requirements
 > - Requires a specific arrangement (time and/or place) already made with someone else
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + am/is/are + verb-ing + (time/place expression)`
 
 > [!example] 📝 Usage & Examples
@@ -447,7 +447,7 @@ tags:
 > - Used almost only with I/We
 > - Does not require a plan made in advance
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Shall + I/we + verb (base form)?`
 
 > [!example] 📝 Usage & Examples
@@ -476,7 +476,7 @@ tags:
 > [!warning] ⚠️ Requirements
 > - Requires a specific future moment to be in progress at
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + will be + verb-ing`
 > Negative: `Subject + will + not + be + verb-ing`
 > Interrogative: `Will + subject + be + verb-ing?`
@@ -509,7 +509,7 @@ tags:
 > [!warning] ⚠️ Requirements
 > - Requires a future deadline, usually introduced by "by" or "by the time"
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + will have + past participle + by + time`
 > Negative: `Subject + will + not + have + past participle`
 > Interrogative: `Will + subject + have + past participle?`
@@ -540,7 +540,7 @@ tags:
 > [!warning] ⚠️ Requirements
 > - Requires for + duration and a future deadline (by + time)
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + will have been + verb-ing + for + time + by + time`
 > Negative: `Subject + will + not + have + been + verb-ing`
 > Interrogative: `Will + subject + have + been + verb-ing?`

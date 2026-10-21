@@ -1,4 +1,4 @@
----
+﻿---
 title: "Algoritmi di ricerca"
 tags:
   - informatica/cpp/algoritmi
@@ -52,7 +52,7 @@ int ricercaLineare(const int arr[], int dimensione, int chiave) {
 
 ## 2. Ricerca Binaria (Dicotomica)
 
-> [!QUESTION] ❓ Domanda d'Esame: Qual è il prerequisito della ricerca binaria?
+> [!INTERROGAZIONE] ❓ Domanda d'Esame: Qual è il prerequisito della ricerca binaria?
 > La ricerca binaria richiede **tassativamente che il vettore sia già ordinato** (in ordine crescente o decrescente). Se l'array è disordinato, l'algoritmo fallirà!
 
 ### Logica del "Divide et Impera"

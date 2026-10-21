@@ -1,4 +1,4 @@
----
+﻿---
 title: "6 Gestione della memoria e riferimenti"
 tags:
   - informatica/python/memoria
@@ -201,7 +201,7 @@ Per evitare *memory leaks*, interviene il **Garbage Collector generazionale** (m
 
 ## 6. Domande d'Esame e Concetti Chiave
 
-> [!QUESTION] ❓ Domande di Verifica
+> [!INTERROGAZIONE] ❓ Domande di Verifica
 > 1. *Qual è la differenza fondamentale tra l'operatore `==` e l'operatore `is`?*  
 >    **Risposta**: `==` verifica se i due operandi hanno lo stesso valore o contenuto logico chiamando `__eq__()`. L'operatore `is` verifica se puntano allo stesso indirizzo di memoria fisico in RAM (`id(a) == id(b)`).
 > 2. *Quando è strettamente necessario usare `copy.deepcopy()` al posto di una copia normale?*  

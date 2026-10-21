@@ -1,14 +1,14 @@
----
+﻿---
 title: "Passive voice"
 tags:
   - inglese/grammatica/passive-voice
   - tipologia/teoria
 ---
 # Passive Voice
-> [!info] 🧠 The Basics
+> [!DEFINIZIONE] 🧠 The Basics
 > The passive voice is used when the focus is on the action and the receiver of the action, rather than who or what is performing the action. In a passive sentence, the object of an active sentence becomes the subject. The person or thing doing the action is called the "agent" and can be introduced at the end of the sentence with the preposition **by**, though it is often omitted if it is unknown, obvious, or not important.
 
-> [!warning] ⚠️ General Rules: Active to Passive
+> [!REGOLA] ⚠️ General Rules: Active to Passive
 > To transform an active sentence into a passive sentence, follow these steps:
 > 1. The **object** of the active sentence becomes the **subject** of the passive sentence.
 > 2. Add the auxiliary verb **to be** in the *same tense* as the main verb of the active sentence.
@@ -23,7 +23,7 @@ tags:
 > - *Step 4:* Hamlet was written by Shakespeare. (Add "by" + Agent)
 > - **Passive:** Hamlet was written by Shakespeare.
 
-> [!important] ⚙️ Structures
+> [!REGOLA] ⚙️ Structures
 > - **Positive:** `Subject + to be (in the correct tense) + Past Participle`
 > - **Negative:** `Subject + to be (in the correct tense) + NOT + Past Participle`
 > - **Interrogative:** `To be (in the correct tense) + Subject + Past Participle?`
@@ -53,7 +53,7 @@ tags:
 > - **Interrogativa:** `To be (nel tempo corretto) + Soggetto + Participio Passato?`
 
 ## 1. Present Simple
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + am/is/are + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -68,7 +68,7 @@ tags:
 > - **Passiva:** Cars are made in Germany. (Le automobili vengono/sono prodotte in Germania.)
 
 ## 2. Present Continuous
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + am/is/are + being + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -83,7 +83,7 @@ tags:
 > - **Passiva:** The meal is being cooked by the chef. (Il pasto sta venendo cucinato dallo chef.)
 
 ## 3. Past Simple
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + was/were + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -98,7 +98,7 @@ tags:
 > - **Passiva:** Hamlet was written by Shakespeare. (L'Amleto fu/è stato scritto da Shakespeare.)
 
 ## 4. Past Continuous
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + was/were + being + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -113,7 +113,7 @@ tags:
 > - **Passiva:** My car was being repaired by the mechanic when I arrived. (La mia auto stava venendo riparata dal meccanico quando sono arrivato.)
 
 ## 5. Present Perfect
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + have/has + been + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -128,7 +128,7 @@ tags:
 > - **Passiva:** My bike has been stolen. (La mia bici è stata rubata.)
 
 ## 6. Past Perfect
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + had + been + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -143,7 +143,7 @@ tags:
 > - **Passiva:** The project had been finished before the deadline. (Il progetto era stato finito prima della scadenza.)
 
 ## 7. Future Simple (Will)
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + will + be + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -158,7 +158,7 @@ tags:
 > - **Passiva:** New employees will be hired by the company next month. (Nuovi dipendenti saranno assunti dall'azienda il mese prossimo.)
 
 ## 8. Future with "Going to"
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + am/is/are + going to be + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -173,7 +173,7 @@ tags:
 > - **Passiva:** A new hospital is going to be built here. (Un nuovo ospedale sta per essere costruito qui.)
 
 ## 9. Modals (can, could, should, must, might, etc.)
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + modal + be + Past Participle`
 
 > [!example] 📝 Transformation Example
@@ -188,7 +188,7 @@ tags:
 > - **Passiva:** A seatbelt must be worn. (La cintura di sicurezza deve essere indossata.)
 
 ## 10. Modals in the past (could have, should have, etc.)
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `Subject + modal + have been + Past Participle`
 
 > [!example] 📝 Transformation Example

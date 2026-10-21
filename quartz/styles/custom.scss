@@ -21,13 +21,85 @@
 
 mark {
   background-color: rgba(255, 224, 102, 0.45);
-  color: inherit;
+  color: #1a1a1a;
   padding: 0.12em 0.35em;
   border-radius: 4px;
   font-weight: 600;
+  border-bottom: 2px solid #fbc02d;
 }
 
 :root[saved-theme="dark"] mark {
-  background-color: rgba(255, 213, 79, 0.28);
-  color: #fff8e1;
+  background-color: rgba(255, 213, 79, 0.30);
+  color: #fff9db;
+  border-bottom: 2px solid #ffd54f;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
+
+.notebooklm-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(168, 85, 247, 0.08));
+  border: 1px solid rgba(147, 51, 234, 0.35);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  .notebooklm-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--secondary, #9333ea);
+  }
+
+  .notebooklm-desc {
+    font-size: 0.95rem;
+    color: var(--darkgray, #4e4e4e);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  .notebooklm-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.35rem;
+  }
+
+  .btn-notebooklm {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-notebooklm-primary {
+    background: linear-gradient(135deg, #6366f1, #9333ea);
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(147, 51, 234, 0.45);
+      filter: brightness(1.08);
+    }
+  }
+}
+
+:root[saved-theme="dark"] .notebooklm-box {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.15));
+  border-color: rgba(168, 85, 247, 0.4);
+  .notebooklm-desc {
+    color: #cbd5e1;
+  }
+}
+

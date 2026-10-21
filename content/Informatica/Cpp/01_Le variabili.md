@@ -4,16 +4,6 @@ tags:
   - informatica/cpp/sintassi
   - tipologia/concetto
 ---
-
-> [!SUMMARY] ⚡ In Sintesi (A Colpo d'Occhio)
-> - **Variabile**: porzione di RAM con ==Nome==, ==Tipo==, ==Valore== e ==Indirizzo (`&`)==.
-> - **Tipi Chiave**: `int` (interi 4 byte), `double` (decimali precisi 8 byte), `char` (singolo carattere), `bool` (`true`/`false`), `string` (testo).
-> - **Input Tastiera**: `cin >>` legge fino al primo spazio; `getline(cin, s)` legge l'intera riga.
-> - **Risoluzione Bug Buffer**: usa sempre ==`cin.ignore()`== tra un `cin >>` e un `getline()`.
-> - **Divisione tra Interi**: $5 / 2$ fa $2$; usa ==`static_cast<float>(a) / b`== per ottenere $2.5$.
-
----
-
 Una **variabile** è una porzione di memoria RAM destinata a contenere un dato che può variare durante l'esecuzione del programma.
 
 Possiamo immaginarla come una **scatola etichettata** con 4 caratteristiche inscindibili:
@@ -60,7 +50,6 @@ int livello = 1;  // Inizializzazione contestuale (buona norma consigliata!)
 ---
 
 ## 2. I Tipi di Dato Primitivi
-
 In C++ ogni variabile deve avere un tipo stabilito a priori (**tipizzazione statica e forte**).
 
 | Tipo | Significato | Dimensione | Intervallo / Valori possibili | Esempio |
@@ -86,7 +75,7 @@ const float TASSO_IVA = 0.22f;
 // TASSO_IVA = 0.25f; // ERRORE! Non puoi modificare una costante!
 ```
 
-> [!DANGER] 🚫 Il Fenomeno dell'Integer Overflow
+> [!TRAPPOLA] 🚫 Il Fenomeno dell'Integer Overflow
 > Se aggiungi `1` al valore massimo consentito da un `int` a 32 bit ($2.147.483.647$), il bit di segno si ribalta e il numero "ricomincia" dal limite negativo:
 > ```cpp
 > int max = 2147483647;
@@ -142,10 +131,6 @@ flowchart TD
 > getline(cin, indirizzo); // Ora funziona regolarmente!
 > ```
 
-> [!INFO] 🖼️ Placeholder Immagine: Funzionamento del buffer dello stream di input
-> *Suggerimento per Obsidian: inserisci qui un diagramma che illustra la coda FIFO del buffer di cin prima e dopo cin.ignore().*  
-> `![[Pasted image buffer_cin.png|550]]`
-
 ---
 
 ## 5. Scope e Variable Shadowing
@@ -176,7 +161,7 @@ int main() {
 
 ## 6. Typecasting con `static_cast`
 
-> [!QUESTION] ❓ Domanda d'Esame: Perché 5 / 2 dà 2 in C++?
+> [!INTERROGAZIONE] ❓ Domanda d'Esame: Perché 5 / 2 dà 2 in C++?
 > Perché la divisione tra due interi genera **sempre un intero troncato**. Per avere decimali, almeno uno dei due operandi deve essere convertito con ==`static_cast<float>()`==:
 
 ```cpp

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Puntatori"
 tags:
   - informatica/cpp/sintassi
@@ -99,7 +99,7 @@ int main() {
 
 ## 4. Puntatori vs Riferimenti (`&`)
 
-> [!QUESTION] ❓ Domanda d'Esame: Qual è la differenza tra un Puntatore e un Riferimento?
+> [!INTERROGAZIONE] ❓ Domanda d'Esame: Qual è la differenza tra un Puntatore e un Riferimento?
 
 | Caratteristica | Puntatore (`int *p`) | Riferimento (`int &r`) |
 | :--- | :--- | :--- |
@@ -174,7 +174,7 @@ flowchart TD
     E1 --- E2 --- E3
 ```
 
-> [!DANGER] 🚫 Errore da Bocciatura: Il Memory Leak
+> [!TRAPPOLA] 🚫 Errore da Bocciatura: Il Memory Leak
 > A ogni `new` deve corrispondere **esattamente un `delete`**. Se allochi memoria in un ciclo senza liberarla, il computer esaurirà tutta la RAM disponibile fino al blocco di sistema!
 
 > [!INFO] 🖼️ Placeholder Immagine: Schema visivo di Memory Leak e Dangling Pointer

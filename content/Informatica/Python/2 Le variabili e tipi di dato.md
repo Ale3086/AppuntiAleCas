@@ -1,4 +1,4 @@
----
+﻿---
 title: "2 Le variabili e tipi di dato"
 tags:
   - informatica/python/sintassi
@@ -132,7 +132,7 @@ print(f"Benvenuto {nome.upper()}, il tuo saldo è €{saldo:.2f}!")
 ### B. Input da Tastiera con `input()`
 La funzione `input(messaggio)` sospende il programma in attesa che l'utente scriva e prema Invio.
 
-> [!DANGER] 🚫 La Trappola più Frequente di `input()`
+> [!TRAPPOLA] 🚫 La Trappola più Frequente di `input()`
 > `input()` restituisce **SEMPRE e SOLO una stringa (`str`)**, anche se l'utente digita delle cifre!
 > ```python
 > a = input("Inserisci primo numero: ")  # Utente digita: 5
@@ -175,7 +175,7 @@ punti **= 2    # elevamento al quadrato -> 3025
 
 ## 7. Domande d'Esame e Concetti Chiave
 
-> [!QUESTION] ❓ Domande di Verifica
+> [!INTERROGAZIONE] ❓ Domande di Verifica
 > 1. *Qual è la differenza tra l'operatore `/` e l'operatore `//` in Python?*  
 >    **Risposta**: `/` calcola la divisione reale restituendo sempre un `float` (es. `7 / 2` produce `3.5`). L'operatore `//` esegue la divisione intera troncata al pavimento (es. `7 // 2` produce `3`).
 > 2. *Se eseguo `a = 10` e poi `b = a`, cosa succede fisicamente in memoria?*  

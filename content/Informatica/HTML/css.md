@@ -1,4 +1,4 @@
----
+﻿---
 title: "CSS - Fogli di Stile a Cascata"
 tags:
   - informatica/css/guida-completa
@@ -114,7 +114,7 @@ flowchart TD
     I --> ID --> CL --> TAG
 ```
 
-> [!DANGER] 🚫 Attenzione a `!important`
+> [!TRAPPOLA] 🚫 Attenzione a `!important`
 > La direttiva `!important` annulla e scavalca le regole di specificità.  
 > Va usata con estrema parsimonia solo per sovrascrivere fogli di stile di librerie terze, altrimenti genera conflitti ingestibili!
 
@@ -122,7 +122,7 @@ flowchart TD
 
 ## Il Box Model
 
-> [!QUESTION] ❓ Domanda d'Esame: Qual è la differenza tra Padding e Margin?
+> [!INTERROGAZIONE] ❓ Domanda d'Esame: Qual è la differenza tra Padding e Margin?
 > - **Padding**: è lo spazio ==interno== alla scatola (tra il testo e il bordo visibile).
 > - **Margin**: è lo spazio vuoto ==esterno== alla scatola (che distanzia questo elemento dagli altri vicini).
 

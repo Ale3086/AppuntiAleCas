@@ -1,4 +1,4 @@
----
+﻿---
 title: "7 La programmazione a oggetti (OOP)"
 tags:
   - informatica/python/oop
@@ -53,7 +53,7 @@ mia_auto = Automobile("Alfa Romeo", "Giulia", 280)
 print(mia_auto.scheda_tecnica())
 ```
 
-> [!QUESTION] ❓ Perché `self` deve essere sempre il primo parametro?
+> [!INTERROGAZIONE] ❓ Perché `self` deve essere sempre il primo parametro?
 > In C++, il puntatore `this` viene passato implicitamente dietro le quinte. In Python, coerentemente con il principio dello Zen *"Explicit is better than implicit"*, il riferimento all'oggetto viene dichiarato esplicitamente nella firma del metodo come `self`. Quando chiami `mia_auto.scheda_tecnica()`, Python la traduce automaticamente in `Automobile.scheda_tecnica(mia_auto)`.
 
 ---
@@ -215,7 +215,7 @@ print(p1 == p2)    # True (confronto automatico di tutti i campi!)
 
 ## 8. Domande d'Esame e Concetti Chiave
 
-> [!QUESTION] ❓ Domande di Verifica
+> [!INTERROGAZIONE] ❓ Domande di Verifica
 > 1. *Qual è la differenza fondamentale tra attributi di istanza e attributi di classe?*  
 >    **Risposta**: Gli attributi di istanza (`self.x`) appartengono al singolo oggetto e ciascuna istanza possiede una copia indipendente. Gli attributi di classe sono dichiarati nel corpo della classe e sono condivisi tra tutte le istanze dello stesso tipo.
 > 2. *A cosa serve la funzione `super()` nell'ereditarietà?*  

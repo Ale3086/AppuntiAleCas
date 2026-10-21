@@ -1,4 +1,4 @@
----
+﻿---
 title: "Caratteristiche del C++"
 tags:
   - informatica/cpp/teoria
@@ -42,7 +42,7 @@ Il C++ permette di combinare liberamente più stili di programmazione:
 
 ## 2. Il Ciclo di Compilazione (Dal Sorgente all'Eseguibile)
 
-> [!QUESTION] ❓ Domanda d'Esame: Quali sono le tre fasi di compilazione di un programma C++?
+> [!INTERROGAZIONE] ❓ Domanda d'Esame: Quali sono le tre fasi di compilazione di un programma C++?
 
 ```mermaid
 flowchart LR

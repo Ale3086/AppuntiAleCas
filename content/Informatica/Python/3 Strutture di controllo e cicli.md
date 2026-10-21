@@ -1,4 +1,4 @@
----
+﻿---
 title: "3 Strutture di controllo e cicli"
 tags:
   - informatica/python/controllo-flusso
@@ -32,7 +32,7 @@ flowchart TD
     style D fill:#f8d7da,stroke:#dc3545,color:#721c24
 ```
 
-> [!DANGER] 🚫 Errore Comune: `IndentationError` e `TabError`
+> [!TRAPPOLA] 🚫 Errore Comune: `IndentationError` e `TabError`
 > Non mescolare mai **Tabulazioni (Tab)** e **Spazi**. Lo standard ufficiale PEP 8 impone l'uso di **4 spazi per ciascun livello di indentazione**. Se l'allineamento è errato, il programma non parte nemmeno!
 
 ---
@@ -189,7 +189,7 @@ for num in range(1, 10):
 
 ## 7. Domande d'Esame e Concetti Chiave
 
-> [!QUESTION] ❓ Domande di Verifica
+> [!INTERROGAZIONE] ❓ Domande di Verifica
 > 1. *Cosa succede se in un programma Python si usa un'indentazione incoerente (es. a volte 2 spazi e a volte 4)?*  
 >    **Risposta**: L'interprete rifiuta di eseguire il programma e genera un'eccezione `IndentationError` prima del runtime.
 > 2. *Come funziona la clausola `else` applicata a un ciclo `for`?*  

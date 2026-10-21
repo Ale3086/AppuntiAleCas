@@ -1,11 +1,11 @@
----
+﻿---
 title: "Conditionals"
 tags:
   - inglese/grammatica/conditionals
   - tipologia/teoria
 ---
 # Conditionals
-> [!info] 🧠 The Basics
+> [!DEFINIZIONE] 🧠 The Basics
 > Conditionals are sentences with two clauses: an "if" clause (the condition) and a main clause (the result).
 > They are used to talk about possibilities, imaginary situations, or things that didn't happen.
 
@@ -17,7 +17,7 @@ tags:
 > [!summary] 🎯 What is it for?
 > Used for general truths, scientific facts and habits. Things that are always true if the condition happens.
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `If/When + subject + verb (present simple) , subject + verb (present simple)`
 
 > [!example] 📝 Usage & Examples
@@ -49,7 +49,7 @@ tags:
 > [!summary] 🎯 What is it for?
 > Used for a possible future situation and its consequence.
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `If/When/Unless + subject + verb (present simple) , subject + will + verb`
 
 > [!example] 📝 Usage & Examples
@@ -81,7 +81,7 @@ tags:
 > [!summary] 🎯 What is it for?
 > Used for unreal/imagined situations in the present or future.
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `If/Unless + subject + verb (past simple) , subject + would + verb`
 
 > [!example] 📝 Usage & Examples
@@ -115,7 +115,7 @@ tags:
 > [!summary] 🎯 What is it for?
 > Used for things that could have been different in the past.
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `If/Unless + subject + had + verb (past participle) , subject + would have / wouldn't have + verb (past participle)`
 
 > [!example] 📝 Usage & Examples
@@ -151,7 +151,7 @@ tags:
 > [!summary] 🎯 What is it for?
 > Used to combine two parts from different conditional types, when the time of the condition and the time of the result do not match.
 
-> [!important] ⚙️ Structure
+> [!REGOLA] ⚙️ Structure
 > `If + subject + had + verb (past participle) , subject + would + verb` (past condition → present result)
 > `If + subject + verb (past simple) , subject + would have + verb (past participle)` (present condition → past result)
 

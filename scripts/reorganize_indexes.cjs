@@ -3,14 +3,17 @@ const path = require("path");
 
 const DESCRIPTIONS = {
   // Macro materie
-  "Informatica": "Lo studio del pensiero computazionale e della logica di programmazione: programmazione di sistema in C++, programmazione moderna in Python, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.",
+  "Informatica": "Lo studio del pensiero computazionale e della logica di programmazione: programmazione procedurale in C, programmazione di sistema in C++, OOP in Java, scripting moderno in Python, sviluppo Web (HTML, CSS, JS), algoritmi e strutture dati.",
   "Inglese": "Regole grammaticali complete, teoria dei tempi verbali, lessico tematico e preparazione intensiva per la certificazione linguistica Cambridge B2 First.",
+  "Italiano": "Letteratura italiana, analisi testuale, correnti storico-letterarie, autori, poetica e approfondimenti critici.",
   "Matematica": "Geometria analitica (retta, coniche, circonferenza, parabola, ellisse, iperbole), goniometria, trigonometria, disequazioni e algebra avanzata.",
   "Sistemi e reti": "Architettura delle reti di calcolatori, standard di cablaggio strutturato, apparati di rete e analisi approfondita dei 7 livelli del modello ISO-OSI.",
   "TIPSIT": "Tecnologie Informatiche e Progettazione: sistemi operativi, digitalizzazione multimediale, teoria dei segnali, conversioni binarie e comandi shell.",
 
   // Informatica subfolders
+  "C": "Programmazione in linguaggio C: sintassi fondamentale, puntatori, strutture e gestione dei file a basso livello con stream FILE* (fopen, fread, fwrite, fseek).",
   "Cpp": "Programmazione in C++: gestione della memoria, puntatori, array, funzioni, struct, classi, librerie e algoritmi di ordinamento.",
+  "Java": "Programmazione orientata agli oggetti in Java: architettura JVM, sintassi, modellazione UML con NClass, costruttori, ereditarietà, classi astratte, interfacce e polimorfismo.",
   "Python": "Programmazione in Python: architettura bytecode PVM, collezioni (liste, tuple, set, dict), funzioni avanzate, memory model, OOP, gestione file e algoritmi.",
   "HTML": "Sviluppo Web Frontend: struttura semantica delle pagine in HTML5, fogli di stile CSS3 e programmazione interattiva con JavaScript.",
   "Librerie": "Prontuario delle librerie standard di C++ (iostream, string, vector, algorithm) con funzioni, metodi e casi d'uso pratici.",
@@ -62,7 +65,8 @@ const DESCRIPTIONS = {
   "Le funzioni e procedure": "Modularizzazione del codice, prototipi, passaggio dei parametri per valore o riferimento (`&`) e ricorsione.",
   "Puntatori": "Concetto di indirizzo di memoria, operatore di dereferenziazione (`*`), aritmetica dei puntatori e gestione dinamica con `new`/`delete`.",
   "Le struct e le classi": "Definizione di strutture dati composte, modificatori di visibilità (`public`/`private`), costruttori e programmazione a oggetti.",
-  "Gestione dei file": "Stream di input/output su file con `ifstream` e `ofstream`, lettura riga per riga e salvataggio di dati.",
+  "Gestione dei file": "Stream ad oggetti in C++ con <fstream> (ifstream, ofstream, fstream), modalità ios::*, lettura sicura con getline, file binari, reinterpret_cast e seek.",
+  "Gestione dei file in C": "Flussi a basso livello con puntatori FILE*, modalità fopen, chiusura fclose, lettura/scrittura su file di testo (fprintf, fgets) e binari (fwrite, fread, fseek).",
   "algorithm": "Funzioni essenziali della STL per ordinamento (`std::sort`), ricerca binaria (`std::binary_search`), inversione e minimi/massimi.",
   "iostream": "Gestione del flusso standard di input/output in C++ con `std::cin`, `std::cout`, formattazione e manipolatori stream.",
   "string": "Metodi della classe `std::string`: concatenazione, ricerca di sottostringhe, lunghezza, comparazione e conversioni numeriche.",
@@ -99,6 +103,14 @@ const DESCRIPTIONS = {
   "7 La programmazione a oggetti (OOP)": "Classi, costruttore __init__, parametro self, incapsulamento pythonico, getter/setter con @property, dunder methods ed ereditarietà con @dataclass.",
   "8 Gestione dei file e moduli": "Context Manager with open(), modalità di lettura/scrittura, gestione sicura delle eccezioni con try-except e manipolazione di file JSON e CSV.",
   "9 Algoritmi e ordinamento in Python": "Ricerca lineare e binaria, algoritmi Bubble/Selection sort, algoritmo Timsort nativo, sort() in-place e sorted() con chiavi lambda.",
+  "1 Introduzione a Java e JVM": "Filosofia WORA, architettura a due stadi sorgente-bytecode-JVM, ecosistema JDK vs JRE vs JVM, compilatore JIT e Garbage Collection.",
+  "2 Tipi di dato, Variabili e I-O": "Gli 8 tipi primitivi a dimensione fissa, classi wrapper, immutabilità delle String, casting e input/output con Scanner.",
+  "3 Strutture di Controllo e Array": "Selezione condizionale, enhanced switch a freccia (Java 14+), cicli while/for/for-each e array allocati nello Heap con la classe Arrays.",
+  "4 Classi Oggetti e Modellazione UML": "Dal pensiero procedurale all'OOP, diagrammi delle classi UML con NClass, i 4 modificatori di accesso (private, public, protected, package-private) ed incapsulamento.",
+  "5 Costruttori e Ciclo di vita degli Oggetti": "Ruolo del costruttore, costruttori di default, parametrici e di copia, parola chiave this, e allocazione dinamica nello Heap.",
+  "6 Relazioni tra Classi (UML e Codice)": "Le 5 relazioni fondamentali in UML: Dipendenza, Associazione, Aggregazione (rombo vuoto), Composizione (rombo pieno) e Generalizzazione.",
+  "7 Ereditarietà e Classi Astratte": "Ereditarietà singola con extends, richiamo super, modificatore protected, classi e metodi astratti (notazione in corsivo su NClass) e parola chiave final.",
+  "8 Polimorfismo e Interfacce": "Riferimento polimorfico, collezioni eterogenee, overloading statico vs overriding dinamico (Late Binding) e contratti con interfacce multiple.",
 
   // File individuali di Inglese
   "Competenze richieste per ogni livello": "Quadro Europeo di Riferimento (QCER): differenze di livello da A1 a C2 e parametri di valutazione B2 First.",
@@ -149,6 +161,7 @@ const DESCRIPTIONS = {
   // File individuali di Sistemi e Reti
   "Categorie di cavi": "Caratteristiche elettriche e limiti di velocità delle categorie di cavi Ethernet in rame (Cat5e, Cat6, Cat6a, Cat7, Cat8).",
   "Normativa ISO-OSI 11801": "Standard internazionali per la progettazione e la posa del cablaggio strutturato in edifici civili e commerciali.",
+  "Normativa ISO-IEC 11801": "Standard internazionali per la progettazione e la posa del cablaggio strutturato in edifici civili e commerciali.",
   "Scenario di cablaggio strutturato": "Progetto pratico di cablaggio strutturato per un campus multi-edificio: distributori CD, BD, FD, dorsali verticali in fibra e computo metrico.",
   "Tipologia e Topologia reti": "Classificazione delle reti per estensione geografica (PAN, LAN, MAN, WAN) e topologie fisiche/logiche (stella, anello, bus, maglia).",
   "Tipologie di cavi, i tipi di segnali e il canale di comunicazione": "Mezzi trasmissivi guidati (doppino ritorto UTP/STP, cavo coassiale, fibra ottica) e propagazione dei segnali elettrici e ottici.",
@@ -160,6 +173,16 @@ const DESCRIPTIONS = {
   "Modello ISO-OSI 11801": "Sintesi dei livelli ISO-OSI applicati alla normativa di cablaggio e trasmissione dati.",
   "Standard basi cablaggio": "Distanze massime consentite, armadi rack, patch panel e permutatori nel sottosistema di cablaggio orizzontale e dorsale.",
   "Tecniche acceso al canale casuali": "Protocolli di contesa del canale trasmissivo: ALOHA puro, Slotted ALOHA e Carrier Sense Multiple Access (CSMA).",
+  "01_Introduzione alle reti informatiche": "Concetti fondamentali delle reti di calcolatori: definizione, obiettivi primari, le 5 componenti essenziali (Host, Apparati, Mezzi, Protocolli, Servizi) e il modello universale di comunicazione.",
+  "02_Paradigmi di rete - Client-Server e Peer-to-Peer": "Trattazione approfondita dei modelli architetturali di rete: paradigma Client/Server (richiesta/risposta, upload/download, chiarimento 'l'utente non è il client'), modello Peer-to-Peer (P2P paritetico) e tabella comparativa.",
+  "03_Tipologie e Topologie di rete": "Classificazione completa delle reti: estensione geografica (BAN, PAN, LAN, MAN, WAN, GAN), modello di gestione (Private, Pubbliche, Enterprise, ISP, SOHO), reti miste cablate/wireless e topologie geometriche fisiche e logiche.",
+  "04_Tecniche di commutazione - Circuito e Pacchetto": "Trattazione approfondita delle tecniche di commutazione: Commutazione di Circuito (canale dedicato, telefonia PSTN) vs Commutazione di Pacchetto (frammentazione, multiplexing statistico, Internet/IP) e tabella comparativa.",
+  "05_Indirizzamento e identificazione nelle reti": "Guida completa alla gerarchia di indirizzamento a 4 livelli nelle reti: Indirizzi MAC (L2), Indirizzi IP (L3), Numeri di Porta (L4), Nomi di Dominio FQDN/DNS (L7) e flusso di risoluzione.",
+  "06_Apparati di rete": "Trattazione completa degli apparati di rete: Nodi terminali (Host) vs intermedi, NIC, Hub (L1), Switch (L2 e CAM table), Access Point (Wi-Fi), Modem vs ONT (FTTH), Router (L3), Firewall, modalità di trasmissione (Simplex/Duplex) e domini di collisione/broadcast.",
+  "07_Il Modello ISO-OSI e architettura a livelli": "Trattazione approfondita del modello ISO/OSI: i 7 livelli funzionali, unità dati di protocollo (PDU), processo di incapsulamento e decapsulamento, livelli operativi degli apparati e confronto con TCP/IP.",
+  "08_Le reti Ethernet e standard IEEE 802.3": "Trattazione completa dello standard Ethernet: evoluzione storica, confronto tra Frame Ethernet II ed IEEE 802.3 (Length vs EtherType), anatomia dettagliata del MAC address a 48 bit (OUI e Seriale) ed evoluzione Full-Duplex.",
+  "09_Tecniche di accesso al canale casuali": "Trattazione approfondita dei protocolli di contesa del canale: CSMA/CD con rilevamento collisioni, segnale di Jamming e backoff esponenziale per Ethernet cablata, e CSMA/CA con handshake RTS/CTS per Wi-Fi wireless (risoluzione del terminale nascosto).",
+  "10_Comandi di configurazione Switch Cisco": "Guida pratica ai comandi di base del sistema operativo Cisco IOS: collegamento console/PuTTY, gerarchia delle modalità (User, Privileged, Global Config, Interface), comandi show e gestione della tabella MAC.",
   "Automa di Moore - Riconoscitore di sequenze": "Progettazione dettagliata di un automa a stati finiti di Moore per il riconoscimento della sequenza binaria 101, confronto teorico con Mealy e tabella di traccia.",
   "Automi a stati finiti e Diagrammi di stato": "Definizione formale di quintupla FSM, macchine a stati finiti sincrone, diagrammi a bolle e frecce e rappresentazione grafica delle transizioni.",
   "Riconoscitori di sequenze con e senza sovrapposizione": "Analisi comparativa tra macchine sequenziali con sovrapposizione (overlapping) e senza sovrapposizione (non-overlapping) con esempi pratici.",
@@ -190,8 +213,42 @@ function cleanName(name) {
   return name.replace(/\.md$/, "");
 }
 
+function getFrontmatterDescription(filePath) {
+  try {
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, "utf8");
+      const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (match) {
+        const yaml = match[1];
+        const descMatch = yaml.match(/^description:\s*(?:"([^"]*)"|'([^']*)'|([^\r\n]+))/m);
+        if (descMatch) {
+          const desc = (descMatch[1] || descMatch[2] || descMatch[3] || "").trim();
+          if (desc && desc !== '""' && desc !== "''") {
+            return desc;
+          }
+        }
+      }
+    }
+  } catch (e) {}
+  return null;
+}
+
 function getDescription(key, dir = "") {
   const normalizedDir = dir.replace(/\\/g, "/");
+
+  // Check if file exists directly on disk in dir
+  if (dir) {
+    const mdPath = path.join(dir, key.endsWith(".md") ? key : `${key}.md`);
+    if (fs.existsSync(mdPath)) {
+      try {
+        if (fs.statSync(mdPath).isFile()) {
+          const fmDesc = getFrontmatterDescription(mdPath);
+          if (fmDesc) return fmDesc;
+        }
+      } catch (e) {}
+    }
+  }
+
   if (key === "Teoria") {
     if (normalizedDir.includes("Informatica") || normalizedDir.includes("Cpp")) {
       return "Concetti teorici del C++, architettura dei calcolatori e analisi computazionale degli algoritmi di ordinamento.";
@@ -219,6 +276,11 @@ function getDescription(key, dir = "") {
   if (DESCRIPTIONS[key]) return DESCRIPTIONS[key];
   const cleaned = cleanName(key);
   if (DESCRIPTIONS[cleaned]) return DESCRIPTIONS[cleaned];
+
+  // Try stripping leading numbers like "01_", "1 ", "01 - "
+  const stripped = cleaned.replace(/^\d+[\s._-]+/, "");
+  if (DESCRIPTIONS[stripped]) return DESCRIPTIONS[stripped];
+
   // Fallback
   return `Appunti e nozioni di approfondimento su ${cleaned}.`;
 }
@@ -246,22 +308,13 @@ cssclasses:
 Benvenuto nel mio raccoglitore digitale di appunti scolastici. Questo spazio in continua evoluzione mi accompagnerà fino alla quinta superiore e oltre, fungendo da vero e proprio archivio personale per ripassare e consolidare le mie conoscenze. Usa la barra laterale o seleziona una materia qui sotto per esplorare!
 
 ---
-## 💻 [[_index_Informatica|Informatica]]
-${getDescription("Informatica", dir)}
-
-## 🇬🇧 [[_index_Inglese|Inglese]]
-${getDescription("Inglese", dir)}
-
-## 📐 [[_index_Matematica|Matematica]]
-${getDescription("Matematica", dir)}
-
-## 🌐 [[_index_Sistemi e reti|Sistemi e reti]]
-${getDescription("Sistemi e reti", dir)}
-
-## ⚙️ [[_index_TIPSIT|TIPSIT]]
-${getDescription("TIPSIT", dir)}
 `;
-    fs.writeFileSync(path.join(dir, "index.md"), content, "utf8");
+    subdirs.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+    for (const s of subdirs) {
+      const subDesc = getDescription(s.name, path.join(dir, s.name));
+      content += `### **[[_index_${s.name}|${s.name}]]**\n${subDesc}\n\n`;
+    }
+    fs.writeFileSync(path.join(dir, "index.md"), content.trimEnd() + "\n", "utf8");
 
     // Also remove any loose FolderName.md files from root if present
     for (const s of subdirs) {
@@ -310,6 +363,9 @@ ${getDescription("TIPSIT", dir)}
     .filter(e => e.isFile() && e.name.endsWith('.md') && !e.name.startsWith('_index_') && !e.name.startsWith('index_') && !e.name.startsWith('index['))
     .map(e => e.name);
 
+  subdirs.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+  finalMdFiles.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
   console.log(`Creating ${indexPath} with ${subdirs.length} subfolders and ${finalMdFiles.length} files...`);
 
   const currentFolderDesc = getDescription(folderName, dir);
@@ -320,33 +376,38 @@ description: ${JSON.stringify(currentFolderDesc)}
 ---
 # 📂 ${folderName}
 ${currentFolderDesc}
-
----
-## 📌 Indice dei Contenuti
 `;
 
-  if (subdirs.length > 0) {
-    content += `\n### 📁 Cartelle e Moduli\n`;
+  if (subdirs.length > 0 && finalMdFiles.length > 0) {
+    content += `\n## 📁 Cartelle e Moduli\n\n`;
     for (const s of subdirs) {
-      const subDesc = getDescription(s.name, dir);
-      content += `- **[[_index_${s.name}|${s.name}]]**\n  ${subDesc}\n`;
+      const subDesc = getDescription(s.name, path.join(dir, s.name));
+      content += `### **[[_index_${s.name}|${s.name}]]**\n${subDesc}\n\n`;
     }
-  }
-
-  if (finalMdFiles.length > 0) {
-    content += `\n### 📄 Note e Argomenti\n`;
+    content += `## 📄 Note e Argomenti\n\n`;
     for (const f of finalMdFiles) {
       const baseName = cleanName(f);
-      const fileDesc = getDescription(baseName);
-      content += `- **[[${baseName}]]**\n  ${fileDesc}\n`;
+      const fileDesc = getDescription(baseName, dir);
+      content += `### **[[${baseName}]]**\n${fileDesc}\n\n`;
     }
-  }
-
-  if (subdirs.length === 0 && finalMdFiles.length === 0) {
+  } else if (subdirs.length > 0) {
+    content += `\n`;
+    for (const s of subdirs) {
+      const subDesc = getDescription(s.name, path.join(dir, s.name));
+      content += `### **[[_index_${s.name}|${s.name}]]**\n${subDesc}\n\n`;
+    }
+  } else if (finalMdFiles.length > 0) {
+    content += `\n`;
+    for (const f of finalMdFiles) {
+      const baseName = cleanName(f);
+      const fileDesc = getDescription(baseName, dir);
+      content += `### **[[${baseName}]]**\n${fileDesc}\n\n`;
+    }
+  } else {
     content += `\n*Sezione in fase di espansione e aggiornamento degli appunti.*\n`;
   }
 
-  fs.writeFileSync(indexPath, content, "utf8");
+  fs.writeFileSync(indexPath, content.trimEnd() + "\n", "utf8");
 }
 
 processDirectory("content", true);

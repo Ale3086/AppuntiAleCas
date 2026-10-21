@@ -85,7 +85,7 @@ L'uscita è $1$ **se almeno uno degli ingressi è $1$**. L'uscita è $0$ unicame
 | 1 | 0 | 1 |
 | 1 | 1 | **0** |
 
-> [!TIP] Proprietà Universale della porta NAND
+> [!TEOREMA] Proprietà Universale della porta NAND
 > La porta NAND è detta **porta universale** perché combinando solo porte NAND è possibile realizzare qualsiasi altra funzione logica (NOT, AND, OR, XOR, ecc.).
 
 ---

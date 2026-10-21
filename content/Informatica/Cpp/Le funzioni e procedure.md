@@ -1,4 +1,4 @@
----
+﻿---
 title: "Le funzioni e procedure"
 tags:
   - informatica/cpp/sintassi
@@ -59,7 +59,7 @@ In C++ la sintassi di base è identica, ma concettualmente si distinguono due ru
 
 ## 3. Parametri Formali vs Parametri Attuali (Argomenti)
 
-> [!QUESTION] ❓ Domanda Tipica da Interrogazione / Esame
+> [!INTERROGAZIONE] ❓ Domanda Tipica da Interrogazione / Esame
 > **Qual è l'esatta differenza tra un parametro formale e un parametro attuale?**  
 > - Il **Parametro Formale** è la variabile dichiarata nella firma della funzione (il "segnaposto").
 > - Il **Parametro Attuale** è il valore o la variabile reale fornita durante l'invocazione della funzione.
@@ -271,7 +271,7 @@ flowchart TD
     F4 -.-> F5
 ```
 
-> [!DANGER] 🚫 Errore Critico: Manca il Caso Base = Stack Overflow
+> [!TRAPPOLA] 🚫 Errore Critico: Manca il Caso Base = Stack Overflow
 > Se una funzione ricorsiva non ha una corretta condizione di arresto (caso base), continuerà a chiamare se stessa all'infinito saturando la memoria dello Stack fino a provocare il crash immediato del programma (*Stack Overflow*).
 
 ```cpp

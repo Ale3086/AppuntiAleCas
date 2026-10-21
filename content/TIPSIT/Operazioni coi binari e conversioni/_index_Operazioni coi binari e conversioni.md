@@ -5,13 +5,11 @@ description: "Sistemi numerici posizionali (binario, ottale, esadecimale), algor
 # 📂 Operazioni coi binari e conversioni
 Sistemi numerici posizionali (binario, ottale, esadecimale), algoritmi di conversione con virgola, aritmetica binaria e complemento a due.
 
----
-## 📌 Indice dei Contenuti
+### **[[1. Sistemi di numerazione e Conversioni di base]]**
+Guida completa e intuitiva ai sistemi decimale, binario, esadecimale e ottale, con algoritmi ed esempi passo-passo per numeri interi e frazionari.
 
-### 📄 Note e Argomenti
-- **[[1. Sistemi di numerazione e Conversioni di base]]**
-  Basi 2, 8, 10, 16, sviluppo polinomiale, metodo delle divisioni continue e moltiplicazioni successive per numeri con la virgola.
-- **[[2. Operazioni aritmetiche binarie]]**
-  Addizione binaria con riporto, sottrazione con prestito, moltiplicazione shift-and-add e divisione euclidea.
-- **[[3. Rappresentazione dei numeri con segno e Complemento a 2]]**
-  Rappresentazione in Modulo e Segno, Complemento a 1, algoritmo del Complemento a 2 e condizioni di overflow circuitale.
+### **[[2. Operazioni aritmetiche binarie]]**
+Addizione con riporto, sottrazione con prestito, moltiplicazione shift-and-add e divisione binaria spiegate passo-passo con esempi pratici ed esercizi verificati.
+
+### **[[3. Rappresentazione dei numeri con segno e Complemento a 2]]**
+Rappresentazione in Modulo e Segno, Complemento a 1, algoritmo del Complemento a 2 e condizioni di overflow circuitale.

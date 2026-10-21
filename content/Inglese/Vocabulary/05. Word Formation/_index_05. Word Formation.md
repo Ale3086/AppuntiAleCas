@@ -5,11 +5,8 @@ description: "Tavole riassuntive di prefissi, suffissi, nomi composti e regole d
 # 📂 05. Word Formation
 Tavole riassuntive di prefissi, suffissi, nomi composti e regole di derivazione morfologica per la parte 3 di Use of English.
 
----
-## 📌 Indice dei Contenuti
+### **[[Compound Words]]**
+Nomi e aggettivi composti più diffusi nella lingua inglese con regole di scrittura (uniti, staccati o con trattino).
 
-### 📄 Note e Argomenti
-- **[[Compound Words]]**
-  Nomi e aggettivi composti più diffusi nella lingua inglese con regole di scrittura (uniti, staccati o con trattino).
-- **[[Prefixes and Suffixes]]**
-  Prefissi negativi (`un-`, `in-`, `dis-`) e suffissi per trasformare verbi in sostantivi o aggettivi in avverbi.
+### **[[Prefixes and Suffixes]]**
+Prefissi negativi (`un-`, `in-`, `dis-`) e suffissi per trasformare verbi in sostantivi o aggettivi in avverbi.

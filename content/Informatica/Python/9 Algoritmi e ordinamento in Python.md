@@ -1,4 +1,4 @@
----
+﻿---
 title: "9 Algoritmi e ordinamento in Python"
 tags:
   - informatica/python/algoritmi
@@ -167,7 +167,7 @@ print(originale)       # [5, 2, 9, 1, 7] (L'originale è INVARIATO!)
 print(nuova_ordinata)  # [1, 2, 5, 7, 9]
 ```
 
-> [!DANGER] 🚫 Errore da Principiante
+> [!TRAPPOLA] 🚫 Errore da Principiante
 > Scrivere `mia_lista = mia_lista.sort()` **cancella la tua lista** sostituendola con `None`! Usa `.sort()` solo come istruzione autonoma.
 
 ---
@@ -197,7 +197,7 @@ multi_ordinati = sorted(studenti, key=lambda s: (s["eta"], -s["media"]))
 
 ## 6. Domande d'Esame e Concetti Chiave
 
-> [!QUESTION] ❓ Domande di Verifica
+> [!INTERROGAZIONE] ❓ Domande di Verifica
 > 1. *Qual è la differenza fondamentale tra il metodo `.sort()` e la funzione `sorted()`?*  
 >    **Risposta**: `.sort()` modifica direttamente sul posto la lista originale restituendo `None`. La funzione `sorted()` non altera la collezione di partenza e restituisce una nuova lista con gli elementi ordinati.
 > 2. *Qual è il prerequisito indispensabile per poter eseguire una Ricerca Binaria?*  

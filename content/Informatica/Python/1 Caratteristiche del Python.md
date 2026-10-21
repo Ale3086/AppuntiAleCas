@@ -1,4 +1,4 @@
----
+﻿---
 title: "1 Caratteristiche del Python"
 tags:
   - informatica/python/teoria
@@ -98,7 +98,7 @@ print(numero + int(testo))   # 30 (somma algebrica)
 print(str(numero) + testo)   # "1020" (concatenazione di stringhe)
 ```
 
-> [!DANGER] 🚫 Attenzione al Typing Dinamico nei Grandi Progetti
+> [!TRAPPOLA] 🚫 Attenzione al Typing Dinamico nei Grandi Progetti
 > Poiché non serve dichiarare i tipi, è facile commettere errori di svista passando per sbaglio un testo dove una funzione si aspetta un numero. Dal Python 3.5 in poi è buona pratica usare i ==Type Hints== (es. `def calcola(x: int) -> float:`).
 
 ---
@@ -135,7 +135,7 @@ In Python:
 
 ## 6. Domande d'Esame e Concetti Fondamentali
 
-> [!QUESTION] ❓ Domande Tipiche di Verifica
+> [!INTERROGAZIONE] ❓ Domande Tipiche di Verifica
 > 1. *Cosa significa che Python è a tipizzazione dinamica ma forte?*  
 >    **Risposta**: Dinamica perché le variabili non hanno un tipo rigido ma sono etichette che possono puntare a dati di qualsiasi tipo; Forte perché Python non esegue conversioni di tipo implicite e non permette operazioni tra tipi non compatibili.
 > 2. *A cosa servono i file `.pyc` dentro la cartella `__pycache__`?*  

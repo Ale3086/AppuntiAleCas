@@ -1,4 +1,4 @@
----
+﻿---
 title: "5 Le funzioni"
 tags:
   - informatica/python/funzioni
@@ -61,7 +61,7 @@ connetti_db("192.168.1.1", 5432)           # Sovrascrive solo porta
 connetti_db("10.0.0.1", timeout=30)        # Usa keyword argument per saltare la porta
 ```
 
-> [!DANGER] 🚫 Errore Critico: Default Mutabili (*The Mutable Default Trap*)
+> [!TRAPPOLA] 🚫 Errore Critico: Default Mutabili (*The Mutable Default Trap*)
 > **NON usare MAI oggetti mutabili (liste, dizionari) come valori di default!**
 > ```python
 > def aggiungi_elemento(item, lista=[]): # ERRORE PESSIMO!
@@ -200,7 +200,7 @@ print(studenti)  # [('Carla', 30), ('Alice', 28), ('Bob', 22)]
 
 ## 7. Domande d'Esame e Concetti Chiave
 
-> [!QUESTION] ❓ Domande di Verifica
+> [!INTERROGAZIONE] ❓ Domande di Verifica
 > 1. *Cosa succede se dichiaro un parametro di default come lista vuota: `def func(v=[]):`?*  
 >    **Risposta**: La lista viene creata solo all'interpretazione iniziale della funzione. Tutte le successive invocazioni che omettono l'argomento condivideranno la medesima lista in memoria, accumulando dati in modo anomalo.
 > 2. *Qual è la differenza pratica tra `*args` e `**kwargs`?*  
