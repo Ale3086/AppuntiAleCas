@@ -3,6 +3,7 @@ title: "Cablaggio strutturato"
 description: "Normative ISO/IEC 11801, categorie di cavi Ethernet (rame e fibra ottica), topologie di rete e tecniche di attestazione/crimpaggio."
 ---
 # 📂 Cablaggio strutturato
+Normative ISO/IEC 11801, categorie di cavi Ethernet (rame e fibra ottica), topologie di rete e tecniche di attestazione/crimpaggio.
 
 <div class="notebooklm-box">
   <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
@@ -15,8 +16,6 @@ description: "Normative ISO/IEC 11801, categorie di cavi Ethernet (rame e fibra 
     </a>
   </div>
 </div>
-
-Normative ISO/IEC 11801, categorie di cavi Ethernet (rame e fibra ottica), topologie di rete e tecniche di attestazione/crimpaggio.
 
 ### **[[Categorie di cavi]]**
 Guida completa alle categorie di cavi in rame (Cat 5e, Cat 6, Cat 6A, Cat 7, Cat 8), standard di schermatura (U/UTP, F/UTP, S/FTP), confronto rame vs alluminio e fibra ottica.
