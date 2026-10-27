@@ -85,7 +85,7 @@ for (const target of targets) {
                 );
               }`;
 
-    const highlightReplacement = `              if (opts.highlight) {
+    const highlightOldPatched = `              if (opts.highlight) {
                 node2.value = node2.value.replace(
                   /==((?!=).+?)==/g,
                   (_match, inner) => {
@@ -97,8 +97,36 @@ for (const target of targets) {
                 );
               }`;
 
+    const highlightReplacement = `              if (opts.highlight) {
+                node2.value = node2.value.replace(
+                  /==((?!=).+?)==/g,
+                  (_match, inner) => {
+                    const formatted = inner
+                      .replace(/\\*\\*(.+?)\\*\\*/g, "<strong>$1</strong>")
+                      .replace(/(?<!\\*)\\*([^*]+)\\*(?!\\*)/g, "<em>$1</em>");
+                    let colorClass = "";
+                    let dataAttr = "";
+                    const trimmed = formatted.trim();
+                    if (trimmed.startsWith("🔴") || trimmed.startsWith("❌")) { colorClass = " hl-red"; dataAttr = ' data-highlight-color="🔴"'; }
+                    else if (trimmed.startsWith("🟠")) { colorClass = " hl-orange"; dataAttr = ' data-highlight-color="🟠"'; }
+                    else if (trimmed.startsWith("🟡")) { colorClass = " hl-yellow"; dataAttr = ' data-highlight-color="🟡"'; }
+                    else if (trimmed.startsWith("🟢") || trimmed.startsWith("✅")) { colorClass = " hl-green"; dataAttr = ' data-highlight-color="🟢"'; }
+                    else if (trimmed.startsWith("🔵")) { colorClass = " hl-blue"; dataAttr = ' data-highlight-color="🔵"'; }
+                    else if (trimmed.startsWith("🟣")) { colorClass = " hl-purple"; dataAttr = ' data-highlight-color="🟣"'; }
+                    else if (trimmed.startsWith("💡") || trimmed.startsWith("⭐")) { colorClass = " hl-gold"; dataAttr = ' data-highlight-color="💡"'; }
+                    else if (trimmed.startsWith("🔥")) { colorClass = " hl-pink"; dataAttr = ' data-highlight-color="🔥"'; }
+                    else if (trimmed.startsWith("📌") || trimmed.startsWith("⚡")) { colorClass = " hl-cyan"; dataAttr = ' data-highlight-color="📌"'; }
+                    else if (trimmed.startsWith("⚠️")) { colorClass = " hl-amber"; dataAttr = ' data-highlight-color="⚠️"'; }
+                    return \`<span class="text-highlight\${colorClass}"\${dataAttr}>\${formatted}</span>\`;
+                  }
+                );
+              }`;
+
     if (content.includes(highlightOrig)) {
       content = content.replaceAll(highlightOrig, highlightReplacement);
+      modified = true;
+    } else if (content.includes(highlightOldPatched)) {
+      content = content.replaceAll(highlightOldPatched, highlightReplacement);
       modified = true;
     }
 
@@ -109,7 +137,7 @@ for (const target of targets) {
                   value: \`<span class="text-highlight">\${text6}</span>\`
                 };`;
 
-    const astHighlightReplacement = `                const highlightNode = node2;
+    const astHighlightOldPatched = `                const highlightNode = node2;
                 const text6 = highlightNode.children?.map(getLiteralValue).join("") ?? "";
                 const formatted = text6
                   .replace(/\\*\\*(.+?)\\*\\*/g, "<strong>$1</strong>")
@@ -119,8 +147,34 @@ for (const target of targets) {
                   value: \`<span class="text-highlight">\${formatted}</span>\`
                 };`;
 
+    const astHighlightReplacement = `                const highlightNode = node2;
+                const text6 = highlightNode.children?.map(getLiteralValue).join("") ?? "";
+                const formatted = text6
+                  .replace(/\\*\\*(.+?)\\*\\*/g, "<strong>$1</strong>")
+                  .replace(/(?<!\\*)\\*([^*]+)\\*(?!\\*)/g, "<em>$1</em>");
+                let colorClass = "";
+                let dataAttr = "";
+                const trimmed = formatted.trim();
+                if (trimmed.startsWith("🔴") || trimmed.startsWith("❌")) { colorClass = " hl-red"; dataAttr = ' data-highlight-color="🔴"'; }
+                else if (trimmed.startsWith("🟠")) { colorClass = " hl-orange"; dataAttr = ' data-highlight-color="🟠"'; }
+                else if (trimmed.startsWith("🟡")) { colorClass = " hl-yellow"; dataAttr = ' data-highlight-color="🟡"'; }
+                else if (trimmed.startsWith("🟢") || trimmed.startsWith("✅")) { colorClass = " hl-green"; dataAttr = ' data-highlight-color="🟢"'; }
+                else if (trimmed.startsWith("🔵")) { colorClass = " hl-blue"; dataAttr = ' data-highlight-color="🔵"'; }
+                else if (trimmed.startsWith("🟣")) { colorClass = " hl-purple"; dataAttr = ' data-highlight-color="🟣"'; }
+                else if (trimmed.startsWith("💡") || trimmed.startsWith("⭐")) { colorClass = " hl-gold"; dataAttr = ' data-highlight-color="💡"'; }
+                else if (trimmed.startsWith("🔥")) { colorClass = " hl-pink"; dataAttr = ' data-highlight-color="🔥"'; }
+                else if (trimmed.startsWith("📌") || trimmed.startsWith("⚡")) { colorClass = " hl-cyan"; dataAttr = ' data-highlight-color="📌"'; }
+                else if (trimmed.startsWith("⚠️")) { colorClass = " hl-amber"; dataAttr = ' data-highlight-color="⚠️"'; }
+                parent.children[index2] = {
+                  type: "html",
+                  value: \`<span class="text-highlight\${colorClass}"\${dataAttr}>\${formatted}</span>\`
+                };`;
+
     if (content.includes(astHighlightOrig)) {
       content = content.replaceAll(astHighlightOrig, astHighlightReplacement);
+      modified = true;
+    } else if (content.includes(astHighlightOldPatched)) {
+      content = content.replaceAll(astHighlightOldPatched, astHighlightReplacement);
       modified = true;
     }
 

@@ -19,20 +19,133 @@
   }
 }
 
-mark {
+mark,
+.text-highlight {
   background-color: rgba(255, 224, 102, 0.45);
   color: #1a1a1a;
-  padding: 0.12em 0.35em;
+  padding: 0.12em 0.38em;
   border-radius: 4px;
   font-weight: 600;
   border-bottom: 2px solid #fbc02d;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: all 0.15s ease-in-out;
+
+  strong {
+    font-weight: 800 !important;
+  }
+
+  &.hl-red {
+    background-color: rgba(239, 68, 68, 0.22) !important;
+    border-bottom: 2px solid #dc2626 !important;
+    color: #7f1d1d !important;
+  }
+  &.hl-orange {
+    background-color: rgba(249, 115, 22, 0.22) !important;
+    border-bottom: 2px solid #ea580c !important;
+    color: #7c2d12 !important;
+  }
+  &.hl-yellow {
+    background-color: rgba(255, 235, 59, 0.40) !important;
+    border-bottom: 2px solid #fbc02d !important;
+    color: #1a1a1a !important;
+  }
+  &.hl-green {
+    background-color: rgba(34, 197, 94, 0.22) !important;
+    border-bottom: 2px solid #16a34a !important;
+    color: #14532d !important;
+  }
+  &.hl-blue {
+    background-color: rgba(59, 130, 246, 0.22) !important;
+    border-bottom: 2px solid #2563eb !important;
+    color: #1e3a8a !important;
+  }
+  &.hl-purple {
+    background-color: rgba(168, 85, 247, 0.22) !important;
+    border-bottom: 2px solid #9333ea !important;
+    color: #581c87 !important;
+  }
+  &.hl-gold {
+    background-color: rgba(250, 204, 21, 0.28) !important;
+    border-bottom: 2px solid #ca8a04 !important;
+    color: #713f12 !important;
+  }
+  &.hl-pink {
+    background-color: rgba(244, 63, 94, 0.22) !important;
+    border-bottom: 2px solid #e11d48 !important;
+    color: #881337 !important;
+  }
+  &.hl-cyan {
+    background-color: rgba(6, 182, 212, 0.22) !important;
+    border-bottom: 2px solid #0891b2 !important;
+    color: #164e63 !important;
+  }
+  &.hl-amber {
+    background-color: rgba(245, 158, 11, 0.22) !important;
+    border-bottom: 2px solid #d97706 !important;
+    color: #78350f !important;
+  }
 }
 
-:root[saved-theme="dark"] mark {
-  background-color: rgba(255, 213, 79, 0.30);
-  color: #fff9db;
-  border-bottom: 2px solid #ffd54f;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+:root[saved-theme="dark"] {
+  mark,
+  .text-highlight {
+    background-color: rgba(255, 213, 79, 0.28);
+    color: #fff9db;
+    border-bottom: 2px solid #ffd54f;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+
+    &.hl-red {
+      background-color: rgba(239, 68, 68, 0.28) !important;
+      border-bottom: 2px solid #ef4444 !important;
+      color: #fecaca !important;
+    }
+    &.hl-orange {
+      background-color: rgba(249, 115, 22, 0.28) !important;
+      border-bottom: 2px solid #f97316 !important;
+      color: #fed7aa !important;
+    }
+    &.hl-yellow {
+      background-color: rgba(255, 213, 79, 0.28) !important;
+      border-bottom: 2px solid #ffd54f !important;
+      color: #fff9db !important;
+    }
+    &.hl-green {
+      background-color: rgba(34, 197, 94, 0.28) !important;
+      border-bottom: 2px solid #22c55e !important;
+      color: #bbf7d0 !important;
+    }
+    &.hl-blue {
+      background-color: rgba(59, 130, 246, 0.28) !important;
+      border-bottom: 2px solid #3b82f6 !important;
+      color: #bfdbfe !important;
+    }
+    &.hl-purple {
+      background-color: rgba(168, 85, 247, 0.28) !important;
+      border-bottom: 2px solid #a855f7 !important;
+      color: #e9d5ff !important;
+    }
+    &.hl-gold {
+      background-color: rgba(250, 204, 21, 0.32) !important;
+      border-bottom: 2px solid #facc15 !important;
+      color: #fef08a !important;
+    }
+    &.hl-pink {
+      background-color: rgba(244, 63, 94, 0.28) !important;
+      border-bottom: 2px solid #f43f5e !important;
+      color: #fecdd3 !important;
+    }
+    &.hl-cyan {
+      background-color: rgba(6, 182, 212, 0.28) !important;
+      border-bottom: 2px solid #06b6d4 !important;
+      color: #a5f3fc !important;
+    }
+    &.hl-amber {
+      background-color: rgba(245, 158, 11, 0.28) !important;
+      border-bottom: 2px solid #f59e0b !important;
+      color: #fef3c7 !important;
+    }
+  }
 }
 
 .notebooklm-box {

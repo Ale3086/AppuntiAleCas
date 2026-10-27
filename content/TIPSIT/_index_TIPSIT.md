@@ -14,5 +14,5 @@ Struttura gerarchica dei file system, gestione delle partizioni e guida pratica 
 ### **[[_index_Operazioni coi binari e conversioni|Operazioni coi binari e conversioni]]**
 Sistemi numerici posizionali (binario, ottale, esadecimale), algoritmi di conversione con virgola, aritmetica binaria e complemento a due.
 
-### **[[_index_Sistemi operativi|Sistemi operativi]]**
-Architettura interna del sistema operativo: Kernel monolitico vs microkernel, Shell, modalità Ring (User/Kernel mode) e chiamate di sistema (System Call).
+### **[[_index_Sistemi Operativi e Gestione del Processore|Sistemi Operativi e Gestione del Processore]]**
+Architettura interna del sistema operativo: Macchina Astratta, Ring Model, User/Kernel mode, System Call, sequenza di Boot (BIOS/UEFI, MBR/GPT), modalità di elaborazione, PCB/JCB/Thread, ciclo di vita dei processi, algoritmi di scheduling e metriche prestazionali.

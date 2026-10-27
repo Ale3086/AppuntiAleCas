@@ -25,8 +25,20 @@ tags:
 
 ## 1. La Scheda di Rete (NIC)
 
-La **NIC (*Network Interface Card*)** è l'interfaccia hardware che connette il calcolatore al mezzo trasmissivo (cavo o onde radio), convertendo i dati paralleli del bus interno nel flusso seriale trasmesso sul canale.
-- Memorizza nella ROM permanente il proprio ==**indirizzo fisico MAC univoco a 48 bit** (*Burned-In Address - BIA*)==.
+La **NIC (*Network Interface Card*)** è l'interfaccia hardware fondamentale presente in ogni dispositivo host (PC, server, stampante, smartphone) per consentire l'accesso al mezzo trasmissivo (cavo in rame, fibra ottica o onde radio).
+
+Opera a cavallo tra **==Livello 1 (Fisico)==** e **==Livello 2 (Data Link)==**:
+
+- **Funzioni di Livello 1 (Fisico):**
+  - ==Conversione Parallelo/Seriale:== converte i dati paralleli del bus interno del calcolatore (PCIe) nel flusso seriale di bit inviato sul cavo o nell'etere (e viceversa in ricezione).
+  - ==Transceiver (PHY):== trasmettitore/ricevitore che genera e rileva i segnali fisici (impulsi elettrici sul doppino RJ45, luce nella fibra ottica, onde radio nel Wi-Fi).
+  - ==Auto-negoziazione:== rileva e concorda automaticamente con l'apparato connesso (lo Switch) la massima velocità supportata (10/100/1000 Mbps o 2.5/10 Gbps) e la modalità operativa (Half-Duplex o Full-Duplex).
+- **Funzioni di Livello 2 (Data Link):**
+  - ==Indirizzo Fisico MAC:== custodisce impresso nella memoria ROM permanente il codice univoco a 48 bit, detto **==BIA (*Burned-In Address*)==**.
+  - ==Incapsulamento e Formattazione Trame:== assembla i frame Ethernet aggiungendo intestazione (*header*) e coda di controllo (*trailer FCS/CRC*).
+  - ==Controllo di Errore (CRC-32):== calcola il codice di ridondanza in trasmissione e lo ricalcola all'arrivo; se il frame risulta corrotto, la scheda lo ==scarta immediatamente senza impegnare la CPU==.
+  - ==Filtraggio Hardware dei Frame:== in ricezione ordinaria, la NIC legge il MAC di destinazione e accetta solo le trame dirette al proprio MAC fisico, al broadcast (`FF:FF:FF:FF:FF:FF`) o ai gruppi multicast a cui appartiene, scartando tutte le altre.
+  - ==Modalità Promiscua (*Promiscuous Mode*):== configurazione speciale (utilizzata dai software di analisi come *Wireshark*) che disattiva il filtro hardware, permettendo alla NIC di catturare **tutti i frame in transito** sul segmento di rete.
 
 ---
 
@@ -150,10 +162,34 @@ Il **Firewall** è un apparato hardware o software collocato sul perimetro tra l
 
 ---
 
-## 10. Schema Comparativo Finale: Apparati e Domini
+## 10. Domini di Collisione e Domini di Broadcast
+
+> [!IMPORTANT] Distinzione Chiave per l'Esame
+> - **==Dominio di Collisione:==** porzione di rete in cui le trame inviate da due o piu stazioni contemporaneamente possono **sovrapporsi e corrompersi** a vicenda per contesa del mezzo condiviso.
+> - **==Dominio di Broadcast:==** porzione di rete raggiunta da una trama inviata all'indirizzo di diffusione generale (**`FF:FF:FF:FF:FF:FF`**).
+
+### Confronto Strutturale tra i Due Domini
+
+| Caratteristica | Dominio di Collisione | Dominio di Broadcast |
+| :--- | :--- | :--- |
+| **Evento** | Sovrapposizione distruttiva di segnali sul canale condiviso | Propagazione di una trama destinata a tutti gli host locali |
+| **Livello ISO/OSI Coinvolto** | ==Livello 1 (Fisico)== e ==Livello 2 (Data Link)== | ==Livello 2 (Data Link)== e ==Livello 3 (Rete)== |
+| **Comportamento dell'Hub** | ==Non isola:== tutte le porte appartengono a un unico grande dominio | ==Non isola:== replica elettricamente la trama su tutte le porte |
+| **Comportamento dello Switch** | ==Spezza il dominio:== **ogni singola porta e un dominio di collisione indipendente** | ==Non isola:== inoltra i frame broadcast a tutte le porte attive |
+| **Comportamento del Router** | ==Spezza il dominio:== ogni interfaccia e un dominio separato | ==Spezza il dominio:== **blocca tassativamente le trame di broadcast** |
+| **Soluzione di Eliminazione** | ==Cablaggio Full-Duplex su Switch== (collisioni fisicamente azzerate) | Segmentazione logica in ==VLAN (*Virtual LAN*)== su switch gestiti |
+
+### Regola di Calcolo per gli Esercizi
+- **Contare i Domini di Collisione:** sommare il numero di ==porte collegate degli switch== + le ==interfacce attive dei router== (ogni hub connesso conta come un solo singolo dominio, indipendentemente dai PC collegati).
+- **Contare i Domini di Broadcast:** sommare il numero di ==interfacce di rete attive dei router== (oppure il numero di ==VLAN separate== configurate).
+
+---
+
+## 11. Schema Comparativo Finale: Apparati e Domini
 
 | Apparato | Livello ISO/OSI | Indirizzamento Esaminato | Isola i Domini di Collisione? | Isola i Domini di Broadcast? | Ruolo Funzionale |
 | :--- | :---: | :--- | :---: | :---: | :--- |
+| **NIC (Scheda di Rete)** | ==Livelli 1 e 2 (Fisico + Data Link)== | Proprio indirizzo fisico **==MAC==** | Non applicabile (interfaccia terminale) | Non applicabile | Interfaccia hardware di accesso al canale per l'host |
 | **Hub** | ==Livello 1 (Fisico)== | Nessuno (bit elettrici) | No (unico bus condiviso) | No | Ripetitore passivo multiporta (obsoleto) |
 | **Switch** | ==Livello 2 (Data Link)== | Indirizzi fisici **==MAC==** | **==Sì (ogni porta è un dominio separato)==** | No (inoltra i broadcast a tutti) | Commutazione e inoltro selettivo dei frame LAN |
 | **Access Point** | ==Livello 2 (Data Link)== | Indirizzi MAC (802.3 / 802.11) | No sul canale radio | No | Ponte trasparente tra Ethernet e Wi-Fi |

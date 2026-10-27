@@ -17,17 +17,17 @@ I 7 livelli della pila ISO-OSI, incapsulamento PDU, apparati di rete (Switch, Ro
   </div>
 </div>
 
-  ### **[[01_Introduzione alle reti informatiche]]**
+### **[[01_Introduzione alle reti informatiche]]**
 Concetti fondamentali delle reti di calcolatori: definizione, obiettivi primari, le 5 componenti essenziali (Host, Apparati, Mezzi, Protocolli, Servizi) e il modello universale di comunicazione.
 
 ### **[[02_Paradigmi di rete - Client-Server e Peer-to-Peer]]**
 Trattazione approfondita dei modelli architetturali di rete: paradigma Client/Server (richiesta/risposta, upload/download, chiarimento 'l'utente non è il client'), modello Peer-to-Peer (P2P paritetico) e tabella comparativa.
 
-### **[[03_Tipologie e Topologie di rete]]**
-Classificazione completa delle reti: estensione geografica (BAN, PAN, LAN, MAN, WAN, GAN), modello di gestione (Private, Pubbliche, Enterprise, ISP, SOHO), reti miste cablate/wireless e topologie geometriche fisiche e logiche.
+### **[[03_Classificazione della rete]]**
+Classificazione completa delle reti: estensione geografica (BAN, PAN, LAN, MAN, WAN, GAN), modello di gestione, mezzi trasmissivi (rame, fibra, wireless) e topologie geometriche fisiche e logiche.
 
 ### **[[04_Tecniche di commutazione - Circuito e Pacchetto]]**
-Trattazione approfondita delle tecniche di commutazione: Commutazione di Circuito (canale dedicato, telefonia PSTN) vs Commutazione di Pacchetto (frammentazione, multiplexing statistico, Internet/IP) e tabella comparativa.
+Trattazione approfondita delle tecniche di commutazione: Circuito (canale dedicato, telefonia PSTN), Messaggio (store-and-forward integrale, Telex/Email) e Pacchetto (frammentazione, multiplexing statistico, Internet/IP) con tabella comparativa a tre vie.
 
 ### **[[05_Indirizzamento e identificazione nelle reti]]**
 Guida completa alla gerarchia di indirizzamento a 4 livelli nelle reti: Indirizzi MAC (L2), Indirizzi IP (L3), Numeri di Porta (L4), Nomi di Dominio FQDN/DNS (L7) e flusso di risoluzione.

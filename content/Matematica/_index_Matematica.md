@@ -1,25 +1,21 @@
 ---
 title: "Matematica"
-description: "Geometria analitica (retta, coniche, circonferenza, parabola, ellisse, iperbole), goniometria, trigonometria, disequazioni e algebra avanzata."
+description: "Raccoglitore generale di Matematica: Algebra ed equazioni, Geometria analitica, Goniometria e trigonometria, e Numeri complessi."
 ---
 # 📂 Matematica
 
-Geometria analitica (retta, coniche, circonferenza, parabola, ellisse, iperbole), goniometria, trigonometria, disequazioni e algebra avanzata.
+Raccoglitore generale dei capitoli di matematica del terzo anno di scuola superiore, suddivisi in percorsi modulari ordinati e ricchi di esempi grafici.
 
-### **[[01 - La Retta]]**
-Studio della retta nel piano cartesiano: equazione esplicita e implicita, coefficiente angolare, parallelismo, perpendicolarità e fasci di rette.
+---
 
-### **[[02 - Le Coniche (Parabola e Circonferenza)]]**
-Luoghi geometrici nel piano: equazione della circonferenza (centro e raggio) e della parabola (vertice, fuoco, direttrice e tangenti).
+### **[[_index_Algebra ed Equazioni|Algebra ed Equazioni]]**
+Disequazioni di secondo grado (metodo della parabola), disequazioni fratte (studio del segno), sistemi di disequazioni, scomposizione con la regola di Ruffini, equazioni/disequazioni con valore assoluto ed espressioni irrazionali con radicali.
 
-### **[[03 - Goniometria e Trigonometria]]**
-Circonferenza goniometrica, funzioni seno/coseno/tangente, relazioni fondamentali, formule notevoli e teoremi sui triangoli rettangoli.
+### **[[_index_Geometria Analitica|Geometria Analitica]]**
+Studio analitico della retta e fasci di rette, parabola (asse verticale e orizzontale, intersezioni retta-parabola), circonferenza (equazione canonica, centro, raggio, rette tangenti), ellisse, iperbole e funzione omografica.
 
-### **[[04 - Disequazioni di II grado e Fratte]]**
-Risoluzione algebrica e geometrica delle disequazioni di secondo grado, studio del segno dei fattori per disequazioni fratte e sistemi.
+### **[[_index_Goniometria e Trigonometria|Goniometria e Trigonometria]]**
+Circonferenza goniometrica unitaria, radianti, funzioni seno/coseno/tangente/cotangente, relazioni fondamentali, archi associati, formule di duplicazione, equazioni/disequazioni goniometriche e teoremi di risoluzione dei triangoli (rettangoli, Teorema dei Seni e di Carnot).
 
-### **[[05 - Ellisse e Iperbole]]**
-Proprietà focali, equazioni canoniche riferite agli assi, calcolo di fuochi, vertici, eccentricità e asintoti dell'iperbole.
-
-### **[[06 - Algebra e Irrazionali]]**
-Proprietà dei radicali, condizioni di esistenza, razionalizzazione di frazioni, equazioni e disequazioni irrazionali e con modulo.
+### **[[_index_Numeri Complessi|Numeri Complessi]]**
+L'insieme $\mathbb{C}$, unità immaginaria $i$, potenze cicliche, forma algebrica, piano di Argand-Gauss, coordinate polari, forma trigonometrica, formula di Abraham De Moivre, radici $n$-esime dell'unità e di numeri complessi, forma esponenziale e Identità di Eulero.
