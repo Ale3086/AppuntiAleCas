@@ -1,24 +1,38 @@
 ---
 title: "Sistemi Operativi e Gestione del Processore"
-description: "Modulo completo e approfondito per TPSIT: architettura del SO, ring model, User/Kernel mode, bootstrap, modalità di elaborazione, ciclo di vita dei processi, algoritmi di scheduling e metriche prestazionali con caso d'esame svolto."
-tags:
-  - tipsit/sistemi-operativi
-  - hub-modulo
-  - indice-lezioni
-  - gestione-processore
+description: "Architettura interna del sistema operativo: Macchina Astratta, Ring Model, User/Kernel mode, System Call, sequenza di Boot (BIOS/UEFI, MBR/GPT), modalità di elaborazione, PCB/JCB/Thread, ciclo di vita dei processi, algoritmi di scheduling e metriche prestazionali."
+---
+# 📂 Sistemi Operativi e Gestione del Processore
+
+<div class="notebooklm-box">
+  <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
+  <p class="notebooklm-desc">
+    Esporta l'intero modulo (<strong>4 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
+  </p>
+  <div class="notebooklm-actions">
+    <a href="Sistemi_Operativi_e_Gestione_del_Processore_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
+      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
+    </a>
+  </div>
+</div>
+
+Architettura interna del sistema operativo: Macchina Astratta, Ring Model, User/Kernel mode, System Call, sequenza di Boot (BIOS/UEFI, MBR/GPT), modalità di elaborazione, PCB/JCB/Thread, ciclo di vita dei processi, algoritmi di scheduling e metriche prestazionali.
+
+### **[[01_Architettura del Sistema Operativo, Boot e Privilegi]]**
+Macchina astratta e architettura a 4 livelli, modello a ring concentrici (Ring 0..3), User Mode vs Kernel Mode, System Call e trap software (`INT 0x80`), sequenza di Bootstrap in 5 fasi, BIOS vs UEFI, MBR (dimostrazione matematica limite 2 TiB) vs GPT e ambienti isolati (Dual Boot con exFAT, Macchine Virtuali con Hypervisor, Container Docker).
+
+### **[[02_Modalità di Elaborazione e Entità Software]]**
+Modalità di calcolo (Batch, Interattiva, Multiprogrammazione), superamento dell'I/O Bottleneck tramite controller DMA e gerarchia di velocità delle memorie, Time-Sharing e dimensionamento del Time-Slice ($T_Q \ge 100 \times T_{CS}$), sistemi Real-Time (Hard vs Soft) e ciclo evolutivo Programma -> Job (JCB su disco) -> Processo (PCB in RAM) -> Thread.
+
+### **[[03_Ciclo di Vita del Processo e Algoritmi di Scheduling]]**
+Diagramma degli stati del processo (Nuovo, Pronto, In esecuzione, Sospeso, Finito) con le code RL e WL, i 6 moduli del Kernel (LTS, MTS, STS, Dispatcher con le 3 azioni, Traffic Controller, Interrupt Handler), la regola d'oro e gli algoritmi di scheduling: FCFS (Effetto Convoglio), SJF (Starvation), SRTF, Round-Robin e Priorità con tecnica dell'Aging.
+
+### **[[04_Metriche di Prestazione e Caso Reale d'Esame]]**
+Formulario matematico completo (Turnaround Time, Tempo di Attesa, Efficienza CPU, Throughput) e analisi analitica approfondita del caso d'esame con interruzione hardware da tastiera ($P_2$), prelazione su $P_1$, gestione arrivo di $P_3$ (Spotify), diagramma temporale di Gantt e cronologia secondo per secondo.
+
 ---
 
-# 🖥️ Sistemi Operativi e Gestione del Processore
-
-Benvenuto nel modulo didattico dedicato all'**Architettura dei Sistemi Operativi e alla Gestione della CPU**, progettato per fornire una padronanza teorica e pratica assoluta per le verifiche scritte e orali di **TPSIT**.
-
-Ogni argomento è corredato non solo da definizioni formali, ma dalle **motivazioni sistemistiche approfondite** ("il *perché* di ogni scelta ingegneristica") richieste dai docenti, schemi grafici ad alta risoluzione e calcoli matematici completi.
-
----
-
-## 🎨 Guida alle Evidenziazioni Cromatiche (Nuovo Formato Obsidian)
-
-In tutti i documenti di questo modulo è stato adottato il sistema di evidenziazione semantica a colori basato sulle emoji, che rende i concetti immediatamente distinguibili a colpo d'occhio:
+## 🎨 Legenda Evidenziazioni per lo Studio Veloce
 
 | Evidenziazione | Categoria Concettuale | Significato e Utilizzo |
 | :--- | :--- | :--- |
@@ -31,62 +45,20 @@ In tutti i documenti di questo modulo è stato adottato il sistema di evidenziaz
 
 ---
 
-## 🗺️ Mappa Concettuale Generale del Percorso
+## 🖼️ Galleria delle Illustrazioni Tecniche
 
-```mermaid
-flowchart TD
-    MOD["🖥️ SISTEMI OPERATIVI & GESTIONE DEL PROCESSORE"]
-    
-    MOD --> B1["🏛️ 1. Architettura, Boot e Privilegi<br/>• Macchina Astratta e Gestione Risorse (HW/SW)<br/>• Onion Skin / Ring Model (Ring 0..3 + Shell CLI/GUI/Menu)<br/>• User Mode vs Kernel Mode e System Call (Software Trap)<br/>• Esecuzione Non-Preemptive in Kernel Mode<br/>• Bootstrap in 5 Fasi • BIOS vs UEFI • MBR vs GPT<br/>• Ambienti Isolati: Dual Boot (exFAT) vs VM vs Docker"]
-    
-    MOD --> B2["⚙️ 2. Modalità di Elaborazione ed Entità<br/>• Batch vs Interattiva • Monoprogrammazione vs Multiprogrammazione<br/>• Superamento dell'I/O Bottleneck tramite DMA<br/>• Time-Sharing: i 3 eventi di rilascio CPU • Windows vs Linux<br/>• System Overhead e dimensionamento del Time-Slice<br/>• Sistemi Real-Time: Hard vs Soft (Deadlines)<br/>• Programma -> Job (JCB su disco) -> Processo (PCB in RAM) -> Thread"]
-    
-    MOD --> B3["🔄 3. Ciclo di Vita e Scheduling<br/>• Diagramma degli Stati: New, Ready, Running, Waiting, Swap, Terminated<br/>• I 6 Moduli del Kernel (LTS, MTS, STS, Dispatcher, Traffic Controller, Interrupt Handler)<br/>• REGOLA D'ORO: da Waiting NON si va a Running!<br/>• Algoritmi Non-Preemptive: FCFS (Effetto Convoglio) e SJF (Starvation)<br/>• Algoritmi Preemptive: SRTF, Round-Robin (Time-slice, Multilevel), Priorità con AGING"]
-    
-    MOD --> B4["📊 4. Metriche e Caso Reale d'Esame<br/>• Formulario: Turnaround Time (TT), Tempo di Attesa (TA), Efficienza (eta), Throughput<br/>• Caso Reale con Interruzione Hardware: Driver Tastiera P2 interrompe Browser P1<br/>• Gestione arrivo P3 (Spotify) • Asse temporale e Diagramma di Gantt<br/>• Risoluzione analitica completa istante per istante"]
-```
+Tutte le illustrazioni tecniche originali sono archiviate nella cartella `content/TIPSIT/Zimmagini/` e collegate nei rispettivi fascicoli:
 
----
-
-## 📚 Indice dei Fascicoli di Studio
-
-1. **[[01_Architettura del Sistema Operativo, Boot e Privilegi|🏛️ Fascicolo 1: Architettura del Sistema Operativo, Boot e Privilegi]]**
-   - Ruolo del SO come macchina astratta e intermediario hardware-software.
-   - Architettura a strati concentrici: il modello a Ring (*Ring 0 Kernel, Ring 1 Memory, Ring 2 Device, Ring 3 File System, Shell*).
-   - Livelli di privilegio: User Mode vs Kernel Mode, System Call e trap software (`INT 0x80` / `SYSCALL`).
-   - La sequenza di Bootstrap in 5 fasi: Reset Vector, POST, tabella partizioni, Bootloader e caricamento del Kernel.
-   - Confronti tecnologici fondamentali: BIOS vs UEFI, MBR (limite dei 2 TiB dimostrato) vs GPT.
-   - Ambienti isolati: Dual Boot (perché serve exFAT per condividere dati), Virtual Machine con Hypervisor e Container Docker.
-
-2. **[[02_Modalità di Elaborazione e Entità Software|⚙️ Fascicolo 2: Modalità di Elaborazione ed Entità Software]]**
-   - Classificazione delle modalità di calcolo: Batch, Interattiva, Monoprogrammazione e Multiprogrammazione.
-   - L'I/O Bottleneck e il ruolo del controller DMA (*Direct Memory Access*).
-   - I sistemi Time-Sharing: i 3 eventi precisi di rilascio della CPU e differenza tra Windows (monoutente) e Linux (multiutente).
-   - Il trade-off vitale del Time-Slice e l'impatto del System Overhead sull'efficienza della CPU.
-   - Sistemi Real-Time: vincoli Hard (rischio catastrofico) vs Soft (degrado QoS/SLA).
-   - Il ciclo evolutivo: Programma su disco $\to$ Job in HOLD $\to$ Processo in RAM $\to$ Thread (perché i thread sono leggeri).
-   - Tabella comparativa dettagliata tra **JCB** (Job Control Block su disco) e **PCB** (Process Control Block in RAM).
-
-3. **[[03_Ciclo di Vita del Processo e Algoritmi di Scheduling|🔄 Fascicolo 3: Ciclo di Vita del Processo e Algoritmi di Scheduling]]**
-   - Il diagramma degli stati del processo: *New/Hold, Ready, Running, Waiting, Waiting on Disk, Terminated*.
-   - Il ruolo coordinato dei 6 moduli del Kernel: *Job Scheduler (LTS), Medium-Term Scheduler (MTS), CPU Scheduler (STS), Dispatcher, Traffic Controller e Interrupt Handler*.
-   - La Regola d'Oro sistemistica: perché da Waiting non si può mai passare direttamente a Running.
-   - Algoritmi Non-Preemptive: FCFS (analisi dell'Effetto Convoglio) e SJF (ottimalità teorica e problema della Starvation).
-   - Algoritmi Preemptive: SRTF (*Shortest Remaining Time First*), Round-Robin classico, limitato a code multilivello con feedback e a percentuale.
-   - Scheduling a Priorità: il concetto di Niceness in Linux ($-20 \dots +19$) e la tecnica dell'**Aging (Invecchiamento)** per eliminare l'inedia dei processi.
-
-4. **[[04_Metriche di Prestazione e Caso Reale d'Esame|📊 Fascicolo 4: Metriche di Prestazione e Caso Reale d'Esame]]**
-   - Formulario matematico esplicito: Turnaround Time ($TT$), Tempo di Attesa ($TA$), Efficienza della CPU ($\eta$), Throughput.
-   - Traccia completa dell'esercizio tipico d'esame: 3 processi con $P_2$ driver hardware della tastiera che interrompe $P_1$ a $T=2$.
-   - Cronologia secondo per secondo con diagramma di Gantt e motivazioni sistemistiche di ogni scelta dell'algoritmo.
-   - Calcoli numerici dettagliati passo-passo di $T_{\text{fine}}$, $TT_i$, $TT_M$, $TA_i$, $TA_M$ ed efficienza $\eta \approx 93{,}33\%$.
-
----
-
-## 🖼️ Galleria delle Illustrazioni Integrate
-
-Tutte le illustrazioni tecniche sono archiviate nella cartella `content/TIPSIT/Zimmagini/`:
-- `![[os_ring_model.jpg]]`: Architettura a Ring concentrici (Ring 0 Kernel, Memory, Device, File System, Shell).
-- `![[vm_vs_docker_comparison.jpg]]`: Confronto affiancato architettura Virtual Machine (Hypervisor + Guest OS) vs Container Docker.
-- `![[process_states_lifecycle.jpg]]`: Diagramma di transizione degli stati del processo con i 6 moduli del Kernel.
-- `![[pcb_structure_threads.jpg]]`: Struttura del Process Control Block (PCB) e condivisione memoria nel Multithreading.
+| Fascicolo | File Immagine | Concetto Illustrato |
+| :--- | :--- | :--- |
+| **01** | `![[os_layers_stack_hardware_user.jpg|120]]` | **Architettura a 4 Livelli:** Hardware $\to$ Sistema Operativo $\to$ Applicazioni $\to$ Utente. |
+| **01** | `![[os_ring_model.jpg|120]]` | **Modello a Cipolla (Onion Skin):** Ring 0 (Kernel) a Ring 3 (File System) e Shell esterna. |
+| **01** | `![[system_call_trap_architecture.jpg|120]]` | **Architettura System Call:** Passaggio sicuro User Space $\to$ Kernel Space tramite Hardware Trap (`INT 0x80`). |
+| **01** | `![[bootstrap_5_steps_sequence.jpg|120]]` | **Sequenza di Boot in 5 Fasi:** Reset Vector $\to$ POST $\to$ Partizioni $\to$ Bootloader $\to$ Kernel. |
+| **01** | `![[vm_vs_docker_comparison.jpg|120]]` | **Virtual Machine vs Container Docker:** Hypervisor + Guest OS pesanti vs Kernel condiviso leggero. |
+| **02** | `![[monoprogramming_vs_multiprogramming_dma.jpg|120]]` | **Monoprogrammazione vs Multiprogrammazione:** Tempi morti della CPU vs Efficienza del controller DMA. |
+| **02** | `![[pcb_structure_threads.jpg|120]]` | **Struttura del PCB e Multithreading:** Tabella registri/PID e condivisione memoria Heap/Code tra thread. |
+| **03** | `![[process_states_lifecycle.jpg|120]]` | **Ciclo di Vita a 6 Stati:** Transizioni di stato del processo tra NEW, READY, RUNNING, WAITING, SWAP, TERMINATED. |
+| **03** | `![[kernel_6_modules_architecture.jpg|120]]` | **I 6 Moduli del Kernel:** LTS, MTS (Swapper), STS, Dispatcher (3 compiti), Traffic Controller, Interrupt Handler. |
+| **03** | `![[scheduling_algorithms_overview.jpg|120]]` | **Panoramica Algoritmi di Scheduling:** Non-Preemptive (FCFS, SJF) vs Preemptive (SRTF, Round-Robin, Aging). |
+| **04** | `![[gantt_chart_exam_interrupt.jpg|120]]` | **Diagramma di Gantt Caso d'Esame:** Asse temporale da $T=0$ a $T=15$ con interruzione IRQ a $T=2$. |

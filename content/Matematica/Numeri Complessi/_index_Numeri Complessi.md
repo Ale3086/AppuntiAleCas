@@ -9,6 +9,18 @@ tags:
 
 # 📂 Capitolo 13: Numeri Complessi ($\mathbb{C}$)
 
+<div class="notebooklm-box">
+  <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
+  <p class="notebooklm-desc">
+    Esporta l'intero modulo (<strong>6 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
+  </p>
+  <div class="notebooklm-actions">
+    <a href="Numeri_Complessi_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
+      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
+    </a>
+  </div>
+</div>
+
 I **numeri complessi** ampliano il campo dei numeri reali $\mathbb{R}$, permettendo di dare significato all'estrazione di radici di indice pari da numeri negativi e fornendo un ponte algebrico e geometrico essenziale per l'analisi matematica, la trigonometria, l'elettrotecnica e la fisica quantistica.
 
 ---
@@ -66,7 +78,7 @@ graph TD
     A["Numero Complesso z"] --> B["Forma Algebrica<br>z = a + bi"]
     A --> C["Forma Trigonometrica<br>z = r(cos α + i sin α)"]
     A --> D["Forma Esponenziale<br>z = r e^(iα)"]
-    
+
     B -- "r = √(a²+b²)<br>tan α = b/a" --> C
     C -- "Formula di Eulero<br>e^(iα) = cos α + i sin α" --> D
     D -- "a = r cos α<br>b = r sin α" --> B

@@ -8,7 +8,6 @@ tags:
   - efficienza-cpu
   - caso-esame
 ---
-
 # 📊 Metriche di Prestazione e Caso Reale d'Esame
 
 La valutazione quantitativa di un algoritmo di scheduling si basa su metriche matematiche precise. In questa sezione viene presentato il **formulario formale completo** e la risoluzione analitica guidata di un **tipico problema d'esame** caratterizzato da interruzioni hardware e prelazione della CPU.
@@ -17,14 +16,11 @@ La valutazione quantitativa di un algoritmo di scheduling si basa su metriche ma
 
 ## 4.1 Formulario Formale delle Metriche di Scheduling
 
-```mermaid
-flowchart TD
-    METR["📐 LE 4 METRICHE DI PRESTAZIONE CARDINE"]
-    METR --> M1["1️⃣ Tempo di Turnaround (TT)<br/>Dal momento dell'arrivo al completamento finale"]
-    METR --> M2["2️⃣ Tempo di Attesa (TA)<br/>Tempo totale trascorso fermo negli stati READY e WAITING"]
-    METR --> M3["3️⃣ Efficienza della CPU (eta)<br/>Percentuale di tempo impiegata in calcolo utile"]
-    METR --> M4["4️⃣ Throughput del Sistema<br/>Processi completati per unità temporale"]
-```
+> [!ABSTRACT] 📐 Le 4 Metriche di Prestazione Cardine dello Scheduling
+> 1. **1️⃣ Tempo di Turnaround ($TT_i$):** Tempo totale dal momento dell'ingresso nel sistema fino al completamento definitivo ($T_{\text{fine}} - T_{\text{arrivo}}$).
+> 2. **2️⃣ Tempo di Attesa ($TA_i$):** Tempo complessivo trascorso fermo in RAM o in I/O senza poter usare la CPU ($TT_i - T_{\text{burst}}$).
+> 3. **3️⃣ Efficienza della CPU ($\eta$):** Frazione percentuale del tempo totale spesa in calcolo utile per i processi utente ($\frac{\sum T_{\text{burst}}}{T_{\text{totale}}} \times 100\%$).
+> 4. **4️⃣ Throughput del Sistema:** Numero di processi portati a termine con successo per unità di tempo.
 
 ---
 
@@ -98,66 +94,17 @@ All'interno del sistema operano **3 processi distinti**:
 
 ---
 
-### Diagramma Temporale di Gantt
+### Diagramma Temporale di Gantt (Risoluzione Visiva)
 
-```
-Tempo: 0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
-       ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
-P1     [IDL][RUN][   R E A D Y     ]            [   R U N N I N G (6)   ]
-P2             [   R U N N I N G (5)   ]
-P3                 [   R E A D Y   ][RUN(2)]
-```
+![[gantt_chart_exam_interrupt.jpg|850]]
 
-> [!TIP] 🖼️ Placeholder Grafico per lo Studio Personale
-> *Rappresentazione Visiva Consigliata:* Grafico a barre temporali orizzontali in cui $P_1$ è colorato in blu (con una pausa da $T=2$ a $T=9$), $P_2$ è colorato in rosso evidenziando il fulmine dell'interrupt a $T=2$, e $P_3$ è in verde da $T=7$ a $T=9$.
-
----
-
-### Cronologia Analitica Istante per Istante con le Motivazioni per la Prof
-
-#### ⏱️ Istante $T = 0$:
-- Nel sistema non è ancora giunto alcun processo.
-- La CPU si trova nello stato ==🟠 IDLE (Inattività)== per la durata di $1$ unità di tempo.
-
-#### ⏱️ Istante $T = 1$:
-- Arriva il processo $P_1$ ($T_A = 1, T_B = 7$).
-- Poiché la CPU è libera, il CPU Scheduler e il Dispatcher allocano immediatamente il processore a $P_1$.
-- **Stato:** $P_1$ entra in ==⚡ RUNNING==.
-
-#### ⏱️ Istante $T = 2$ (L'Evento Chiave: Interruzione Hardware):
-- L'utente preme fisicamente un tasto sulla tastiera.
-- Il controller della tastiera invia una linea di interrupt elettrica (**IRQ**) alla CPU.
-- L'Interrupt Handler risveglia il driver $P_2$ ($T_A = 2, T_B = 5$).
-- **La Decisione di Scheduling (per la Prof):** 
-  $P_2$ è un driver di gestione hardware critico del sistema operativo e gode di **priorità hardware assoluta** rispetto al browser utente $P_1$. 
-  Di conseguenza, la CPU attiva la ==🔴 prelazione forzata (Preemption)==:
-  1. $P_1$ viene sospeso e retrocesso forzatamente nello stato ==🟢 READY==.
-  2. $P_1$ ha consumato $1$ sola unità di calcolo (da $T=1$ a $T=2$), quindi il suo **burst residuo rimanente è pari a $7 - 1 = 6$ unità**.
-  3. $P_2$ viene caricato nei registri della CPU ed entra in ==⚡ RUNNING==.
-
-#### ⏱️ Istante $T = 3$:
-- Entra nel sistema il processo $P_3$ (Spotify, con $T_A = 3$ e $T_B = 2$).
-- **La Decisione di Scheduling (per la Prof):** 
-  Nonostante $P_3$ sia un processo brevissimo ($T_B = 2$) e in una normale politica SJF avrebbe la precedenza su burst più lunghi, **la routine del driver hardware $P_2$ in esecuzione non può essere interrotta da normali processi utente**. 
-  $P_3$ deve pertanto accodarsi pazientemente nella coda di ==🟢 READY== in memoria RAM.
-
-#### ⏱️ Istante $T = 7$:
-- Il driver $P_2$ completa l'intero burst di $5$ unità ($2 + 5 = 7$) e transita nello stato ==🔴 TERMINATED== ($T_{F2} = 7$).
-- La CPU torna disponibile. Nella Ready Queue sono presenti due processi in attesa:
-  - $P_3$ con burst $T_B = 2$
-  - $P_1$ con burst residuo $T_{B,\text{residuo}} = 6$
-- **La Decisione di Scheduling (per la Prof):** 
-  Trattandosi di due normali processi a livello utente, lo Scheduler applica la politica **SJF (Shortest Job First)** per minimizzare il tempo di attesa medio. Poiché il tempo di $P_3$ ($2$) è nettamente inferiore al tempo di $P_1$ ($6$), la CPU viene assegnata a **$P_3$**.
-- $P_3$ transita in ==⚡ RUNNING== per $2$ unità di tempo (da $T=7$ a $T=9$).
-
-#### ⏱️ Istante $T = 9$:
-- $P_3$ conclude regolarmente il proprio burst e termina ($T_{F3} = 9$).
-- L'unico processo rimasto nella Ready Queue è $P_1$.
-- Il Dispatcher esegue il Context Switch, ripristina i registri di $P_1$ dal PCB e gli riassegna la CPU.
-- $P_1$ esegue le sue rimanenti $6$ unità di burst (da $T=9$ a $T=15$).
-
-#### ⏱️ Istante $T = 15$:
-- $P_1$ termina definitivamente la propria esecuzione ($T_{F1} = 15$).
+> [!NOTE] 📊 Legenda Visiva del Diagramma di Gantt
+> - **$T=0 \to T=1$:** ==🟠 IDLE== (CPU in attesa).
+> - **$T=1 \to T=2$:** ==🔵 $P_1$ RUNNING== (esegue 1 unità).
+> - **$T=2$:** ⚡ **Interruzione Hardware (IRQ)**: $P_2$ fa prelazione su $P_1$. $P_1$ torna in ==🟢 READY== con burst residuo pari a $6$.
+> - **$T=2 \to T=7$:** ==🔴 $P_2$ RUNNING== (esegue 5 unità non interrompibili da processi utente). A $T=3$ arriva $P_3$ e si mette in coda ==🟢 READY==. A $T=7$, $P_2$ termina (==🔴 TERMINATED==).
+> - **$T=7 \to T=9$:** ==🟢 $P_3$ RUNNING== (SJF: burst 2 < residuo 6). A $T=9$, $P_3$ termina.
+> - **$T=9 \to T=15$:** ==🔵 $P_1$ RUNNING== (completa le 6 unità residue e termina a $T=15$).
 
 ---
 
@@ -165,38 +112,15 @@ P3                 [   R E A D Y   ][RUN(2)]
 
 Raccogliamo tutti i valori all'interno della tabella analitica:
 
-| Processo | Descrizione | Istante Arrivo ($T_A$) | Burst Totale ($T_B$) | Istante Fine ($T_{\text{fine}}$) | Turnaround ($TT = T_{\text{fine}} - T_A$) | Attesa ($TA = TT - T_B$) |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| **$P_1$** | Browser Web (Utente) | $1$ | $7$ | **$15$** | $15 - 1 = \mathbf{14}$ | $14 - 7 = \mathbf{7}$ |
-| **$P_2$** | Driver Tastiera (HW) | $2$ | $5$ | **$7$** | $7 - 2 = \mathbf{5}$ | $5 - 5 = \mathbf{0}$ |
-| **$P_3$** | Riproduttore Audio | $3$ | $2$ | **$9$** | $9 - 3 = \mathbf{6}$ | $6 - 2 = \mathbf{4}$ |
+| Processo  | Descrizione          | Istante Arrivo ($T_A$) | Burst Totale ($T_B$) | Istante Fine ($T_{\text{fine}}$) | Turnaround ($TT = T_{\text{fine}} - T_A$) | Attesa ($TA = TT - T_B$) |
+| :-------: | :------------------- | :--------------------: | :------------------: | :------------------------------: | :---------------------------------------: | :----------------------: |
+| **$P_1$** | Browser Web (Utente) |          $1$           |         $7$          |             **$15$**             |          $15 - 1 = \mathbf{14}$           |  $14 - 7 = \mathbf{7}$   |
+| **$P_2$** | Driver Tastiera (HW) |          $2$           |         $5$          |             **$7$**              |           $7 - 2 = \mathbf{5}$            |   $5 - 5 = \mathbf{0}$   |
+| **$P_3$** | Riproduttore Audio   |          $3$           |         $2$          |             **$9$**              |           $9 - 3 = \mathbf{6}$            |   $6 - 2 = \mathbf{4}$   |
 
 ---
 
-### 1. Calcolo dei Tempi di Turnaround
-- $TT_1 = 15 - 1 = \mathbf{14}$
-- $TT_2 = 7 - 2 = \mathbf{5}$
-- $TT_3 = 9 - 3 = \mathbf{6}$
-
-$$\mathbf{TT_M = \frac{14 + 5 + 6}{3} = \frac{25}{3} \approx 8{,}33 \text{ unità di tempo}}$$
-
----
-
-### 2. Calcolo dei Tempi di Attesa
-- **Verifica diretta del tempo di attesa di $P_1$ sull'asse temporale:**
-  - $P_1$ non attende prima di iniziare ($T=1$).
-  - Viene sospeso all'istante $T=2$ e riprende all'istante $T=9$.
-  - Rimane fermo in READY da $T=2$ a $T=9$, ovvero per $9 - 2 = \mathbf{7 \text{ unità di tempo}}$ (esattamente la durata dell'esecuzione combinata di $P_2$ e $P_3$).
-- **Verifica del tempo di attesa di $P_2$:**
-  - Arriva a $T=2$ e parte immediatamente a $T=2 \implies TA_2 = \mathbf{0}$.
-- **Verifica del tempo di attesa di $P_3$:**
-  - Arriva a $T=3$ e rimane bloccato in READY fino a $T=7 \implies 7 - 3 = \mathbf{4 \text{ unità di tempo}}$.
-
-$$\mathbf{TA_M = \frac{7 + 0 + 4}{3} = \frac{11}{3} \approx 3{,}67 \text{ unità di tempo}}$$
-
----
-
-### 3. Calcolo dell'Efficienza della CPU ($\eta$)
+### Calcolo dell'Efficienza della CPU ($\eta$)
 - Somma dei tempi di burst utili eseguiti dalla CPU:
   $$\sum T_B = T_{B1} + T_{B2} + T_{B3} = 7 + 5 + 2 = \mathbf{14 \text{ unità}}$$
 - Tempo totale trascorso di osservazione del sistema:

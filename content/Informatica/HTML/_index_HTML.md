@@ -2,6 +2,19 @@
 title: "HTML"
 description: "Sviluppo Web Frontend: struttura semantica delle pagine in HTML5, fogli di stile CSS3 e programmazione interattiva con JavaScript."
 ---
+
+<div class="notebooklm-box">
+  <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
+  <p class="notebooklm-desc">
+    Esporta l'intero modulo (<strong>1 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
+  </p>
+  <div class="notebooklm-actions">
+    <a href="HTML_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
+      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
+    </a>
+  </div>
+</div>
+
 ## 📁 Cartelle e Moduli
 
 ### **[[_index_html|html]]**
