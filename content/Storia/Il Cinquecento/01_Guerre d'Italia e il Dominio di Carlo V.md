@@ -1,6 +1,6 @@
 ---
 title: "01. Guerre d'Italia e l'Impero di Carlo V"
-description: "Sintesi schematica per interrogazioni: discesa di Carlo VIII, l'eredità dei 4 nonni di Carlo V, il duello con Francesco I, il Sacco di Roma (1527) e la Pace di Cateau-Cambrésis (1559)."
+description: "Sintesi schematica con collegamenti integrati: discesa di Carlo VIII, l'eredità dei 4 nonni di Carlo V, il duello con Francesco I, il Sacco di Roma (1527), l'abdicazione e la Pace di Cateau-Cambrésis (1559)."
 tags:
   - storia/cinquecento
   - carlo-v
@@ -31,78 +31,54 @@ flowchart TD
 
 ### 🗺️ Tabella Rapida dei Territori Ereditati
 
-| Da Chi Eredita? | Territori Precisi | Perché Sono Importanti? |
-| :--- | :--- | :--- |
-| **Massimiliano I d'Asburgo** *(nonno paterno)* | ==🔵 Austria, Tirolo, Stiria, Carinzia== | Baluardo tedesco contro l'avanzata dei Turchi Ottomani nei Balcani. |
-| **Maria di Borgogna** *(nonna paterna)* | ==🔵 Paesi Bassi (Fiandre, Olanda)== e ==🔵 Franca Contea== | Regione più ricca d'Europa per manifatture tessili e commercio marittimo. |
-| **Isabella di Castiglia** *(nonna materna)* | ==🔵 Corona di Castiglia== e ==🔵 Colonie Americane== | Fanteria scelta (*Tercios*) e ==🟠 carichi di oro e argento== dal Nuovo Mondo. |
-| **Ferdinando d'Aragona** *(nonno materno)* | ==🔵 Aragona, Regno di Napoli, Sicilia, Sardegna== | Controllo navale del Mediterraneo e "granaio d'Europa" (grano del Sud). |
+| Da Chi Eredita?                                | Territori Precisi                                           | Perché Sono Importanti?                                                                                                          |
+| :--------------------------------------------- | :---------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| **Massimiliano I d'Asburgo** *(nonno paterno)* | ==🔵 Austria, Tirolo, Stiria, Carinzia==                    | Baluardo tedesco contro l'avanzata dei Turchi Ottomani nei Balcani.                                                              |
+| **Maria di Borgogna** *(nonna paterna)*        | ==🔵 Paesi Bassi (Fiandre, Olanda)== e ==🔵 Franca Contea== | Regione più ricca d'Europa per commercio e manifatture (sarà poi il teatro della rivolta calvinista descritta nella Lezione 05). |
+| **Isabella di Castiglia** *(nonna materna)*    | ==🔵 Corona di Castiglia== e ==🔵 Colonie Americane==       | Fanteria d'élite (*Tercios*) e l'afflusso di ==🟠 oro e argento dalle miniere americane== analizzate nella Lezione 05.           |
+| **Ferdinando d'Aragona** *(nonno materno)*     | ==🔵 Aragona, Regno di Napoli, Sicilia, Sardegna==          | Controllo navale del Mediterraneo e "granaio d'Europa" (grano del Sud).                                                          |
 
 - **==🟡 1519 - Elezione a Imperatore del SRI:==** Il titolo imperiale è elettivo. Carlo V batte Francesco I comprando i voti dei **7 Principi Elettori** con 850.000 fiorini d'oro prestati dai banchieri **Fugger** e **Welser**.
 
-![[european-inheritances-of-charles-v-in-1519-v0-4eurpnwzganh1.webp|700]]
+![[Pasted image 20261028131413.png|700]]
 
 ---
 
 ## 3. Lo Scontro con Francesco I di Francia
 
-- **Causa strategica:** La Francia si sente **accerchiata** dai territori asburgici.
-- **L'obiettivo conteso:** Il **Ducato di Milano**. Per Carlo V è la cerniera vitale del **Camino Español** (permette di spostare truppe da Genova e Napoli verso Germania e Fiandre via terra).
+- **Causa strategica:** La Francia di Francesco I si sente **accerchiata** dai territori asburgici.
+- **L'obiettivo conteso:** Il **Ducato di Milano**. Per Carlo V è la cerniera vitale del **Camino Español** (permette di spostare via terra truppe e rifornimenti dai porti di Spagna e Napoli verso la Germania e le Fiandre).
+- **🔗 Collegamento con Lutero:** L'impegno militare totale di Carlo V in questa guerra contro la Francia e contro l'avanzata dei Turchi a Vienna gli impedirà di intervenire con decisione in Germania, lasciando a Martin Lutero il tempo necessario per diffondere indisturbato la Riforma Protestante tra i principi tedeschi.
 
-### I Fatti Salienti (Da Ricordare per l'Interrogazione)
-1. **==🟡 1525 - Battaglia di Pavia:==** Carlo V sconfigge i francesi; **Francesco I viene fatto prigioniero** e deve cedere Milano.
-2. **1526 - Lega di Cognac:** Il papa **Clemente VII Medici**, terrorizzato dal troppo potere di Carlo V, si allea con la Francia.
+### I Fatti Salienti
+1. **==🟡 1525 - Battaglia di Pavia:==** Carlo V sconfigge i francesi con gli archibugieri dei *Tercios*; **Francesco I viene fatto prigioniero** e deve cedere Milano.
+2. **1526 - Lega di Cognac:** Il papa **Clemente VII Medici**, terrorizzato dall'eccessivo potere di Carlo V in Italia, compie un ribaltamento di alleanze unendosi alla Francia.
 3. **==🟡 1527 - Il Sacco di Roma:==**
-   - Carlo V invia in Italia 12.000 **Lanzichenecchi** (fanti tedeschi in gran parte luterani).
+   - Per punire il tradimento del Papa, Carlo V invia in Italia 12.000 **Lanzichenecchi** (fanti mercenari tedeschi in gran parte convertiti al luteranesimo).
    - Rimasti senza paga, assediano e saccheggiano Roma per 9 mesi: chiese profanate, massacri e fuga del Papa a Castel Sant'Angelo.
-   - Shock in tutta Europa: evento visto come punizione divina sulla corruzione papale.
-1. **1529 - 1530: La Pace e l'Incoronazione:** Pace delle Due Dame (Cambrai); Clemente VII fa pace con Carlo V e lo incorona solennemente **Imperatore a Bologna (1530)**.
+   - **🔗 Conseguenza Diretta sullo Scisma d'Inghilterra:** Questo evento ha un impatto storico decisivo: Papa Clemente VII, ridotto a ostaggio politico di Carlo V, sarà costretto a respingere la richiesta di Enrico VIII di annullare le nozze con Caterina d'Aragona (che era la **zia carnale di Carlo V**!), innescando direttamente lo Scisma Anglicano del 1534.
+4. **1529 - 1530: Pace di Cambrai e Incoronazione:** Clemente VII fa pace con Carlo V e lo incorona solennemente **Imperatore a Bologna (1530)**.
 
-![[Pasted image 20261027125334.jpg]]
+![[Pasted image 20261028131611.png|700]]
 
 ---
 
 ## 4. L'Abdicazione di Carlo V e la Divisione dell'Impero (1555-1556)
 
-Consapevole che il sogno di un impero universale unito è fallito (troppi nemici contemporanei: Francia, Ottomani di Solimano il Magnifico e principi protestanti tedeschi), Carlo V abdica e **divide l'impero in due parti**:
+Consapevole che il sogno di un impero universale cattolico è fallito (dopo aver dovuto concedere ai principi tedeschi la libertà religiosa con la Pace di Augusta del 1555), Carlo V abdica e **divide l'impero in due rami dinastici**:
 
-- Al figlio **==🔵 Filippo II==**: ==Spagna, Colonie Americane, Paesi Bassi, Milano, Napoli, Sicilia e Sardegna==.
-- Al fratello **==🔵 Ferdinando I==**: ==Terre asburgiche d'Austria, Boemia, Ungheria== e il titolo di **Imperatore del Sacro Romano Impero**.
+- Al figlio **==🔵 Filippo II==**: riceve la ==Spagna, le Colonie Americane, i Paesi Bassi e i domini italiani (Milano, Napoli, Sicilia, Sardegna)==. Da qui nasce la grande potenza della Spagna Imperiale di Filippo II.
+- Al fratello **==🔵 Ferdinando I==**: riceve le ==Terre asburgiche d'Austria, Boemia, Ungheria== e il titolo elettivo di **Imperatore del Sacro Romano Impero**.
 
 ---
 
 ## 5. La Pace di Cateau-Cambrésis (1559): L'Italia Spagnola
 
 Firmata tra **Filippo II di Spagna** ed **Enrico II di Francia**:
-- **==🟢 Fine delle Guerre d'Italia:==** Sancisce l'inizio dell'**egemonia spagnola sull'Italia** per 150 anni (fino al 1713).
+- **==🟢 Fine delle Guerre d'Italia:==** Sancisce l'inizio dell'**egemonia spagnola sull'Italia** per oltre 150 anni (fino al 1713).
 - **Assetto politico dell'Italia:**
-  - **Domini diretti spagnoli:** Milano, Regno di Napoli, Sicilia, Sardegna e lo **Stato dei Presìdi** (basi militari costiere in Toscana).
-  - **Stati sotto influenza spagnola:** Genova (banchieri della Spagna), Granducato di Toscana (Medici), Ducato di Savoia.
-  - **Unico stato davvero indipendente:** la **Repubblica di Venezia**.
+  - **Domini diretti spagnoli:** Milano, Regno di Napoli, Sicilia, Sardegna e lo **Stato dei Presìdi** (basi militari costiere in Toscana: Orbetello, Piombino, Porto Ercole) per controllare le rotte navali tirreniche.
+  - **Stati satellite legati alla Spagna:** Repubblica di Genova (principale banchiere della Corona spagnola), Granducato di Toscana (Medici), Ducato di Savoia.
+  - **Unico stato davvero indipendente:** la **Repubblica di Venezia**, che concentrerà tutte le sue forze navali nella difesa dell'Oriente contro i Turchi fino alla battaglia di Lepanto nel 1571.
 
-```
-╔══════════════════════════════════════════════════════════════════════════════════════════╗
-║ 🖼️ PLACEHOLDER: L'ITALIA DOPO CATEAU-CAMBRÉSIS (1559)                                    ║
-╠══════════════════════════════════════════════════════════════════════════════════════════╣
-║ ![[italia_cateau_cambresis_1559.png|700]]                                                ║
-║ Cerca: "Carta Italia dopo la pace di Cateau-Cambrésis 1559"                              ║
-╚══════════════════════════════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## 🖼️ Confronto Immagini del Libro (pp. 378-379)
-
-> [!NOTE] Carlo V vs Francesco I
-> - **Carlo V (dipinto da Tiziano a cavallo a Mühlberg):** Appare come imperatore-soldato cristiano (*Miles Christianus*), armatura da battaglia, austero e stanco per le continue guerre.
-> - **Francesco I (dipinto da Clouet):** Appare come principe rinascimentale sfarzoso, vesti di seta e velluto dorato, posa rilassata che ostenta lusso e potere mondano.
-
----
-
-## 🎯 Punti Chiave da Sapere per l'Interrogazione
-
-> [!INTERROGAZIONE] Domande Secche della Prof
-> 1. **Quali territori eredita Carlo V e da chi?** *Austria e corona imperiale dagli Asburgo; Fiandre e Franca Contea da Maria di Borgogna; Castiglia e colonie americane da Isabella; Aragona, Napoli, Sicilia e Sardegna da Ferdinando.*
-> 2. **Perché Milano era fondamentale per Carlo V?** *Perché permetteva il corridoio terrestre (Camino Español) per collegare i porti di Spagna/Genova con l'Austria e le Fiandre, isolando la Francia.*
-> 3. **Cosa fu il Sacco di Roma del 1527?** *L'invasione e devastazione di Roma da parte dei Lanzichenecchi luterani inviati da Carlo V contro papa Clemente VII (Lega di Cognac).*
-> 4. **Cosa stabilisce la Pace di Cateau-Cambrésis (1559)?** *La vittoria spagnola e il dominio diretto della Spagna su Milano, Napoli, Sicilia, Sardegna e Presìdi fino al 1713.*
+![[Pasted image 20261028131812.png|700]]

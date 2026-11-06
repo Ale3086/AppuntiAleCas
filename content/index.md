@@ -23,7 +23,7 @@ Geometria analitica (retta, coniche, circonferenza, parabola, ellisse, iperbole)
 Architettura delle reti di calcolatori, standard di cablaggio strutturato, apparati di rete e analisi approfondita dei 7 livelli del modello ISO-OSI.
 
 ### **[[_index_Storia|Storia]]**
-Il Cinquecento, le Guerre d'Italia, l'immenso impero di Carlo V, la Riforma protestante e la Controriforma tridentina, l'età elisabettiana e la Spagna coloniale di Filippo II.
+Appunti e nozioni di approfondimento su Storia.
 
 ### **[[_index_TIPSIT|TIPSIT]]**
 Tecnologie Informatiche e Progettazione: sistemi operativi, digitalizzazione multimediale, teoria dei segnali, conversioni binarie e comandi shell.

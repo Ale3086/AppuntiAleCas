@@ -7,7 +7,6 @@ tags:
   - forma-algebrica
   - operazioni
 ---
-
 # Forma Algebrica e Operazioni Fondamentali
 
 ## 1. Definizione di Numero Complesso

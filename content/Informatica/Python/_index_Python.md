@@ -3,19 +3,6 @@ title: "Python"
 description: "Programmazione in Python: architettura bytecode PVM, collezioni (liste, tuple, set, dict), funzioni avanzate, memory model, OOP, gestione file e algoritmi."
 ---
 # 📂 Python
-
-<div class="notebooklm-box">
-  <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
-  <p class="notebooklm-desc">
-    Esporta l'intero modulo (<strong>9 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
-  </p>
-  <div class="notebooklm-actions">
-    <a href="Python_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
-      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
-    </a>
-  </div>
-</div>
-
 Programmazione in Python: architettura bytecode PVM, collezioni (liste, tuple, set, dict), funzioni avanzate, memory model, OOP, gestione file e algoritmi.
 
 ### **[[1 Caratteristiche del Python]]**
@@ -43,4 +30,4 @@ Classi, costruttore __init__, parametro self, incapsulamento pythonico, getter/s
 Context Manager with open(), modalità di lettura/scrittura, gestione sicura delle eccezioni con try-except e manipolazione di file JSON e CSV.
 
 ### **[[9 Algoritmi e ordinamento in Python]]**
-Ricerca lineare e binaria, algoritmi Bubble/Selection sort, algoritmo Timsort nativo, sort() in-place e sorted() con chiavi lambda.
+Appunti e nozioni di approfondimento su 9 Algoritmi e ordinamento in Python.

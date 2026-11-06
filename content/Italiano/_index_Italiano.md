@@ -5,4 +5,5 @@ description: "Letteratura italiana, analisi testuale, correnti storico-letterari
 # 📂 Italiano
 Letteratura italiana, analisi testuale, correnti storico-letterarie, autori, poetica e approfondimenti critici.
 
-*Sezione in fase di espansione e aggiornamento degli appunti.*
+### **[[AppuntiAleCas/content/Italiano/Manierismo e Barocco/appunti|Il Seicento e il Barocco]]**
+Sintesi su coordinate storiche, rottura con il Rinascimento, committenza e accademie, l'Estasi di santa Teresa del Bernini, la pittura e la poetica della meraviglia di Marino.

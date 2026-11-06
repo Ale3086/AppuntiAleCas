@@ -7,7 +7,6 @@ tags:
   - teoria
   - unita-immaginaria
 ---
-
 # Insieme $\mathbb{C}$ e Numeri Immaginari
 
 > [!NOTE] Il Limite dei Numeri Reali ($\mathbb{R}$)

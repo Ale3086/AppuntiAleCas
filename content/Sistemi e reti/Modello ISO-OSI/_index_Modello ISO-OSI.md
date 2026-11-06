@@ -5,18 +5,6 @@ description: "I 7 livelli della pila ISO-OSI, incapsulamento PDU, apparati di re
 # 📂 Modello ISO-OSI
 I 7 livelli della pila ISO-OSI, incapsulamento PDU, apparati di rete (Switch, Router, Hub), reti Ethernet e comandi Cisco IOS.
 
-<div class="notebooklm-box">
-  <div class="notebooklm-header">🧠 Studio con Google NotebookLM</div>
-  <p class="notebooklm-desc">
-    Esporta l'intero modulo (<strong>9 lezioni complete + tutti gli schemi e immagini</strong>) in un unico file pronto per l'analisi multimodale di Google NotebookLM:
-  </p>
-  <div class="notebooklm-actions">
-    <a href="Modello_ISO-OSI_completo.pdf" download class="btn-notebooklm btn-notebooklm-primary">
-      📥 Scarica PDF con Immagini (Fonte Unica per NotebookLM)
-    </a>
-  </div>
-</div>
-
 ### **[[01_Introduzione alle reti informatiche]]**
 Concetti fondamentali delle reti di calcolatori: definizione, obiettivi primari, le 5 componenti essenziali (Host, Apparati, Mezzi, Protocolli, Servizi) e il modello universale di comunicazione.
 
@@ -24,10 +12,10 @@ Concetti fondamentali delle reti di calcolatori: definizione, obiettivi primari,
 Trattazione approfondita dei modelli architetturali di rete: paradigma Client/Server (richiesta/risposta, upload/download, chiarimento 'l'utente non è il client'), modello Peer-to-Peer (P2P paritetico) e tabella comparativa.
 
 ### **[[03_Classificazione della rete]]**
-Classificazione completa delle reti: estensione geografica (BAN, PAN, LAN, MAN, WAN, GAN), modello di gestione, mezzi trasmissivi (rame, fibra, wireless) e topologie geometriche fisiche e logiche.
+Classificazione completa delle reti: estensione geografica (PAN, LAN, MAN, WAN), modelli di gestione, mezzi trasmissivi (rame, fibra, wireless) e topologie fisiche e logiche.
 
 ### **[[04_Tecniche di commutazione - Circuito e Pacchetto]]**
-Trattazione approfondita delle tecniche di commutazione: Circuito (canale dedicato, telefonia PSTN), Messaggio (store-and-forward integrale, Telex/Email) e Pacchetto (frammentazione, multiplexing statistico, Internet/IP) con tabella comparativa a tre vie.
+Trattazione approfondita delle tecniche di commutazione: Commutazione di Circuito (canale dedicato, PSTN), Commutazione di Messaggio (store-and-forward integrale) e Commutazione di Pacchetto (frammentazione, multiplexing statistico, Internet/IP) con tabella comparativa a tre vie.
 
 ### **[[05_Indirizzamento e identificazione nelle reti]]**
 Guida completa alla gerarchia di indirizzamento a 4 livelli nelle reti: Indirizzi MAC (L2), Indirizzi IP (L3), Numeri di Porta (L4), Nomi di Dominio FQDN/DNS (L7) e flusso di risoluzione.

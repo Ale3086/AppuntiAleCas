@@ -102,15 +102,21 @@ const DESCRIPTIONS = {
   "6 Gestione della memoria e riferimenti": "Reference model, funzione id(), differenza tra == e is, mutabilità vs immutabilità, shallow copy vs deepcopy e GC con Reference Counting.",
   "7 La programmazione a oggetti (OOP)": "Classi, costruttore __init__, parametro self, incapsulamento pythonico, getter/setter con @property, dunder methods ed ereditarietà con @dataclass.",
   "8 Gestione dei file e moduli": "Context Manager with open(), modalità di lettura/scrittura, gestione sicura delle eccezioni con try-except e manipolazione di file JSON e CSV.",
-  "9 Algoritmi e ordinamento in Python": "Ricerca lineare e binaria, algoritmi Bubble/Selection sort, algoritmo Timsort nativo, sort() in-place e sorted() con chiavi lambda.",
-  "1 Introduzione a Java e JVM": "Filosofia WORA, architettura a due stadi sorgente-bytecode-JVM, ecosistema JDK vs JRE vs JVM, compilatore JIT e Garbage Collection.",
-  "2 Tipi di dato, Variabili e I-O": "Gli 8 tipi primitivi a dimensione fissa, classi wrapper, immutabilità delle String, casting e input/output con Scanner.",
-  "3 Strutture di Controllo e Array": "Selezione condizionale, enhanced switch a freccia (Java 14+), cicli while/for/for-each e array allocati nello Heap con la classe Arrays.",
-  "4 Classi Oggetti e Modellazione UML": "Dal pensiero procedurale all'OOP, diagrammi delle classi UML con NClass, i 4 modificatori di accesso (private, public, protected, package-private) ed incapsulamento.",
-  "5 Costruttori e Ciclo di vita degli Oggetti": "Ruolo del costruttore, costruttori di default, parametrici e di copia, parola chiave this, e allocazione dinamica nello Heap.",
-  "6 Relazioni tra Classi (UML e Codice)": "Le 5 relazioni fondamentali in UML: Dipendenza, Associazione, Aggregazione (rombo vuoto), Composizione (rombo pieno) e Generalizzazione.",
-  "7 Ereditarietà e Classi Astratte": "Ereditarietà singola con extends, richiamo super, modificatore protected, classi e metodi astratti (notazione in corsivo su NClass) e parola chiave final.",
-  "8 Polimorfismo e Interfacce": "Riferimento polimorfico, collezioni eterogenee, overloading statico vs overriding dinamico (Late Binding) e contratti con interfacce multiple.",
+  // Java subfolders & notes
+  "Java/Teoria": "Concetti teorici per interrogazioni ed esami orali: architettura JVM, RAM (Stack, Heap, Metaspace), OOP, membri statici, costruttori, UML NClass, classi astratte e polimorfismo.",
+  "Java/Pratica": "Prontuario di laboratorio e ricette di sintassi per esercizi al computer: tipi primitivi, metodi String, I/O con Scanner, cicli, array, matrici e template per menu interattivi.",
+  "01 Architettura JVM e Modello di Memoria": "Filosofia WORA, pipeline di compilazione a due stadi sorgente-bytecode-JVM, ecosistema JDK vs JRE vs JVM, organizzazione della RAM (Stack, Heap, Metaspace), Garbage Collector e JIT Compiler.",
+  "02 Il Paradigma OOP e la Classe in Java": "Dal pensiero procedurale agli oggetti collaborativi, scatola UML a 3 scomparti in NClass, i 4 modificatori di accesso con matrice di visibilità ed incapsulamento (Getter e Setter validati).",
+  "03 Membri Statici (static) vs Membri di Istanza": "Trattazione approfondita della keyword static: variabili di classe nel Metaspace, metodi statici, assenza di this, divieto di accesso a membri non-statici, firma del main e costanti static final.",
+  "04 Ciclo di Vita degli Oggetti e Costruttori": "Ruolo del costruttore, costruttori di default, parametrici e di copia (anti-aliasing), regola di scomparsa del costruttore vuoto, parola chiave this e i 4 passi di new nello Heap.",
+  "05 Relazioni tra Classi e Modellazione UML": "Le 5 relazioni fondamentali in UML: Dipendenza, Associazione, Aggregazione (rombo vuoto), Composizione (rombo pieno), Generalizzazione (triangolo vuoto), cicli di vita e NClass.",
+  "06 Ereditarietà, Super e Classi Astratte": "Ereditarietà singola con extends, richiamo super(...) in prima riga, modificatore protected, classi e metodi astratti (corsivo su NClass), e parola chiave final.",
+  "07 Polimorfismo, Late Binding e Interfacce": "Riferimento polimorfico, collezioni eterogenee, overloading statico vs overriding dinamico, Late Binding con VMT, contratti con interfacce multiple (implements) e realization NClass.",
+  "01 Tipi di dato, Conversioni e Metodi Stringa": "Tavola dei tipi primitivi con suffissi (L, f), casting widening/narrowing, parsing numerico, immutabilità di String, confronto con .equals() e tabella dei metodi essenziali.",
+  "02 Input-Output e Gestione Console (Scanner)": "Stampa formattata con printf, template di lettura da tastiera con Scanner, risoluzione del bug del buffer residuo \\n e programma completo testabile.",
+  "03 Controlli di Flusso, Switch e Cicli": "Istruzioni if-else booleane, operatore ternario, Enhanced Switch a freccia (Java 14+), cicli while, do-while per validazione input, for classico e for-each in sola lettura.",
+  "04 Array e Matrici (Algoritmi e Ricette)": "Array come oggetti Heap (.length), le 4 ricette algoritmiche d'esame (caricamento, somma/media, max/min con indice, ricerca lineare), matrici 2D e metodi di java.util.Arrays.",
+  "05 Template Standard per Esercizi OOP": "Blueprint rigoroso per una classe entità (attributi private, costruttori sovraccaricati, getter/setter, toString()) e classe Tester con menu interattivo do-while e switch.",
 
   // File individuali di Inglese
   "Competenze richieste per ogni livello": "Quadro Europeo di Riferimento (QCER): differenze di livello da A1 a C2 e parametri di valutazione B2 First.",
@@ -250,11 +256,19 @@ function getDescription(key, dir = "") {
   }
 
   if (key === "Teoria") {
-    if (normalizedDir.includes("Informatica") || normalizedDir.includes("Cpp")) {
+    if (normalizedDir.includes("Java")) {
+      return "Concetti teorici per interrogazioni ed esami orali: architettura JVM, RAM (Stack, Heap, Metaspace), OOP, membri statici, costruttori, UML NClass, classi astratte e polimorfismo.";
+    }
+    if (normalizedDir.includes("Cpp")) {
       return "Concetti teorici del C++, architettura dei calcolatori e analisi computazionale degli algoritmi di ordinamento.";
     }
     if (normalizedDir.includes("Inglese")) {
       return "Regole grammaticali complete della lingua inglese: tempi verbali, conditionals, passive voice ed esercizi di consolidamento.";
+    }
+  }
+  if (key === "Pratica") {
+    if (normalizedDir.includes("Java")) {
+      return "Prontuario di laboratorio e ricette di sintassi per esercizi al computer: tipi primitivi, metodi String, I/O con Scanner, cicli, array, matrici e template per menu interattivi.";
     }
   }
   if (key === "Strategie") {

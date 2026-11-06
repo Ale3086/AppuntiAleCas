@@ -1,6 +1,6 @@
 ---
 title: "04. L'Inghilterra dei Tudor - Da Enrico VIII a Elisabetta I"
-description: "Sintesi schematica per interrogazioni: Enrico VIII e l'Atto di Supremazia (1534), ascesa della gentry, Maria la Sanguinaria, regno di Elisabetta I, i corsari di Drake e la disfatta dell'Invincibile Armata (1588)."
+description: "Sintesi schematica con collegamenti integrati: Enrico VIII e lo Scisma (1534), ascesa della gentry, distinzione tra Maria Tudor e Maria Stuart, Elisabetta I, i corsari di Drake e la disfatta dell'Invincibile Armata (1588)."
 tags:
   - storia/cinquecento
   - tudor
@@ -8,99 +8,78 @@ tags:
   - elisabetta-i
   - invincibile-armata
 ---
-
-# 👑 L'Inghilterra dei Tudor: Da Enrico VIII a Elisabetta I
-
-> [!NOTE] Riferimento Libro
-> **Pagine:** 413 - 415 (La Riforma in Inghilterra) | 465 - 473 (Elisabetta I e scontro con la Spagna)
-
----
-
 ## 1. Enrico VIII e lo Scisma Anglicano (1534)
 
-La rottura di **Enrico VIII Tudor** con la Chiesa cattolica non nacque da motivi religiosi, ma da un **==🔵 problema dinastico e politico==**:
+La rottura di **Enrico VIII Tudor** con la Chiesa cattolica non nacque da motivi religiosi, ma da un        **==🔵 problema dinastico e geopolitico==**:
 
-- **Il motivo:** Enrico VIII è sposato con **Caterina d'Aragona** (zia dell'imperatore Carlo V) e non riesce ad avere un erede maschio (hanno solo una figlia, Maria).
-- **La richiesta al Papa:** Si innamora della dama di corte **Anna Bolena** e chiede a papa Clemente VII l'annullamento del matrimonio.
-- **Il rifiuto del Papa:** Clemente VII rifiuta per non offendere l'imperatore Carlo V, che ha appena saccheggiato Roma nel 1527.
+- **Il motivo dinastico:** Enrico VIII è sposato con **Caterina d'Aragona** e non riesce ad avere un erede maschio (hanno solo una figlia femmina, Maria Tudor).
+- **La richiesta al Papa:** Innamorato della dama di corte **Anna Bolena**, chiede a Papa Clemente VII l'annullamento del matrimonio.
+- **🔗 Il Rifiuto del Papa e il Legame con Carlo V:**  
+  Clemente VII rifiuta per ragioni puramente politiche: dopo il Sacco di Roma del 1527, il Papa è letteralmente sotto il controllo militare dell'imperatore Carlo V; concedere il divorzio avrebbe significato fare un torto intollerabile a Carlo V, che era il **nipote diretto di Caterina d'Aragona**!
 - **==🟡 1534 - L'Atto di Supremazia (Act of Supremacy):==**
   - Enrico VIII fa approvare dal Parlamento la legge che dichiara il Re: **"L'unico Capo Supremo sulla terra della Chiesa d'Inghilterra"** (*Anglicana Ecclesia*).
-  - **Non è un'eresia, ma uno scisma politico:** dottrina e sacramenti restano inizialmente cattolici. Chi si oppone viene decapitato per tradimento (es. l'umanista **Tommaso Moro**).
+  - **È uno scisma politico, non un'eresia dottrinale:** riti e dogmi restano cattolici. Chi rifiuta il giuramento viene decapitato per tradimento (es. l'umanista **Tommaso Moro**).
+
+![[Pasted image 20261104111240.png]]
 
 ---
 
 ## 2. La Conseguenza Economica: La Nascita della "Gentry"
 
-- **Soppressione dei Monasteri (1536-1540):** Il Re confisca tutti i conventi e le terre della Chiesa (circa **1/5 di tutte le terre coltivabili inglesi**).
-- **Ascesa della Gentry:** La Corona vende queste terre alla piccola e media nobiltà rurale (**gentry**) e ai ricchi mercanti borghesi.
-- **Le Recinzioni (*Enclosures*):** I nuovi proprietari recintano i campi aperti per allevarvi pecore da lana per il commercio tessile. Chi ha comprato terre della Chiesa diventa un fedelissimo sostenitore della nuova Chiesa anglicana (per non dover restituire i campi al clero!).
+- **Soppressione dei Monasteri (1536-1540):** Enrico VIII confisca tutti i conventi e le terre della Chiesa cattolica (circa **1/5 di tutte le terre coltivabili d'Inghilterra**).
+- **Vendita alla Gentry:** La Corona vende queste terre alla piccola e media nobiltà rurale (**gentry**) e ai ricchi mercanti borghesi di Londra.
+- **Le Recinzioni (*Enclosures*):** I nuovi proprietari recintano i campi aperti trasformandoli in pascoli per pecore da lana, arricchendosi con il commercio tessile. Chi ha comprato terre della Chiesa diventa un fedelissimo difensore dell'anglicanesimo (per non dover restituire i campi al clero cattolico!).
 
 ---
 
-## 3. Da Edoardo VI a Maria la Sanguinaria
+## 3. La Fase Intermedia: Edoardo VI e Maria la Sanguinaria
 
-1. **Edoardo VI (1547-1553):** Salito al trono a 9 anni, trasforma l'anglicanesimo in senso **calvinista** e introduce il testo liturgico obbligatorio: il ***Book of Common Prayer*** (1549).
+1. **Edoardo VI (1547-1553):** Salito al trono a soli 9 anni, apre la Chiesa anglicana al calvinismo e introduce il testo liturgico obbligatorio in lingua inglese: il ***Book of Common Prayer*** (1549).
 2. **Maria I Tudor detta "La Sanguinaria" (*Bloody Mary*, 1553-1558):**
-   - Figlia di Caterina d'Aragona e cattolica devota, sposa **Filippo II di Spagna**.
-   - Tenta di restaurare a forza il cattolicesimo mandando al rogo circa 300 protestanti (tra cui l'arcivescovo Cranmer), lasciando negli inglesi un odio viscerale verso il papato e la Spagna.
+   - Figlia di Caterina d'Aragona e cattolica devota, sposa **Filippo II di Spagna** (il sovrano protagonista della Lezione 05).
+   - Tenta di restaurare a forza il cattolicesimo mandando al rogo circa 300 protestanti (tra cui l'arcivescovo Cranmer), lasciando negli inglesi un odio profondo verso il cattolicesimo e verso la Spagna.
+
+> [!TRAPPOLA] ⚠️ ATTENZIONE AL TRANELLO: Non Confondere le Due Marie!
+> - **Maria I TUDOR ("Bloody Mary"):** È la figlia di Enrico VIII e Caterina d'Aragona. È la **sorellastra di Elisabetta I** ed è la **moglie di Filippo II di Spagna**. Regna in Inghilterra dal 1553 al 1558 perseguitando i protestanti.
+> - **Maria STUART (Mary Queen of Scots):** È la **cugina cattolica di Elisabetta I** e regina di Scozia. Fuggita in Inghilterra, complotta con il Papa e con Filippo II per assassinare Elisabetta. Verrà **decapitata nel 1587**!
+
+![[Pasted image 20261104111419.png|419]]
 
 ---
 
 ## 4. Elisabetta I Tudor e l'Età dell'Oro (1558-1603)
 
-Figlia di Enrico VIII e Anna Bolena, sale al trono a 25 anni e regna per 45 anni. Si proclama la **"Regina Vergine"** (*Virgin Queen*) rifiutando ogni matrimonio per preservare l'indipendenza dell'Inghilterra.
+Figlia di Enrico VIII e Anna Bolena, sale al trono a 25 anni e regna per 45 anni. Si proclama la **"Regina Vergine"** (*Virgin Queen*) rifiutando ogni matrimonio dinastico per preservare l'indipendenza dell'Inghilterra.
 
-### Le Azioni Chiave di Elisabetta I:
-- **Compromesso Religioso (1559):** Trova una via di mezzo: teologia protestante moderata (Trentanove Articoli) ma mantiene la gerarchia dei vescovi (*episcopale*) nominati dalla Corona. Reprime sia i cattolici ribelli che i **Puritani** (calvinisti radicali).
-- **La Questione di Maria Stuart (1587):** La cugina cattolica **Maria Stuart** (regina di Scozia fuggita a Londra) complotta con il Papa e la Spagna per rovesciare Elisabetta. Scoperti i carteggi segreti, Elisabetta la fa **==🔴 decapitare nel 1587==**, scatenando la reazione di Filippo II.
-- **I Corsari di Elisabetta (*Sea Dogs*):** La Regina finanzia corsari patrioti come **Sir Francis Drake** per attaccare e depredare i galeoni spagnoli carichi di argento americano. Nel 1584 nasce la colonia della **Virginia**.
-- **Commercio Mondiale:** Nel **1600** fonda la potente **Compagnia delle Indie Orientali**. Fiorisce il teatro rinascimentale di **William Shakespeare**.
+### I Punti Cardine del Suo Regno:
+- **Il Compromesso Religioso (1559):** Confermato l'Atto di Supremazia e l'Atto di Uniformità; teologia protestante moderata (39 Articoli) unita alla gerarchia dei vescovi (*episcopale*). Reprime sia i cattolici ribelli sia i **Puritani** (i calvinisti radicali ispirati a Calvino).
+- **La Decapitazione di Maria Stuart (1587):** Dopo 19 anni di prigionia dorata, scoperte le lettere del complotto papista per assassinarla, Elisabetta fa decapitare la cugina cattolica Maria Stuart, offrendo a Filippo II il pretesto per la guerra.
+- **La Guerra di Corsa (I *Sea Dogs*):** Elisabetta finanzia corsari patrioti con regolari lettere di corsa: **Sir Francis Drake** assalta i galeoni spagnoli carichi di argento americano provenienti dalle miniere di Potosí. Nel 1584 nasce la colonia della **Virginia**.
+- **Commercio e Cultura:** Nel **1600** nasce la potente **Compagnia delle Indie Orientali**. Fiorisce il teatro di **William Shakespeare**.
 
-```
-╔══════════════════════════════════════════════════════════════════════════════════════════╗
-║ 🖼️ PLACEHOLDER: RITRATTO DI ELISABETTA I ("DITCHLEY PORTRAIT")                           ║
-╠══════════════════════════════════════════════════════════════════════════════════════════╣
-║ ![[elisabetta_i_ritratto_ditchley.png|700]]                                              ║
-║ Cerca: "Queen Elizabeth I Marcus Gheeraerts Ditchley portrait"                           ║
-╚══════════════════════════════════════════════════════════════════════════════════════════╝
-```
+![[Pasted image 20261028132026.png|392]]
 
 ---
 
 ## 5. La Disfatta dell'Invincibile Armata (1588)
 
-Nel **==🟡 1588==**, Filippo II di Spagna invia una flotta gigantesca (130 enormi galeoni e 30.000 soldati) per invadere l'Inghilterra eretica.
+Nel **==🟡 1588==**, il re di Spagna Filippo II invia una flotta colossale (130 enormi galeoni e 30.000 soldati) per invadere l'Inghilterra eretica.
+
+- **🔗 Perché Filippo II Attacca Proprio Ora? I 3 Motivi Interconnessi:**
+  1. **Religioso:** Elisabetta è il simbolo del protestantesimo europeo contro la Controriforma cattolica e ha appena giustiziato la regina cattolica Maria Stuart (1587).
+  2. **Economico:** I corsari inglesi di Francis Drake saccheggiano costantemente le rotte dell'argento americano della Spagna.
+  3. **Geopolitico:** Elisabetta invia truppe e denaro per **sostenere i ribelli calvinisti dell'Olanda** nella loro Guerra d'Indipendenza contro la Spagna. Filippo II deve prima abbattere l'Inghilterra per poter domare i Paesi Bassi!
 
 ```mermaid
 flowchart TD
-    FIL["🇪🇸 INVINCIBILE ARMATA (Filippo II)<br/>130 navi giganti e pesanti, pensate per l'arrembaggio corpo a corpo"] 
+    FIL["🇪🇸 INVINCIBILE ARMATA (Filippo II)<br/>130 navi enormi e pesanti, lente, concepite per l'arrembaggio"] 
     vs["⚔️ SCONTRO NELLA MANICA (1588)"]
-    ENG["🇬🇧 FLOTTA INGLESE (Drake e Howard)<br/>Navi basse, leggere, agili e con cannoni a lunga gittata"]
+    ENG["🇬🇧 FLOTTA INGLESE (Drake e Howard)<br/>Navi agili, veloci, basse e con cannoni a lunga gittata"]
     
     FIL & ENG --> vs
-    vs --> B1["🔥 Brulotti inglesi (navi in fiamme) a Calais: panico tra gli spagnoli"]
+    vs --> B1["🔥 Brulotti inglesi (navi incendiarie) a Calais: panico e dispersione spagnola"]
     B1 --> B2["🌪️ Tempeste spaventose sulle scogliere di Scozia e Irlanda"]
-    B2 --> ESITO["🟢 VITTORIA INGLESE SCHIACCIANTE<br/>Meno di metà delle navi spagnole torna in patria.<br/>Inizia il primato sui mari dell'Inghilterra!"]
+    B2 --> ESITO["🟢 VITTORIA INGLESE SCHIACCIANTE<br/>Meno di metà delle navi spagnole torna a casa.<br/>Inizia il dominio inglese sui mari del mondo!"]
 ```
 
-> [!IMPORTANTE] Conseguenza Storica del 1588
-> La vittoria segna il **declino militare della Spagna** e consacra l'**Inghilterra come nuova regina indiscussa dei mari e dei commerci mondiali**.
-
-```
-╔══════════════════════════════════════════════════════════════════════════════════════════╗
-║ 🖼️ PLACEHOLDER: LA DISFATTA DELL'INVINCIBILE ARMATA (1588)                               ║
-╠══════════════════════════════════════════════════════════════════════════════════════════╣
-║ ![[disfatta_invincibile_armata_1588.png|700]]                                            ║
-║ Cerca: "Defeat of the Spanish Armada Loutherbourg painting"                              ║
-╚══════════════════════════════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## 🎯 Punti Chiave da Sapere per l'Interrogazione
-
-> [!INTERROGAZIONE] Domande Secche della Prof
-> 1. **Perché nasce la Chiesa Anglicana nel 1534?** *Enrico VIII voleva un erede maschio da Anna Bolena; al rifiuto del Papa di annullare il matrimonio con Caterina d'Aragona, promulgò l'Atto di Supremazia diventando capo della Chiesa d'Inghilterra.*
-> 2. **Chi era la "gentry" e come si arricchì?** *La piccola e media nobiltà rurale che acquistò le terre confiscate ai monasteri cattolici, recintandole (enclosures) per l'allevamento della lana.*
-> 3. **Cosa fece Elisabetta I con Maria Stuart?** *La tenne prigioniera per 19 anni e nel 1587 la fece decapitare per aver complottato con Spagna e Papa per assassinarla.*
-> 4. **Quali furono le cause della sconfitta dell'Invincibile Armata spagnola nel 1588?** *Le navi inglesi più agili armate di cannoni a lungo raggio, l'attacco dei brulotti a Calais e le violentissime tempeste sulle coste scozzesi e irlandesi.*
+![[Pasted image 20261028132054.png|700]]

@@ -7,7 +7,6 @@ tags:
   - parabola
   - secondo-grado
 ---
-
 # Disequazioni di Secondo Grado e Metodo della Parabola
 
 Una disequazione di secondo grado ad una incognita si presenta, dopo aver svolto i calcoli e ridotto i termini simili, in una delle quattro forme canoniche:

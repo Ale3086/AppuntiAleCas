@@ -1,0 +1,1 @@
+(fare i comnadi divisi per sezione, fare vedeere il comando come h2 e poi sotto breve speigazione con esempio, non andre nei comandi vecchissimi e inutilizzati ma dammi le cose che effettivante sono utili come git fettch, merge, push, pull, clone e così via) (9 anhce git config e cose del genere sono importanti, te dimmi tutto poi seleziono io quello che serve o no)
